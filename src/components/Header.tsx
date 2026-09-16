@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Gallery", href: "/gallery" },
   { label: "Service Area", href: "/service-area" },
   { label: "Commercial", href: "/commercial" },
+  { label: "Batch Sharpening", href: "/batch" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "FAQ", href: "/faq" },
   { label: "About", href: "/about" },
