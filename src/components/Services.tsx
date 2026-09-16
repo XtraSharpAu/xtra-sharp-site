@@ -25,6 +25,8 @@ const services = [
   },
 ];
 
+import Link from "next/link";
+
 export default function Services() {
   return (
     <section
@@ -49,6 +51,14 @@ export default function Services() {
               </p>
             </div>
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            href="/services"
+            className="text-sm font-medium text-ausBlue transition-colors hover:underline"
+          >
+            View full services &amp; pricing &rarr;
+          </Link>
         </div>
       </div>
     </section>

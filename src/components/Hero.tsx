@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section
@@ -20,12 +22,12 @@ export default function Hero() {
         >
           Book Appointment
         </a>
-        <a
-          href="#services"
+        <Link
+          href="/services"
           className="rounded-full border border-ausBlue px-6 py-3 text-sm font-medium text-ausBlue transition-colors hover:bg-ausBlue/10"
         >
           View Services
-        </a>
+        </Link>
       </div>
     </section>
   );
