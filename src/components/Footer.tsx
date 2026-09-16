@@ -13,9 +13,20 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Xtra Sharp. Appointment-only —
             no walk-ins.
           </p>
-          <Link href="/terms" className="hover:text-ausBlue hover:underline">
-            Service Terms
-          </Link>
+          <div className="flex gap-4">
+            <Link
+              href="/privacy"
+              className="hover:text-ausBlue hover:underline"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="hover:text-ausBlue hover:underline"
+            >
+              Service Terms
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

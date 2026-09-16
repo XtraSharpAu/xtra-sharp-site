@@ -19,7 +19,7 @@ export default function PolicySections({ sections }: PolicySectionsProps) {
           </h2>
           <div className="mt-3 space-y-2 text-text/80">
             {section.paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <div key={index}>{paragraph}</div>
             ))}
           </div>
         </div>
