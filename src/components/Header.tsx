@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Batch Sharpening", href: "/batch" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "FAQ", href: "/faq" },
+  { label: "Tips", href: "/tips" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
