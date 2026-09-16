@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Xtra Sharp",
-  description: "Xtra Sharp site",
+  title: "Xtra Sharp | Knife & Tool Sharpening in Campbelltown & Macarthur",
+  description:
+    "Professional, appointment-only knife, scissor, clipper blade and tool sharpening in Campbelltown, Western Sydney & the Macarthur region. Drop-off, mail-in and local pick-up available.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
