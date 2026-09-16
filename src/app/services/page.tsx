@@ -17,25 +17,26 @@ const services = [
     title: "Knife Sharpening",
     suitableFor:
       "kitchen knives, chef knives, utility knives, boning knives, hunting knives, pocket knives.",
-    whatYouGet: [
+    whatsIncluded: [
       "Correct edge angle restored",
       "Burr removal and polish",
       "Tip repair (if required)",
       "Straightening of minor bends",
-      "Rust spot removal (light)",
+      "Light rust spot removal",
     ],
     pricing: [
       { label: "Standard kitchen knives", value: "$10–$15" },
       { label: "Large chef knives / cleavers", value: "$15–$20" },
       { label: "Specialty blades", value: "Quoted on inspection" },
     ],
+    highlights: ["Fast turnaround", "Professional finish", "Consistent edge quality"],
   },
   {
     icon: "✂️",
     title: "Scissor Sharpening",
     suitableFor:
       "household scissors, kitchen scissors, industrial scissors, grooming scissors.",
-    whatYouGet: [
+    whatsIncluded: [
       "Correct bevel restored",
       "Alignment check",
       "Smooth cutting action",
@@ -46,12 +47,13 @@ const services = [
       { label: "Heavy-duty / industrial", value: "$20+" },
       { label: "Grooming scissors", value: "Quoted on inspection" },
     ],
+    highlights: ["Clean, smooth cut", "Correct tension", "Professional alignment"],
   },
   {
     icon: "🐾",
     title: "Clipper Blade Sharpening",
     suitableFor: "pet grooming blades, horse clipper blades, shearing combs.",
-    whatYouGet: [
+    whatsIncluded: [
       "Full clean",
       "Sharpening on calibrated plates",
       "Re-assembly",
@@ -61,23 +63,25 @@ const services = [
       { label: "Standard clipper blades", value: "$15" },
       { label: "Wide blades / specialty", value: "$20+" },
     ],
+    highlights: ["Groomer-grade finish", "Smooth running", "Reliable performance"],
   },
   {
     icon: "🔧",
     title: "Chisel & Tool Sharpening",
     suitableFor:
       "woodworking chisels, plane blades, carving tools, workshop tools.",
-    whatYouGet: [
+    whatsIncluded: [
       "Correct bevel angle",
       "Honed edge",
       "Polished finish",
-      "Rust spot removal (light)",
+      "Light rust spot removal",
     ],
     pricing: [
       { label: "Standard chisels", value: "$10" },
       { label: "Plane blades", value: "$15" },
       { label: "Specialty tools", value: "Quoted on inspection" },
     ],
+    highlights: ["Accurate angles", "Workshop-ready edges", "Ideal for tradies and DIY"],
   },
 ];
 

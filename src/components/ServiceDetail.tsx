@@ -7,16 +7,18 @@ type ServiceDetailProps = {
   icon: string;
   title: string;
   suitableFor: string;
-  whatYouGet: string[];
+  whatsIncluded: string[];
   pricing: PricingLine[];
+  highlights: string[];
 };
 
 export default function ServiceDetail({
   icon,
   title,
   suitableFor,
-  whatYouGet,
+  whatsIncluded,
   pricing,
+  highlights,
 }: ServiceDetailProps) {
   return (
     <div className="rounded-lg border border-metallic/40 bg-background p-6 shadow-sm">
@@ -30,9 +32,9 @@ export default function ServiceDetail({
       </p>
 
       <div className="mt-4">
-        <p className="text-sm font-medium text-text">What you get:</p>
+        <p className="text-sm font-medium text-text">What&apos;s included:</p>
         <ul className="mt-2 space-y-1">
-          {whatYouGet.map((item) => (
+          {whatsIncluded.map((item) => (
             <li key={item} className="flex items-start gap-2 text-sm text-text/70">
               <span className="mt-0.5 text-ausBlue">✔</span>
               <span>{item}</span>
@@ -51,6 +53,20 @@ export default function ServiceDetail({
             >
               <span>{line.label}</span>
               <span className="font-medium text-ctaRed">{line.value}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="mt-4 border-t border-metallic/40 pt-4">
+        <p className="text-sm font-medium text-text">Highlights:</p>
+        <ul className="mt-2 flex flex-wrap gap-2">
+          {highlights.map((item) => (
+            <li
+              key={item}
+              className="rounded-full border border-ausBlue/40 bg-ausBlue/5 px-3 py-1 text-xs font-medium text-ausBlue"
+            >
+              {item}
             </li>
           ))}
         </ul>

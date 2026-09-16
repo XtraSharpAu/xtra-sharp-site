@@ -10,8 +10,8 @@ export default function ServicesHero() {
       </p>
       <p className="max-w-2xl text-text/70">
         Xtra Sharp provides precision sharpening for knives, scissors,
-        clipper blades, chisels, and specialty tools. Every item is
-        sharpened using professional machines, calibrated angles, and a
+        clipper blades, chisels, and workshop tools. Every item is
+        sharpened using calibrated angles, professional machines, and a
         quality-first workflow.
       </p>
     </section>
