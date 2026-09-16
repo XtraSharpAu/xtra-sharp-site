@@ -1,0 +1,112 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import TermsHero from "@/components/TermsHero";
+import PolicySections from "@/components/PolicySections";
+
+export const metadata: Metadata = {
+  title: "Service Terms | Xtra Sharp",
+  description:
+    "Xtra Sharp's service terms covering appointments, item condition, repairs, turnaround, pricing, pick-up/mail-in, liability, and cancellations.",
+};
+
+const sections = [
+  {
+    title: "Appointments",
+    paragraphs: [
+      "All services are appointment-only.",
+      "Walk-ins are not accepted.",
+      "You must confirm a drop-off, pick-up, or mail-in arrangement before sending or delivering items.",
+    ],
+  },
+  {
+    title: "Item Condition",
+    paragraphs: [
+      "Items must be provided in a reasonably clean condition.",
+      "Heavy rust, severe damage, or broken components may require additional work or may not be serviceable.",
+      "If an item cannot be sharpened safely, you will be notified before any work begins.",
+    ],
+  },
+  {
+    title: "Repairs & Damage",
+    paragraphs: [
+      "Minor chips, bends, and tip repairs are included where possible.",
+      "Severe damage is quoted individually.",
+      "If an item is unsafe or structurally compromised, sharpening may be refused.",
+    ],
+  },
+  {
+    title: "Turnaround Times",
+    paragraphs: [
+      "Standard turnaround is 24–48 hours.",
+      "Large batches or specialty tools may take longer.",
+      "Urgent jobs are available on request and quoted based on workload.",
+    ],
+  },
+  {
+    title: "Pricing & Payment",
+    paragraphs: [
+      <>
+        Pricing is listed on the{" "}
+        <Link href="/pricing" className="text-ausBlue hover:underline">
+          Pricing page
+        </Link>
+        .
+      </>,
+      "Specialty items or unusual tools may require a custom quote.",
+      "Payment is due on collection or before return shipping for mail-in jobs.",
+    ],
+  },
+  {
+    title: "Pick-Up & Mail-In",
+    paragraphs: [
+      "Local pick-up is available in selected Western Sydney areas and quoted based on distance.",
+      "Mail-in customers are responsible for postage to Xtra Sharp.",
+      "Return postage can be included in the quote or billed separately.",
+    ],
+  },
+  {
+    title: "Loss or Damage During Transit",
+    paragraphs: [
+      "For mail-in jobs, Xtra Sharp is not responsible for items lost or damaged during postage.",
+      "Customers should package items securely and consider tracked shipping.",
+    ],
+  },
+  {
+    title: "Safety & Liability",
+    paragraphs: [
+      "Sharpened items are extremely sharp.",
+      "Customers are responsible for safe handling after collection or delivery.",
+      "Xtra Sharp is not liable for injuries caused by misuse or improper handling of sharpened tools.",
+    ],
+  },
+  {
+    title: "Cancellations",
+    paragraphs: [
+      "If you need to cancel or reschedule an appointment, please notify Xtra Sharp as early as possible.",
+      "Missed appointments may affect turnaround times for future bookings.",
+    ],
+  },
+  {
+    title: "Contact",
+    paragraphs: [
+      <>
+        For questions about these terms or any special requirements,{" "}
+        <Link href="/contact" className="text-ausBlue hover:underline">
+          contact Xtra Sharp
+        </Link>{" "}
+        directly.
+      </>,
+    ],
+  },
+];
+
+export default function TermsPage() {
+  return (
+    <>
+      <TermsHero />
+      <section className="border-t border-metallic/40 px-6 py-16">
+        <PolicySections sections={sections} />
+      </section>
+    </>
+  );
+}
