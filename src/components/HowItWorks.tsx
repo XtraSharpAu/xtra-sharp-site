@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const steps = [
   {
     title: "Book an Appointment",
@@ -44,6 +46,14 @@ export default function HowItWorks() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            href="/how-it-works"
+            className="text-sm font-medium text-ausBlue transition-colors hover:underline"
+          >
+            View the full process &rarr;
+          </Link>
         </div>
       </div>
     </section>
