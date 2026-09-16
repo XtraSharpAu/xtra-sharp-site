@@ -113,7 +113,7 @@ export default function HowItWorksPage() {
             clear communication and reliable turnaround for every job.
           </p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="mt-6 inline-block rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-ctaRed/90"
           >
             Book Appointment

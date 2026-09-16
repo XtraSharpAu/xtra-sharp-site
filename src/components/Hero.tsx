@@ -16,12 +16,12 @@ export default function Hero() {
         Serving Campbelltown, Western Sydney &amp; the Macarthur Region
       </p>
       <div className="mt-4 flex flex-col gap-4 sm:flex-row">
-        <a
-          href="#contact"
+        <Link
+          href="/contact"
           className="rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-ctaRed/90"
         >
           Book Appointment
-        </a>
+        </Link>
         <Link
           href="/services"
           className="rounded-full border border-ausBlue px-6 py-3 text-sm font-medium text-ausBlue transition-colors hover:bg-ausBlue/10"

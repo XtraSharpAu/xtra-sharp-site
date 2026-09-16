@@ -3,7 +3,7 @@ import Link from "next/link";
 const navLinks = [
   { label: "Services", href: "/services" },
   { label: "How It Works", href: "/how-it-works" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -25,7 +25,7 @@ export default function Header() {
           ))}
         </nav>
         <Link
-          href="/#contact"
+          href="/contact"
           className="rounded-full bg-ctaRed px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-ctaRed/90"
         >
           Book Appointment

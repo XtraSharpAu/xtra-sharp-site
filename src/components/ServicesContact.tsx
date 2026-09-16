@@ -14,7 +14,7 @@ export default function ServicesContact() {
         <p className="text-text/70">Appointment-Only</p>
         <p className="text-text/70">Drop-Off • Mail-In • Pick-Up</p>
         <Link
-          href="/#contact"
+          href="/contact"
           className="mt-6 inline-block rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-ctaRed/90"
         >
           Book Appointment
