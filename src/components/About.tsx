@@ -1,3 +1,5 @@
+import PillList from "@/components/PillList";
+
 const trustedBy = [
   "Schools",
   "Childcare centres",
@@ -27,16 +29,9 @@ export default function About() {
         </p>
         <div className="mt-10 text-center">
           <p className="font-medium text-text">Trusted by:</p>
-          <ul className="mt-4 flex flex-wrap justify-center gap-3">
-            {trustedBy.map((item) => (
-              <li
-                key={item}
-                className="rounded-full border border-metallic/40 bg-metallic/10 px-4 py-1 text-sm text-text/80"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
+          <div className="mt-4">
+            <PillList items={trustedBy} />
+          </div>
         </div>
       </div>
     </section>
