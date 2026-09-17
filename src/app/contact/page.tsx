@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import ContactHero from "@/components/ContactHero";
 import ContactMethods from "@/components/ContactMethods";
+import ContactMap from "@/components/ContactMap";
+import ContactForm from "@/components/ContactForm";
 import OptionCards from "@/components/OptionCards";
 import Turnaround from "@/components/Turnaround";
 import NeedAQuote from "@/components/NeedAQuote";
@@ -31,6 +33,8 @@ export default function ContactPage() {
     <>
       <ContactHero />
       <ContactMethods />
+      <ContactMap />
+      <ContactForm />
 
       <section className="border-t border-metallic/40 bg-ausBlue/5 px-6 py-20">
         <div className="mx-auto max-w-5xl">
