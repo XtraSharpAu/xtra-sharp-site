@@ -108,7 +108,8 @@ export default function AboutPage() {
             <PillList items={whoWeWorkWith} />
           </div>
           <p className="mt-6 text-text/80">
-            Batch pricing is available for larger orders.
+            Consistent, professional sharpening for all clients — no
+            shortcuts, no compromises.
           </p>
         </div>
       </section>
