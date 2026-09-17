@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# xtrasharp.com.au in Bing
+Sitemap: https://xtrasharp.com.au/sitemap.xml
