@@ -5,13 +5,13 @@ import Checklist from "@/components/Checklist";
 export const metadata: Metadata = {
   title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Professional knife sharpening in Campbelltown NSW. Water-cooled, machine-guided sharpening for kitchen, butcher, hunting, and outdoor knives.",
+    "Professional knife sharpening in Campbelltown NSW. Water-cooled sharpening for kitchen knives, butcher knives, hunting knives, large knives, tomahawks, and axes.",
 };
 
 const knifeTypes = [
   {
     icon: "🍳",
-    title: "Kitchen Knives",
+    title: "Kitchen & Butcher Knives",
     items: [
       "Chef's knives",
       "Paring knives",
@@ -20,68 +20,51 @@ const knifeTypes = [
       "Carving knives",
       "Boning knives",
       "Fillet knives",
-    ],
-  },
-  {
-    icon: "🥩",
-    title: "Butcher & Meat Processing",
-    items: [
-      "Boning knives",
-      "Skinning knives",
-      "Breaking knives",
-      "Trimming knives",
-      "Meat processing blades",
+      "Butcher knives",
+      "Large knives",
     ],
   },
   {
     icon: "🏕️",
-    title: "Hunting & Outdoor",
+    title: "Hunting & Outdoor Knives",
     items: [
-      "Fixed-blade hunting knives",
+      "Hunting knives",
+      "Field knives",
       "Folding knives",
       "Camping knives",
-      "Fishing knives",
-      "Field knives",
     ],
+  },
+  {
+    icon: "🪓",
+    title: "Axes & Heavy Blades",
+    items: ["Tomahawks", "Axes", "Hatchets"],
   },
 ];
 
-const processSteps = [
-  {
-    title: "Assessment",
-    description: "Steel type, bevel angle, condition.",
-  },
-  {
-    title: "Water-cooled grinding",
-    description: "Prevents heat damage.",
-  },
-  {
-    title: "Edge refinement",
-    description: "Correct angle for knife type.",
-  },
-  {
-    title: "Machine-guided sharpening",
-    description: "Combined with precise hand control.",
-  },
-  {
-    title: "Final inspection",
-    description: "Tested for smooth cutting.",
-  },
+const sharpeningMethod = [
+  "Water-cooled grinding (prevents heat damage)",
+  "Machine-guided sharpening with controlled hand input",
+  "Correct angle restoration",
+  "Final cutting test",
 ];
 
 const pricing = [
   { name: "Standard knives", price: "$10" },
   { name: "Butcher knives", price: "$10" },
+  { name: "Large knives", price: "$15" },
+  { name: "Hunting knives", price: "$10–$15 (depending on condition)" },
+  { name: "Tomahawk", price: "$15" },
+  { name: "Axe", price: "$20–$25 (depending on condition)" },
 ];
 
 const whyChooseUs = [
   "13+ years sharpening experience",
   "Mirror Cut® accredited",
   "Flamin' Sharp licensee",
-  "Water-cooled sharpening (no heat damage)",
-  "Machine-guided sharpening with precise hand control",
+  "Water-cooled sharpening for knives and heavy blades",
+  "Machine-guided sharpening with controlled hand input",
   "Fast turnaround",
-  "Trusted by schools, restaurants, and local businesses",
+  "Trusted by schools, restaurants, butchers, and local businesses",
 ];
 
 export default function KnifeSharpeningPage() {
@@ -92,8 +75,8 @@ export default function KnifeSharpeningPage() {
           Professional Knife Sharpening &mdash; Campbelltown NSW
         </h1>
         <p className="max-w-2xl text-lg text-text/70">
-          Sharp, safe, reliable edges for kitchens, butchers, hunters, and
-          outdoor use.
+          Water-cooled sharpening for kitchen knives, butcher knives, hunting
+          knives, large knives, tomahawks, and axes.
         </p>
         <a
           href="tel:0412974277"
@@ -106,13 +89,12 @@ export default function KnifeSharpeningPage() {
       <section className="border-t border-metallic/40 px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-text/80">
-            At Xtra Sharp, every knife is sharpened using water-cooled
-            equipment to protect the steel from heat damage. Your knives are
-            sharpened with machine-guided precision and controlled hand
-            input, giving you a clean, accurate edge every time. Whether
-            you&apos;re a home cook, a butcher, a chef, or an outdoor
-            enthusiast, your knives will cut smoothly, safely, and with less
-            effort.
+            Knives require accurate angles and a controlled sharpening
+            process. At Xtra Sharp, all knives and heavy blades are
+            sharpened using water-cooled equipment to protect the steel from
+            heat damage and ensure a clean, strong cutting edge. Sharpening
+            is performed in my dedicated sharpening area in Woodbine,
+            Campbelltown NSW.
           </p>
         </div>
       </section>
@@ -133,21 +115,11 @@ export default function KnifeSharpeningPage() {
       <section className="border-t border-metallic/40 px-6 py-20">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-center text-3xl font-semibold text-text">
-            Sharpening Process
+            Sharpening Method
           </h2>
-          <ol className="mt-10 space-y-6">
-            {processSteps.map((step, index) => (
-              <li key={step.title} className="flex items-start gap-4">
-                <span className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-accent text-sm font-semibold text-background">
-                  {index + 1}
-                </span>
-                <div>
-                  <p className="font-medium text-text">{step.title}</p>
-                  <p className="text-sm text-text/70">{step.description}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <div className="mt-6 inline-block text-left">
+            <Checklist items={sharpeningMethod} />
+          </div>
         </div>
       </section>
 
@@ -160,12 +132,12 @@ export default function KnifeSharpeningPage() {
             {pricing.map((line, index) => (
               <div
                 key={line.name}
-                className={`flex items-center justify-between py-2 ${
+                className={`flex items-center justify-between gap-4 py-2 ${
                   index > 0 ? "border-t border-metallic/40" : ""
                 }`}
               >
                 <span className="text-text/80">{line.name}</span>
-                <span className="font-semibold text-ctaRed">
+                <span className="text-right font-semibold text-ctaRed">
                   {line.price}
                 </span>
               </div>
@@ -219,8 +191,8 @@ export default function KnifeSharpeningPage() {
           Call Now — 0412 974 277
         </a>
         <p className="mt-4 text-text/70">
-          Drop-off sharpening in Campbelltown NSW. Free pick-up for local
-          schools. Commercial pick-up available for larger jobs.
+          Drop-off sharpening in Campbelltown NSW. Mail-in sharpening
+          available Australia-wide.
         </p>
       </section>
     </>
