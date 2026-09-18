@@ -32,7 +32,7 @@ Speculative ideas, not commitments or a roadmap. Each should be evaluated agains
 
 ## Ideas for New Automation
 
-- Automated review request follow-up (email/SMS sent a set number of days after job completion) — currently a manual process per `docs/business-systems-pack.md`'s workflows.
+- Automated review request follow-up (email/SMS sent a set number of days after job completion) — currently a manual process per `docs/business-systems-pack/02-workflow-documentation.md`.
 - A real backend for the contact form (see `docs/maintenance.md` item #1) so submissions don't depend on the visitor's own email client.
 - Simple booking/calendar tool for drop-off appointments, reducing back-and-forth on scheduling.
 - Automated satchel-size suggestion tool on `/mail-in`, based on item type/quantity selected — though this would need real, honest logic behind it rather than a gimmick.
@@ -45,7 +45,7 @@ Speculative ideas, not commitments or a roadmap. Each should be evaluated agains
 
 ## Ideas for Business Growth
 
-- Formalise commercial/batch relationships with salons, restaurants, schools and butchers into standing scheduled arrangements rather than ad hoc bookings (see `docs/business-systems-pack.md`).
+- Formalise commercial/batch relationships with salons, restaurants, schools and butchers into standing scheduled arrangements rather than ad hoc bookings (see `docs/business-systems-pack/`).
 - Consider a second drop-off day/time slot structure if demand grows beyond what's comfortably handled by appointment-only single-operator capacity.
 - Evaluate expanding the service area suburb list as real demand data (enquiries from outside the current listed area) becomes available.
 - Track which service categories generate the most enquiries vs. bookings, to prioritise future content/marketing investment (e.g. this pack's SEO keyword work in `docs/seo-pack.md`) toward what's actually converting.
