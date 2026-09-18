@@ -3,33 +3,33 @@ import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
+  title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Professional sharpening for hairdressing, grooming, sewing and household scissors.",
+    "Water-cooled sharpening for secateurs, hedge shears and axes.",
   openGraph: {
-    title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
+    title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional sharpening for hairdressing, grooming, sewing and household scissors.",
-    url: "https://xtrasharp.com.au/scissors-sharpening",
+      "Water-cooled sharpening for secateurs, hedge shears and axes.",
+    url: "https://xtrasharp.com.au/garden-tools",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-scissors.jpg"],
+    images: ["https://xtrasharp.com.au/og-garden-tools.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
+    title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional sharpening for hairdressing, grooming, sewing and household scissors.",
-    images: ["https://xtrasharp.com.au/og-scissors.jpg"],
+      "Water-cooled sharpening for secateurs, hedge shears and axes.",
+    images: ["https://xtrasharp.com.au/og-garden-tools.jpg"],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/scissors-sharpening",
+    "twitter:url": "https://xtrasharp.com.au/garden-tools",
   },
 };
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: "Scissors Sharpening",
+  serviceType: "Garden Tools Sharpening",
   provider: {
     "@type": "LocalBusiness",
     name: "Xtra Sharp",
@@ -41,26 +41,15 @@ const serviceSchema = {
       "@type": "PriceSpecification",
       priceCurrency: "AUD",
       minPrice: 15,
-      maxPrice: 70,
+      maxPrice: 20,
     },
   },
 };
 
-const scissorTypes = [
-  "Hairdressing scissors",
-  "Grooming scissors",
-  "Grooming thinning scissors",
-  "Sewing scissors",
-  "Household scissors",
-];
-
 const pricing = [
-  { name: "Hairdressing scissors (bevel)", price: "$50" },
-  { name: "Hairdressing scissors (convex)", price: "$70" },
-  { name: "Grooming scissors (bevel)", price: "$25" },
-  { name: "Grooming scissors (convex)", price: "$35" },
-  { name: "Grooming thinning scissors", price: "$30" },
-  { name: "Sewing / household scissors", price: "$15" },
+  { name: "Hedge shears", price: "$15" },
+  { name: "Secateurs", price: "$15" },
+  { name: "Axes / tomahawks", price: "$20" },
 ];
 
 const importantNotes = [
@@ -70,18 +59,17 @@ const importantNotes = [
   "Mail-in available Australia-wide",
 ];
 
-export default function ScissorsSharpeningPage() {
+export default function GardenToolsPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
 
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">
-          Scissors Sharpening
+          Garden Tools Sharpening
         </h1>
         <p className="max-w-2xl text-lg text-text/70">
-          Professional sharpening for hairdressing, grooming, sewing and
-          household scissors.
+          Water-cooled sharpening for secateurs, hedge shears and axes.
         </p>
         <a
           href="tel:0412974277"
@@ -94,28 +82,17 @@ export default function ScissorsSharpeningPage() {
       <section className="border-t border-metallic/40 px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-semibold text-text">
-            Precision Machine-Guided Sharpening
+            Water-Cooled Sharpening
           </h2>
           <p className="mt-4 text-text/80">
-            I sharpen scissors using a machine-guided process that maintains
-            correct angle, ride line, tension and alignment. This ensures
-            your scissors cut cleanly, smoothly and safely.
+            Garden tools are sharpened using water-cooled equipment to
+            protect the steel from heat damage, giving a clean, accurate
+            edge that holds up to regular garden use.
           </p>
         </div>
       </section>
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Types of Scissors I Sharpen
-          </h2>
-          <div className="mt-6 inline-block text-left">
-            <Checklist items={scissorTypes} />
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-md">
           <h2 className="text-center text-2xl font-semibold text-text">
             Pricing
@@ -135,14 +112,10 @@ export default function ScissorsSharpeningPage() {
               </div>
             ))}
           </div>
-          <p className="mt-4 text-center text-text/80">
-            Some scissors may vary depending on condition. You can send a
-            photo for an exact quote.
-          </p>
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+      <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-semibold text-text">
             Drop-Off Sharpening (Campbelltown NSW)
@@ -155,13 +128,13 @@ export default function ScissorsSharpeningPage() {
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-semibold text-text">
             Mail-In Sharpening (Australia-Wide)
           </h2>
           <p className="mt-4 text-text/80">
-            You can post your scissors using a prepaid Australia Post
+            You can post your garden tools using a prepaid Australia Post
             satchel. Return postage is sent with tracking.
           </p>
           <p className="mt-4 text-text/80">
@@ -171,20 +144,20 @@ export default function ScissorsSharpeningPage() {
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+      <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-semibold text-text">
             Turnaround Time
           </h2>
           <p className="mt-4 text-text/80">
-            Most scissors are sharpened same day or next day. Mail-in
+            Most garden tools are sharpened same day or next day. Mail-in
             sharpening is usually completed within 1–2 business days after
             arrival.
           </p>
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-center text-2xl font-semibold text-text">
             Important Notes
@@ -195,7 +168,7 @@ export default function ScissorsSharpeningPage() {
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
+      <section className="border-t border-metallic/40 px-6 py-20 text-center">
         <a
           href="tel:0412974277"
           className="inline-block rounded-full bg-ctaRed px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-ctaRed/90"

@@ -3,9 +3,27 @@ import PillList from "@/components/PillList";
 import Checklist from "@/components/Checklist";
 
 export const metadata: Metadata = {
-  title: "Service Areas | Xtra Sharp Campbelltown NSW",
+  title: "Service Area | Xtra Sharp Campbelltown NSW",
   description:
-    "Xtra Sharp provides sharpening in Campbelltown, Woodbine, and the Macarthur region, with Australia-wide mail-in sharpening available.",
+    "Drop-off sharpening in Campbelltown NSW. Mail-in available Australia-wide.",
+  openGraph: {
+    title: "Service Area | Xtra Sharp Campbelltown NSW",
+    description:
+      "Drop-off sharpening in Campbelltown NSW. Mail-in available Australia-wide.",
+    url: "https://xtrasharp.com.au/service-area",
+    type: "website",
+    images: ["https://xtrasharp.com.au/og-service-area.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Service Area | Xtra Sharp Campbelltown NSW",
+    description:
+      "Drop-off sharpening in Campbelltown NSW. Mail-in available Australia-wide.",
+    images: ["https://xtrasharp.com.au/og-service-area.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au/service-area",
+  },
 };
 
 const macarthurSuburbs = [
@@ -23,7 +41,7 @@ const macarthurSuburbs = [
   "Bradbury",
 ];
 
-const importantNotes = [
+const noMobileNotes = [
   "No mobile sharpening",
   "No on-site sharpening",
   "Drop-off only",
@@ -35,11 +53,11 @@ export default function ServiceAreaPage() {
     <>
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">
-          Service Areas
+          Service Area
         </h1>
         <p className="max-w-2xl text-lg text-text/70">
-          Sharpening services for Campbelltown and surrounding suburbs, with
-          Australia-wide mail-in sharpening available.
+          Drop-off sharpening in Campbelltown NSW. Mail-in available
+          Australia-wide.
         </p>
         <a
           href="tel:0412974277"
@@ -52,41 +70,22 @@ export default function ServiceAreaPage() {
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-semibold text-text">
-            Primary Service Area &mdash; Campbelltown NSW
+            Local Area Coverage
           </h2>
           <p className="mt-4 text-text/80">
-            Xtra Sharp provides sharpening services for customers in
-            Campbelltown and Woodbine (dedicated sharpening area). Drop-off
-            sharpening is available by appointment.
+            Xtra Sharp provides drop-off sharpening from my dedicated
+            sharpening area in Woodbine, listed publicly as Campbelltown
+            NSW. I also service the wider Macarthur region.
           </p>
         </div>
-      </section>
-
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Macarthur Region
-          </h2>
-          <div className="mt-6">
-            <PillList items={macarthurSuburbs} />
-          </div>
+        <div className="mx-auto mt-8 max-w-3xl">
+          <PillList items={macarthurSuburbs} />
         </div>
-      </section>
-
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Sydney Mail-In Coverage
-          </h2>
-          <p className="mt-4 text-text/80">
-            Mail-in sharpening is available for households, groomers,
-            hairdressers, restaurants, butchers, tradespeople, and
-            commercial clients across NSW and Australia.
-          </p>
-          <p className="mt-4 text-text/80">
-            Return postage is sent using Australia Post with tracking. You
-            can include a prepaid satchel, or I can add postage to your
-            final total.
+        <div className="mx-auto mt-8 max-w-2xl text-center">
+          <p className="text-text/80">
+            Outside the local area? Mail-in sharpening is available
+            Australia-wide, with return postage sent using Australia Post
+            with tracking.
           </p>
         </div>
       </section>
@@ -94,50 +93,30 @@ export default function ServiceAreaPage() {
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-semibold text-text">
-            Before Sending Anything
+            Why Drop-Off Only
           </h2>
           <p className="mt-4 text-text/80">
-            Please contact me first before posting any items. I&apos;ll
-            confirm pricing, turnaround time, and the correct satchel size.
-            You can also send a photo for an exact quote.
+            Sharpening is carried out using water-cooled and machine-guided
+            equipment based at my dedicated sharpening area in Woodbine.
+            Keeping all sharpening at one fixed location means every item
+            gets the same accurate, consistent result &mdash; drop-off and
+            mail-in are the only ways to access it.
           </p>
         </div>
       </section>
 
       <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Pick-Up Options
-          </h2>
-          <h3 className="mt-6 text-lg font-medium text-text">
-            Free School Pick-Up
-          </h3>
-          <p className="mt-2 text-text/80">
-            Available for local schools in the Campbelltown area.
-          </p>
-          <h3 className="mt-6 text-lg font-medium text-text">
-            Commercial Pick-Up
-          </h3>
-          <p className="mt-2 text-text/80">
-            Available for jobs over $300 within the local Campbelltown
-            area. If your business is very close to me, I can often assist
-            with smaller loads &mdash; just contact me.
-          </p>
-        </div>
-      </section>
-
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-center text-2xl font-semibold text-text">
-            Important Notes
+            No Mobile Sharpening
           </h2>
           <div className="mt-6 inline-block text-left">
-            <Checklist items={importantNotes} />
+            <Checklist items={noMobileNotes} />
           </div>
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 px-6 py-20 text-center">
+      <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
         <a
           href="tel:0412974277"
           className="inline-block rounded-full bg-ctaRed px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-ctaRed/90"

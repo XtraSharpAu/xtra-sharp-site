@@ -4,6 +4,22 @@ import Checklist from "@/components/Checklist";
 export const metadata: Metadata = {
   title: "Pricing | Xtra Sharp Campbelltown NSW",
   description: "Clear, upfront pricing for all sharpening services.",
+  openGraph: {
+    title: "Pricing | Xtra Sharp Campbelltown NSW",
+    description: "Clear, upfront pricing for all sharpening services.",
+    url: "https://xtrasharp.com.au/pricing",
+    type: "website",
+    images: ["https://xtrasharp.com.au/og-pricing.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pricing | Xtra Sharp Campbelltown NSW",
+    description: "Clear, upfront pricing for all sharpening services.",
+    images: ["https://xtrasharp.com.au/og-pricing.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au/pricing",
+  },
 };
 
 type PriceLine = { name: string; price: string };

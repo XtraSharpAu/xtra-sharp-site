@@ -1,10 +1,49 @@
 import type { Metadata } from "next";
 import Checklist from "@/components/Checklist";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
   description:
     "Precision sharpening for A5, wide and large-animal clipper blades.",
+  openGraph: {
+    title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
+    description:
+      "Precision sharpening for A5, wide and large-animal clipper blades.",
+    url: "https://xtrasharp.com.au/clipper-blades",
+    type: "article",
+    images: ["https://xtrasharp.com.au/og-clipper.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
+    description:
+      "Precision sharpening for A5, wide and large-animal clipper blades.",
+    images: ["https://xtrasharp.com.au/og-clipper.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au/clipper-blades",
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Clipper Blade Sharpening",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Xtra Sharp",
+  },
+  areaServed: "Campbelltown NSW, Macarthur region, Australia-wide (mail-in)",
+  offers: {
+    "@type": "Offer",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      priceCurrency: "AUD",
+      minPrice: 15,
+      maxPrice: 20,
+    },
+  },
 };
 
 const clipperBladeTypes = [
@@ -46,6 +85,8 @@ function ClipperMachinePlaceholder() {
 export default function ClipperBladesPage() {
   return (
     <>
+      <JsonLd data={serviceSchema} />
+
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">
           Clipper Blade Sharpening

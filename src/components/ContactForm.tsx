@@ -1,79 +1,77 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function ContactForm() {
-  const router = useRouter();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    router.push("/thank-you");
+    const subject = encodeURIComponent(`Enquiry from ${name || "website contact form"}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\n${message}`
+    );
+    window.location.href = `mailto:phil@xtrasharp.com.au?subject=${subject}&body=${body}`;
   }
 
   return (
-    <section className="border-t border-metallic/40 px-6 py-20">
-      <div className="mx-auto max-w-xl">
-        <h2 className="text-center text-3xl font-semibold text-text">
-          Send a Message
-        </h2>
-        <p className="mt-4 text-center text-text/80">
-          Prefer to write it down? Fill in the form below and we&apos;ll get
-          back to you.
-        </p>
-        <form onSubmit={handleSubmit} className="mt-8 space-y-4">
-          <div>
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-text"
-            >
-              Name
-            </label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              required
-              className="mt-1 w-full rounded-md border border-metallic/40 bg-background px-3 py-2 text-text focus:border-accent focus:outline-none"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-text"
-            >
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              className="mt-1 w-full rounded-md border border-metallic/40 bg-background px-3 py-2 text-text focus:border-accent focus:outline-none"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-text"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              required
-              className="mt-1 w-full rounded-md border border-metallic/40 bg-background px-3 py-2 text-text focus:border-accent focus:outline-none"
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
-    </section>
+    <div className="mx-auto max-w-xl">
+      <p className="text-center text-text/80">
+        Fill in the form below &mdash; it will open your email app with your
+        message ready to send to phil@xtrasharp.com.au.
+      </p>
+      <form onSubmit={handleSubmit} className="mt-8 space-y-4 text-left">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-text">
+            Name
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            className="mt-1 w-full rounded-md border border-metallic/40 bg-background px-3 py-2 text-text focus:border-accent focus:outline-none"
+          />
+        </div>
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-text">
+            Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            className="mt-1 w-full rounded-md border border-metallic/40 bg-background px-3 py-2 text-text focus:border-accent focus:outline-none"
+          />
+        </div>
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-text">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows={5}
+            required
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
+            className="mt-1 w-full rounded-md border border-metallic/40 bg-background px-3 py-2 text-text focus:border-accent focus:outline-none"
+          />
+        </div>
+        <button
+          type="submit"
+          className="w-full rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
   );
 }

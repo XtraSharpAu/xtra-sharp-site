@@ -6,6 +6,24 @@ export const metadata: Metadata = {
   title: "FAQ | Xtra Sharp Campbelltown NSW",
   description:
     "Answers to common questions about sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp.",
+  openGraph: {
+    title: "FAQ | Xtra Sharp Campbelltown NSW",
+    description:
+      "Answers to common questions about sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp.",
+    url: "https://xtrasharp.com.au/faq",
+    type: "website",
+    images: ["https://xtrasharp.com.au/og-faq.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ | Xtra Sharp Campbelltown NSW",
+    description:
+      "Answers to common questions about sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp.",
+    images: ["https://xtrasharp.com.au/og-faq.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au/faq",
+  },
 };
 
 const faqSchema = {
