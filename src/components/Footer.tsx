@@ -4,7 +4,12 @@ export default function Footer() {
   return (
     <footer className="border-t border-metallic/40 bg-background">
       <div className="mx-auto max-w-6xl px-6 py-6 text-center text-sm text-text/70">
-        <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+        <p className="font-medium text-text">
+          Xtra Sharp &mdash; Professional Knife &amp; Tool Sharpening
+        </p>
+        <p className="mt-1">Campbelltown NSW &bull; Servicing Macarthur Since 2013</p>
+        <p className="mt-1">Cash, card, and internet banking accepted.</p>
+        <p className="mt-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
           <span>
             <strong className="text-text">Phone:</strong>{" "}
             <a href="tel:0412974277" className="hover:text-accent hover:underline">
