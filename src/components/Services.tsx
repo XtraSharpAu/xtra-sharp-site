@@ -31,7 +31,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="border-t border-metallic/40 bg-ausBlue/5 px-6 py-20"
+      className="border-t border-metallic/40 bg-accent/5 px-6 py-20"
     >
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-3xl font-semibold text-text">
@@ -55,7 +55,7 @@ export default function Services() {
         <div className="mt-10 text-center">
           <Link
             href="/services"
-            className="text-sm font-medium text-ausBlue transition-colors hover:underline"
+            className="text-sm font-medium text-accent transition-colors hover:underline"
           >
             View full services &amp; pricing &rarr;
           </Link>

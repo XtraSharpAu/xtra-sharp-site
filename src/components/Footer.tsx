@@ -7,7 +7,7 @@ export default function Footer() {
         <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
           <span>
             <strong className="text-text">Phone:</strong>{" "}
-            <a href="tel:0412974277" className="hover:text-ausBlue hover:underline">
+            <a href="tel:0412974277" className="hover:text-accent hover:underline">
               0412 974 277
             </a>
           </span>
@@ -16,7 +16,7 @@ export default function Footer() {
             <strong className="text-text">Email:</strong>{" "}
             <a
               href="mailto:phil@xtrasharp.com.au"
-              className="hover:text-ausBlue hover:underline"
+              className="hover:text-accent hover:underline"
             >
               phil@xtrasharp.com.au
             </a>
@@ -28,7 +28,7 @@ export default function Footer() {
               href="https://www.google.com/maps/place/22+Queenscliff+Dr,+Woodbine+NSW+2560"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-ausBlue hover:underline"
+              className="hover:text-accent hover:underline"
             >
               22 Queenscliff Drive, Woodbine NSW
             </a>
@@ -40,17 +40,17 @@ export default function Footer() {
               href="https://www.google.com/maps/search/Xtra+Sharp+Campbelltown"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-ausBlue hover:underline"
+              className="hover:text-accent hover:underline"
             >
               Campbelltown &amp; Western Sydney
             </a>
           </span>
         </p>
         <p className="mt-3 flex justify-center gap-4">
-          <Link href="/terms" className="hover:text-ausBlue hover:underline">
+          <Link href="/terms" className="hover:text-accent hover:underline">
             Terms of Service
           </Link>
-          <Link href="/privacy" className="hover:text-ausBlue hover:underline">
+          <Link href="/privacy" className="hover:text-accent hover:underline">
             Privacy Policy
           </Link>
         </p>

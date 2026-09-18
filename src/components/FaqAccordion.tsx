@@ -116,7 +116,7 @@ export default function FaqAccordion() {
             >
               <span className="font-medium text-text">{faq.question}</span>
               <span
-                className={`flex-none text-xl leading-none text-ausBlue transition-transform ${
+                className={`flex-none text-xl leading-none text-accent transition-transform ${
                   isOpen ? "rotate-45" : ""
                 }`}
               >
@@ -130,7 +130,7 @@ export default function FaqAccordion() {
                     <ul key={blockIndex} className="space-y-1">
                       {block.map((item) => (
                         <li key={item} className="flex items-start gap-2">
-                          <span className="mt-1 text-ausBlue">✔</span>
+                          <span className="mt-1 text-accent">✔</span>
                           <span>{item}</span>
                         </li>
                       ))}

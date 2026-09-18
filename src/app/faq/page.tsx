@@ -18,7 +18,7 @@ export default function FaqPage() {
         <FaqAccordion />
       </section>
 
-      <section className="border-t border-metallic/40 bg-ausBlue/5 px-6 py-20">
+      <section className="border-t border-metallic/40 bg-accent/5 px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-semibold text-text">
             Still Have Questions?
@@ -28,7 +28,7 @@ export default function FaqPage() {
           </p>
           <Link
             href="/contact"
-            className="mt-6 inline-block rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-ctaRed/90"
+            className="mt-6 inline-block rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
           >
             Contact Us
           </Link>

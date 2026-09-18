@@ -125,7 +125,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 bg-ausBlue/5 px-6 py-20">
+      <section className="border-t border-metallic/40 bg-accent/5 px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-center text-3xl font-semibold text-text">
             Additional Services

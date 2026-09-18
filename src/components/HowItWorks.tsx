@@ -35,7 +35,7 @@ export default function HowItWorks() {
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {steps.map((step, index) => (
             <div key={step.title} className="flex gap-4">
-              <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-ausBlue text-background font-semibold">
+              <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-accent text-background font-semibold">
                 {index + 1}
               </div>
               <div>
@@ -50,7 +50,7 @@ export default function HowItWorks() {
         <div className="mt-10 text-center">
           <Link
             href="/how-it-works"
-            className="text-sm font-medium text-ausBlue transition-colors hover:underline"
+            className="text-sm font-medium text-accent transition-colors hover:underline"
           >
             View the full process &rarr;
           </Link>

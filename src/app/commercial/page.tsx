@@ -85,7 +85,7 @@ export default function CommercialPage() {
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 bg-ausBlue/5 px-6 py-20">
+      <section className="border-t border-metallic/40 bg-accent/5 px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-semibold text-text">
             📦 Batch &amp; Contract Sharpening
@@ -114,14 +114,14 @@ export default function CommercialPage() {
             href="https://www.google.com/maps/place/22+Queenscliff+Dr,+Woodbine+NSW+2560"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-block text-ausBlue hover:underline"
+            className="mt-2 inline-block text-accent hover:underline"
           >
             Open in Google Maps
           </a>
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 bg-ausBlue/5 px-6 py-20">
+      <section className="border-t border-metallic/40 bg-accent/5 px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-semibold text-text">
             📞 Book Commercial Sharpening
@@ -131,7 +131,7 @@ export default function CommercialPage() {
               <strong className="text-text">Phone:</strong>{" "}
               <a
                 href="tel:0412974277"
-                className="text-ausBlue hover:underline"
+                className="text-accent hover:underline"
               >
                 0412 974 277
               </a>
@@ -141,7 +141,7 @@ export default function CommercialPage() {
               <strong className="text-text">Email:</strong>{" "}
               <a
                 href="mailto:phil@xtrasharp.com.au"
-                className="text-ausBlue hover:underline"
+                className="text-accent hover:underline"
               >
                 phil@xtrasharp.com.au
               </a>

@@ -63,7 +63,7 @@ export default function TipsPage() {
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 bg-ausBlue/5 px-6 py-20">
+      <section className="border-t border-metallic/40 bg-accent/5 px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-semibold text-text">
             ✂️ Scissor Care (Grooming &amp; Barber)
@@ -85,7 +85,7 @@ export default function TipsPage() {
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 bg-ausBlue/5 px-6 py-20">
+      <section className="border-t border-metallic/40 bg-accent/5 px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-semibold text-text">
             🪚 Workshop Tool Tips
@@ -108,7 +108,7 @@ export default function TipsPage() {
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 bg-ausBlue/5 px-6 py-20">
+      <section className="border-t border-metallic/40 bg-accent/5 px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-semibold text-text">
             📞 Need Professional Sharpening?
@@ -118,7 +118,7 @@ export default function TipsPage() {
               <strong className="text-text">Phone:</strong>{" "}
               <a
                 href="tel:0412974277"
-                className="text-ausBlue hover:underline"
+                className="text-accent hover:underline"
               >
                 0412 974 277
               </a>
@@ -128,7 +128,7 @@ export default function TipsPage() {
               <strong className="text-text">Email:</strong>{" "}
               <a
                 href="mailto:phil@xtrasharp.com.au"
-                className="text-ausBlue hover:underline"
+                className="text-accent hover:underline"
               >
                 phil@xtrasharp.com.au
               </a>

@@ -48,7 +48,7 @@ export default function ContactMethods() {
               href={method.link.href}
               target={method.link.external ? "_blank" : undefined}
               rel={method.link.external ? "noopener noreferrer" : undefined}
-              className="mt-3 inline-block font-medium text-ausBlue hover:underline"
+              className="mt-3 inline-block font-medium text-accent hover:underline"
             >
               {method.link.label}
             </a>

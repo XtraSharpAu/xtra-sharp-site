@@ -16,12 +16,12 @@ export default function ProcessStep({
   return (
     <section
       className={`border-t border-metallic/40 px-6 py-16 ${
-        alt ? "bg-ausBlue/5" : ""
+        alt ? "bg-accent/5" : ""
       }`}
     >
       <div className="mx-auto max-w-4xl">
         <div className="flex items-center gap-4">
-          <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-ausBlue text-lg font-semibold text-background">
+          <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-accent text-lg font-semibold text-background">
             {number}
           </div>
           <h2 className="text-2xl font-semibold text-text sm:text-3xl">

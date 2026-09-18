@@ -36,7 +36,7 @@ export default function ServiceDetail({
         <ul className="mt-2 space-y-1">
           {whatsIncluded.map((item) => (
             <li key={item} className="flex items-start gap-2 text-sm text-text/70">
-              <span className="mt-0.5 text-ausBlue">✔</span>
+              <span className="mt-0.5 text-accent">✔</span>
               <span>{item}</span>
             </li>
           ))}
@@ -64,7 +64,7 @@ export default function ServiceDetail({
           {highlights.map((item) => (
             <li
               key={item}
-              className="rounded-full border border-ausBlue/40 bg-ausBlue/5 px-3 py-1 text-xs font-medium text-ausBlue"
+              className="rounded-full border border-accent/40 bg-accent/5 px-3 py-1 text-xs font-medium text-accent"
             >
               {item}
             </li>

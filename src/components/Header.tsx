@@ -27,7 +27,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors hover:text-ausBlue"
+              className="transition-colors hover:text-accent"
             >
               {link.label}
             </Link>
@@ -35,7 +35,7 @@ export default function Header() {
         </nav>
         <Link
           href="/contact"
-          className="rounded-full bg-ctaRed px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-ctaRed/90"
+          className="rounded-full bg-ctaRed px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
         >
           Book Appointment
         </Link>

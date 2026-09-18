@@ -29,7 +29,7 @@ export default function CommercialSegment({
             key={item}
             className="flex items-start gap-2 text-sm text-text/70"
           >
-            <span className="mt-0.5 text-ausBlue">✔</span>
+            <span className="mt-0.5 text-accent">✔</span>
             <span>{item}</span>
           </li>
         ))}

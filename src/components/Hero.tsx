@@ -18,13 +18,13 @@ export default function Hero() {
       <div className="mt-4 flex flex-col gap-4 sm:flex-row">
         <Link
           href="/contact"
-          className="rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-ctaRed/90"
+          className="rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
         >
           Book Appointment
         </Link>
         <Link
           href="/services"
-          className="rounded-full border border-ausBlue px-6 py-3 text-sm font-medium text-ausBlue transition-colors hover:bg-ausBlue/10"
+          className="rounded-full border border-accent px-6 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent/10"
         >
           View Services
         </Link>
