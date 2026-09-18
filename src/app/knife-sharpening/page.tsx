@@ -171,9 +171,6 @@ export default function KnifeSharpeningPage() {
               </div>
             ))}
           </div>
-          <p className="mt-4 text-center text-sm text-text/60">
-            No bulk pricing.
-          </p>
         </div>
       </section>
 
