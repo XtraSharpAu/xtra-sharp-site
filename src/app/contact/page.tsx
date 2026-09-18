@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Contact | Xtra Sharp Campbelltown NSW",
   description:
     "Contact Xtra Sharp for bookings, questions, quotes, and mail-in sharpening enquiries in Campbelltown NSW.",
+};
+
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  url: "https://xtrasharp.com.au/contact",
+  contactType: "Customer Service",
+  telephone: "0412 974 277",
+  email: "phil@xtrasharp.com.au",
 };
 
 const contactDetails = [
@@ -22,6 +32,8 @@ const contactDetails = [
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={contactPageSchema} />
+
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">
           Contact Xtra Sharp

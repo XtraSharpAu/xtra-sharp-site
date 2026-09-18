@@ -1,11 +1,32 @@
 import type { Metadata } from "next";
 import CommercialSegment from "@/components/CommercialSegment";
 import Checklist from "@/components/Checklist";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
   description:
     "Professional knife sharpening in Campbelltown NSW. Water-cooled sharpening for kitchen knives, butcher knives, hunting knives, large knives, tomahawks, and axes.",
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Sharpening",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Xtra Sharp",
+  },
+  areaServed: "Campbelltown NSW, Macarthur region",
+  offers: {
+    "@type": "Offer",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      priceCurrency: "AUD",
+      minPrice: 10,
+      maxPrice: 80,
+    },
+  },
 };
 
 const knifeTypes = [
@@ -70,6 +91,8 @@ const whyChooseUs = [
 export default function KnifeSharpeningPage() {
   return (
     <>
+      <JsonLd data={serviceSchema} />
+
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">
           Professional Knife Sharpening &mdash; Campbelltown NSW

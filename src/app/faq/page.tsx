@@ -1,10 +1,42 @@
 import type { Metadata } from "next";
 import Checklist from "@/components/Checklist";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "FAQ | Xtra Sharp Campbelltown NSW",
   description:
     "Answers to common questions about sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp.",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What items do you sharpen?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Knives, scissors, clipper blades, garden tools, processor blades, industrial blades, chisels.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does sharpening take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most sharpening is completed same day or next day. Mail-in sharpening is usually completed within 1–2 business days after arrival.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do prices change depending on condition?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Some items may vary in price depending on condition. You can send a photo for an exact quote.",
+      },
+    },
+  ],
 };
 
 const itemsSharpened = [
@@ -31,6 +63,8 @@ const itemsSharpened = [
 export default function FaqPage() {
   return (
     <>
+      <JsonLd data={faqSchema} />
+
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">
           Frequently Asked Questions

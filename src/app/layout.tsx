@@ -2,7 +2,27 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import "@/styles/globals.css";
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Xtra Sharp",
+  image: "https://xtrasharp.com.au/logo.png",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Campbelltown",
+    addressRegion: "NSW",
+    addressCountry: "Australia",
+  },
+  telephone: "0412 974 277",
+  url: "https://xtrasharp.com.au",
+  description:
+    "Professional sharpening services for knives, scissors, clipper blades, garden tools, processor blades and industrial blades.",
+  areaServed:
+    "Campbelltown NSW, Macarthur region, Australia-wide (mail-in sharpening)",
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +47,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background text-text">
+        <JsonLd data={localBusinessSchema} />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
