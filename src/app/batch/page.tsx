@@ -28,8 +28,9 @@ const pricingFactors = [
 ];
 
 const turnaround = [
-  "24–48 hours for standard batches",
-  "Same-day available depending on workload",
+  "1–2 days for most batches",
+  "Up to 3 days during busy periods, depending on workload",
+  "Urgent jobs available by arrangement",
   "Priority handling for commercial clients",
 ];
 

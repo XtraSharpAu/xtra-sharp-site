@@ -40,9 +40,9 @@ const sections = [
   {
     title: "Turnaround Times",
     paragraphs: [
-      "Standard turnaround is 24–48 hours.",
-      "Large batches or specialty tools may take longer.",
-      "Urgent jobs are available on request and quoted based on workload.",
+      "Most items are completed within 1–2 days.",
+      "During busy periods this can take up to 3 days, depending on workload.",
+      "Urgent jobs are available by arrangement.",
     ],
   },
   {

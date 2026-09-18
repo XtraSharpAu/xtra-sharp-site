@@ -29,9 +29,9 @@ const faqs: FaqItem[] = [
   {
     question: "How long does sharpening take?",
     content: [
-      "Standard turnaround is 24–48 hours.",
-      "Large batches or specialty tools may take longer.",
-      "Urgent jobs are available on request.",
+      "Most items are completed within 1–2 days.",
+      "Busy periods may take up to 3 days, depending on workload.",
+      "Urgent jobs are available by arrangement.",
     ],
   },
   {

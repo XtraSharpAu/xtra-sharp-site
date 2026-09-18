@@ -31,7 +31,7 @@ export default function ThankYouPage() {
                 "Your items and service details will be reviewed",
                 "You'll receive a confirmation message",
                 "A drop-off, pick-up, or mail-in arrangement will be finalised",
-                "Turnaround time will be provided (usually 24–48 hours)",
+                "Turnaround time will be provided (usually 1–2 days)",
               ]}
             />
           </div>

@@ -21,7 +21,7 @@ const workshop = [
 const promise = [
   "Honest quotes — no hidden costs",
   "Consistent quality across every job",
-  "Fast turnaround (usually 24–48 hours)",
+  "Fast turnaround (usually 1–2 days)",
   "Appointment-only service for reliability",
 ];
 

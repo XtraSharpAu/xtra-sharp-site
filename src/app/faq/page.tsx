@@ -47,7 +47,7 @@ const faqSchema = {
       name: "How long does sharpening take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most sharpening is completed same day or next day. Mail-in sharpening is usually completed within 1–2 business days after arrival.",
+        text: "Most sharpening is completed within 1–2 days. Busy periods may take up to 3 days, depending on workload. Urgent jobs are available by arrangement.",
       },
     },
     {
@@ -126,9 +126,9 @@ export default function FaqPage() {
             How long does sharpening take?
           </h2>
           <p className="mt-4 text-text/80">
-            Most sharpening is completed same day or next day, depending on
-            the number of items. Mail-in sharpening is usually completed
-            within 1–2 business days after your items arrive.
+            Most sharpening is completed within 1–2 days. During busy
+            periods this can take up to 3 days, depending on workload.
+            Urgent jobs are available by arrangement.
           </p>
         </div>
       </section>

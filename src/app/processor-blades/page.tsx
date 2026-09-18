@@ -162,9 +162,9 @@ export default function ProcessorBladesPage() {
             Turnaround Time
           </h2>
           <p className="mt-4 text-text/80">
-            Most processor blades are sharpened same day or next day.
-            Mail-in sharpening is usually completed within 1–2 business
-            days after arrival.
+            Most processor blades are completed within 1–2 days. Busy
+            periods may take up to 3 days, depending on workload. Urgent
+            jobs are available by arrangement.
           </p>
         </div>
       </section>

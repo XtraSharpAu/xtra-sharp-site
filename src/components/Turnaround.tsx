@@ -1,7 +1,7 @@
 const times = [
-  { label: "Standard items", value: "24–48 hours" },
-  { label: "Large batches", value: "Quoted" },
-  { label: "Urgent jobs", value: "Available on request" },
+  { label: "Most items", value: "1–2 days" },
+  { label: "Busy periods", value: "Up to 3 days" },
+  { label: "Urgent jobs", value: "By arrangement" },
 ];
 
 export default function Turnaround() {

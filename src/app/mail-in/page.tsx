@@ -79,7 +79,7 @@ const howItWorks = [
   },
   {
     title: "Fast turnaround",
-    description: "1–2 business days after arrival.",
+    description: "1–2 days after arrival, up to 3 days during busy periods.",
   },
   {
     title: "Return postage",
@@ -220,9 +220,10 @@ export default function MailInPage() {
             Turnaround Time
           </h2>
           <p className="mt-4 text-text/80">
-            Mail-in sharpening is usually completed within 1–2 business days
-            after your items arrive. Return postage is sent using Australia
-            Post with tracking.
+            Most items are completed within 1–2 days of arrival. During busy
+            periods this can take up to 3 days, depending on workload.
+            Urgent jobs are available by arrangement. Return postage is sent
+            using Australia Post with tracking.
           </p>
         </div>
       </section>
