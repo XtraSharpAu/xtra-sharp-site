@@ -38,6 +38,14 @@ export const metadata: Metadata = {
   title: "Xtra Sharp | Knife & Tool Sharpening in Campbelltown & Macarthur",
   description:
     "Professional, appointment-only knife, scissor, clipper blade and tool sharpening in Campbelltown, Western Sydney & the Macarthur region. Drop-off, mail-in and local pick-up available.",
+  openGraph: {
+    title: "Xtra Sharp | Professional Sharpening in Campbelltown NSW",
+    description:
+      "Knife, scissors, clipper blade, garden tool and processor blade sharpening. Fast turnaround. Mail-in available Australia-wide.",
+    url: "https://xtrasharp.com.au",
+    type: "website",
+    images: ["https://xtrasharp.com.au/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
