@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Sharpening Tips & Advice | Xtra Sharp",
   description:
     "Practical care tips for knives, scissors, clipper blades and workshop tools between professional sharpening visits, from Xtra Sharp in Campbelltown NSW.",
+  alternates: {
+    canonical: "https://xtrasharp.com.au/tips",
+  },
 };
 
 const knifeCare = [

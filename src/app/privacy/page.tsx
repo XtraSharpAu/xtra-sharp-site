@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Xtra Sharp",
   description:
     "How Xtra Sharp collects, uses, and protects customer information, booking details, and communication.",
+  alternates: {
+    canonical: "https://xtrasharp.com.au/privacy",
+  },
 };
 
 const sections = [

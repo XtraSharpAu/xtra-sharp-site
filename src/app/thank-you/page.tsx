@@ -6,6 +6,13 @@ import Checklist from "@/components/Checklist";
 export const metadata: Metadata = {
   title: "Thank You | Xtra Sharp",
   description: "Your message to Xtra Sharp has been received.",
+  alternates: {
+    canonical: "https://xtrasharp.com.au/thank-you",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function ThankYouPage() {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
@@ -23,6 +24,9 @@ export const metadata: Metadata = {
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/scissors-sharpening",
+  },
+  alternates: {
+    canonical: "https://xtrasharp.com.au/scissors-sharpening",
   },
 };
 
@@ -74,6 +78,12 @@ export default function ScissorsSharpeningPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Scissors Sharpening", url: "https://xtrasharp.com.au/scissors-sharpening" },
+        ]}
+      />
 
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">

@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Services & Pricing | Xtra Sharp",
   description:
     "Professional knife, scissor, clipper blade and tool sharpening in Campbelltown NSW. See what's included and common pricing for every service.",
+  alternates: {
+    canonical: "https://xtrasharp.com.au/services",
+  },
 };
 
 const services = [

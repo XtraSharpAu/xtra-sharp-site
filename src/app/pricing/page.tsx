@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Checklist from "@/components/Checklist";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Pricing | Xtra Sharp Campbelltown NSW",
@@ -19,6 +20,9 @@ export const metadata: Metadata = {
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/pricing",
+  },
+  alternates: {
+    canonical: "https://xtrasharp.com.au/pricing",
   },
 };
 
@@ -131,6 +135,13 @@ function PricingBox({ title, items, text }: PricingSectionData) {
 export default function PricingPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Pricing", url: "https://xtrasharp.com.au/pricing" },
+        ]}
+      />
+
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">Pricing</h1>
         <p className="max-w-2xl text-lg text-text/70">

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Service Terms | Xtra Sharp",
   description:
     "Xtra Sharp's service terms covering appointments, item condition, repairs, turnaround, pricing, pick-up/mail-in, liability, and cancellations.",
+  alternates: {
+    canonical: "https://xtrasharp.com.au/terms",
+  },
 };
 
 const sections = [

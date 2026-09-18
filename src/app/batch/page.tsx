@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Batch Sharpening | Xtra Sharp",
   description:
     "Batch sharpening for schools, salons, restaurants, workshops and tradespeople across Campbelltown, Woodbine and Western Sydney, with priority handling and consistent edge quality.",
+  alternates: {
+    canonical: "https://xtrasharp.com.au/batch",
+  },
 };
 
 const batchItems = [

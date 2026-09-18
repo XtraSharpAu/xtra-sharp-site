@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "About | Xtra Sharp",
   description:
     "Xtra Sharp is a professional knife and tool sharpening service based in Woodbine, Campbelltown NSW, serving Western Sydney.",
+  alternates: {
+    canonical: "https://xtrasharp.com.au/about",
+  },
 };
 
 const workshop = [

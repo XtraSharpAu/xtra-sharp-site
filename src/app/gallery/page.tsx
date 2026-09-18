@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Gallery | Xtra Sharp",
   description:
     "See examples of Xtra Sharp's knife, scissor, clipper blade and tool sharpening work, plus our Campbelltown NSW workshop setup.",
+  alternates: {
+    canonical: "https://xtrasharp.com.au/gallery",
+  },
 };
 
 const categories = [

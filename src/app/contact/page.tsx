@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import ContactForm from "@/components/ContactForm";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Contact | Xtra Sharp Campbelltown NSW",
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
   other: {
     "twitter:url": "https://xtrasharp.com.au/contact",
   },
+  alternates: {
+    canonical: "https://xtrasharp.com.au/contact",
+  },
 };
 
 const contactPageSchema = {
@@ -36,6 +40,12 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={contactPageSchema} />
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Contact", url: "https://xtrasharp.com.au/contact" },
+        ]}
+      />
 
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">Contact</h1>

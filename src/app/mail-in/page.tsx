@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Checklist from "@/components/Checklist";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Mail-In Sharpening | Xtra Sharp Australia-Wide",
@@ -20,6 +21,9 @@ export const metadata: Metadata = {
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/mail-in",
+  },
+  alternates: {
+    canonical: "https://xtrasharp.com.au/mail-in",
   },
 };
 
@@ -102,6 +106,13 @@ const importantNotes = [
 export default function MailInPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Mail-In Sharpening", url: "https://xtrasharp.com.au/mail-in" },
+        ]}
+      />
+
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">
           Mail-In Sharpening

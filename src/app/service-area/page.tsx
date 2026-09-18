@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PillList from "@/components/PillList";
 import Checklist from "@/components/Checklist";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Service Area | Xtra Sharp Campbelltown NSW",
@@ -23,6 +24,9 @@ export const metadata: Metadata = {
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/service-area",
+  },
+  alternates: {
+    canonical: "https://xtrasharp.com.au/service-area",
   },
 };
 
@@ -51,6 +55,13 @@ const noMobileNotes = [
 export default function ServiceAreaPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Service Area", url: "https://xtrasharp.com.au/service-area" },
+        ]}
+      />
+
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">
           Service Area

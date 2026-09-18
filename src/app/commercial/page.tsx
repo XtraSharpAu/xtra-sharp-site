@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Commercial Clients | Xtra Sharp",
   description:
     "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown, Woodbine and Western Sydney, with batch pricing and scheduled cycles.",
+  alternates: {
+    canonical: "https://xtrasharp.com.au/commercial",
+  },
 };
 
 const segments = [

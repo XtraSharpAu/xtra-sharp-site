@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "How It Works | Xtra Sharp",
   description:
     "The step-by-step process behind every Xtra Sharp job — booking, drop-off/mail-in/pick-up options, sharpening, quality checks, and return.",
+  alternates: {
+    canonical: "https://xtrasharp.com.au/how-it-works",
+  },
 };
 
 const sendOptions = [
