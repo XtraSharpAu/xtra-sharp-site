@@ -3,97 +3,96 @@ import Checklist from "@/components/Checklist";
 
 export const metadata: Metadata = {
   title: "Pricing | Xtra Sharp Campbelltown NSW",
-  description:
-    "Clear, simple sharpening prices for knives, scissors, clipper blades, garden tools, processor blades, and chisels in Campbelltown NSW.",
+  description: "Clear, upfront pricing for all sharpening services.",
 };
 
-type PricingCategoryData = {
+type PriceLine = { name: string; price: string };
+
+type PricingSectionData = {
   title: string;
-  subtitle?: string;
-  items: { name: string; price: string }[];
+  items: PriceLine[];
+  text: string;
 };
 
-const categories: PricingCategoryData[] = [
-  {
-    title: "Knife Sharpening",
-    subtitle: "Water-cooled",
-    items: [
-      { name: "Standard knives", price: "$10" },
-      { name: "Butcher knives", price: "$10" },
-      { name: "Large knives", price: "$15" },
-      { name: "Hunting knives", price: "$10–$15 (depending on condition)" },
-    ],
-  },
-  {
-    title: "Axes & Heavy Blades",
-    subtitle: "Water-cooled",
-    items: [
-      { name: "Tomahawk", price: "$15" },
-      { name: "Axe", price: "$15–$25 (depending on condition)" },
-    ],
-  },
-  {
-    title: "Scissors Sharpening",
-    subtitle: "Machine-guided",
-    items: [
-      { name: "Hairdressing scissors (bevel)", price: "$50" },
-      { name: "Hairdressing scissors (convex)", price: "$70" },
-      { name: "Grooming scissors (bevel)", price: "$25" },
-      { name: "Grooming scissors (convex)", price: "$35" },
-      { name: "Sewing / dressmaking scissors", price: "$15" },
-    ],
-  },
-  {
-    title: "Clipper Blade Sharpening",
-    subtitle: "Machine-guided",
-    items: [
-      { name: "A5 blades", price: "$15" },
-      { name: "Wide blades", price: "$20" },
-      { name: "Large animal blades", price: "$20" },
-    ],
-  },
-  {
-    title: "Garden Tools Sharpening",
-    subtitle: "Water-cooled",
-    items: [
-      { name: "Secateurs", price: "$13" },
-      { name: "Small garden tools", price: "$13" },
-      { name: "Hedge shears", price: "$15" },
-    ],
-  },
-  {
-    title: "Processor Blades Sharpening",
-    subtitle: "Water-cooled",
-    items: [
-      {
-        name: "Home processor blades",
-        price: "$10–$25 (depending on condition)",
-      },
-      { name: "Large industrial processor blades", price: "$30–$80" },
-    ],
-  },
-  {
-    title: "Chisels",
-    items: [{ name: "Chisels", price: "$13" }],
-  },
+const knives: PricingSectionData = {
+  title: "Knives",
+  items: [
+    { name: "Small Victorinox paring knives", price: "$6" },
+    { name: "Knives (standard)", price: "$10" },
+    { name: "Large knives", price: "$15" },
+    { name: "Butcher knives", price: "$10" },
+    { name: "Hunting knives", price: "$10–$15" },
+  ],
+  text: "Water-cooled sharpening for safe, accurate edges.",
+};
+
+const scissors: PricingSectionData = {
+  title: "Scissors",
+  items: [
+    { name: "Hairdressing scissors (bevel)", price: "$50" },
+    { name: "Hairdressing scissors (convex)", price: "$70" },
+    { name: "Grooming scissors (bevel)", price: "$25" },
+    { name: "Grooming scissors (convex)", price: "$35" },
+    { name: "Grooming thinning scissors", price: "$30" },
+    { name: "Sewing / household scissors", price: "$15" },
+  ],
+  text: "Machine-guided sharpening with correct angle, ride line and tension.",
+};
+
+const clipperBlades: PricingSectionData = {
+  title: "Clipper Blades",
+  items: [
+    { name: "A5 clipper blades", price: "$15" },
+    { name: "Wide clipper blades", price: "$20" },
+    { name: "Large-animal blades", price: "$20" },
+  ],
+  text: "Machine-guided sharpening with correct alignment and finishing.",
+};
+
+const gardenTools: PricingSectionData = {
+  title: "Garden Tools",
+  items: [
+    { name: "Hedge shears", price: "$15" },
+    { name: "Secateurs", price: "$15" },
+    { name: "Axes / tomahawks", price: "$20" },
+  ],
+  text: "Water-cooled sharpening for clean, accurate edges.",
+};
+
+const processorBlades: PricingSectionData = {
+  title: "Processor Blades",
+  items: [
+    { name: "Home processor blades", price: "$20–$25" },
+    {
+      name: "Large industrial blades",
+      price: "$30 or more depending on size and condition",
+    },
+  ],
+  text: "Water-cooled sharpening for safe, accurate edges.",
+};
+
+const pricingSections: PricingSectionData[] = [
+  knives,
+  scissors,
+  clipperBlades,
+  gardenTools,
+  processorBlades,
 ];
 
-const whyChooseUs = [
-  "13+ years sharpening experience",
-  "Mirror Cut® accredited",
-  "Flamin' Sharp licensee",
-  "Water-cooled sharpening for items that require it",
-  "Machine-guided sharpening with controlled hand input",
-  "Fast turnaround",
-  "Trusted by schools, restaurants, groomers, salons, and local businesses",
+const importantNotes = [
+  "No mobile sharpening",
+  "No on-site sharpening",
+  "Drop-off only",
+  "Mail-in available Australia-wide",
 ];
 
-function PricingBox({ title, subtitle, items }: PricingCategoryData) {
+function PricingBox({ title, items, text }: PricingSectionData) {
   return (
-    <div className="rounded-lg border border-metallic/40 bg-background p-6">
-      <h3 className="text-xl font-semibold text-text">{title}</h3>
-      {subtitle && <p className="text-sm text-text/60">{subtitle}</p>}
-      <div className="mt-4">
+    <div className="mx-auto max-w-md">
+      <h2 className="text-center text-2xl font-semibold text-text">
+        {title}
+      </h2>
+      <div className="mt-6 rounded-lg border border-metallic/40 bg-background p-6">
         {items.map((line, index) => (
           <div
             key={line.name}
@@ -101,13 +100,14 @@ function PricingBox({ title, subtitle, items }: PricingCategoryData) {
               index > 0 ? "border-t border-metallic/40" : ""
             }`}
           >
-            <span className="text-sm text-text/80">{line.name}</span>
-            <span className="text-right text-sm font-semibold text-ctaRed">
+            <span className="text-text/80">{line.name}</span>
+            <span className="text-right font-semibold text-ctaRed">
               {line.price}
             </span>
           </div>
         ))}
       </div>
+      <p className="mt-4 text-center text-text/80">{text}</p>
     </div>
   );
 }
@@ -116,12 +116,9 @@ export default function PricingPage() {
   return (
     <>
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
-        <h1 className="text-4xl font-bold text-text sm:text-5xl">
-          Pricing — Xtra Sharp
-        </h1>
+        <h1 className="text-4xl font-bold text-text sm:text-5xl">Pricing</h1>
         <p className="max-w-2xl text-lg text-text/70">
-          Clear, simple pricing for knives, scissors, clipper blades, garden
-          tools, processor blades, and chisels.
+          Clear, upfront pricing for all sharpening services.
         </p>
         <a
           href="tel:0412974277"
@@ -131,34 +128,23 @@ export default function PricingPage() {
         </a>
       </section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-20">
-        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
-          {categories.map((category) => (
-            <PricingBox key={category.title} {...category} />
-          ))}
-        </div>
-      </section>
-
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Condition-Based Pricing
-          </h2>
-          <p className="mt-4 text-text/80">
-            Some items may vary in price depending on condition. You can
-            send a photo for an exact quote before drop-off or mail-in.
-          </p>
-        </div>
-      </section>
+      {pricingSections.map((section, index) => (
+        <section
+          key={section.title}
+          className={`border-t border-metallic/40 px-6 py-16 ${
+            index % 2 === 1 ? "bg-surface" : ""
+          }`}
+        >
+          <PricingBox {...section} />
+        </section>
+      ))}
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Mail-In Sharpening
-          </h2>
+          <h2 className="text-2xl font-semibold text-text">Photo Quotes</h2>
           <p className="mt-4 text-text/80">
-            Same pricing as above. Return postage added to final total
-            (Australia Post tracked).
+            If you&apos;re unsure about pricing, you can send a photo for
+            confirmation.
           </p>
         </div>
       </section>
@@ -166,11 +152,12 @@ export default function PricingPage() {
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-semibold text-text">
-            Free School Pick-Up
+            Drop-Off Sharpening (Campbelltown NSW)
           </h2>
           <p className="mt-4 text-text/80">
-            Free pick-up and drop-off available for local schools in the
-            Campbelltown area.
+            Drop-off sharpening is available by appointment. I sharpen from
+            my dedicated sharpening area in Woodbine, listed publicly as
+            Campbelltown NSW.
           </p>
         </div>
       </section>
@@ -178,24 +165,26 @@ export default function PricingPage() {
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-semibold text-text">
-            Commercial Pick-Up
+            Mail-In Sharpening (Australia-Wide)
           </h2>
           <p className="mt-4 text-text/80">
-            Commercial collections are generally offered for jobs over $300
-            within the local Campbelltown area. If your business is very
-            close to me, I can often assist with smaller loads &mdash; just
-            contact me to check availability.
+            You can post items using a prepaid Australia Post satchel.
+            Return postage is sent with tracking.
+          </p>
+          <p className="mt-4 text-text/80">
+            Please contact me first before sending anything. I&apos;ll
+            confirm pricing, turnaround time and the correct satchel size.
           </p>
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 px-6 py-20">
+      <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-3xl font-semibold text-text">
-            Why Choose Xtra Sharp
+          <h2 className="text-center text-2xl font-semibold text-text">
+            Important Notes
           </h2>
           <div className="mt-6 inline-block text-left">
-            <Checklist items={whyChooseUs} />
+            <Checklist items={importantNotes} />
           </div>
         </div>
       </section>
