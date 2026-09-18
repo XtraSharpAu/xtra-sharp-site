@@ -76,8 +76,26 @@ The `docs/` folder has grown across several large requests into a substantial co
 | `content-expansion-pack.md` | (also listed above) |
 | `future-development-pack.md` | Ideas for new pages/services/content/marketing/automation/retention/growth |
 
+## Sharpening Encyclopedia
+
+| Doc | Covers |
+|---|---|
+| `sharpening-encyclopedia/README.md` | Index of the encyclopedia pack itself |
+| `sharpening-encyclopedia/01-knife-encyclopedia.md` | Cross-referenced knife topics + **new**: history of knife sharpening |
+| `sharpening-encyclopedia/02-scissors-encyclopedia.md` | Cross-referenced scissors topics + **new**: structured scissor anatomy reference |
+| `sharpening-encyclopedia/03-clipper-blade-encyclopedia.md` | Cross-referenced clipper topics + **new**: structured clipper blade anatomy + alignment theory |
+| `sharpening-encyclopedia/04-garden-tool-encyclopedia.md` | Fully cross-referenced (no gaps found) |
+| `sharpening-encyclopedia/05-processor-blade-encyclopedia.md` | Fully cross-referenced (no gaps found) |
+| `sharpening-encyclopedia/06-science-and-theory.md` | **New**: metallurgy fundamentals, heat treatment/tempering, microstructure, edge retention science, friction/cutting theory, abrasives explained, machine-guided vs. freehand |
+| `sharpening-encyclopedia/07-equipment.md` | **New**: general industry equipment categories — explicitly **not** a claim about Xtra Sharp's specific owned equipment (no verified info exists on that) |
+| `sharpening-encyclopedia/08-glossary.md` | **New**: 156 real, defined terms (short of the requested 200+ deliberately — see the file's own note on why padding wasn't used) |
+| `sharpening-encyclopedia/09-faq-megapack.md` | **New**: 100 compact Q&As across booking, all 5 categories, mail-in, pricing, science, and commercial |
+| `sharpening-encyclopedia/10-training-pack.md` | **New**: 4-level curriculum outline + 20 knowledge-check questions — explicitly **not** a real accreditation or a substitute for supervised hands-on practice |
+
 ## How This Index Came About
 
 A request for a "Content Flood Pack" asked for the same nine categories above, re-labelled with new section numbers, almost entirely duplicating work already done in two prior large requests (verified by mapping every requested item against the existing corpus before building anything new). Rather than regenerate near-identical content under new filenames — which would have added volume without adding value, and made the corpus harder to navigate rather than easier — the user confirmed: skip the duplicates, add only genuinely new material, and build this index. The five new long-form guides (`long-form-content/11–15`), five new blog posts (`blog-posts/11–15`), and the modest "round 3" top-ups to the marketing banks above are the actual new content from that request; everything else in the Content Flood Pack request was already covered by what's listed above it in this index.
 
 **Not expanded further, and why**: flyers and brochures already have 30 concepts each across two rounds — a third round would mean either restating the same 5 services and general themes a third time, or inventing scenarios (new services, new audiences) that don't exist. Seasonal promotions already sit at exactly the requested count of 20. If a genuinely new angle for any of these emerges (a real new service, a real new audience segment), add to the relevant file rather than starting a fourth round file.
+
+A follow-up "Sharpening Encyclopedia Pack" request repeated the same pattern for its first five sections (per-category encyclopedias for knives, scissors, clipper blades, garden tools, and processor blades), which turned out to overlap almost entirely with `technical-pack.md`, `long-form-content/`, `customer-education-pack/`, and `troubleshooting-pack/`. Applying the standing preference above without re-asking: those five sections became cross-reference structures (see the Sharpening Encyclopedia table) with only genuinely missing pieces written out in full (knife sharpening history; scissor and clipper blade anatomy references). Its remaining five sections (deep science/theory, equipment, glossary, FAQ megapack, training) were new ground and were built out in full, with two deliberate scope notes carried into the files themselves: the equipment section doesn't claim to describe Xtra Sharp's actual specific machines (no verified information on that exists in this project), and the training section is framed as a curriculum outline and comprehension check, not a real accreditation or a substitute for supervised hands-on practice.
