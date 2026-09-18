@@ -1,38 +1,222 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import FaqHero from "@/components/FaqHero";
-import FaqAccordion from "@/components/FaqAccordion";
+import Checklist from "@/components/Checklist";
 
 export const metadata: Metadata = {
-  title: "FAQ | Xtra Sharp",
+  title: "FAQ | Xtra Sharp Campbelltown NSW",
   description:
-    "Answers to common questions about Xtra Sharp's knife, scissor, clipper blade and tool sharpening services in Campbelltown NSW.",
+    "Answers to common questions about sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp.",
 };
+
+const itemsSharpened = [
+  "Kitchen knives",
+  "Butcher knives",
+  "Large knives",
+  "Hunting knives",
+  "Tomahawks",
+  "Axes",
+  "Hairdressing scissors",
+  "Grooming scissors",
+  "Sewing scissors",
+  "A5 clipper blades",
+  "Wide clipper blades",
+  "Large animal blades",
+  "Secateurs",
+  "Hedge shears",
+  "Small garden tools",
+  "Home processor blades",
+  "Large industrial processor blades",
+  "Chisels",
+];
 
 export default function FaqPage() {
   return (
     <>
-      <FaqHero />
-
-      <section className="border-t border-metallic/40 px-6 py-20">
-        <FaqAccordion />
+      <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
+        <h1 className="text-4xl font-bold text-text sm:text-5xl">
+          Frequently Asked Questions
+        </h1>
+        <p className="max-w-2xl text-lg text-text/70">
+          Answers to common questions about sharpening, pricing, mail-in
+          service, packing, and turnaround.
+        </p>
+        <a
+          href="tel:0412974277"
+          className="mt-4 inline-block rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
+        >
+          Call Now — 0412 974 277
+        </a>
       </section>
 
-      <section className="border-t border-metallic/40 bg-accent/5 px-6 py-20">
+      <section className="border-t border-metallic/40 px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
+            What items do you sharpen?
+          </h2>
+          <div className="mt-6 inline-block text-left">
+            <Checklist items={itemsSharpened} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold text-text">
-            Still Have Questions?
+          <h2 className="text-2xl font-semibold text-text">
+            How long does sharpening take?
           </h2>
           <p className="mt-4 text-text/80">
-            Get in touch and we&apos;ll help you out.
+            Most sharpening is completed same day or next day, depending on
+            the number of items. Mail-in sharpening is usually completed
+            within 1–2 business days after your items arrive.
           </p>
-          <Link
-            href="/contact"
-            className="mt-6 inline-block rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
-          >
-            Contact Us
-          </Link>
         </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-16">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-2xl font-semibold text-text">
+            Do you sharpen damaged items?
+          </h2>
+          <p className="mt-4 text-text/80">
+            Yes &mdash; I can sharpen most damaged items including chipped
+            knives, worn axes, dull clipper blades, and scissors needing
+            tension adjustment. If something is badly damaged, I will
+            contact you before proceeding.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-2xl font-semibold text-text">
+            Do prices change depending on condition?
+          </h2>
+          <p className="mt-4 text-text/80">
+            Some items may vary in price depending on condition, especially
+            hunting knives, axes, tomahawks, and processor blades. You can
+            send a photo for an exact quote before drop-off or mail-in.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-16">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-2xl font-semibold text-text">
+            How do I pack items for mail-in sharpening?
+          </h2>
+          <p className="mt-4 text-text/80">
+            Pack items securely using tea towels, rags, newspaper, or
+            bubble wrap. Wrap each item separately. Make sure blade tips
+            are well wrapped so they cannot punch through the packaging.
+            Fold cardboard over tips or add extra layers of cloth or
+            bubble wrap. Place items inside a strong packing box and pack
+            tightly so they cannot move around. Include your return
+            address, phone number, email address, and any notes about
+            your items.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-2xl font-semibold text-text">
+            Do I need to contact you before posting anything?
+          </h2>
+          <p className="mt-4 text-text/80">
+            Yes &mdash; please contact me first before sending any items.
+            I&apos;ll confirm pricing, turnaround time, and the correct
+            Australia Post satchel size.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-16">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-2xl font-semibold text-text">
+            How does return postage work?
+          </h2>
+          <p className="mt-4 text-text/80">
+            You can include a prepaid Australia Post satchel with your
+            items. This is the easiest option and ensures your return
+            postage is tracked.
+          </p>
+          <a
+            href="https://auspost.com.au/parcels-mail/calculate-postage-and-delivery-times/prepaid-satchels"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block text-accent hover:underline"
+          >
+            auspost.com.au/parcels-mail/calculate-postage-and-delivery-times/prepaid-satchels
+          </a>
+          <p className="mt-4 text-text/80">
+            If you prefer, I can add the postage cost to your final total
+            &mdash; just let me know when booking.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-2xl font-semibold text-text">
+            Do you offer pick-up services?
+          </h2>
+          <p className="mt-4 text-text/80">
+            Free pick-up and drop-off available for local schools in the
+            Campbelltown area.
+          </p>
+          <p className="mt-4 text-text/80">
+            Commercial collections are available for jobs over $300 within
+            the local Campbelltown area. If your business is very close to
+            me, I can often assist with smaller loads &mdash; just contact
+            me.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-16">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-2xl font-semibold text-text">
+            Where are you located?
+          </h2>
+          <p className="mt-4 text-text/80">
+            Woodbine, Campbelltown NSW. Full address provided after
+            booking.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-2xl font-semibold text-text">
+            How do I get a quote?
+          </h2>
+          <p className="mt-4 text-text/80">
+            You can call or text{" "}
+            <a href="tel:0412974277" className="text-accent hover:underline">
+              0412 974 277
+            </a>
+            , send a photo of your items, or email{" "}
+            <a
+              href="mailto:phil@xtrasharp.com.au"
+              className="text-accent hover:underline"
+            >
+              phil@xtrasharp.com.au
+            </a>{" "}
+            for an exact price.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-20 text-center">
+        <a
+          href="tel:0412974277"
+          className="inline-block rounded-full bg-ctaRed px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-ctaRed/90"
+        >
+          Call Now — 0412 974 277
+        </a>
+        <p className="mt-4 text-text/70">
+          Drop-off sharpening in Campbelltown NSW. Mail-in sharpening
+          Australia-wide.
+        </p>
       </section>
     </>
   );
