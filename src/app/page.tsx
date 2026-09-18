@@ -3,9 +3,27 @@ import CommercialSegment from "@/components/CommercialSegment";
 import Checklist from "@/components/Checklist";
 
 export const metadata: Metadata = {
-  title: "Xtra Sharp | Knife & Tool Sharpening in Campbelltown NSW",
+  title: "Xtra Sharp | Professional Sharpening in Campbelltown NSW",
   description:
-    "Professional knife and tool sharpening in Campbelltown NSW. Drop-off sharpening, mail-in service, and pick-up for schools and local businesses.",
+    "Knife, scissors, clipper blade, garden tool and processor blade sharpening. Fast turnaround. Mail-in available Australia-wide.",
+  openGraph: {
+    title: "Xtra Sharp | Professional Sharpening in Campbelltown NSW",
+    description:
+      "Knife, scissors, clipper blade, garden tool and processor blade sharpening. Fast turnaround. Mail-in available Australia-wide.",
+    url: "https://xtrasharp.com.au",
+    type: "website",
+    images: ["https://xtrasharp.com.au/og-image.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Xtra Sharp | Professional Sharpening in Campbelltown NSW",
+    description:
+      "Knife, scissors, clipper blade, garden tool and processor blade sharpening. Fast turnaround. Mail-in available Australia-wide.",
+    images: ["https://xtrasharp.com.au/og-image.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au",
+  },
 };
 
 const services = [

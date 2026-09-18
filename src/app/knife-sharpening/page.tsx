@@ -4,9 +4,9 @@ import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
+  title: "Knife Sharpening Campbelltown NSW | Xtra Sharp",
   description:
-    "Professional knife sharpening in Campbelltown NSW. Water-cooled sharpening for kitchen knives, butcher knives, hunting knives, large knives, tomahawks, and axes.",
+    "Water-cooled sharpening for kitchen, butcher, large and hunting knives. Clean, accurate edges with fast turnaround.",
   openGraph: {
     title: "Knife Sharpening Campbelltown NSW | Xtra Sharp",
     description:
@@ -14,6 +14,16 @@ export const metadata: Metadata = {
     url: "https://xtrasharp.com.au/knife-sharpening",
     type: "article",
     images: ["https://xtrasharp.com.au/og-knife.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Knife Sharpening Campbelltown NSW | Xtra Sharp",
+    description:
+      "Water-cooled sharpening for kitchen, butcher, large and hunting knives. Clean, accurate edges with fast turnaround.",
+    images: ["https://xtrasharp.com.au/og-knife.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au/knife-sharpening",
   },
 };
 
