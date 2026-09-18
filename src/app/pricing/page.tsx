@@ -38,7 +38,7 @@ const knives: PricingSectionData = {
   title: "Knives",
   items: [
     { name: "Small Victorinox paring knives", price: "$6" },
-    { name: "Knives (standard)", price: "$10" },
+    { name: "Standard kitchen knives", price: "$10" },
     { name: "Large knives", price: "$15" },
     { name: "Butcher knives", price: "$10" },
     { name: "Hunting knives", price: "$10–$15" },
@@ -85,7 +85,7 @@ const processorBlades: PricingSectionData = {
     { name: "Home processor blades", price: "$20–$25" },
     {
       name: "Large industrial blades",
-      price: "$30 or more depending on size and condition",
+      price: "$30+ depending on size and condition",
     },
   ],
   text: "Water-cooled sharpening for safe, accurate edges.",

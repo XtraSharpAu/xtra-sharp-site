@@ -54,7 +54,7 @@ const pricing = [
   { name: "Home processor blades", price: "$20–$25" },
   {
     name: "Large industrial blades",
-    price: "$30 or more depending on size and condition",
+    price: "$30+ depending on size and condition",
   },
 ];
 

@@ -33,7 +33,7 @@ The practical challenge, much like the salon scheduling problem, is that commerc
 
 Once a schedule is established, processor blade sharpening becomes a predictable line item rather than an unplanned cost:
 
-- Home processor blades run $20–$25 per sharpen; large industrial blades are $30 or more depending on size and condition (contact ahead for larger commercial blades, since pricing genuinely varies with size and condition rather than fitting a flat rate).
+- Home processor blades run $20–$25 per sharpen; large industrial blades are $30+ depending on size and condition (contact ahead for larger commercial blades, since pricing genuinely varies with size and condition rather than fitting a flat rate).
 - Multiply by your established interval to get an annual maintenance cost per blade/unit.
 - Weigh this against the hidden cost of reactive maintenance (product waste, slower prep, equipment strain) — a scheduled maintenance cost is usually smaller and more predictable than the accumulated cost of running degraded equipment through service, even before accounting for the equipment-longevity benefit of not running a blunt blade against a motor for extended periods.
 

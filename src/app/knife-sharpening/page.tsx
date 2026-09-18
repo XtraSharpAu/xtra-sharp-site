@@ -52,7 +52,7 @@ const serviceSchema = {
 
 const pricing = [
   { name: "Small Victorinox paring knives", price: "$6" },
-  { name: "Knives (standard)", price: "$10" },
+  { name: "Standard kitchen knives", price: "$10" },
   { name: "Large knives", price: "$15" },
   { name: "Butcher knives", price: "$10" },
   { name: "Hunting knives", price: "$10–$15" },

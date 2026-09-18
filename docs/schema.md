@@ -60,7 +60,7 @@ Template (Knife Sharpening shown; the other four are identical in shape, differi
 }
 ```
 
-> Note on Processor Blades: the real price list says "$30 or more depending on size and condition" for large industrial blades — an open-ended upper bound. Schema.org's `PriceSpecification.maxPrice` has no way to express "or more," so `maxPrice: 30` is used as the grounded, literal figure rather than an invented higher number.
+> Note on Processor Blades: the real price list says "$30+ depending on size and condition" for large industrial blades — an open-ended upper bound. Schema.org's `PriceSpecification.maxPrice` has no way to express "+", so `maxPrice: 30` is used as the grounded, literal figure rather than an invented higher number.
 
 ## 3. FAQPage (`/faq`)
 
@@ -107,7 +107,7 @@ This is the single source of truth for pricing referenced throughout this docs p
 | Category | Item | Price |
 |---|---|---|
 | Knives | Small Victorinox paring knives | $6 |
-| Knives | Knives (standard) | $10 |
+| Knives | Standard kitchen knives | $10 |
 | Knives | Large knives | $15 |
 | Knives | Butcher knives | $10 |
 | Knives | Hunting knives | $10–$15 |
@@ -124,7 +124,7 @@ This is the single source of truth for pricing referenced throughout this docs p
 | Garden Tools | Secateurs | $15 |
 | Garden Tools | Axes / tomahawks | $20 |
 | Processor Blades | Home processor blades | $20–$25 |
-| Processor Blades | Large industrial blades | $30 or more depending on size and condition |
+| Processor Blades | Large industrial blades | $30+ depending on size and condition |
 
 ## Untapped Schema Opportunities
 
