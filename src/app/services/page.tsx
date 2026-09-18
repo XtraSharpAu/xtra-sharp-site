@@ -28,7 +28,7 @@ const services = [
     ],
     pricing: [
       { label: "Small Victorinox paring knives", value: "$6" },
-      { label: "Knives (standard)", value: "$10" },
+      { label: "Standard kitchen knives", value: "$10" },
       { label: "Large knives", value: "$15" },
       { label: "Butcher knives", value: "$10" },
       { label: "Hunting knives", value: "$10–$15" },
@@ -98,7 +98,7 @@ const services = [
       { label: "Home processor blades", value: "$20–$25" },
       {
         label: "Large industrial blades",
-        value: "$30 or more depending on size and condition",
+        value: "$30+ depending on size and condition",
       },
     ],
     highlights: ["Home & commercial", "Water-cooled precision", "Consistent results"],
