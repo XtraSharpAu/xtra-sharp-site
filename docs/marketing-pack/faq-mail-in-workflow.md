@@ -1,4 +1,4 @@
-# FAQ — Mail-In Workflow (10)
+# FAQ — Mail-In Workflow (13)
 
 New entries focused specifically on the mechanics of the mail-in process — distinct from `faq-expansions.md` (general marketing Q&As, only a couple of which touch mail-in) and the mail-in-related entries already in `sharpening-encyclopedia/09-faq-megapack.md`. These are procedural: what actually happens, step by step, once someone decides to mail items in.
 
@@ -21,3 +21,9 @@ New entries focused specifically on the mechanics of the mail-in process — dis
 9. **"How will I know my order is finished and being sent back?"** — You'll receive confirmation that your job is complete before it's sent back, so you know it's on its way rather than just watching for a delivery with no notice.
 
 10. **"Is mail-in available everywhere in Australia, or just near Campbelltown?"** — Mail-in sharpening is available Australia-wide — you don't need to be local to use it, only to arrange drop-off or local pick-up.
+
+11. **"How long does mail-in sharpening take from start to finish?"** — The workshop turnaround itself is 1–2 days after your items arrive, up to 3 days during busy periods. On top of that, add postage transit time each way — the total end-to-end time depends on how long Australia Post takes to and from your location.
+
+12. **"Does mail-in take longer than a drop-off booking?"** — The sharpening work takes the same 1–2 days (up to 3 during busy periods) either way — that part doesn't change. Mail-in simply adds postage transit time in both directions, which a drop-off or local pick-up doesn't require.
+
+13. **"Is the 1–2 day turnaround counted from when I post my package, or when it arrives?"** — It's counted from arrival, not from when you post it. The 1–2 days (up to 3 during busy periods) covers the sharpening work at Xtra Sharp once your package reaches the workshop — postage time to and from you is separate.

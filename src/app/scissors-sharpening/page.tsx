@@ -52,11 +52,11 @@ function ScissorsIntroGallery() {
 export const metadata: Metadata = {
   title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Professional sharpening for hairdressing, grooming, sewing and household scissors.",
+    "Professional sharpening for hairdressing, grooming, sewing and household scissors in Campbelltown NSW, with mail-in sharpening Australia-wide.",
   openGraph: {
     title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional sharpening for hairdressing, grooming, sewing and household scissors.",
+      "Professional sharpening for hairdressing, grooming, sewing and household scissors in Campbelltown NSW, with mail-in sharpening Australia-wide.",
     url: "https://xtrasharp.com.au/scissors-sharpening",
     type: "article",
     images: ["https://xtrasharp.com.au/og-scissors.jpg"],
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional sharpening for hairdressing, grooming, sewing and household scissors.",
+      "Professional sharpening for hairdressing, grooming, sewing and household scissors in Campbelltown NSW, with mail-in sharpening Australia-wide.",
     images: ["https://xtrasharp.com.au/og-scissors.jpg"],
   },
   other: {

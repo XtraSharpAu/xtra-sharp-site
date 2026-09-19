@@ -5,10 +5,12 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Contact | Xtra Sharp Campbelltown NSW",
-  description: "Call, message or book a drop-off appointment.",
+  description:
+    "Call, message or book a drop-off appointment with Xtra Sharp in Campbelltown NSW, or arrange Australia-wide mail-in sharpening.",
   openGraph: {
     title: "Contact | Xtra Sharp Campbelltown NSW",
-    description: "Call, message or book a drop-off appointment.",
+    description:
+      "Call, message or book a drop-off appointment with Xtra Sharp in Campbelltown NSW, or arrange Australia-wide mail-in sharpening.",
     url: "https://xtrasharp.com.au/contact",
     type: "website",
     images: ["https://xtrasharp.com.au/og-contact.jpg"],
@@ -16,7 +18,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Contact | Xtra Sharp Campbelltown NSW",
-    description: "Call, message or book a drop-off appointment.",
+    description:
+      "Call, message or book a drop-off appointment with Xtra Sharp in Campbelltown NSW, or arrange Australia-wide mail-in sharpening.",
     images: ["https://xtrasharp.com.au/og-contact.jpg"],
   },
   other: {

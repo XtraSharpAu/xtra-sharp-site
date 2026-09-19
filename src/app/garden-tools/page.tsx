@@ -9,11 +9,11 @@ import { relatedServiceLinks } from "@/lib/serviceLinks";
 export const metadata: Metadata = {
   title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Water-cooled sharpening for secateurs, hedge shears and axes.",
+    "Water-cooled sharpening for secateurs, hedge shears and axes in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
   openGraph: {
     title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Water-cooled sharpening for secateurs, hedge shears and axes.",
+      "Water-cooled sharpening for secateurs, hedge shears and axes in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
     url: "https://xtrasharp.com.au/garden-tools",
     type: "article",
     images: ["https://xtrasharp.com.au/og-garden-tools.jpg"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Water-cooled sharpening for secateurs, hedge shears and axes.",
+      "Water-cooled sharpening for secateurs, hedge shears and axes in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
     images: ["https://xtrasharp.com.au/og-garden-tools.jpg"],
   },
   other: {

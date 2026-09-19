@@ -6,11 +6,11 @@ import Checklist from "@/components/Checklist";
 export const metadata: Metadata = {
   title: "Commercial Clients | Xtra Sharp",
   description:
-    "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown, Woodbine and Western Sydney, with batch pricing and scheduled cycles.",
+    "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown NSW, with batch pricing and scheduled cycles.",
   openGraph: {
     title: "Commercial Clients | Xtra Sharp",
     description:
-      "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown, Woodbine and Western Sydney, with batch pricing and scheduled cycles.",
+      "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown NSW, with batch pricing and scheduled cycles.",
     url: "https://xtrasharp.com.au/commercial",
     type: "article",
     images: ["https://xtrasharp.com.au/og-commercial.jpg"],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Commercial Clients | Xtra Sharp",
     description:
-      "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown, Woodbine and Western Sydney, with batch pricing and scheduled cycles.",
+      "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown NSW, with batch pricing and scheduled cycles.",
     images: ["https://xtrasharp.com.au/og-commercial.jpg"],
   },
   other: {

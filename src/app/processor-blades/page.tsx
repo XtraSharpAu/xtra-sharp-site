@@ -102,11 +102,11 @@ function ProcessorEquipmentPhoto() {
 export const metadata: Metadata = {
   title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Water-cooled sharpening for home and industrial processor blades.",
+    "Water-cooled sharpening for home and industrial processor blades in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
   openGraph: {
     title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Water-cooled sharpening for home and industrial processor blades.",
+      "Water-cooled sharpening for home and industrial processor blades in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
     url: "https://xtrasharp.com.au/processor-blades",
     type: "article",
     images: ["https://xtrasharp.com.au/og-processor-blades.jpg"],
@@ -115,7 +115,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Water-cooled sharpening for home and industrial processor blades.",
+      "Water-cooled sharpening for home and industrial processor blades in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
     images: ["https://xtrasharp.com.au/og-processor-blades.jpg"],
   },
   other: {

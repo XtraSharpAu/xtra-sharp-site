@@ -17,9 +17,9 @@ All draft marketing materials for Xtra Sharp. Every fact used across this pack (
 | `faq-expansions.md` | 10 marketing/landing-page-oriented Q&As |
 | `blog-outlines.md` | 10 blog post outlines |
 | `blog-posts/` | 25 full-length blog posts (one file each) — see `docs/INDEX.md` for the running total by round |
-| `faq-mail-in-workflow.md` | 10 new Q&As on mail-in process mechanics (distinct from `faq-expansions.md`) |
-| `google-business-posts-seasonal.md` | 10 seasonal GBP post drafts, operationalizing 10 of the 20 themes in `seasonal-campaign-concepts.md` |
-| `social-media-posts-before-after-equipment.md` | 10 social captions themed around before/after results and equipment quality |
+| `faq-mail-in-workflow.md` | 13 Q&As on mail-in process mechanics and turnaround times (distinct from `faq-expansions.md`) |
+| `google-business-posts-seasonal.md` + `-round2.md` | 15 seasonal GBP post drafts total, operationalizing 15 of the 20 themes in `seasonal-campaign-concepts.md` |
+| `social-media-posts-before-after-equipment.md` + `-round2.md` | 15 social captions total — before/after results (10) and equipment quality (5) |
 
 ## Notes on Flyers & Brochures
 

@@ -63,9 +63,9 @@ The `docs/` folder has grown across several large requests into a substantial co
 | `blog-outlines.md` | **15 outlines** |
 | `blog-posts/01–15` | **15 full blog posts** (10 original + 5 new: sharpening vs. replacing, behind-the-scenes, DIY vs. professional, first-time customer guide, Australian weather/blade care) |
 | `blog-posts/16–25` | **10 new (Command 8)**: cost of dull knives, steel hardness explained, choosing clipper blade size, processor blade safety, hedge shears vs secateurs vs loppers, commercial kitchen sharpening schedules, sustainability case for sharpening, school/salon schedules, long-term blade storage, appointment etiquette |
-| `faq-mail-in-workflow.md` | **New (Command 8)**: 10 Q&As on mail-in process mechanics specifically (first step, packing, confirmation, return tracking, damage-in-transit, etc.) |
-| `google-business-posts-seasonal.md` | **New (Command 8)**: 10 ready-to-publish seasonal GBP posts, operationalizing 10 of the 20 themes already scoped in `seasonal-campaign-concepts.md` |
-| `social-media-posts-before-after-equipment.md` | **New (Command 8)**: 10 social captions on before/after results and equipment quality — a theme not covered by the existing 125 posts |
+| `faq-mail-in-workflow.md` | **Command 8 + 9**: 13 Q&As on mail-in process mechanics and turnaround times (first step, packing, confirmation, return tracking, damage-in-transit, total turnaround time, mail-in vs. drop-off timing, what the 1–2 day figure counts from) |
+| `google-business-posts-seasonal.md` + `-round2.md` | **Command 8 + 9**: 15 ready-to-publish seasonal GBP posts total, operationalizing 15 of the 20 themes in `seasonal-campaign-concepts.md`. 5 themes remain unused: Hunting Season Prep, National Tradies Day, Autumn Pruning Campaign, Community Event Tie-In, Small Business Month |
+| `social-media-posts-before-after-equipment.md` + `-round2.md` | **Command 8 + 9**: 15 social captions total — 10 before/after-results captions (distinct angles) and 5 equipment-quality captions — a theme not covered by the existing 125 posts |
 
 ## Business Operations
 

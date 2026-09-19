@@ -175,11 +175,11 @@ function KnifeDemoVideo() {
 export const metadata: Metadata = {
   title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Water-cooled sharpening for kitchen, butcher, large and hunting knives.",
+    "Water-cooled sharpening for kitchen, butcher, large and hunting knives in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
   openGraph: {
     title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Water-cooled sharpening for kitchen, butcher, large and hunting knives.",
+      "Water-cooled sharpening for kitchen, butcher, large and hunting knives in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
     url: "https://xtrasharp.com.au/knife-sharpening",
     type: "article",
     images: ["https://xtrasharp.com.au/og-knife.jpg"],
@@ -188,7 +188,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Water-cooled sharpening for kitchen, butcher, large and hunting knives.",
+      "Water-cooled sharpening for kitchen, butcher, large and hunting knives in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
     images: ["https://xtrasharp.com.au/og-knife.jpg"],
   },
   other: {

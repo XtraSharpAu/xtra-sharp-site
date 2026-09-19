@@ -4,10 +4,12 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Pricing | Xtra Sharp Campbelltown NSW",
-  description: "Clear, upfront pricing for all sharpening services.",
+  description:
+    "Clear, upfront pricing for knife, scissors, clipper blade, garden tool and processor blade sharpening at Xtra Sharp in Campbelltown NSW.",
   openGraph: {
     title: "Pricing | Xtra Sharp Campbelltown NSW",
-    description: "Clear, upfront pricing for all sharpening services.",
+    description:
+      "Clear, upfront pricing for knife, scissors, clipper blade, garden tool and processor blade sharpening at Xtra Sharp in Campbelltown NSW.",
     url: "https://xtrasharp.com.au/pricing",
     type: "website",
     images: ["https://xtrasharp.com.au/og-pricing.jpg"],
@@ -15,7 +17,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Pricing | Xtra Sharp Campbelltown NSW",
-    description: "Clear, upfront pricing for all sharpening services.",
+    description:
+      "Clear, upfront pricing for knife, scissors, clipper blade, garden tool and processor blade sharpening at Xtra Sharp in Campbelltown NSW.",
     images: ["https://xtrasharp.com.au/og-pricing.jpg"],
   },
   other: {
