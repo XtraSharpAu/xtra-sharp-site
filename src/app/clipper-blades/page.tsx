@@ -138,6 +138,23 @@ function ClipperMachinePhoto() {
   );
 }
 
+function ClipperProcessVideo() {
+  return (
+    <div className="mx-auto mt-6 w-full max-w-2xl">
+      <div className="aspect-video overflow-hidden rounded-lg shadow-md">
+        <iframe
+          src="https://www.youtube.com/embed/vSB9MhXxX6Y"
+          title="Clipper Blade Sharpening Process"
+          className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
+      <p className="mt-2 text-sm text-text/60">Clipper Blade Sharpening Process</p>
+    </div>
+  );
+}
+
 export default function ClipperBladesPage() {
   return (
     <>
@@ -178,6 +195,7 @@ export default function ClipperBladesPage() {
           </p>
           <div className="mt-8">
             <ClipperMachinePhoto />
+            <ClipperProcessVideo />
           </div>
         </div>
       </section>
