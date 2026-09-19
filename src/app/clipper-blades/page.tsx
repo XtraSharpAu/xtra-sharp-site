@@ -351,20 +351,20 @@ const clipperPackingPhotos = [
   {
     src: "/clipper-packing-small-bags.jpg",
     alt: "Blades placed in small plastic bags for protection.",
-    width: 240,
-    height: 320,
+    width: 960,
+    height: 1280,
   },
   {
     src: "/clipper-packing-wrapped.jpg",
     alt: "Blades wrapped in paper towel to protect them.",
-    width: 240,
-    height: 320,
+    width: 960,
+    height: 1280,
   },
   {
     src: "/clipper-packing-ready.jpg",
     alt: "Blades bagged up and ready to go back to the customer.",
-    width: 240,
-    height: 320,
+    width: 960,
+    height: 1280,
   },
 ];
 
