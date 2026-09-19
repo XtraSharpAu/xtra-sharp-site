@@ -77,16 +77,38 @@ function KnifeEquipmentPhoto() {
   );
 }
 
-function KnifeBeforePhoto() {
+const knifeGroupPhotos = [
+  {
+    src: "/knives-before-sharpening.jpg",
+    alt: "Professional knife set prepared for sharpening.",
+    width: 320,
+    height: 240,
+  },
+  {
+    src: "/knives-after-sharpening.jpg",
+    alt: "Knife set sharpened for precision cutting.",
+    width: 1500,
+    height: 2000,
+  },
+];
+
+function KnifeGroupPhotos() {
   return (
-    <div className="mx-auto mt-8 w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
-      <Image
-        src="/knives-before-sharpening.jpg"
-        alt="Kitchen knives before sharpening — visible edge wear and dull finish."
-        width={320}
-        height={240}
-        className="h-auto w-full"
-      />
+    <div className="mx-auto mt-6 grid max-w-3xl gap-6 sm:grid-cols-2">
+      {knifeGroupPhotos.map((photo) => (
+        <div key={photo.src}>
+          <div className="overflow-hidden rounded-lg shadow-md">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              width={photo.width}
+              height={photo.height}
+              className="h-auto w-full"
+            />
+          </div>
+          <p className="mt-2 text-center text-sm text-text/60">{photo.alt}</p>
+        </div>
+      ))}
     </div>
   );
 }
@@ -99,20 +121,6 @@ function KnifeBeforeDetailPhoto() {
         alt="Close-up of knife edges before sharpening showing visible damage and dull spots."
         width={1400}
         height={651}
-        className="h-auto w-full"
-      />
-    </div>
-  );
-}
-
-function KnifeAfterPhoto() {
-  return (
-    <div className="mx-auto mt-6 w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
-      <Image
-        src="/knives-after-sharpening.jpg"
-        alt="Kitchen knives after sharpening — restored edges and polished finish."
-        width={1500}
-        height={2000}
         className="h-auto w-full"
       />
     </div>
@@ -143,7 +151,7 @@ function KnifeDemoVideo() {
     <div className="mx-auto mt-8 w-full max-w-2xl">
       <div className="aspect-video overflow-hidden rounded-lg shadow-md">
         <iframe
-          src="https://www.youtube.com/embed/cFjTeFz_AU4"
+          src="https://www.youtube.com/embed/pRQ2ZioYiFw"
           title="Knife Sharpening Demonstration — Slicing Paper with Ease"
           className="h-full w-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -316,13 +324,12 @@ export default function KnifeSharpeningPage() {
             Precision Knife Sharpening for Every Edge
           </h2>
           <KnifeIntroGallery />
-          <KnifeBeforePhoto />
           <KnifeBeforeDetailPhoto />
-          <KnifeAfterPhoto />
+          <KnifeDemoVideo />
+          <KnifeGroupPhotos />
           <KnifePremiumPhoto />
           <KnifeEquipmentPhoto />
           <KnifeEdgeDetailPhoto />
-          <KnifeDemoVideo />
         </div>
       </section>
 
