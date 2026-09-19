@@ -3,11 +3,11 @@ import Link from "next/link";
 import CommercialSegment from "@/components/CommercialSegment";
 
 export const metadata: Metadata = {
-  title: "Sharpening Services — Knives, Scissors, Clipper Blades & More | Xtra Sharp",
+  title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
   description:
     "Professional sharpening with water-cooled and machine-guided accuracy. Drop-off sharpening in Campbelltown NSW, mail-in sharpening Australia-wide.",
   openGraph: {
-    title: "Sharpening Services — Knives, Scissors, Clipper Blades & More | Xtra Sharp",
+    title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
     description:
       "Professional sharpening with water-cooled and machine-guided accuracy. Drop-off sharpening in Campbelltown NSW, mail-in sharpening Australia-wide.",
     url: "https://xtrasharp.com.au",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sharpening Services — Knives, Scissors, Clipper Blades & More | Xtra Sharp",
+    title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
     description:
       "Professional sharpening with water-cooled and machine-guided accuracy. Drop-off sharpening in Campbelltown NSW, mail-in sharpening Australia-wide.",
     images: ["https://xtrasharp.com.au/og-image.jpg"],

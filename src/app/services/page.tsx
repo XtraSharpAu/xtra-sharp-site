@@ -7,11 +7,11 @@ import ServicesContact from "@/components/ServicesContact";
 import DropOffChecklist from "@/components/DropOffChecklist";
 
 export const metadata: Metadata = {
-  title: "Services & Pricing | Xtra Sharp",
+  title: "Services & Pricing | Xtra Sharp Campbelltown NSW",
   description:
     "Professional knife, scissors, clipper blade, garden tool and processor blade sharpening in Campbelltown NSW. See what's included and pricing for every service.",
   openGraph: {
-    title: "Services & Pricing | Xtra Sharp",
+    title: "Services & Pricing | Xtra Sharp Campbelltown NSW",
     description:
       "Professional knife, scissors, clipper blade, garden tool and processor blade sharpening in Campbelltown NSW. See what's included and pricing for every service.",
     url: "https://xtrasharp.com.au/services",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services & Pricing | Xtra Sharp",
+    title: "Services & Pricing | Xtra Sharp Campbelltown NSW",
     description:
       "Professional knife, scissors, clipper blade, garden tool and processor blade sharpening in Campbelltown NSW. See what's included and pricing for every service.",
     images: ["https://xtrasharp.com.au/og-services.jpg"],

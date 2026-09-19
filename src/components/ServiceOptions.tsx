@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const options = [
   {
     title: "Drop-Off (Appointment Only)",
@@ -8,6 +10,7 @@ const options = [
     title: "Mail-In Service",
     description:
       "Send your items via Australia Post. Return postage can be included or billed separately.",
+    href: "/mail-in",
   },
   {
     title: "Local Pick-Up",
@@ -29,7 +32,18 @@ export default function ServiceOptions() {
               key={option.title}
               className="rounded-lg border border-metallic/40 bg-background p-6 text-center shadow-sm"
             >
-              <h3 className="font-medium text-text">{option.title}</h3>
+              <h3 className="font-medium text-text">
+                {option.href ? (
+                  <Link
+                    href={option.href}
+                    className="text-accent hover:underline"
+                  >
+                    {option.title}
+                  </Link>
+                ) : (
+                  option.title
+                )}
+              </h3>
               <p className="mt-2 text-sm text-text/70">
                 {option.description}
               </p>

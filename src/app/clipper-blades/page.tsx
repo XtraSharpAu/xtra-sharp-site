@@ -10,11 +10,11 @@ import RelatedLinks from "@/components/RelatedLinks";
 import { relatedServiceLinks } from "@/lib/serviceLinks";
 
 export const metadata: Metadata = {
-  title: "Clipper Blade Sharpening for Groomers | Xtra Sharp Campbelltown NSW",
+  title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
   description:
     "Animal clipper blade and grooming shears sharpening in Campbelltown NSW for groomers, vets and animal-care professionals. A5, wide and large-animal blades.",
   openGraph: {
-    title: "Clipper Blade Sharpening for Groomers | Xtra Sharp Campbelltown NSW",
+    title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Animal clipper blade and grooming shears sharpening in Campbelltown NSW for groomers, vets and animal-care professionals. A5, wide and large-animal blades.",
     url: "https://xtrasharp.com.au/clipper-blades",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clipper Blade Sharpening for Groomers | Xtra Sharp Campbelltown NSW",
+    title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Animal clipper blade and grooming shears sharpening in Campbelltown NSW for groomers, vets and animal-care professionals. A5, wide and large-animal blades.",
     images: ["https://xtrasharp.com.au/og-clipper.jpg"],

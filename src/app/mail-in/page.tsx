@@ -4,19 +4,22 @@ import Checklist from "@/components/Checklist";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Mail-In Sharpening | Xtra Sharp Australia-Wide",
-  description: "Australia-wide sharpening with tracked return postage.",
+  title: "Mail-In Sharpening | Xtra Sharp Campbelltown NSW",
+  description:
+    "Professional mail-in sharpening Australia-wide for knives, scissors, clipper blades and more, with a prepaid satchel and tracked return postage.",
   openGraph: {
-    title: "Mail-In Sharpening | Xtra Sharp Australia-Wide",
-    description: "Australia-wide sharpening with tracked return postage.",
+    title: "Mail-In Sharpening | Xtra Sharp Campbelltown NSW",
+    description:
+      "Professional mail-in sharpening Australia-wide for knives, scissors, clipper blades and more, with a prepaid satchel and tracked return postage.",
     url: "https://xtrasharp.com.au/mail-in",
     type: "article",
     images: ["https://xtrasharp.com.au/og-mail-in.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mail-In Sharpening | Xtra Sharp Australia-Wide",
-    description: "Australia-wide sharpening with tracked return postage.",
+    title: "Mail-In Sharpening | Xtra Sharp Campbelltown NSW",
+    description:
+      "Professional mail-in sharpening Australia-wide for knives, scissors, clipper blades and more, with a prepaid satchel and tracked return postage.",
     images: ["https://xtrasharp.com.au/og-mail-in.jpg"],
   },
   other: {

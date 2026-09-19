@@ -5,22 +5,22 @@ import PolicySections from "@/components/PolicySections";
 import Checklist from "@/components/Checklist";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Xtra Sharp",
+  title: "Privacy Policy | Xtra Sharp Campbelltown NSW",
   description:
-    "How Xtra Sharp collects, uses, and protects customer information, booking details, and communication.",
+    "How Xtra Sharp, a professional sharpening business in Campbelltown NSW, collects, uses, and protects customer information, booking details, and communication.",
   openGraph: {
-    title: "Privacy Policy | Xtra Sharp",
+    title: "Privacy Policy | Xtra Sharp Campbelltown NSW",
     description:
-      "How Xtra Sharp collects, uses, and protects customer information, booking details, and communication.",
+      "How Xtra Sharp, a professional sharpening business in Campbelltown NSW, collects, uses, and protects customer information, booking details, and communication.",
     url: "https://xtrasharp.com.au/privacy",
     type: "article",
     images: ["https://xtrasharp.com.au/og-privacy.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privacy Policy | Xtra Sharp",
+    title: "Privacy Policy | Xtra Sharp Campbelltown NSW",
     description:
-      "How Xtra Sharp collects, uses, and protects customer information, booking details, and communication.",
+      "How Xtra Sharp, a professional sharpening business in Campbelltown NSW, collects, uses, and protects customer information, booking details, and communication.",
     images: ["https://xtrasharp.com.au/og-privacy.jpg"],
   },
   other: {

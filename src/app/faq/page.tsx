@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -6,11 +7,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "FAQ | Xtra Sharp Campbelltown NSW",
   description:
-    "Answers to common questions about sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp.",
+    "Answers to common questions about professional sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp in Campbelltown NSW.",
   openGraph: {
     title: "FAQ | Xtra Sharp Campbelltown NSW",
     description:
-      "Answers to common questions about sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp.",
+      "Answers to common questions about professional sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp in Campbelltown NSW.",
     url: "https://xtrasharp.com.au/faq",
     type: "website",
     images: ["https://xtrasharp.com.au/og-faq.jpg"],
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FAQ | Xtra Sharp Campbelltown NSW",
     description:
-      "Answers to common questions about sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp.",
+      "Answers to common questions about professional sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp in Campbelltown NSW.",
     images: ["https://xtrasharp.com.au/og-faq.jpg"],
   },
   other: {
@@ -278,6 +279,13 @@ export default function FaqPage() {
         <p className="mt-4 text-text/70">
           Drop-off sharpening in Campbelltown NSW. Mail-in sharpening
           Australia-wide.
+        </p>
+        <p className="mt-2 text-text/70">
+          Still have a question?{" "}
+          <Link href="/contact" className="text-accent hover:underline">
+            Contact Xtra Sharp
+          </Link>
+          .
         </p>
       </section>
     </>

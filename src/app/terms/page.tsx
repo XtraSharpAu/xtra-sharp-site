@@ -4,11 +4,11 @@ import TermsHero from "@/components/TermsHero";
 import PolicySections from "@/components/PolicySections";
 
 export const metadata: Metadata = {
-  title: "Service Terms | Xtra Sharp",
+  title: "Service Terms | Xtra Sharp Campbelltown NSW",
   description:
     "Xtra Sharp's service terms covering appointments, item condition, repairs, turnaround, pricing, pick-up/mail-in, liability, and cancellations.",
   openGraph: {
-    title: "Service Terms | Xtra Sharp",
+    title: "Service Terms | Xtra Sharp Campbelltown NSW",
     description:
       "Xtra Sharp's service terms covering appointments, item condition, repairs, turnaround, pricing, pick-up/mail-in, liability, and cancellations.",
     url: "https://xtrasharp.com.au/terms",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Service Terms | Xtra Sharp",
+    title: "Service Terms | Xtra Sharp Campbelltown NSW",
     description:
       "Xtra Sharp's service terms covering appointments, item condition, repairs, turnaround, pricing, pick-up/mail-in, liability, and cancellations.",
     images: ["https://xtrasharp.com.au/og-terms.jpg"],
