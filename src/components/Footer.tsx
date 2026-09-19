@@ -1,34 +1,35 @@
 import Link from "next/link";
 
+const serviceLinks = [
+  { label: "Knife Sharpening", href: "/knife-sharpening" },
+  { label: "Scissors Sharpening", href: "/scissors-sharpening" },
+  { label: "Clipper Blade Sharpening", href: "/clipper-blades" },
+  { label: "Garden Tool Sharpening", href: "/garden-tools" },
+  { label: "Processor Blade Sharpening", href: "/processor-blades" },
+];
+
+const customerLinks = [
+  { label: "Mail-In Sharpening", href: "/mail-in" },
+  { label: "Drop-Off Checklist", href: "/services" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
+];
+
+const legalLinks = [
+  { label: "Terms of Service", href: "/terms" },
+  { label: "Privacy Policy", href: "/privacy" },
+];
+
 export default function Footer() {
   return (
     <footer className="border-t border-metallic/40 bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-6 text-center text-sm text-text/70">
-        <p className="font-medium text-text">
-          Xtra Sharp &mdash; Professional Knife &amp; Tool Sharpening
-        </p>
-        <p className="mt-1">Campbelltown NSW &bull; Servicing Macarthur Since 2013</p>
-        <p className="mt-1">Cash, card, and internet banking accepted.</p>
-        <p className="mt-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
-          <span>
-            <strong className="text-text">Phone:</strong>{" "}
-            <a href="tel:0412974277" className="hover:text-accent hover:underline">
-              0412 974 277
-            </a>
-          </span>
-          <span aria-hidden="true">|</span>
-          <span>
-            <strong className="text-text">Email:</strong>{" "}
-            <a
-              href="mailto:phil@xtrasharp.com.au"
-              className="hover:text-accent hover:underline"
-            >
-              phil@xtrasharp.com.au
-            </a>
-          </span>
-          <span aria-hidden="true">|</span>
-          <span>
-            <strong className="text-text">Location:</strong>{" "}
+      <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-text/80">
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-text">Xtra Sharp</h3>
+          <p className="mt-2">Campbelltown NSW &bull; Servicing Macarthur Since 2013</p>
+          <p className="mt-1">Cash, card, and internet banking accepted.</p>
+          <p className="mt-3">
+            <strong className="text-text">Sharpening Location:</strong>{" "}
             <a
               href="https://www.google.com/maps/place/22+Queenscliff+Dr,+Woodbine+NSW+2560"
               target="_blank"
@@ -37,9 +38,8 @@ export default function Footer() {
             >
               22 Queenscliff Drive, Woodbine NSW
             </a>
-          </span>
-          <span aria-hidden="true">|</span>
-          <span>
+          </p>
+          <p className="mt-1">
             <strong className="text-text">Service Area:</strong>{" "}
             <a
               href="https://www.google.com/maps/search/Xtra+Sharp+Campbelltown"
@@ -49,20 +49,69 @@ export default function Footer() {
             >
               Campbelltown &amp; Western Sydney
             </a>
-          </span>
-        </p>
-        <p className="mt-3 flex justify-center gap-4">
-          <Link href="/terms" className="hover:text-accent hover:underline">
-            Terms of Service
-          </Link>
-          <Link href="/privacy" className="hover:text-accent hover:underline">
-            Privacy Policy
-          </Link>
-        </p>
-        <p className="mt-3">
+          </p>
+          <p className="mt-1">
+            <strong className="text-text">Phone:</strong>{" "}
+            <a href="tel:0412974277" className="hover:text-accent hover:underline">
+              0412 974 277
+            </a>
+          </p>
+          <p className="mt-1">
+            <strong className="text-text">Email:</strong>{" "}
+            <a
+              href="mailto:phil@xtrasharp.com.au"
+              className="hover:text-accent hover:underline"
+            >
+              phil@xtrasharp.com.au
+            </a>
+          </p>
+        </div>
+
+        <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+          <div>
+            <h4 className="font-semibold text-text">Services</h4>
+            <ul className="mt-2 space-y-1">
+              {serviceLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="hover:text-accent hover:underline">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-text">Customer Info</h4>
+            <ul className="mt-2 space-y-1">
+              {customerLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="hover:text-accent hover:underline">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-text">Legal</h4>
+            <ul className="mt-2 space-y-1">
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="hover:text-accent hover:underline">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-metallic/40 pt-4 text-xs text-text/60">
           &copy; {new Date().getFullYear()} Xtra Sharp &mdash; Professional
           Knife &amp; Tool Sharpening &bull; Campbelltown NSW
-        </p>
+        </div>
       </div>
     </footer>
   );
