@@ -1,18 +1,28 @@
 import Checklist from "@/components/Checklist";
 
-const dropOffItems = [
+const baseDropOffItems = [
   "Ensure items are clean and dry.",
   "Label commercial sets clearly.",
   "Use protective sleeves for knives and scissors.",
-  "Detach clipper blades only if applicable.",
-  "Include contact details inside the package.",
 ];
+
+const clipperLine = "Detach clipper blades before drop-off or mailing.";
+
+const closingLine = "Include contact details inside the package.";
 
 type DropOffChecklistProps = {
   surface?: boolean;
+  isClipperPage?: boolean;
 };
 
-export default function DropOffChecklist({ surface = false }: DropOffChecklistProps) {
+export default function DropOffChecklist({
+  surface = false,
+  isClipperPage = false,
+}: DropOffChecklistProps) {
+  const items = isClipperPage
+    ? [...baseDropOffItems, clipperLine, closingLine]
+    : [...baseDropOffItems, closingLine];
+
   return (
     <section
       className={`border-t border-metallic/40 px-6 py-16 ${surface ? "bg-surface" : ""}`}
@@ -22,7 +32,7 @@ export default function DropOffChecklist({ surface = false }: DropOffChecklistPr
           Before You Drop Off
         </h2>
         <div className="mt-6 inline-block text-left">
-          <Checklist items={dropOffItems} />
+          <Checklist items={items} />
         </div>
         <p className="mt-4 text-center text-text/80">
           Drop-off location: Campbelltown NSW (address provided after booking).

@@ -685,7 +685,7 @@ export default function ClipperBladesPage() {
         </div>
       </section>
 
-      <DropOffChecklist />
+      <DropOffChecklist isClipperPage />
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
