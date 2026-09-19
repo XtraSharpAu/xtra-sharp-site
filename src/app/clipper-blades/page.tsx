@@ -270,6 +270,69 @@ function ClipperVideoSection() {
   );
 }
 
+const clipperProcessSteps = [
+  {
+    title: "Inspecting Clipper Blades",
+    description:
+      "Checking the condition of clipper blades before sharpening. This step identifies wear, buildup, and alignment issues that affect cutting performance.",
+  },
+  {
+    title: "Blades Cleaned and Ready for Sharpening",
+    description:
+      "Clipper blades fully cleaned and prepared for sharpening. All debris, hair, and buildup removed to ensure a smooth and accurate sharpening pass.",
+  },
+  {
+    title: "Sharpening the Blades",
+    description:
+      "Sharpening the clipper blades on the purpose-built machine. This step restores the cutting surface and prepares the blades for alignment and testing.",
+  },
+  {
+    title: "Demagnetising the Blades",
+    description:
+      "Demagnetising the clipper blades after sharpening to prevent fine metal particles from clinging to the blade. This step helps keep the cutting surface clean and improves grooming performance.",
+  },
+  {
+    title: "Cleaning the Clipper Blades",
+    description:
+      "Cleaning the clipper blades after sharpening to remove fine metal particles and residue. This step ensures a smooth cutting surface and prepares the blades for alignment and reassembly.",
+  },
+  {
+    title: "Putting the Blades Back Together",
+    description:
+      "Reassembling the clipper blade set after sharpening and cleaning. This step ensures correct tension, smooth movement, and proper alignment for optimal cutting performance.",
+  },
+  {
+    title: "Testing the Blades",
+    description:
+      "Testing the clipper blades after reassembly to confirm smooth movement, correct tension, and clean cutting performance. This step ensures the blades are functioning properly before returning them to the customer.",
+  },
+  {
+    title: "Protecting Blades with Blade Wash",
+    description:
+      "Applying blade wash to protect the clipper blades before returning them to the customer. This helps prevent rust and keeps the blades in good condition, especially if they won't be used immediately. Before use, wipe most of the blade wash off and apply fresh oil.",
+  },
+];
+
+function ClipperProcessSteps() {
+  return (
+    <div className="mx-auto mt-12 max-w-3xl text-left">
+      <h3 className="text-xl font-semibold text-text">
+        The Sharpening Process, Step by Step
+      </h3>
+      <ol className="mt-6 space-y-6">
+        {clipperProcessSteps.map((step, index) => (
+          <li key={step.title}>
+            <h4 className="font-semibold text-text">
+              Step {index + 1} — {step.title}
+            </h4>
+            <p className="mt-1 text-text/80">{step.description}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
 function ClipperPricing() {
   return (
     <div className="mx-auto max-w-md">
@@ -381,6 +444,7 @@ export default function ClipperBladesPage() {
           <ClipperAfterPhoto />
           <ClipperEquipmentSection />
           <ClipperVideoSection />
+          <ClipperProcessSteps />
         </div>
       </section>
 
