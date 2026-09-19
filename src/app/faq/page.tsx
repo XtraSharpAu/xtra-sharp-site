@@ -254,13 +254,13 @@ export default function FaqPage() {
           </h2>
           <p className="mt-4 text-text/80">
             You can call or text{" "}
-            <a href="tel:0412974277" className="text-accent hover:underline">
+            <a href="tel:0412974277" className="text-accent underline">
               0412 974 277
             </a>
             , send a photo of your items, or email{" "}
             <a
               href="mailto:phil@xtrasharp.com.au"
-              className="text-accent hover:underline"
+              className="text-accent underline"
             >
               phil@xtrasharp.com.au
             </a>{" "}
@@ -282,7 +282,7 @@ export default function FaqPage() {
         </p>
         <p className="mt-2 text-text/70">
           Still have a question?{" "}
-          <Link href="/contact" className="text-accent hover:underline">
+          <Link href="/contact" className="text-accent underline">
             Contact Xtra Sharp
           </Link>
           .

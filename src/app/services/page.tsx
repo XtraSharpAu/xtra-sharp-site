@@ -130,7 +130,10 @@ export default function ServicesPage() {
       <ServicesHero />
 
       <section className="border-t border-metallic/40 px-6 py-20">
-        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
+        <h2 className="text-center text-3xl font-semibold text-text">
+          Our Services
+        </h2>
+        <div className="mx-auto mt-10 grid max-w-5xl gap-6 sm:grid-cols-2">
           {services.map((service) => (
             <ServiceDetail key={service.title} {...service} />
           ))}

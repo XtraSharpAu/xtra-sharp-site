@@ -20,6 +20,7 @@ The `docs/` folder has grown across several large requests into a substantial co
 | `faq.md` | Developer FAQ about the codebase |
 | `visual-audit.md` | Live-build audit: photos/captions/footer/section order, and the OG/Twitter metadata gap found and fixed |
 | `visual-assets.md` | **New (Command 8)**: how the 14 generated images (10 OG cards, 3 hero banners, 1 composite) were actually made, and their honest limitations |
+| `lighthouse-audit.md` | **New (Command 16)**: real Lighthouse 13.5.0 scores (before/after) for 11 pages, plus what was actually fixed (23 oversized images, 3 low-contrast inline links, 1 heading-order skip) |
 
 ## SEO, Accessibility, Performance, Structure
 

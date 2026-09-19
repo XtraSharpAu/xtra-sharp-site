@@ -98,7 +98,7 @@ export default function ContactPage() {
           <h2 className="text-2xl font-semibold text-text">Hours</h2>
           <p className="mt-4 text-text/80">
             By appointment. Call or text{" "}
-            <a href="tel:0412974277" className="text-accent hover:underline">
+            <a href="tel:0412974277" className="text-accent underline">
               0412 974 277
             </a>{" "}
             to arrange a drop-off time.
