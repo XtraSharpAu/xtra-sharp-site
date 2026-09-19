@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Checklist from "@/components/Checklist";
+import DropOffChecklist from "@/components/DropOffChecklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ServiceFaq from "@/components/ServiceFaq";
@@ -82,14 +83,6 @@ const importantNotes = [
   "No on-site sharpening",
   "Drop-off only",
   "Mail-in available Australia-wide",
-];
-
-const dropOffChecklist = [
-  "Wipe items clean (no food, hair, dirt, or oil)",
-  "Label items if dropping off multiple pieces",
-  "Ensure clipper blades are detached from the clipper",
-  "Remove heavy rust or debris if possible",
-  "Place items in a secure container or wrap for transport",
 ];
 
 const clipperCareInstructions = [
@@ -692,16 +685,7 @@ export default function ClipperBladesPage() {
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Before You Drop Off
-          </h2>
-          <div className="mt-6 inline-block text-left">
-            <Checklist items={dropOffChecklist} />
-          </div>
-        </div>
-      </section>
+      <DropOffChecklist />
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
