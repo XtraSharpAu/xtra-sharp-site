@@ -127,7 +127,7 @@ function KnifeEdgeDetailPhoto() {
           src="/knife_damage_zoom.jpg"
           alt="Knife edge detail prior to sharpening."
           width={1600}
-          height={443}
+          height={501}
           className="h-auto w-full"
         />
       </div>
