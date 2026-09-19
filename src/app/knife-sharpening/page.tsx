@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import ServiceFaq from "@/components/ServiceFaq";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedServiceLinks } from "@/lib/serviceLinks";
 
 export const metadata: Metadata = {
   title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
@@ -65,10 +68,60 @@ const importantNotes = [
   "Mail-in available Australia-wide",
 ];
 
+const dropOffChecklist = [
+  "Wipe items clean (no food, hair, dirt, or oil)",
+  "Label items if dropping off multiple pieces",
+  "Ensure clipper blades are detached from the clipper",
+  "Remove heavy rust or debris if possible",
+  "Place items in a secure container or wrap for transport",
+];
+
+const faqs = [
+  {
+    question: "How often should kitchen knives be sharpened?",
+    answer:
+      "It depends on how often the knife is used, but most home kitchen knives benefit from a professional sharpen every 3–6 months, with regular honing in between to maintain the edge.",
+  },
+  {
+    question: "Do you sharpen serrated knives?",
+    answer:
+      "Yes — serrated knives can be sharpened carefully to maintain their original tooth pattern.",
+  },
+  {
+    question: "Can you fix chips or damaged edges?",
+    answer:
+      "Minor chips, bends, and tip repairs are included where possible. Severe damage is quoted individually.",
+  },
+  {
+    question: "What's the difference between honing and sharpening?",
+    answer:
+      "Honing realigns and straightens an edge that's already sharp, using a honing rod between sharpenings. Sharpening removes a small amount of metal to form a completely new edge once honing is no longer enough.",
+  },
+  {
+    question: "Will sharpening remove a lot of metal?",
+    answer:
+      "No — professional sharpening removes only the minimum amount of metal needed to restore a clean edge, so a knife can be sharpened many times over its lifespan.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function KnifeSharpeningPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <Breadcrumbs
         items={[
           { name: "Home", url: "https://xtrasharp.com.au" },
@@ -174,6 +227,28 @@ export default function KnifeSharpeningPage() {
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-center text-2xl font-semibold text-text">
+            Before You Drop Off
+          </h2>
+          <div className="mt-6 inline-block text-left">
+            <Checklist items={dropOffChecklist} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-6">
+            <ServiceFaq items={faqs} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
             Important Notes
           </h2>
           <div className="mt-6 inline-block text-left">
@@ -181,6 +256,8 @@ export default function KnifeSharpeningPage() {
           </div>
         </div>
       </section>
+
+      <RelatedLinks links={relatedServiceLinks("/knife-sharpening")} />
 
       <section className="border-t border-metallic/40 px-6 py-20 text-center">
         <a

@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import ServiceFaq from "@/components/ServiceFaq";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedServiceLinks } from "@/lib/serviceLinks";
 
 export const metadata: Metadata = {
   title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
@@ -74,10 +77,60 @@ const importantNotes = [
   "Mail-in available Australia-wide",
 ];
 
+const dropOffChecklist = [
+  "Wipe items clean (no food, hair, dirt, or oil)",
+  "Label items if dropping off multiple pieces",
+  "Ensure clipper blades are detached from the clipper",
+  "Remove heavy rust or debris if possible",
+  "Place items in a secure container or wrap for transport",
+];
+
+const faqs = [
+  {
+    question: "Do you sharpen both bevel and convex scissors?",
+    answer:
+      "Yes — both bevel and convex edge scissors are sharpened, each set up correctly for its specific edge type. See the pricing above for the difference in price between the two.",
+  },
+  {
+    question: "Can sharpening fix scissor nicks or rough cutting?",
+    answer:
+      "Minor nicks and rough cutting caused by a worn edge are usually corrected during sharpening. Severe damage is assessed and quoted individually.",
+  },
+  {
+    question: "Do you reset tension after sharpening?",
+    answer:
+      "Yes — correct tension is checked and reset as part of the machine-guided sharpening process, so the scissors close smoothly and cut cleanly along the full blade.",
+  },
+  {
+    question: "How should I maintain hairdressing scissors?",
+    answer:
+      "Wipe the blades clean after each use, avoid cutting anything other than hair, store them in a case or guard, and apply a drop of scissor oil at the pivot occasionally to keep the action smooth.",
+  },
+  {
+    question: "Do you sharpen grooming thinning scissors?",
+    answer:
+      "Yes — grooming thinning scissors are sharpened as a standard service; see the pricing above.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function ScissorsSharpeningPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <Breadcrumbs
         items={[
           { name: "Home", url: "https://xtrasharp.com.au" },
@@ -197,6 +250,28 @@ export default function ScissorsSharpeningPage() {
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-center text-2xl font-semibold text-text">
+            Before You Drop Off
+          </h2>
+          <div className="mt-6 inline-block text-left">
+            <Checklist items={dropOffChecklist} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-6">
+            <ServiceFaq items={faqs} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
             Important Notes
           </h2>
           <div className="mt-6 inline-block text-left">
@@ -204,6 +279,8 @@ export default function ScissorsSharpeningPage() {
           </div>
         </div>
       </section>
+
+      <RelatedLinks links={relatedServiceLinks("/scissors-sharpening")} />
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
         <a

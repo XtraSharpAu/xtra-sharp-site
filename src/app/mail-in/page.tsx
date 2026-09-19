@@ -103,6 +103,15 @@ const importantNotes = [
   "Mail-in available Australia-wide",
 ];
 
+const mailInChecklist = [
+  "Clean items before packing",
+  "Wrap each item securely to prevent movement",
+  "Include your name, phone number, and return address",
+  "Include a brief note listing the items you're sending",
+  "Use a padded satchel or box for safe transport",
+  "Keep your tracking number for reference",
+];
+
 export default function MailInPage() {
   return (
     <>
@@ -229,6 +238,17 @@ export default function MailInPage() {
       </section>
 
       <section className="border-t border-metallic/40 px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
+            Mail-In Checklist
+          </h2>
+          <div className="mt-6 inline-block text-left">
+            <Checklist items={mailInChecklist} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-center text-2xl font-semibold text-text">
             Important Notes

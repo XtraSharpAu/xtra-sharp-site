@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import ServiceFaq from "@/components/ServiceFaq";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedServiceLinks } from "@/lib/serviceLinks";
 
 export const metadata: Metadata = {
   title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
@@ -63,10 +66,60 @@ const importantNotes = [
   "Mail-in available Australia-wide",
 ];
 
+const dropOffChecklist = [
+  "Wipe items clean (no food, hair, dirt, or oil)",
+  "Label items if dropping off multiple pieces",
+  "Ensure clipper blades are detached from the clipper",
+  "Remove heavy rust or debris if possible",
+  "Place items in a secure container or wrap for transport",
+];
+
+const faqs = [
+  {
+    question: "Do you sharpen secateurs, hedge shears, and axes?",
+    answer:
+      "Yes — secateurs, hedge shears, axes and tomahawks are all sharpened; see the pricing above.",
+  },
+  {
+    question: "Can sharpening fix tools that are hard to cut with?",
+    answer:
+      "Yes — tools that feel like they're crushing or tearing rather than cutting cleanly usually just need the edge restored, which sharpening resolves.",
+  },
+  {
+    question: "Do you clean or de-rust garden tools?",
+    answer:
+      "Light surface rust and debris are cleared as part of the sharpening process. Heavy rust may require additional work, and very badly corroded tools may not be serviceable — you'll be told before any work begins.",
+  },
+  {
+    question: "How should I maintain garden tools after sharpening?",
+    answer:
+      "Wipe blades clean after each use, dry them before storing to prevent rust, and apply a light coat of oil to exposed metal between uses.",
+  },
+  {
+    question: "How often should garden tools be sharpened?",
+    answer:
+      "It depends on how much they're used, but most home garden tools benefit from a professional sharpen once or twice a year, or whenever cuts start to look torn or crushed rather than clean.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function GardenToolsPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <Breadcrumbs
         items={[
           { name: "Home", url: "https://xtrasharp.com.au" },
@@ -170,6 +223,28 @@ export default function GardenToolsPage() {
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-center text-2xl font-semibold text-text">
+            Before You Drop Off
+          </h2>
+          <div className="mt-6 inline-block text-left">
+            <Checklist items={dropOffChecklist} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-6">
+            <ServiceFaq items={faqs} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
             Important Notes
           </h2>
           <div className="mt-6 inline-block text-left">
@@ -177,6 +252,8 @@ export default function GardenToolsPage() {
           </div>
         </div>
       </section>
+
+      <RelatedLinks links={relatedServiceLinks("/garden-tools")} />
 
       <section className="border-t border-metallic/40 px-6 py-20 text-center">
         <a

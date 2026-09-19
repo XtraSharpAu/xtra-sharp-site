@@ -4,6 +4,7 @@ import ServiceDetail from "@/components/ServiceDetail";
 import ServiceOptions from "@/components/ServiceOptions";
 import Turnaround from "@/components/Turnaround";
 import ServicesContact from "@/components/ServicesContact";
+import Checklist from "@/components/Checklist";
 
 export const metadata: Metadata = {
   title: "Services & Pricing | Xtra Sharp",
@@ -105,6 +106,14 @@ const services = [
   },
 ];
 
+const dropOffChecklist = [
+  "Wipe items clean (no food, hair, dirt, or oil)",
+  "Label items if dropping off multiple pieces",
+  "Ensure clipper blades are detached from the clipper",
+  "Remove heavy rust or debris if possible",
+  "Place items in a secure container or wrap for transport",
+];
+
 export default function ServicesPage() {
   return (
     <>
@@ -120,6 +129,18 @@ export default function ServicesPage() {
 
       <ServiceOptions />
       <Turnaround />
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
+            Before You Drop Off
+          </h2>
+          <div className="mt-6 inline-block text-left">
+            <Checklist items={dropOffChecklist} />
+          </div>
+        </div>
+      </section>
+
       <ServicesContact />
     </>
   );

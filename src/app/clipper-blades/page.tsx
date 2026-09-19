@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import ServiceFaq from "@/components/ServiceFaq";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedServiceLinks } from "@/lib/serviceLinks";
 
 export const metadata: Metadata = {
   title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
@@ -71,6 +74,55 @@ const importantNotes = [
   "Mail-in available Australia-wide",
 ];
 
+const dropOffChecklist = [
+  "Wipe items clean (no food, hair, dirt, or oil)",
+  "Label items if dropping off multiple pieces",
+  "Ensure clipper blades are detached from the clipper",
+  "Remove heavy rust or debris if possible",
+  "Place items in a secure container or wrap for transport",
+];
+
+const faqs = [
+  {
+    question: "Do you sharpen A5, wide, and large-animal blades?",
+    answer:
+      "Yes — A5 clipper blades, wide clipper blades, and large-animal blades are all sharpened; see the pricing above.",
+  },
+  {
+    question: "Do you check alignment after sharpening?",
+    answer:
+      "Yes — every blade is individually cleaned, aligned, and test-run before it's returned.",
+  },
+  {
+    question: "Can sharpening fix blades that feel hot or noisy?",
+    answer:
+      "Often, yes — blades that run hot or noisy are usually dull or misaligned, and sharpening combined with realignment typically resolves it. If the cause is mechanical, such as the clipper motor itself, that's outside what sharpening can fix.",
+  },
+  {
+    question: "How should clipper blades be cleaned before drop-off?",
+    answer:
+      "Wipe off loose hair, oil, and debris, and detach the blades from the clipper before drop-off or posting.",
+  },
+  {
+    question: "How often should clipper blades be sharpened?",
+    answer:
+      "It depends on usage, but professional groomers often sharpen A5 and wide blades every few weeks to a couple of months with regular use; home or occasional users can usually go longer.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 function ClipperMachinePlaceholder() {
   return (
     <div
@@ -90,6 +142,7 @@ export default function ClipperBladesPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <Breadcrumbs
         items={[
           { name: "Home", url: "https://xtrasharp.com.au" },
@@ -212,6 +265,28 @@ export default function ClipperBladesPage() {
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-center text-2xl font-semibold text-text">
+            Before You Drop Off
+          </h2>
+          <div className="mt-6 inline-block text-left">
+            <Checklist items={dropOffChecklist} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-6">
+            <ServiceFaq items={faqs} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
             Important Notes
           </h2>
           <div className="mt-6 inline-block text-left">
@@ -219,6 +294,8 @@ export default function ClipperBladesPage() {
           </div>
         </div>
       </section>
+
+      <RelatedLinks links={relatedServiceLinks("/clipper-blades")} />
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
         <a

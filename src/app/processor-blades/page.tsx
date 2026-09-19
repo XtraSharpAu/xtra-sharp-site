@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import ServiceFaq from "@/components/ServiceFaq";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedServiceLinks } from "@/lib/serviceLinks";
 
 export const metadata: Metadata = {
   title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
@@ -65,10 +68,60 @@ const importantNotes = [
   "Mail-in available Australia-wide",
 ];
 
+const dropOffChecklist = [
+  "Wipe items clean (no food, hair, dirt, or oil)",
+  "Label items if dropping off multiple pieces",
+  "Ensure clipper blades are detached from the clipper",
+  "Remove heavy rust or debris if possible",
+  "Place items in a secure container or wrap for transport",
+];
+
+const faqs = [
+  {
+    question: "Do you sharpen both home and commercial processor blades?",
+    answer:
+      "Yes — both home processor blades and large industrial/commercial blades are sharpened; see the pricing above.",
+  },
+  {
+    question: "Can sharpening fix blades that don't cut cleanly?",
+    answer:
+      "Yes — blades that tear or crush instead of cutting cleanly are almost always just dull, and sharpening restores a clean cutting edge.",
+  },
+  {
+    question: "Do you check balance and edge geometry?",
+    answer:
+      "Yes — blades are checked for consistent edge geometry so they run smoothly and cut evenly, which matters for balance on rotating blades.",
+  },
+  {
+    question: "How should processor blades be cleaned before drop-off?",
+    answer:
+      "Wipe off food residue and oil, and make sure blades are detached from the processor before drop-off or posting.",
+  },
+  {
+    question: "How often should processor blades be sharpened?",
+    answer:
+      "It depends on how often the processor is used — home blades are often sharpened every few months, while commercial or industrial blades in regular use may need sharpening more frequently.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function ProcessorBladesPage() {
   return (
     <>
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <Breadcrumbs
         items={[
           { name: "Home", url: "https://xtrasharp.com.au" },
@@ -172,6 +225,28 @@ export default function ProcessorBladesPage() {
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-center text-2xl font-semibold text-text">
+            Before You Drop Off
+          </h2>
+          <div className="mt-6 inline-block text-left">
+            <Checklist items={dropOffChecklist} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-6">
+            <ServiceFaq items={faqs} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
             Important Notes
           </h2>
           <div className="mt-6 inline-block text-left">
@@ -179,6 +254,8 @@ export default function ProcessorBladesPage() {
           </div>
         </div>
       </section>
+
+      <RelatedLinks links={relatedServiceLinks("/processor-blades")} />
 
       <section className="border-t border-metallic/40 px-6 py-20 text-center">
         <a
