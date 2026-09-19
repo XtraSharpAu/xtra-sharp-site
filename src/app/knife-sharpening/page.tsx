@@ -94,21 +94,28 @@ const knifeGroupPhotos = [
 
 function KnifeGroupPhotos() {
   return (
-    <div className="mx-auto mt-6 grid max-w-3xl gap-6 sm:grid-cols-2">
-      {knifeGroupPhotos.map((photo) => (
-        <div key={photo.src}>
-          <div className="overflow-hidden rounded-lg shadow-md">
-            <Image
-              src={photo.src}
-              alt={photo.alt}
-              width={photo.width}
-              height={photo.height}
-              className="h-auto w-full"
-            />
+    <div className="mx-auto mt-12 max-w-3xl">
+      <h3 className="text-xl font-semibold text-text">
+        Knife Set Prepared for Sharpening
+      </h3>
+      <div className="mt-6 grid gap-6 sm:grid-cols-2">
+        {knifeGroupPhotos.map((photo) => (
+          <div key={photo.src}>
+            <div className="overflow-hidden rounded-lg shadow-md">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
+                className="h-auto w-full"
+              />
+            </div>
+            <p className="mt-2 text-center text-sm text-text/60">
+              {photo.alt}
+            </p>
           </div>
-          <p className="mt-2 text-center text-sm text-text/60">{photo.alt}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
@@ -152,14 +159,14 @@ function KnifeDemoVideo() {
       <div className="aspect-video overflow-hidden rounded-lg shadow-md">
         <iframe
           src="https://www.youtube.com/embed/pRQ2ZioYiFw"
-          title="Knife Sharpening Demonstration — Slicing Paper with Ease"
+          title="Knife Sharpening Demonstration — Same knife set shown above."
           className="h-full w-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         />
       </div>
       <p className="mt-2 text-sm text-text/60">
-        Knife Sharpening Demonstration — Slicing Paper with Ease
+        Knife Sharpening Demonstration — Same knife set shown above.
       </p>
     </div>
   );
