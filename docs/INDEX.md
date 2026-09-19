@@ -19,6 +19,7 @@ The `docs/` folder has grown across several large requests into a substantial co
 | `schema.md` | Every JSON-LD block, **master pricing table** (single source of truth) |
 | `faq.md` | Developer FAQ about the codebase |
 | `visual-audit.md` | Live-build audit: photos/captions/footer/section order, and the OG/Twitter metadata gap found and fixed |
+| `visual-assets.md` | **New (Command 8)**: how the 14 generated images (10 OG cards, 3 hero banners, 1 composite) were actually made, and their honest limitations |
 
 ## SEO, Accessibility, Performance, Structure
 
@@ -61,6 +62,10 @@ The `docs/` folder has grown across several large requests into a substantial co
 | `service-descriptions.md`, `faq-expansions.md`, `prep-guides.md` | Directory-listing descriptions, landing-page Q&As, item-prep guides |
 | `blog-outlines.md` | **15 outlines** |
 | `blog-posts/01–15` | **15 full blog posts** (10 original + 5 new: sharpening vs. replacing, behind-the-scenes, DIY vs. professional, first-time customer guide, Australian weather/blade care) |
+| `blog-posts/16–25` | **10 new (Command 8)**: cost of dull knives, steel hardness explained, choosing clipper blade size, processor blade safety, hedge shears vs secateurs vs loppers, commercial kitchen sharpening schedules, sustainability case for sharpening, school/salon schedules, long-term blade storage, appointment etiquette |
+| `faq-mail-in-workflow.md` | **New (Command 8)**: 10 Q&As on mail-in process mechanics specifically (first step, packing, confirmation, return tracking, damage-in-transit, etc.) |
+| `google-business-posts-seasonal.md` | **New (Command 8)**: 10 ready-to-publish seasonal GBP posts, operationalizing 10 of the 20 themes already scoped in `seasonal-campaign-concepts.md` |
+| `social-media-posts-before-after-equipment.md` | **New (Command 8)**: 10 social captions on before/after results and equipment quality — a theme not covered by the existing 125 posts |
 
 ## Business Operations
 
