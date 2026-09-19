@@ -6,6 +6,25 @@ import ServiceFaq from "@/components/ServiceFaq";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedServiceLinks } from "@/lib/serviceLinks";
 
+function KnifeDemoVideo() {
+  return (
+    <div className="mx-auto mt-8 w-full max-w-2xl">
+      <div className="aspect-video overflow-hidden rounded-lg shadow-md">
+        <iframe
+          src="https://www.youtube.com/embed/cFjTeFz_AU4"
+          title="Knife Sharpening Demonstration — Slicing Paper with Ease"
+          className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
+      <p className="mt-2 text-sm text-text/60">
+        Knife Sharpening Demonstration — Slicing Paper with Ease
+      </p>
+    </div>
+  );
+}
+
 export const metadata: Metadata = {
   title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
   description:
@@ -156,6 +175,7 @@ export default function KnifeSharpeningPage() {
             to protect the steel&apos;s temper from heat damage, giving a
             clean, strong cutting edge.
           </p>
+          <KnifeDemoVideo />
         </div>
       </section>
 
