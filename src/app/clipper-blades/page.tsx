@@ -186,13 +186,19 @@ function ClipperVideoSection() {
       <div className="aspect-video overflow-hidden rounded-lg shadow-md">
         <iframe
           src="https://www.youtube.com/embed/vSB9MhXxX6Y"
-          title="Clipper Blade Sharpening Process"
+          title="Clipper Blade Sharpening — Process Overview"
           className="h-full w-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         />
       </div>
-      <p className="mt-2 text-sm text-text/60">Clipper Blade Sharpening Process</p>
+      <p className="mt-2 text-sm text-text/60">
+        Clipper Blade Sharpening — Process Overview. This video shows part
+        of the clipper blade sharpening workflow, including setup,
+        alignment, and key steps in the process. A more detailed version
+        will be added soon once the remaining cleaning stages are
+        recorded.
+      </p>
     </div>
   );
 }
