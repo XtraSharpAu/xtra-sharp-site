@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -123,17 +124,16 @@ const faqSchema = {
   })),
 };
 
-function ClipperMachinePlaceholder() {
+function ClipperMachinePhoto() {
   return (
-    <div
-      role="img"
-      aria-label="Automated clipper blade sharpening machine used for A5, wide and large-animal blades."
-      className="mx-auto flex aspect-video w-full max-w-2xl flex-col items-center justify-center gap-2 rounded-lg border border-metallic/40 bg-surface text-center shadow-sm"
-    >
-      <span className="text-3xl">📷</span>
-      <span className="text-sm text-text/60">
-        Clipper blade sharpening machine photo coming soon
-      </span>
+    <div className="mx-auto w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
+      <Image
+        src="/clipper-blade-sharpening-machine.jpg"
+        alt="Automated clipper blade sharpening machine used for A5, wide and large-animal blades."
+        width={1920}
+        height={1280}
+        className="h-auto w-full"
+      />
     </div>
   );
 }
@@ -177,7 +177,7 @@ export default function ClipperBladesPage() {
             aligned and tested before return.
           </p>
           <div className="mt-8">
-            <ClipperMachinePlaceholder />
+            <ClipperMachinePhoto />
           </div>
         </div>
       </section>
