@@ -6,17 +6,17 @@ const serviceLinks = [
   { label: "Clipper Blade Sharpening", href: "/clipper-blades" },
   { label: "Garden Tool Sharpening", href: "/garden-tools" },
   { label: "Processor Blade Sharpening", href: "/processor-blades" },
+  { label: "Mail-In Sharpening", href: "/mail-in" },
 ];
 
 const customerLinks = [
-  { label: "Mail-In Sharpening", href: "/mail-in" },
   { label: "Drop-Off Checklist", href: "/services" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 
 const legalLinks = [
-  { label: "Terms of Service", href: "/terms" },
+  { label: "Terms & Conditions", href: "/terms" },
   { label: "Privacy Policy", href: "/privacy" },
 ];
 
