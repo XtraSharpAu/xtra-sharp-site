@@ -8,22 +8,22 @@ import RelatedLinks from "@/components/RelatedLinks";
 import { relatedServiceLinks } from "@/lib/serviceLinks";
 
 export const metadata: Metadata = {
-  title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
+  title: "Clipper Blade Sharpening for Groomers | Xtra Sharp Campbelltown NSW",
   description:
-    "Precision sharpening for A5, wide and large-animal clipper blades.",
+    "Animal clipper blade and grooming shears sharpening for groomers, vets and animal-care professionals. A5, wide and large-animal blades.",
   openGraph: {
-    title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
+    title: "Clipper Blade Sharpening for Groomers | Xtra Sharp Campbelltown NSW",
     description:
-      "Precision sharpening for A5, wide and large-animal clipper blades.",
+      "Animal clipper blade and grooming shears sharpening for groomers, vets and animal-care professionals. A5, wide and large-animal blades.",
     url: "https://xtrasharp.com.au/clipper-blades",
     type: "article",
     images: ["https://xtrasharp.com.au/og-clipper.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
+    title: "Clipper Blade Sharpening for Groomers | Xtra Sharp Campbelltown NSW",
     description:
-      "Precision sharpening for A5, wide and large-animal clipper blades.",
+      "Animal clipper blade and grooming shears sharpening for groomers, vets and animal-care professionals. A5, wide and large-animal blades.",
     images: ["https://xtrasharp.com.au/og-clipper.jpg"],
   },
   other: {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: "Clipper Blade Sharpening",
+  serviceType: "Animal Clipper Blade & Grooming Shears Sharpening",
   provider: {
     "@type": "LocalBusiness",
     name: "Xtra Sharp",
@@ -49,7 +49,7 @@ const serviceSchema = {
       "@type": "PriceSpecification",
       priceCurrency: "AUD",
       minPrice: 15,
-      maxPrice: 20,
+      maxPrice: 35,
     },
   },
 };
@@ -60,12 +60,20 @@ const clipperBladeTypes = [
   "Large-animal blades",
   "Grooming clipper blades",
   "Veterinary clipper blades",
+  "Grooming shears (bevel & convex)",
+  "Thinning scissors",
 ];
 
-const pricing = [
-  { name: "A5 clipper blades", price: "$15" },
+const clipperPricing = [
+  { name: "A5 clipper blades", price: "$15 per set" },
   { name: "Wide clipper blades", price: "$20" },
-  { name: "Large-animal blades", price: "$20" },
+  { name: "Large-animal clipper blades", price: "$20" },
+];
+
+const shearsPricing = [
+  { name: "Grooming shears (bevel)", price: "$25 per pair" },
+  { name: "Grooming shears (convex)", price: "$35 per pair" },
+  { name: "Thinning scissors", price: "$30 per pair" },
 ];
 
 const importantNotes = [
@@ -107,7 +115,7 @@ const faqs = [
   {
     question: "How often should clipper blades be sharpened?",
     answer:
-      "It depends on usage, but professional groomers often sharpen A5 and wide blades every few weeks to a couple of months with regular use; home or occasional users can usually go longer.",
+      "It depends on usage, but professional groomers often sharpen A5 and wide blades every few weeks to a couple of months with regular use.",
   },
 ];
 
@@ -124,9 +132,43 @@ const faqSchema = {
   })),
 };
 
-function ClipperMachinePhoto() {
+function PhotoPlaceholder({ label }: { label: string }) {
   return (
-    <div className="mx-auto w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
+    <div className="flex aspect-[4/3] items-center justify-center rounded-lg border-2 border-dashed border-metallic/40 bg-surface text-sm text-text/50">
+      {label}
+    </div>
+  );
+}
+
+function ClipperIntroGallery() {
+  return (
+    <div className="mx-auto mt-8 grid max-w-4xl gap-4 sm:grid-cols-3">
+      <PhotoPlaceholder label="Photo coming soon" />
+      <PhotoPlaceholder label="Photo coming soon" />
+      <PhotoPlaceholder label="Photo coming soon" />
+    </div>
+  );
+}
+
+function ClipperBeforePhoto() {
+  return (
+    <div className="mx-auto mt-6 w-full max-w-2xl">
+      <PhotoPlaceholder label="Before photo coming soon" />
+    </div>
+  );
+}
+
+function ClipperAfterPhoto() {
+  return (
+    <div className="mx-auto mt-6 w-full max-w-2xl">
+      <PhotoPlaceholder label="After photo coming soon" />
+    </div>
+  );
+}
+
+function ClipperEquipmentPhoto() {
+  return (
+    <div className="mx-auto mt-12 w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
       <Image
         src="/clipper-blade-sharpening-machine.jpg"
         alt="Automated clipper blade sharpening machine used for A5, wide and large-animal blades."
@@ -138,7 +180,7 @@ function ClipperMachinePhoto() {
   );
 }
 
-function ClipperProcessVideo() {
+function ClipperVideoSection() {
   return (
     <div className="mx-auto mt-6 w-full max-w-2xl">
       <div className="aspect-video overflow-hidden rounded-lg shadow-md">
@@ -152,6 +194,72 @@ function ClipperProcessVideo() {
       </div>
       <p className="mt-2 text-sm text-text/60">Clipper Blade Sharpening Process</p>
     </div>
+  );
+}
+
+function ClipperPricing() {
+  return (
+    <div className="mx-auto max-w-md">
+      <h2 className="text-center text-2xl font-semibold text-text">
+        Pricing
+      </h2>
+      <div className="mt-6 rounded-lg border border-metallic/40 bg-background p-6">
+        <h3 className="text-sm font-semibold text-text/80">
+          Clipper Blades
+        </h3>
+        {clipperPricing.map((line) => (
+          <div
+            key={line.name}
+            className="flex items-center justify-between gap-4 border-t border-metallic/40 py-2 first:mt-2"
+          >
+            <span className="text-text/80">{line.name}</span>
+            <span className="text-right font-semibold text-ctaRed">
+              {line.price}
+            </span>
+          </div>
+        ))}
+      </div>
+      <div className="mt-6 rounded-lg border border-metallic/40 bg-background p-6">
+        <h3 className="text-sm font-semibold text-text/80">
+          Grooming Shears
+        </h3>
+        {shearsPricing.map((line) => (
+          <div
+            key={line.name}
+            className="flex items-center justify-between gap-4 border-t border-metallic/40 py-2 first:mt-2"
+          >
+            <span className="text-text/80">{line.name}</span>
+            <span className="text-right font-semibold text-ctaRed">
+              {line.price}
+            </span>
+          </div>
+        ))}
+      </div>
+      <p className="mt-4 text-center text-text/80">
+        Some blades and shears may vary depending on condition. You can
+        send a photo for an exact quote.
+      </p>
+    </div>
+  );
+}
+
+function ClipperCTA() {
+  return (
+    <>
+      <h2 className="text-2xl font-semibold text-text">
+        Ready to sharpen your animal clipper blades and grooming shears?
+      </h2>
+      <p className="mt-4 text-text/70">
+        Professional sharpening for groomers and animal-care specialists.
+        Drop-off in Campbelltown NSW.
+      </p>
+      <a
+        href="tel:0412974277"
+        className="mt-6 inline-block rounded-full bg-ctaRed px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-ctaRed/90"
+      >
+        Call Now — 0412 974 277
+      </a>
+    </>
   );
 }
 
@@ -169,10 +277,12 @@ export default function ClipperBladesPage() {
 
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">
-          Clipper Blade Sharpening
+          Clipper Blade Sharpening for Groomers
         </h1>
         <p className="max-w-2xl text-lg text-text/70">
-          Precision sharpening for A5, wide and large-animal clipper blades.
+          Animal clipper blade and grooming shears sharpening for groomers,
+          vets and animal-care professionals. A5, wide and large-animal
+          blades.
         </p>
         <a
           href="tel:0412974277"
@@ -193,17 +303,18 @@ export default function ClipperBladesPage() {
             finishing. Every blade is sharpened individually, cleaned,
             aligned and tested before return.
           </p>
-          <div className="mt-8">
-            <ClipperMachinePhoto />
-            <ClipperProcessVideo />
-          </div>
+          <ClipperIntroGallery />
+          <ClipperBeforePhoto />
+          <ClipperAfterPhoto />
+          <ClipperEquipmentPhoto />
+          <ClipperVideoSection />
         </div>
       </section>
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-center text-2xl font-semibold text-text">
-            Types of Clipper Blades I Sharpen
+            What I Sharpen for Groomers &amp; Animal-Care Professionals
           </h2>
           <div className="mt-6 inline-block text-left">
             <Checklist items={clipperBladeTypes} />
@@ -212,30 +323,7 @@ export default function ClipperBladesPage() {
       </section>
 
       <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-md">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Pricing
-          </h2>
-          <div className="mt-6 rounded-lg border border-metallic/40 bg-background p-6">
-            {pricing.map((line, index) => (
-              <div
-                key={line.name}
-                className={`flex items-center justify-between gap-4 py-2 ${
-                  index > 0 ? "border-t border-metallic/40" : ""
-                }`}
-              >
-                <span className="text-text/80">{line.name}</span>
-                <span className="text-right font-semibold text-ctaRed">
-                  {line.price}
-                </span>
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 text-center text-text/80">
-            Some blades may vary depending on condition. You can send a
-            photo for an exact quote.
-          </p>
-        </div>
+        <ClipperPricing />
       </section>
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
@@ -257,8 +345,9 @@ export default function ClipperBladesPage() {
             Mail-In Sharpening (Australia-Wide)
           </h2>
           <p className="mt-4 text-text/80">
-            You can post your clipper blades using a prepaid Australia Post
-            satchel. Return postage is sent with tracking.
+            You can post your clipper blades and grooming shears using a
+            prepaid Australia Post satchel. Return postage is sent with
+            tracking.
           </p>
           <p className="mt-4 text-text/80">
             Please contact me first before sending anything. I&apos;ll
@@ -273,9 +362,8 @@ export default function ClipperBladesPage() {
             Turnaround Time
           </h2>
           <p className="mt-4 text-text/80">
-            Most clipper blades are completed within 1–2 days. Busy periods
-            may take up to 3 days, depending on workload. Urgent jobs are
-            available by arrangement.
+            Standard turnaround for clipper blades and grooming shears is
+            3 days.
           </p>
         </div>
       </section>
@@ -316,16 +404,7 @@ export default function ClipperBladesPage() {
       <RelatedLinks links={relatedServiceLinks("/clipper-blades")} />
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
-        <a
-          href="tel:0412974277"
-          className="inline-block rounded-full bg-ctaRed px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-ctaRed/90"
-        >
-          Call Now — 0412 974 277
-        </a>
-        <p className="mt-4 text-text/70">
-          Drop-off sharpening in Campbelltown NSW. Mail-in sharpening
-          Australia-wide.
-        </p>
+        <ClipperCTA />
       </section>
     </>
   );
