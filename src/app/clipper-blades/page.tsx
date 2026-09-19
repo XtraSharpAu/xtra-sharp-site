@@ -347,6 +347,55 @@ function ClipperProcessSteps() {
   );
 }
 
+const clipperPackingPhotos = [
+  {
+    src: "/clipper-packing-small-bags.jpg",
+    alt: "Blades placed in small plastic bags for protection.",
+    width: 240,
+    height: 320,
+  },
+  {
+    src: "/clipper-packing-wrapped.jpg",
+    alt: "Blades wrapped in paper towel to protect them.",
+    width: 240,
+    height: 320,
+  },
+  {
+    src: "/clipper-packing-ready.jpg",
+    alt: "Blades bagged up and ready to go back to the customer.",
+    width: 240,
+    height: 320,
+  },
+];
+
+function ClipperPackingPhotos() {
+  return (
+    <div className="mx-auto mt-12 max-w-3xl text-left">
+      <h3 className="text-xl font-semibold text-text">
+        Packed Carefully for Return
+      </h3>
+      <div className="mx-auto mt-6 grid max-w-2xl gap-6 sm:grid-cols-3">
+        {clipperPackingPhotos.map((photo) => (
+          <div key={photo.src}>
+            <div className="overflow-hidden rounded-lg shadow-md">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
+                className="h-auto w-full"
+              />
+            </div>
+            <p className="mt-2 text-center text-sm text-text/60">
+              {photo.alt}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function ClipperPricing() {
   return (
     <div className="mx-auto max-w-md">
@@ -459,6 +508,7 @@ export default function ClipperBladesPage() {
           <ClipperEquipmentSection />
           <ClipperVideoSection />
           <ClipperProcessSteps />
+          <ClipperPackingPhotos />
         </div>
       </section>
 
