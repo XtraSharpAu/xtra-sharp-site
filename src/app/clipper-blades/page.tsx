@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -89,6 +90,14 @@ const dropOffChecklist = [
   "Ensure clipper blades are detached from the clipper",
   "Remove heavy rust or debris if possible",
   "Place items in a secure container or wrap for transport",
+];
+
+const clipperCareInstructions = [
+  "Always oil your clipper blades before and after use.",
+  "Store blades in a dry place to prevent rust.",
+  "Avoid dropping blades — this is the most common cause of broken teeth, which makes the blade unusable.",
+  "Clean hair and debris from blades regularly.",
+  "If blades start pulling or snagging, they may need sharpening again.",
 ];
 
 const faqs = [
@@ -509,6 +518,32 @@ export default function ClipperBladesPage() {
           <ClipperVideoSection />
           <ClipperProcessSteps />
           <ClipperPackingPhotos />
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-16 text-center">
+        <h2 className="text-2xl font-semibold text-text">
+          Packing &amp; Return Process
+        </h2>
+        <p className="mt-4 text-text/80">
+          Need your clipper blades sharpened? Book your service today.
+        </p>
+        <Link
+          href="/contact"
+          className="mt-6 inline-block rounded-full bg-ctaRed px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-ctaRed/90"
+        >
+          Book Sharpening
+        </Link>
+      </section>
+
+      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-center text-2xl font-semibold text-text">
+            Clipper Blade Care Instructions
+          </h2>
+          <div className="mt-6 inline-block text-left">
+            <Checklist items={clipperCareInstructions} />
+          </div>
         </div>
       </section>
 
