@@ -25,6 +25,7 @@ The `docs/` folder has grown across several large requests into a substantial co
 | `launch-readiness.md` | **New (Command 18)**: pre-launch checklist — domain/branding/copy verified in-codebase; GBP and Google Search Console flagged as unverifiable (no account access); **GA4 confirmed genuinely absent from the site**, a real gap, not fabricated as present |
 | `analytics-monitoring.md` | **New (Command 19)**: real GA4 integration built (`src/components/GoogleAnalytics.tsx`, env-var gated, inactive until a real Measurement ID is set) and tested locally with a throwaway ID; Search Console, GBP and uptime monitoring documented as requiring the site owner's own account access, not fabricated as done |
 | `weekly-report.md` | **New (Command 20)**: no analytics/Search Console/uptime data exists to report — none of those three were ever activated (see `analytics-monitoring.md`), stated explicitly rather than inventing numbers; real re-run Lighthouse scores included (Clipper Blades now 89, likely measurement noise not a regression — no code changed) |
+| `activation-verification.md` | **New (Command 21)**: GA4/Search Console/uptime/GBP activation are all actions only the site owner can take (own account logins, own browser with real internet access) — re-confirmed still not activated, turned into a concrete checklist for the owner rather than a fabricated "done" report |
 
 ## SEO, Accessibility, Performance, Structure
 
