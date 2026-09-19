@@ -18,6 +18,7 @@ The `docs/` folder has grown across several large requests into a substantial co
 | `metadata.md` | Exact current title/description/canonical per page |
 | `schema.md` | Every JSON-LD block, **master pricing table** (single source of truth) |
 | `faq.md` | Developer FAQ about the codebase |
+| `visual-audit.md` | Live-build audit: photos/captions/footer/section order, and the OG/Twitter metadata gap found and fixed |
 
 ## SEO, Accessibility, Performance, Structure
 
@@ -95,6 +96,15 @@ The `docs/` folder has grown across several large requests into a substantial co
 ## How This Index Came About
 
 A request for a "Content Flood Pack" asked for the same nine categories above, re-labelled with new section numbers, almost entirely duplicating work already done in two prior large requests (verified by mapping every requested item against the existing corpus before building anything new). Rather than regenerate near-identical content under new filenames — which would have added volume without adding value, and made the corpus harder to navigate rather than easier — the user confirmed: skip the duplicates, add only genuinely new material, and build this index. The five new long-form guides (`long-form-content/11–15`), five new blog posts (`blog-posts/11–15`), and the modest "round 3" top-ups to the marketing banks above are the actual new content from that request; everything else in the Content Flood Pack request was already covered by what's listed above it in this index.
+
+## "Full Technical + Marketing Master Pack" Request (Command 7)
+
+A later request ("Command 7") asked for the same 5 developer docs, SEO/schema pack, sitemap/robots, canonical/OG/Twitter tags, and a marketing pack of specific counts (20 GBP posts, 20 social captions, 10 ad variations, 10 brochure lines, 10 FAQ expansions, 10 prep guides) — all of which already existed in this corpus, in most cases at higher counts than requested (e.g. 50 GBP posts across three rounds, not 20). Every item was checked against the corpus above before anything was built. The only genuine gaps found:
+- **Canonical tags**: already present on every page — no gap.
+- **OG/Twitter tags**: 10 pages (`about`, `batch`, `commercial`, `gallery`, `how-it-works`, `privacy`, `services`, `terms`, `thank-you`, `tips`) had canonical tags but no `openGraph`/`twitter` blocks. Fixed — see `visual-audit.md` §5.
+- **Visual audit** (photos wired, captions/alt text, footer privacy, section order): genuinely new since it checks very recent work not covered by `website-audit-pack.md`. Written up in `visual-audit.md`.
+
+No documentation or marketing files were regenerated. If a future request asks for this pack again, point to this section first.
 
 **Not expanded further, and why**: flyers and brochures already have 30 concepts each across two rounds — a third round would mean either restating the same 5 services and general themes a third time, or inventing scenarios (new services, new audiences) that don't exist. Seasonal promotions already sit at exactly the requested count of 20. If a genuinely new angle for any of these emerges (a real new service, a real new audience segment), add to the relevant file rather than starting a fourth round file.
 

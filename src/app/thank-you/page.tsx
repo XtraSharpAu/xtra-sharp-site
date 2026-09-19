@@ -6,6 +6,22 @@ import Checklist from "@/components/Checklist";
 export const metadata: Metadata = {
   title: "Thank You | Xtra Sharp",
   description: "Your message to Xtra Sharp has been received.",
+  openGraph: {
+    title: "Thank You | Xtra Sharp",
+    description: "Your message to Xtra Sharp has been received.",
+    url: "https://xtrasharp.com.au/thank-you",
+    type: "article",
+    images: ["https://xtrasharp.com.au/og-thank-you.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Thank You | Xtra Sharp",
+    description: "Your message to Xtra Sharp has been received.",
+    images: ["https://xtrasharp.com.au/og-thank-you.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au/thank-you",
+  },
   alternates: {
     canonical: "https://xtrasharp.com.au/thank-you",
   },

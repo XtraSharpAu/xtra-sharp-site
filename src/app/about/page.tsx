@@ -6,6 +6,24 @@ export const metadata: Metadata = {
   title: "About | Xtra Sharp",
   description:
     "Xtra Sharp is a professional knife and tool sharpening service based in Woodbine, Campbelltown NSW, serving Western Sydney.",
+  openGraph: {
+    title: "About | Xtra Sharp",
+    description:
+      "Xtra Sharp is a professional knife and tool sharpening service based in Woodbine, Campbelltown NSW, serving Western Sydney.",
+    url: "https://xtrasharp.com.au/about",
+    type: "article",
+    images: ["https://xtrasharp.com.au/og-about.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | Xtra Sharp",
+    description:
+      "Xtra Sharp is a professional knife and tool sharpening service based in Woodbine, Campbelltown NSW, serving Western Sydney.",
+    images: ["https://xtrasharp.com.au/og-about.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au/about",
+  },
   alternates: {
     canonical: "https://xtrasharp.com.au/about",
   },

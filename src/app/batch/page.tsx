@@ -6,6 +6,24 @@ export const metadata: Metadata = {
   title: "Batch Sharpening | Xtra Sharp",
   description:
     "Batch sharpening for schools, salons, restaurants, workshops and tradespeople across Campbelltown, Woodbine and Western Sydney, with priority handling and consistent edge quality.",
+  openGraph: {
+    title: "Batch Sharpening | Xtra Sharp",
+    description:
+      "Batch sharpening for schools, salons, restaurants, workshops and tradespeople across Campbelltown, Woodbine and Western Sydney, with priority handling and consistent edge quality.",
+    url: "https://xtrasharp.com.au/batch",
+    type: "article",
+    images: ["https://xtrasharp.com.au/og-batch.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Batch Sharpening | Xtra Sharp",
+    description:
+      "Batch sharpening for schools, salons, restaurants, workshops and tradespeople across Campbelltown, Woodbine and Western Sydney, with priority handling and consistent edge quality.",
+    images: ["https://xtrasharp.com.au/og-batch.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au/batch",
+  },
   alternates: {
     canonical: "https://xtrasharp.com.au/batch",
   },

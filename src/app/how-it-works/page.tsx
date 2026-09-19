@@ -9,6 +9,24 @@ export const metadata: Metadata = {
   title: "How It Works | Xtra Sharp",
   description:
     "The step-by-step process behind every Xtra Sharp job — booking, drop-off/mail-in/pick-up options, sharpening, quality checks, and return.",
+  openGraph: {
+    title: "How It Works | Xtra Sharp",
+    description:
+      "The step-by-step process behind every Xtra Sharp job — booking, drop-off/mail-in/pick-up options, sharpening, quality checks, and return.",
+    url: "https://xtrasharp.com.au/how-it-works",
+    type: "article",
+    images: ["https://xtrasharp.com.au/og-how-it-works.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How It Works | Xtra Sharp",
+    description:
+      "The step-by-step process behind every Xtra Sharp job — booking, drop-off/mail-in/pick-up options, sharpening, quality checks, and return.",
+    images: ["https://xtrasharp.com.au/og-how-it-works.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au/how-it-works",
+  },
   alternates: {
     canonical: "https://xtrasharp.com.au/how-it-works",
   },

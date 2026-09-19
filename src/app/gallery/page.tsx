@@ -6,6 +6,24 @@ export const metadata: Metadata = {
   title: "Gallery | Xtra Sharp",
   description:
     "See examples of Xtra Sharp's knife, scissor, clipper blade and tool sharpening work, plus our Campbelltown NSW workshop setup.",
+  openGraph: {
+    title: "Gallery | Xtra Sharp",
+    description:
+      "See examples of Xtra Sharp's knife, scissor, clipper blade and tool sharpening work, plus our Campbelltown NSW workshop setup.",
+    url: "https://xtrasharp.com.au/gallery",
+    type: "article",
+    images: ["https://xtrasharp.com.au/og-gallery.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gallery | Xtra Sharp",
+    description:
+      "See examples of Xtra Sharp's knife, scissor, clipper blade and tool sharpening work, plus our Campbelltown NSW workshop setup.",
+    images: ["https://xtrasharp.com.au/og-gallery.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au/gallery",
+  },
   alternates: {
     canonical: "https://xtrasharp.com.au/gallery",
   },

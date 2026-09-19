@@ -6,6 +6,24 @@ export const metadata: Metadata = {
   title: "Sharpening Tips & Advice | Xtra Sharp",
   description:
     "Practical care tips for knives, scissors, clipper blades and workshop tools between professional sharpening visits, from Xtra Sharp in Campbelltown NSW.",
+  openGraph: {
+    title: "Sharpening Tips & Advice | Xtra Sharp",
+    description:
+      "Practical care tips for knives, scissors, clipper blades and workshop tools between professional sharpening visits, from Xtra Sharp in Campbelltown NSW.",
+    url: "https://xtrasharp.com.au/tips",
+    type: "article",
+    images: ["https://xtrasharp.com.au/og-tips.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sharpening Tips & Advice | Xtra Sharp",
+    description:
+      "Practical care tips for knives, scissors, clipper blades and workshop tools between professional sharpening visits, from Xtra Sharp in Campbelltown NSW.",
+    images: ["https://xtrasharp.com.au/og-tips.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au/tips",
+  },
   alternates: {
     canonical: "https://xtrasharp.com.au/tips",
   },

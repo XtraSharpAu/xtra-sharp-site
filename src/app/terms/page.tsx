@@ -7,6 +7,24 @@ export const metadata: Metadata = {
   title: "Service Terms | Xtra Sharp",
   description:
     "Xtra Sharp's service terms covering appointments, item condition, repairs, turnaround, pricing, pick-up/mail-in, liability, and cancellations.",
+  openGraph: {
+    title: "Service Terms | Xtra Sharp",
+    description:
+      "Xtra Sharp's service terms covering appointments, item condition, repairs, turnaround, pricing, pick-up/mail-in, liability, and cancellations.",
+    url: "https://xtrasharp.com.au/terms",
+    type: "article",
+    images: ["https://xtrasharp.com.au/og-terms.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Service Terms | Xtra Sharp",
+    description:
+      "Xtra Sharp's service terms covering appointments, item condition, repairs, turnaround, pricing, pick-up/mail-in, liability, and cancellations.",
+    images: ["https://xtrasharp.com.au/og-terms.jpg"],
+  },
+  other: {
+    "twitter:url": "https://xtrasharp.com.au/terms",
+  },
   alternates: {
     canonical: "https://xtrasharp.com.au/terms",
   },
