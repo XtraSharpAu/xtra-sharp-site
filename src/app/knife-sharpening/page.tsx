@@ -7,6 +7,56 @@ import ServiceFaq from "@/components/ServiceFaq";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedServiceLinks } from "@/lib/serviceLinks";
 
+const introGalleryPhotos = [
+  {
+    src: "/knife-gallery-lineup.jpg",
+    alt: "Professional knife lineup prepared for sharpening.",
+  },
+  {
+    src: "/knife-gallery-case.jpg",
+    alt: "Variety of kitchen knives before sharpening.",
+  },
+  {
+    src: "/knife-gallery-mixed.jpg",
+    alt: "Chef and utility knives arranged for sharpening.",
+  },
+];
+
+function KnifeIntroGallery() {
+  return (
+    <div className="mx-auto mt-8 grid max-w-4xl gap-4 sm:grid-cols-3">
+      {introGalleryPhotos.map((photo) => (
+        <div
+          key={photo.src}
+          className="overflow-hidden rounded-lg shadow-md"
+        >
+          <Image
+            src={photo.src}
+            alt={photo.alt}
+            width={1200}
+            height={1600}
+            className="h-auto w-full"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function KnifePremiumPhoto() {
+  return (
+    <div className="mx-auto mt-6 w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
+      <Image
+        src="/knife-premium-japanese.jpg"
+        alt="Japanese chef knife sharpened for precision cutting."
+        width={1200}
+        height={1600}
+        className="h-auto w-full"
+      />
+    </div>
+  );
+}
+
 function KnifeBeforePhoto() {
   return (
     <div className="mx-auto mt-8 w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
@@ -226,9 +276,11 @@ export default function KnifeSharpeningPage() {
           <h2 className="text-2xl font-semibold text-text">
             Precision Knife Sharpening for Every Edge
           </h2>
+          <KnifeIntroGallery />
           <KnifeBeforePhoto />
           <KnifeBeforeDetailPhoto />
           <KnifeAfterPhoto />
+          <KnifePremiumPhoto />
           <KnifeDemoVideo />
         </div>
       </section>
