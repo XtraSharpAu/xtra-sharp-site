@@ -57,6 +57,26 @@ function KnifePremiumPhoto() {
   );
 }
 
+function KnifeEquipmentPhoto() {
+  return (
+    <div className="mx-auto mt-12 w-full max-w-2xl">
+      <div className="overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/knife_sharpening_machine.jpg"
+          alt="Knife sharpening machine with belt grinder and polishing wheel in workshop."
+          width={1600}
+          height={2155}
+          className="h-auto w-full"
+        />
+      </div>
+      <p className="mt-2 text-sm text-text/60">
+        Professional belt grinder and wheel setup used for precision knife
+        sharpening.
+      </p>
+    </div>
+  );
+}
+
 function KnifeBeforePhoto() {
   return (
     <div className="mx-auto mt-8 w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
@@ -281,6 +301,7 @@ export default function KnifeSharpeningPage() {
           <KnifeBeforeDetailPhoto />
           <KnifeAfterPhoto />
           <KnifePremiumPhoto />
+          <KnifeEquipmentPhoto />
           <KnifeDemoVideo />
         </div>
       </section>
