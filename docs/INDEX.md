@@ -22,6 +22,7 @@ The `docs/` folder has grown across several large requests into a substantial co
 | `visual-assets.md` | **New (Command 8)**: how the 14 generated images (10 OG cards, 3 hero banners, 1 composite) were actually made, and their honest limitations |
 | `lighthouse-audit.md` | **New (Command 16)**: real Lighthouse 13.5.0 scores (before/after) for 11 pages, plus what was actually fixed (23 oversized images, 3 low-contrast inline links, 1 heading-order skip) |
 | `deployment-audit.md` | **New (Command 17)**: caching headers added to `next.config.ts` and why; explicit statement of what could NOT be verified from this environment (DNS, SSL, live production headers, real deploy) and why |
+| `launch-readiness.md` | **New (Command 18)**: pre-launch checklist — domain/branding/copy verified in-codebase; GBP and Google Search Console flagged as unverifiable (no account access); **GA4 confirmed genuinely absent from the site**, a real gap, not fabricated as present |
 
 ## SEO, Accessibility, Performance, Structure
 
