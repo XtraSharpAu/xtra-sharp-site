@@ -180,6 +180,73 @@ function ClipperEquipmentPhoto() {
   );
 }
 
+const clipperEquipmentBenefits = [
+  "Cuts cleaner",
+  "Runs cooler",
+  "Reduces strain on the clipper motor",
+  "Minimises snagging and pulling",
+  "Improves grooming efficiency",
+];
+
+function ClipperEquipmentSection() {
+  return (
+    <div className="mx-auto mt-12 max-w-3xl text-left">
+      <h3 className="text-xl font-semibold text-text">
+        Purpose-Built Equipment for Animal Clipper Blades
+      </h3>
+      <p className="mt-3 text-text/80">
+        At Xtra Sharp, all clipper blade sharpening is carried out on a
+        dedicated machine designed specifically for A5, wide, and
+        large-animal blades. The system uses a purpose-built plate made
+        for clipper blades, ensuring the correct cutting action is
+        restored every time.
+      </p>
+
+      <h3 className="mt-8 text-xl font-semibold text-text">
+        Designed for Grooming Blades
+      </h3>
+      <p className="mt-3 text-text/80">
+        This machine is built for the unique requirements of animal
+        clipper blades. Its purpose-built plate and controlled sharpening
+        process return blades to proper working condition without
+        altering their intended performance.
+      </p>
+
+      <h3 className="mt-8 text-xl font-semibold text-text">
+        Secure, Controlled Sharpening
+      </h3>
+      <p className="mt-3 text-text/80">
+        Each blade is held firmly in place while the plate restores the
+        cutting surface. This helps reduce vibration, improves coat
+        finish, and supports consistent grooming results.
+      </p>
+
+      <h3 className="mt-8 text-xl font-semibold text-text">
+        Why Groomers Benefit
+      </h3>
+      <p className="mt-3 text-text/80">A properly sharpened blade:</p>
+      <div className="mt-3">
+        <Checklist items={clipperEquipmentBenefits} />
+      </div>
+      <p className="mt-4 text-text/80">
+        Consistent sharpening quality means fewer blade issues and better
+        results.
+      </p>
+
+      <h3 className="mt-8 text-xl font-semibold text-text">
+        Machine Photo
+      </h3>
+      <div className="mt-3">
+        <ClipperEquipmentPhoto />
+        <p className="mt-2 text-sm text-text/60">
+          Automated clipper blade sharpening machine used for A5, wide and
+          large-animal blades.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function ClipperVideoSection() {
   return (
     <div className="mx-auto mt-6 w-full max-w-2xl">
@@ -312,7 +379,7 @@ export default function ClipperBladesPage() {
           <ClipperIntroGallery />
           <ClipperBeforePhoto />
           <ClipperAfterPhoto />
-          <ClipperEquipmentPhoto />
+          <ClipperEquipmentSection />
           <ClipperVideoSection />
         </div>
       </section>
