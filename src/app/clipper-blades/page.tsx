@@ -141,20 +141,41 @@ const faqSchema = {
   })),
 };
 
-function PhotoPlaceholder({ label }: { label: string }) {
-  return (
-    <div className="flex aspect-[4/3] items-center justify-center rounded-lg border-2 border-dashed border-metallic/40 bg-surface text-sm text-text/50">
-      {label}
-    </div>
-  );
-}
+const clipperIntroGalleryPhotos = [
+  {
+    src: "/clipper-blade-set-full.jpg",
+    alt: "Clipper blades before sharpening — ready for inspection.",
+    width: 960,
+    height: 1280,
+  },
+  {
+    src: "/clipper-sharpening-machine-bright.jpg",
+    alt: "Professional clipper blade sharpening equipment.",
+    width: 1600,
+    height: 1200,
+  },
+  {
+    src: "/clipper-blade-clean-top.jpg",
+    alt: "Sharpened clipper blade ready for testing.",
+    width: 1200,
+    height: 1600,
+  },
+];
 
 function ClipperIntroGallery() {
   return (
     <div className="mx-auto mt-8 grid max-w-4xl gap-4 sm:grid-cols-3">
-      <PhotoPlaceholder label="Photo coming soon" />
-      <PhotoPlaceholder label="Photo coming soon" />
-      <PhotoPlaceholder label="Photo coming soon" />
+      {clipperIntroGalleryPhotos.map((photo) => (
+        <div key={photo.src} className="overflow-hidden rounded-lg shadow-md">
+          <Image
+            src={photo.src}
+            alt={photo.alt}
+            width={photo.width}
+            height={photo.height}
+            className="h-auto w-full"
+          />
+        </div>
+      ))}
     </div>
   );
 }
@@ -162,7 +183,18 @@ function ClipperIntroGallery() {
 function ClipperBeforePhoto() {
   return (
     <div className="mx-auto mt-6 w-full max-w-2xl">
-      <PhotoPlaceholder label="Before photo coming soon" />
+      <div className="overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/clipper-blade-worn-closeup.jpg"
+          alt="Clipper blades before sharpening — visible wear along the teeth."
+          width={1200}
+          height={1600}
+          className="h-auto w-full"
+        />
+      </div>
+      <p className="mt-2 text-center text-sm text-text/60">
+        Clipper blades before sharpening — visible wear along the teeth.
+      </p>
     </div>
   );
 }
@@ -170,7 +202,37 @@ function ClipperBeforePhoto() {
 function ClipperAfterPhoto() {
   return (
     <div className="mx-auto mt-6 w-full max-w-2xl">
-      <PhotoPlaceholder label="After photo coming soon" />
+      <div className="overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/clipper-blade-clean-top.jpg"
+          alt="Clipper blades after sharpening — aligned and polished."
+          width={1200}
+          height={1600}
+          className="h-auto w-full"
+        />
+      </div>
+      <p className="mt-2 text-center text-sm text-text/60">
+        Clipper blades after sharpening — aligned and polished.
+      </p>
+    </div>
+  );
+}
+
+function ClipperEdgeDetailPhoto() {
+  return (
+    <div className="mx-auto mt-6 w-full max-w-2xl">
+      <div className="overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/clipper-blade-edge-teeth-macro.jpg"
+          alt="Close-up of sharpened edge detail."
+          width={1200}
+          height={1600}
+          className="h-auto w-full"
+        />
+      </div>
+      <p className="mt-2 text-center text-sm text-text/60">
+        Close-up of sharpened edge detail.
+      </p>
     </div>
   );
 }
@@ -539,6 +601,7 @@ export default function ClipperBladesPage() {
           <ClipperIntroGallery />
           <ClipperBeforePhoto />
           <ClipperAfterPhoto />
+          <ClipperEdgeDetailPhoto />
           <ClipperEquipmentSection />
           <ClipperVideoSection />
           <ClipperProcessSteps />
