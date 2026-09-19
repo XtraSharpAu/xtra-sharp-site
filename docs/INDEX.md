@@ -23,6 +23,7 @@ The `docs/` folder has grown across several large requests into a substantial co
 | `lighthouse-audit.md` | **New (Command 16)**: real Lighthouse 13.5.0 scores (before/after) for 11 pages, plus what was actually fixed (23 oversized images, 3 low-contrast inline links, 1 heading-order skip) |
 | `deployment-audit.md` | **New (Command 17)**: caching headers added to `next.config.ts` and why; explicit statement of what could NOT be verified from this environment (DNS, SSL, live production headers, real deploy) and why |
 | `launch-readiness.md` | **New (Command 18)**: pre-launch checklist — domain/branding/copy verified in-codebase; GBP and Google Search Console flagged as unverifiable (no account access); **GA4 confirmed genuinely absent from the site**, a real gap, not fabricated as present |
+| `analytics-monitoring.md` | **New (Command 19)**: real GA4 integration built (`src/components/GoogleAnalytics.tsx`, env-var gated, inactive until a real Measurement ID is set) and tested locally with a throwaway ID; Search Console, GBP and uptime monitoring documented as requiring the site owner's own account access, not fabricated as done |
 
 ## SEO, Accessibility, Performance, Structure
 
