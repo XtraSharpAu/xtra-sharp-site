@@ -119,6 +119,25 @@ function KnifeAfterPhoto() {
   );
 }
 
+function KnifeEdgeDetailPhoto() {
+  return (
+    <div className="mx-auto mt-12 w-full max-w-2xl">
+      <div className="overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/knife_damage_zoom.jpg"
+          alt="Knife edge detail prior to sharpening."
+          width={1600}
+          height={578}
+          className="h-auto w-full"
+        />
+      </div>
+      <p className="mt-2 text-sm text-text/60">
+        Close-up of knife edge before sharpening.
+      </p>
+    </div>
+  );
+}
+
 function KnifeDemoVideo() {
   return (
     <div className="mx-auto mt-8 w-full max-w-2xl">
@@ -302,6 +321,7 @@ export default function KnifeSharpeningPage() {
           <KnifeAfterPhoto />
           <KnifePremiumPhoto />
           <KnifeEquipmentPhoto />
+          <KnifeEdgeDetailPhoto />
           <KnifeDemoVideo />
         </div>
       </section>
