@@ -3,11 +3,11 @@ import AboutHero from "@/components/AboutHero";
 import Checklist from "@/components/Checklist";
 
 export const metadata: Metadata = {
-  title: "About | Xtra Sharp",
+  title: "About | Xtra Sharp Campbelltown NSW",
   description:
     "Xtra Sharp is a professional knife and tool sharpening service based in Woodbine, Campbelltown NSW, serving Western Sydney.",
   openGraph: {
-    title: "About | Xtra Sharp",
+    title: "About | Xtra Sharp Campbelltown NSW",
     description:
       "Xtra Sharp is a professional knife and tool sharpening service based in Woodbine, Campbelltown NSW, serving Western Sydney.",
     url: "https://xtrasharp.com.au/about",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About | Xtra Sharp",
+    title: "About | Xtra Sharp Campbelltown NSW",
     description:
       "Xtra Sharp is a professional knife and tool sharpening service based in Woodbine, Campbelltown NSW, serving Western Sydney.",
     images: ["https://xtrasharp.com.au/og-about.jpg"],

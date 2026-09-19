@@ -68,7 +68,7 @@ const sections = [
     paragraphs: [
       <>
         Pricing is listed on the{" "}
-        <Link href="/pricing" className="text-accent hover:underline">
+        <Link href="/pricing" className="text-accent underline">
           Pricing page
         </Link>
         .
@@ -112,7 +112,7 @@ const sections = [
     paragraphs: [
       <>
         For questions about these terms or any special requirements,{" "}
-        <Link href="/contact" className="text-accent hover:underline">
+        <Link href="/contact" className="text-accent underline">
           contact Xtra Sharp
         </Link>{" "}
         directly.

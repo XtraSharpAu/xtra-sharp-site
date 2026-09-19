@@ -3,11 +3,11 @@ import BatchHero from "@/components/BatchHero";
 import Checklist from "@/components/Checklist";
 
 export const metadata: Metadata = {
-  title: "Batch Sharpening | Xtra Sharp",
+  title: "Batch Sharpening | Xtra Sharp Campbelltown NSW",
   description:
     "Batch sharpening for schools, salons, restaurants and workshops across Campbelltown NSW and Western Sydney, with priority handling and consistent edge quality.",
   openGraph: {
-    title: "Batch Sharpening | Xtra Sharp",
+    title: "Batch Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Batch sharpening for schools, salons, restaurants and workshops across Campbelltown NSW and Western Sydney, with priority handling and consistent edge quality.",
     url: "https://xtrasharp.com.au/batch",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Batch Sharpening | Xtra Sharp",
+    title: "Batch Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Batch sharpening for schools, salons, restaurants and workshops across Campbelltown NSW and Western Sydney, with priority handling and consistent edge quality.",
     images: ["https://xtrasharp.com.au/og-batch.jpg"],

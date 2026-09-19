@@ -3,11 +3,11 @@ import GalleryHero from "@/components/GalleryHero";
 import GalleryCategory from "@/components/GalleryCategory";
 
 export const metadata: Metadata = {
-  title: "Gallery | Xtra Sharp",
+  title: "Gallery | Xtra Sharp Campbelltown NSW",
   description:
     "See examples of Xtra Sharp's knife, scissor, clipper blade and tool sharpening work, plus our Campbelltown NSW workshop setup.",
   openGraph: {
-    title: "Gallery | Xtra Sharp",
+    title: "Gallery | Xtra Sharp Campbelltown NSW",
     description:
       "See examples of Xtra Sharp's knife, scissor, clipper blade and tool sharpening work, plus our Campbelltown NSW workshop setup.",
     url: "https://xtrasharp.com.au/gallery",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gallery | Xtra Sharp",
+    title: "Gallery | Xtra Sharp Campbelltown NSW",
     description:
       "See examples of Xtra Sharp's knife, scissor, clipper blade and tool sharpening work, plus our Campbelltown NSW workshop setup.",
     images: ["https://xtrasharp.com.au/og-gallery.jpg"],

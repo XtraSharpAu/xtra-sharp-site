@@ -3,11 +3,11 @@ import TipsHero from "@/components/TipsHero";
 import Checklist from "@/components/Checklist";
 
 export const metadata: Metadata = {
-  title: "Sharpening Tips & Advice | Xtra Sharp",
+  title: "Sharpening Tips & Advice | Xtra Sharp Campbelltown NSW",
   description:
     "Practical care tips for knives, scissors, clipper blades and workshop tools between professional sharpening visits, from Xtra Sharp in Campbelltown NSW.",
   openGraph: {
-    title: "Sharpening Tips & Advice | Xtra Sharp",
+    title: "Sharpening Tips & Advice | Xtra Sharp Campbelltown NSW",
     description:
       "Practical care tips for knives, scissors, clipper blades and workshop tools between professional sharpening visits, from Xtra Sharp in Campbelltown NSW.",
     url: "https://xtrasharp.com.au/tips",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sharpening Tips & Advice | Xtra Sharp",
+    title: "Sharpening Tips & Advice | Xtra Sharp Campbelltown NSW",
     description:
       "Practical care tips for knives, scissors, clipper blades and workshop tools between professional sharpening visits, from Xtra Sharp in Campbelltown NSW.",
     images: ["https://xtrasharp.com.au/og-tips.jpg"],

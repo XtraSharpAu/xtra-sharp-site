@@ -113,7 +113,7 @@ const sections = [
     paragraphs: [
       <>
         If you have questions about this Privacy Policy,{" "}
-        <Link href="/contact" className="text-accent hover:underline">
+        <Link href="/contact" className="text-accent underline">
           contact Xtra Sharp
         </Link>{" "}
         directly.

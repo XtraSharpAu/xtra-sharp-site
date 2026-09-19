@@ -4,11 +4,11 @@ import CommercialSegment from "@/components/CommercialSegment";
 import Checklist from "@/components/Checklist";
 
 export const metadata: Metadata = {
-  title: "Commercial Clients | Xtra Sharp",
+  title: "Commercial Clients | Xtra Sharp Campbelltown NSW",
   description:
     "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown NSW, with batch pricing and scheduled cycles.",
   openGraph: {
-    title: "Commercial Clients | Xtra Sharp",
+    title: "Commercial Clients | Xtra Sharp Campbelltown NSW",
     description:
       "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown NSW, with batch pricing and scheduled cycles.",
     url: "https://xtrasharp.com.au/commercial",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Commercial Clients | Xtra Sharp",
+    title: "Commercial Clients | Xtra Sharp Campbelltown NSW",
     description:
       "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown NSW, with batch pricing and scheduled cycles.",
     images: ["https://xtrasharp.com.au/og-commercial.jpg"],
@@ -99,7 +99,10 @@ export default function CommercialPage() {
       <CommercialHero />
 
       <section className="border-t border-metallic/40 px-6 py-20">
-        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
+        <h2 className="text-center text-3xl font-semibold text-text">
+          Commercial Sectors We Serve
+        </h2>
+        <div className="mx-auto mt-10 grid max-w-5xl gap-6 sm:grid-cols-2">
           {segments.map((segment) => (
             <CommercialSegment key={segment.title} {...segment} />
           ))}

@@ -6,11 +6,11 @@ import Checklist from "@/components/Checklist";
 import OptionCards from "@/components/OptionCards";
 
 export const metadata: Metadata = {
-  title: "How It Works | Xtra Sharp",
+  title: "How It Works | Xtra Sharp Campbelltown NSW",
   description:
     "The step-by-step process behind every Xtra Sharp job — booking, drop-off/mail-in/pick-up options, sharpening, quality checks, and return.",
   openGraph: {
-    title: "How It Works | Xtra Sharp",
+    title: "How It Works | Xtra Sharp Campbelltown NSW",
     description:
       "The step-by-step process behind every Xtra Sharp job — booking, drop-off/mail-in/pick-up options, sharpening, quality checks, and return.",
     url: "https://xtrasharp.com.au/how-it-works",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "How It Works | Xtra Sharp",
+    title: "How It Works | Xtra Sharp Campbelltown NSW",
     description:
       "The step-by-step process behind every Xtra Sharp job — booking, drop-off/mail-in/pick-up options, sharpening, quality checks, and return.",
     images: ["https://xtrasharp.com.au/og-how-it-works.jpg"],
