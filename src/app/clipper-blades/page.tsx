@@ -281,26 +281,36 @@ function ClipperVideoSection() {
 
 const clipperProcessSteps = [
   {
-    title: "Inspecting Clipper Blades",
+    title: "Inspecting",
+    videoId: "T63v_yzcLNA",
     description:
       "Checking the condition of clipper blades before sharpening. This step identifies wear, buildup, and alignment issues that affect cutting performance.",
     caption:
       "Inspecting clipper blades before sharpening — checking wear and buildup.",
   },
   {
-    title: "Blades Cleaned and Ready for Sharpening",
+    title: "Cleaned & Ready",
+    videoId: "jSPJTdo1jvc",
     description:
       "Clipper blades fully cleaned and prepared for sharpening. All debris, hair, and buildup removed to ensure a smooth and accurate sharpening pass.",
     caption: "Blades cleaned and ready for sharpening — all buildup removed.",
   },
   {
-    title: "Sharpening the Blades",
+    title: "Sharpening",
+    videoId: "TAUAprurMEw",
     description:
       "Sharpening the clipper blades on the purpose-built machine. This step restores the cutting surface and prepares the blades for alignment and testing.",
     caption: "Sharpening the blades — restoring the cutting surface.",
   },
   {
-    title: "Demagnetising the Blades",
+    title: "Deburring",
+    videoId: "jzMoT6WvCkg",
+    description: null,
+    caption: "Deburring the clipper blades.",
+  },
+  {
+    title: "Demagnetising",
+    videoId: "f2ryWYaCO-4",
     description:
       "Demagnetising the clipper blades after sharpening to prevent fine metal particles from clinging to the blade. This step helps keep the cutting surface clean and improves grooming performance.",
     caption:
@@ -308,26 +318,30 @@ const clipperProcessSteps = [
   },
   {
     title: "Cleaning the Clipper Blades",
+    videoId: "duBTQ4rz36c",
     description:
       "Cleaning the clipper blades after sharpening to remove fine metal particles and residue. This step ensures a smooth cutting surface and prepares the blades for alignment and reassembly.",
     caption:
       "Cleaning the clipper blades — removing fine metal and residue after sharpening.",
   },
   {
-    title: "Putting the Blades Back Together",
+    title: "Reassembling",
+    videoId: "LFkUeiRcjAM",
     description:
       "Reassembling the clipper blade set after sharpening and cleaning. This step ensures correct tension, smooth movement, and proper alignment for optimal cutting performance.",
     caption:
       "Putting the blades back together — ensuring correct tension and alignment.",
   },
   {
-    title: "Testing the Blades",
+    title: "Testing",
+    videoId: "iK7tfQAxTdE",
     description:
       "Testing the clipper blades after reassembly to confirm smooth movement, correct tension, and clean cutting performance. This step ensures the blades are functioning properly before returning them to the customer.",
     caption: "Testing the blades — confirming smooth movement and clean cutting.",
   },
   {
-    title: "Protecting Blades with Blade Wash",
+    title: "Blade Wash",
+    videoId: "aOvSsybYK2c",
     description:
       "Applying blade wash to protect the clipper blades before returning them to the customer. This helps prevent rust and keeps the blades in good condition, especially if they won't be used immediately. Before use, wipe most of the blade wash off and apply fresh oil.",
     caption:
@@ -341,13 +355,24 @@ function ClipperProcessSteps() {
       <h3 className="text-xl font-semibold text-text">
         The Sharpening Process, Step by Step
       </h3>
-      <ol className="mt-6 space-y-6">
+      <ol className="mt-6 space-y-10">
         {clipperProcessSteps.map((step, index) => (
           <li key={step.title}>
             <h4 className="font-semibold text-text">
               Step {index + 1} — {step.title}
             </h4>
-            <p className="mt-1 text-text/80">{step.description}</p>
+            <div className="mt-3 aspect-video overflow-hidden rounded-lg shadow-md">
+              <iframe
+                src={`https://www.youtube.com/embed/${step.videoId}`}
+                title={`Clipper Blade Sharpening — Step ${index + 1}: ${step.title}`}
+                className="h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+            {step.description && (
+              <p className="mt-2 text-text/80">{step.description}</p>
+            )}
             <p className="mt-1 text-sm text-text/60">{step.caption}</p>
           </li>
         ))}
