@@ -79,6 +79,26 @@ function ProcessorAfterPhoto() {
   );
 }
 
+function ProcessorEquipmentPhoto() {
+  return (
+    <div className="mx-auto mt-12 w-full max-w-2xl">
+      <div className="overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/knife_sharpening_machine.jpg"
+          alt="Water-cooled sharpening machine used for knives and industrial processor blades."
+          width={1600}
+          height={2155}
+          className="h-auto w-full"
+        />
+      </div>
+      <p className="mt-2 text-sm text-text/60">
+        Water-cooled sharpening machine used for knives and industrial
+        processor blades.
+      </p>
+    </div>
+  );
+}
+
 export const metadata: Metadata = {
   title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
   description:
@@ -229,6 +249,7 @@ export default function ProcessorBladesPage() {
           </p>
           <ProcessorBeforePhoto />
           <ProcessorAfterPhoto />
+          <ProcessorEquipmentPhoto />
         </div>
       </section>
 
