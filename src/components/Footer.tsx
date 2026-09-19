@@ -29,6 +29,9 @@ export default function Footer() {
           <p className="mt-2">Campbelltown NSW &bull; Servicing Macarthur Since 2013</p>
           <p className="mt-1">Cash, card, and internet banking accepted.</p>
           <p className="mt-3">
+            <strong className="text-text">Location:</strong> Campbelltown NSW
+          </p>
+          <p className="mt-1">
             <strong className="text-text">Sharpening Location:</strong>{" "}
             Address provided after booking
           </p>
