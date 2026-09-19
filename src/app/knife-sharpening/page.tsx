@@ -1,10 +1,53 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ServiceFaq from "@/components/ServiceFaq";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedServiceLinks } from "@/lib/serviceLinks";
+
+function KnifeBeforePhoto() {
+  return (
+    <div className="mx-auto mt-8 w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
+      <Image
+        src="/knives-before-sharpening.jpg"
+        alt="Kitchen knives before sharpening — visible edge wear and dull finish."
+        width={320}
+        height={240}
+        className="h-auto w-full"
+      />
+    </div>
+  );
+}
+
+function KnifeBeforeDetailPhoto() {
+  return (
+    <div className="mx-auto mt-6 w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
+      <Image
+        src="/knives-before-sharpening-detail.jpg"
+        alt="Close-up of knife edges before sharpening showing visible damage and dull spots."
+        width={1400}
+        height={651}
+        className="h-auto w-full"
+      />
+    </div>
+  );
+}
+
+function KnifeAfterPhoto() {
+  return (
+    <div className="mx-auto mt-6 w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
+      <Image
+        src="/knives-after-sharpening.jpg"
+        alt="Kitchen knives after sharpening — restored edges and polished finish."
+        width={1500}
+        height={2000}
+        className="h-auto w-full"
+      />
+    </div>
+  );
+}
 
 function KnifeDemoVideo() {
   return (
@@ -175,6 +218,17 @@ export default function KnifeSharpeningPage() {
             to protect the steel&apos;s temper from heat damage, giving a
             clean, strong cutting edge.
           </p>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-2xl font-semibold text-text">
+            Precision Knife Sharpening for Every Edge
+          </h2>
+          <KnifeBeforePhoto />
+          <KnifeBeforeDetailPhoto />
+          <KnifeAfterPhoto />
           <KnifeDemoVideo />
         </div>
       </section>
