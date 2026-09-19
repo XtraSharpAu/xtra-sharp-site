@@ -43,6 +43,42 @@ function ProcessorBeforePhoto() {
   );
 }
 
+const processorAfterPhotos = [
+  {
+    src: "/processor-blade-after-single.jpg",
+    alt: "Processor blades after sharpening — precision-polished edges restored.",
+    width: 1200,
+    height: 1537,
+  },
+  {
+    src: "/processor-blade-after-set.jpg",
+    alt: "Industrial processor blades sharpened to a mirror finish for optimal cutting performance.",
+    width: 1200,
+    height: 1440,
+  },
+];
+
+function ProcessorAfterPhoto() {
+  return (
+    <div className="mx-auto mt-6 grid max-w-3xl gap-6 sm:grid-cols-2">
+      {processorAfterPhotos.map((photo) => (
+        <div key={photo.src}>
+          <div className="overflow-hidden rounded-lg shadow-md">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              width={photo.width}
+              height={photo.height}
+              className="h-auto w-full"
+            />
+          </div>
+          <p className="mt-2 text-center text-sm text-text/60">{photo.alt}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export const metadata: Metadata = {
   title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
   description:
@@ -192,6 +228,7 @@ export default function ProcessorBladesPage() {
             for home and industrial equipment.
           </p>
           <ProcessorBeforePhoto />
+          <ProcessorAfterPhoto />
         </div>
       </section>
 
