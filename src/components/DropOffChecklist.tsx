@@ -29,13 +29,15 @@ export default function DropOffChecklist({
     >
       <div className="mx-auto max-w-2xl">
         <h2 className="text-center text-2xl font-semibold text-text">
-          Before You Drop Off
+          Before You Drop Off (Campbelltown NSW)
         </h2>
         <div className="mt-6 inline-block text-left">
           <Checklist items={items} />
         </div>
         <p className="mt-4 text-center text-text/80">
-          Drop-off location: Campbelltown NSW (address provided after booking).
+          Drop-off location: Campbelltown NSW (address provided after
+          booking). Prefer not to travel? Mail-in sharpening is available
+          Australia-wide.
         </p>
       </div>
     </section>

@@ -26,7 +26,11 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-text/80">
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-text">Xtra Sharp</h3>
-          <p className="mt-2">Campbelltown NSW &bull; Servicing Macarthur Since 2013</p>
+          <p className="mt-2">
+            Professional knife sharpening in Campbelltown NSW, servicing
+            Macarthur since 2013. Mail-in sharpening available
+            Australia-wide.
+          </p>
           <p className="mt-1">Cash, card, and internet banking accepted.</p>
           <p className="mt-3">
             <strong className="text-text">Location:</strong> Campbelltown NSW
