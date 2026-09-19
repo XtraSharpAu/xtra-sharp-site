@@ -1,10 +1,47 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ServiceFaq from "@/components/ServiceFaq";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedServiceLinks } from "@/lib/serviceLinks";
+
+const processorBeforePhotos = [
+  {
+    src: "/processor-blade-before-single.jpg",
+    alt: "Processor blades before sharpening — visible wear along the cutting edge.",
+    width: 1500,
+    height: 2000,
+  },
+  {
+    src: "/processor-blade-before-set.jpg",
+    alt: "Industrial processor blades awaiting precision sharpening.",
+    width: 1500,
+    height: 1790,
+  },
+];
+
+function ProcessorBeforePhoto() {
+  return (
+    <div className="mx-auto mt-8 grid max-w-3xl gap-6 sm:grid-cols-2">
+      {processorBeforePhotos.map((photo) => (
+        <div key={photo.src}>
+          <div className="overflow-hidden rounded-lg shadow-md">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              width={photo.width}
+              height={photo.height}
+              className="h-auto w-full"
+            />
+          </div>
+          <p className="mt-2 text-center text-sm text-text/60">{photo.alt}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export const metadata: Metadata = {
   title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
@@ -154,6 +191,7 @@ export default function ProcessorBladesPage() {
             protect the steel from heat damage, giving safe, accurate edges
             for home and industrial equipment.
           </p>
+          <ProcessorBeforePhoto />
         </div>
       </section>
 
