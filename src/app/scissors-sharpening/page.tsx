@@ -1,10 +1,53 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ServiceFaq from "@/components/ServiceFaq";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedServiceLinks } from "@/lib/serviceLinks";
+
+const scissorsIntroGalleryPhotos = [
+  {
+    src: "/scissors-gallery-lineup.jpg",
+    alt: "Hairdressing scissors lineup prepared for sharpening.",
+    width: 1061,
+    height: 1600,
+  },
+  {
+    src: "/scissors-gallery-collection.jpg",
+    alt: "Collection of hairdressing scissors prepared for sharpening.",
+    width: 1185,
+    height: 1418,
+  },
+  {
+    src: "/scissors-gallery-closeup.jpg",
+    alt: "Close-up of a hairdressing scissors handle and finger rings.",
+    width: 1200,
+    height: 1600,
+  },
+];
+
+function ScissorsIntroGallery() {
+  return (
+    <div className="mx-auto mt-8 grid max-w-4xl gap-4 sm:grid-cols-3">
+      {scissorsIntroGalleryPhotos.map((photo) => (
+        <div
+          key={photo.src}
+          className="overflow-hidden rounded-lg shadow-md"
+        >
+          <Image
+            src={photo.src}
+            alt={photo.alt}
+            width={photo.width}
+            height={photo.height}
+            className="h-auto w-full"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export const metadata: Metadata = {
   title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
@@ -164,6 +207,7 @@ export default function ScissorsSharpeningPage() {
             correct angle, ride line, tension and alignment. This ensures
             your scissors cut cleanly, smoothly and safely.
           </p>
+          <ScissorsIntroGallery />
         </div>
       </section>
 
