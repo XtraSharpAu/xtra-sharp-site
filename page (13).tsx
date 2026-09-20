@@ -52,18 +52,6 @@ export default function FaqPage() {
         </div>
       </section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-semibold text-text">
-            Do you sharpen serrated knives?
-          </h2>
-          <p className="mt-3 text-text/80">
-            Yes, serrated knives can be sharpened carefully to maintain their
-            original tooth pattern.
-          </p>
-        </div>
-      </section>
-
       <section className="border-t border-metallic/40 bg-accent/5 px-6 py-16">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-semibold text-text">

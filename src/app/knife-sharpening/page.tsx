@@ -242,9 +242,24 @@ const faqs = [
       "It depends on how often the knife is used, but most home kitchen knives benefit from a professional sharpen every 3–6 months, with regular honing in between to maintain the edge.",
   },
   {
-    question: "Do you sharpen serrated knives?",
+    question: "What sharpening method do you use?",
     answer:
-      "Yes — serrated knives can be sharpened carefully to maintain their original tooth pattern.",
+      "All knives are sharpened using a controlled water‑cooled process to protect the steel, maintain edge integrity, and deliver a consistent, professional finish.",
+  },
+  {
+    question: "How do I book my knives in for sharpening?",
+    answer:
+      "You can book in anytime by phone or message. Once confirmed, you’ll receive a clear drop‑off time and a turnaround estimate based on current workload.",
+  },
+  {
+    question: "What type of edge finish do you provide?",
+    answer:
+      "Every knife is finished to a clean, consistent working edge suitable for home or commercial use. If you prefer a specific finish, just let us know when you book in.",
+  },
+  {
+    question: "Can you sharpen different steel types?",
+    answer:
+      "Yes — we work with most common kitchen knife steels, including carbon and stainless, using a controlled water‑cooled process to protect the blade and maintain edge quality.",
   },
   {
     question: "Can you fix chips or damaged edges?",

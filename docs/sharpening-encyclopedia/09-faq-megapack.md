@@ -21,7 +21,7 @@ Compact format. This supplements, and doesn't replace, the live `/faq` page (11 
 12. **What's the difference between honing and sharpening?** Honing realigns; sharpening restores. See `08-glossary.md`.
 13. **Will sharpening change my knife's shape?** A proper sharpen restores the edge, not the overall shape.
 14. **Can a rusty old knife be saved?** Often yes — depends on rust depth; see `docs/long-form-content/11-restoring-a-neglected-knife.md`.
-15. **Do you sharpen serrated knives?** Yes, with a technique that preserves the tooth pattern.
+15. **Can you sharpen different steel types?** Yes — most common kitchen knife steels, including carbon and stainless, using a controlled water-cooled process. See `docs/long-form-content/09-steel-types-and-sharpening.md`.
 16. **What's water-cooled sharpening?** See `docs/technical-pack.md`.
 17. **Why did my home-sharpened knife's angle change over the years?** Freehand sharpening drift — see `06-science-and-theory.md`.
 18. **What cutting board should I use?** Wood or plastic — glass/stone/ceramic dulls blades faster.
