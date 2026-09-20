@@ -34,13 +34,13 @@ Full multi-command workflow executed from initial rebuild through content, SEO, 
 
 ## Monitoring Activation Progress
 
-Re-verified fresh, unchanged since the last activation review: **0 of 3 monitoring/analytics systems are active.** GA4's integration code is built and tested and needs no further engineering work — it's purely waiting on a real Measurement ID. Search Console and uptime monitoring have no code dependency at all; both are pure account setup. None of the three can be progressed further from this environment. Full detail, including a concrete next-review date, in `docs/monitoring-status.md`.
+Still **0 of 3 monitoring/analytics systems active in production**, but GA4 moved forward: a real Measurement ID (`G-F91NJ3NQ8X`) was supplied and the existing integration code was re-verified locally against it (script tag and `gtag('config', ...)` both render correctly with the real ID; still renders nothing when the env var is unset). The ID has not been committed anywhere in the repo — it needs to go into Vercel's environment variables, not source control. Search Console and uptime monitoring have no code dependency at all; both are pure account setup. None of the three can be progressed further from this environment — see `docs/analytics-monitoring.md` §1 for the GA4 detail and `docs/monitoring-status.md` for the other two.
 
 ## Outstanding Owner-Side Actions
 
-These four remain exactly as documented in `docs/activation-verification.md` — none of them can be completed from this environment, since each requires the site owner's own account access:
+None of the following can be completed from this environment, since each requires the site owner's own account access:
 
-1. Add a real GA4 Measurement ID in Vercel → Environment Variables → redeploy.
+1. Add `NEXT_PUBLIC_GA_MEASUREMENT_ID` = `G-F91NJ3NQ8X` in Vercel → Settings → Environment Variables (Production, and Preview if wanted) → redeploy.
 2. Add and verify the Search Console property, submit `sitemap.xml`.
 3. Set up uptime monitoring (Vercel Monitoring or UptimeRobot) with real alert contact details.
 4. Confirm the Google Business Profile listing's website link, phone, suburb, and service description against the site's real values.

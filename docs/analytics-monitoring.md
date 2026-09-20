@@ -4,14 +4,24 @@ Same discipline as `docs/deployment-audit.md` and `docs/launch-readiness.md`: th
 
 ## 1. Google Analytics 4
 
-**Could not "obtain a GA4 Measurement ID"** — that requires being logged into the site owner's Google Analytics account, which this session has no access to (and, per the deployment audit, no network route to any google.com domain at all). No ID was invented or hardcoded in its place, since a fake-looking `G-XXXXXXXXXX` would silently track nothing while making the site look instrumented when it isn't.
+A request later supplied a real Measurement ID: **`G-F91NJ3NQ8X`**. Earlier in this project no ID was available — logging into the site owner's Google Analytics account isn't something this session has ever had access to (and, per the deployment audit, there's no network route to any google.com domain at all from here). No ID was invented or hardcoded in its place at the time, since a fake-looking `G-XXXXXXXXXX` would silently track nothing while making the site look instrumented when it isn't. That's no longer the situation for the ID itself — see below for what's still outstanding.
 
-**What was built instead: a real, working, ready-to-activate integration**, gated behind an environment variable so it does nothing until a real ID is supplied — never sends requests to Google, never risks polluting a wrong or placeholder property with test traffic.
+**What was built: a real, working, ready-to-activate integration**, gated behind an environment variable so it does nothing until a real ID is supplied — never sends requests to Google, never risks polluting a wrong or placeholder property with test traffic.
 
 - `src/components/GoogleAnalytics.tsx` reads `NEXT_PUBLIC_GA_MEASUREMENT_ID`. If it's unset, the component renders `null` and no script loads at all — confirmed with a local build+serve that no `googletagmanager.com` reference appears anywhere in the page when the variable is absent.
 - If set, it loads `gtag.js` and initializes it, using Next.js's `next/script` component with `strategy="afterInteractive"` — the framework's recommended pattern for third-party analytics tags (loads after the page is interactive, doesn't block hydration), rather than pasting raw `<script>` tags into `<head>`, which isn't how the App Router manages `<head>` content and would perform worse than `next/script`.
 - Wired into `src/app/layout.tsx` so it runs on every page site-wide.
-- **Verified the active code path works**, without touching the real production config: built and served the site locally with a throwaway test value (`NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TEST123456`, never committed anywhere) and confirmed both the `gtag.js` script tag and the `gtag('config', 'G-TEST123456')` call render correctly in the served HTML. Then rebuilt clean without it for what's actually being committed.
+
+**A later request asked for this to be added via `pages/_app.js`.** This codebase has no `pages/` directory at all — it's built entirely on the App Router (`src/app/`), confirmed by `find . -iname "pages"` returning nothing and every route living under `src/app/*/page.tsx`. Adding a `pages/_app.js` here wouldn't do anything: Next.js only runs `_app.js` for routes defined under `pages/`, and none exist, so the file would be inert dead code that misrepresents the project's actual architecture. The functionally equivalent, framework-correct place for this — `src/components/GoogleAnalytics.tsx` wired into the root layout — already existed before that request and needed no changes; no `pages/_app.js` was created.
+
+**Verified twice**, without touching real production config:
+1. Originally, with a throwaway test value (`NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TEST123456`, never committed) — confirmed both the `gtag.js` script tag and the `gtag('config', ...)` call rendered correctly.
+2. Again with the real ID once it was supplied: built and served locally with `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-F91NJ3NQ8X` and confirmed the live HTML contains `googletagmanager.com/gtag/js?id=G-F91NJ3NQ8X` and `gtag('config', 'G-F91NJ3NQ8X')`. Then rebuilt clean without the variable set and reconfirmed zero `googletagmanager` references, so the "off by default" behavior still holds. The real ID was used for local verification only — it was **not** committed anywhere in the repo (`.env*` is gitignored); it belongs in Vercel's environment variables, not source control, same as any other environment-specific config, even though a GA4 Measurement ID isn't itself a secret.
+
+**Still outstanding — requires the site owner's own Vercel access, which this session doesn't have** (no `vercel` CLI, no `.vercel` project link, no credentials or network route to Vercel's dashboard/API from this sandbox):
+1. In the Vercel dashboard: Project → Settings → Environment Variables → add `NEXT_PUBLIC_GA_MEASUREMENT_ID` = `G-F91NJ3NQ8X` for Production (and Preview if wanted).
+2. Redeploy (Vercel → Deployments → Redeploy on the latest, or push any commit to `main` to trigger one automatically).
+3. **Verify tag firing** on the live site: DevTools → Network, filter for `collect` or `g/collect`, confirm a request fires on page load. This can only be checked against a live deployment with the env var actually set — not from here.
 
 ### What you need to do to turn this on
 1. Get your real Measurement ID from Google Analytics (Admin → Data Streams → your web stream → format `G-XXXXXXXXXX`).
@@ -50,8 +60,10 @@ Not set up. Both suggested options require creating or configuring an account wi
 
 | Item | Status |
 |---|---|
-| GA4 integration code | ✅ Built, tested locally with a throwaway ID, ready — inactive until a real Measurement ID is set |
-| GA4 tag firing on live site | ❓ Cannot verify without a live site + real ID |
+| GA4 integration code | ✅ Built, tested locally with both a throwaway ID and the real ID (`G-F91NJ3NQ8X`) — ready, inactive until the env var is set in Vercel |
+| GA4 env var set in Vercel (`NEXT_PUBLIC_GA_MEASUREMENT_ID`) | ❌ Not done — needs your Vercel dashboard access |
+| Site redeployed with the var set | ❌ Not done — same reason |
+| GA4 tag firing on live site | ❓ Cannot verify until the above two are done on your end |
 | Search Console property added | ❌ Not done — needs your Google account |
 | sitemap.xml submitted / indexing checked | ❌ Not done — same reason; the file itself is correct and ready |
 | GBP website link / phone / suburb / service description | ❓ Not verified — needs your GBP dashboard; site's own source-of-truth values listed above for comparison |
