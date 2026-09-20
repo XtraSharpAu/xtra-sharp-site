@@ -34,21 +34,20 @@ Full multi-command workflow executed from initial rebuild through content, SEO, 
 
 ## Monitoring Activation Progress
 
-Still **0 of 3 monitoring/analytics systems active in production**, but GA4 moved forward: a real Measurement ID (`G-F91NJ3NQ8X`) was supplied and the existing integration code was re-verified locally against it (script tag and `gtag('config', ...)` both render correctly with the real ID; still renders nothing when the env var is unset). The ID has not been committed anywhere in the repo — it needs to go into Vercel's environment variables, not source control. Search Console and uptime monitoring have no code dependency at all; both are pure account setup. None of the three can be progressed further from this environment — see `docs/analytics-monitoring.md` §1 for the GA4 detail and `docs/monitoring-status.md` for the other two.
+**GA4 is now live — 1 of 3 monitoring/analytics systems active in production.** The env var was set in Vercel, the tag fires and returns 204, and — after a real-world gap where accepted hits weren't appearing in Realtime/DebugView (investigated and ruled out at the code level; root cause not reported back, but fixed) — the owner has confirmed real visits are now recording. A temporary `debug_mode: true` diagnostic flag used during that investigation has been reverted. Search Console and uptime monitoring remain not set up; both are pure account setup with no code dependency, and neither can be progressed further from this environment — see `docs/analytics-monitoring.md` §1 for the GA4 detail and `docs/monitoring-status.md` for the other two.
 
 ## Outstanding Owner-Side Actions
 
 None of the following can be completed from this environment, since each requires the site owner's own account access:
 
-1. Add `NEXT_PUBLIC_GA_MEASUREMENT_ID` = `G-F91NJ3NQ8X` in Vercel → Settings → Environment Variables (Production, and Preview if wanted) → redeploy.
-2. Add and verify the Search Console property, submit `sitemap.xml`.
-3. Set up uptime monitoring (Vercel Monitoring or UptimeRobot) with real alert contact details.
-4. Confirm the Google Business Profile listing's website link, phone, suburb, and service description against the site's real values.
+1. Add and verify the Search Console property, submit `sitemap.xml`.
+2. Set up uptime monitoring (Vercel Monitoring or UptimeRobot) with real alert contact details.
+3. Confirm the Google Business Profile listing's website link, phone, suburb, and service description against the site's real values.
 
 ## Completion Status
 
 - ✅ Code, content, SEO, accessibility, performance, **and now structured data (20/21) and marketing readiness** — complete and verified across all 21 pages, not a sample.
-- ⚙️ Activation tasks — pending the site owner's own account access; see the four items above. 0 of 3 monitoring/analytics systems active.
+- ⚙️ Activation tasks — pending the site owner's own account access; see the three items above. 1 of 3 monitoring/analytics systems active (GA4).
 - ⚙️ Quarterly Lighthouse automation — local script proven working (real run committed); GitHub Actions schedule written but unverified from this environment, pending its first real fire or manual dispatch.
 - 📄 All commits verified on `origin/main`.
 

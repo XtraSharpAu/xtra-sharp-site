@@ -18,10 +18,7 @@ export default function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          // TEMPORARY diagnostic flag — debug_mode marks hits as debug
-          // traffic so they show up in GA4 DebugView. Revert this once
-          // the "0 events" issue is diagnosed; see docs/analytics-monitoring.md.
-          gtag('config', '${GA_MEASUREMENT_ID}', { debug_mode: true });
+          gtag('config', '${GA_MEASUREMENT_ID}');
         `}
       </Script>
     </>
