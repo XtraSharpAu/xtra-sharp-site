@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
 import ContactForm from "@/components/ContactForm";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -64,6 +65,21 @@ export default function ContactPage() {
       </section>
 
       <section className="border-t border-metallic/40 px-6 py-16 text-center">
+        <figure className="mx-auto mb-4 flex flex-col items-center gap-2">
+          <div className="h-[100px] w-[100px] overflow-hidden rounded-full shadow-md">
+            <Image
+              src="/owner-phillip-angland.jpg"
+              alt="Phillip Angland — Owner of Xtra Sharp"
+              width={512}
+              height={512}
+              sizes="100px"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <figcaption className="text-xs text-text/70">
+            Phillip Angland — Owner &amp; Sharpener
+          </figcaption>
+        </figure>
         <h2 className="text-2xl font-semibold text-text">Call or Text</h2>
         <a
           href="tel:0412974277"
