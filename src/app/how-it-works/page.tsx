@@ -4,6 +4,7 @@ import HowItWorksHero from "@/components/HowItWorksHero";
 import ProcessStep from "@/components/ProcessStep";
 import Checklist from "@/components/Checklist";
 import OptionCards from "@/components/OptionCards";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "How It Works | Xtra Sharp Campbelltown NSW",
@@ -69,6 +70,13 @@ const returnOptions = [
 export default function HowItWorksPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "How It Works", url: "https://xtrasharp.com.au/how-it-works" },
+        ]}
+      />
+
       <HowItWorksHero />
 
       <ProcessStep number={1} title="Book Your Appointment">

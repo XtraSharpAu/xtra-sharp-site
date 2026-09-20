@@ -1,0 +1,89 @@
+name: Quarterly Lighthouse Audit
+
+# Runs against the live production site, so it needs real internet access —
+# unlike the sandboxed environment this repo is usually developed in, a
+# GitHub Actions runner has that. See docs/maintenance-automation.md.
+#
+# Schedule: 09:00 UTC on the 1st of January, April, July, October (quarterly).
+# Can also be run on demand from the Actions tab ("Run workflow").
+on:
+  schedule:
+    - cron: "0 9 1 1,4,7,10 *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Determine quarter tag
+        id: quarter
+        run: |
+          year=$(date -u +%Y)
+          month=$(date -u +%-m)
+          quarter=$(( (month - 1) / 3 + 1 ))
+          echo "tag=${year}-Q${quarter}" >> "$GITHUB_OUTPUT"
+
+      - name: Run Lighthouse against production
+        run: |
+          mkdir -p /tmp/lh-reports
+          routes=(
+            "/" "/knife-sharpening" "/scissors-sharpening" "/clipper-blades"
+            "/garden-tools" "/processor-blades" "/pricing" "/mail-in"
+            "/service-area" "/faq" "/contact" "/about" "/services"
+            "/how-it-works" "/commercial" "/batch" "/tips" "/gallery"
+            "/terms" "/privacy" "/thank-you"
+          )
+          for route in "${routes[@]}"; do
+            slug="${route:1}"; [ -z "$slug" ] && slug="home"; slug="${slug//\//-}"
+            echo "Auditing https://xtrasharp.com.au${route}"
+            npx -y lighthouse@13.5.0 "https://xtrasharp.com.au${route}" \
+              --only-categories=performance,accessibility,seo \
+              --output=json \
+              --output-path="/tmp/lh-reports/${slug}.json" \
+              --chrome-flags="--headless=new --no-sandbox --disable-gpu" \
+              --quiet
+          done
+
+      - name: Summarize and flag low scores
+        run: |
+          out="docs/quarterly-reports/${{ steps.quarter.outputs.tag }}.json"
+          mkdir -p docs/quarterly-reports
+          routes=(
+            "/:home" "/knife-sharpening:knife-sharpening" "/scissors-sharpening:scissors-sharpening"
+            "/clipper-blades:clipper-blades" "/garden-tools:garden-tools" "/processor-blades:processor-blades"
+            "/pricing:pricing" "/mail-in:mail-in" "/service-area:service-area" "/faq:faq"
+            "/contact:contact" "/about:about" "/services:services" "/how-it-works:how-it-works"
+            "/commercial:commercial" "/batch:batch" "/tips:tips" "/gallery:gallery"
+            "/terms:terms" "/privacy:privacy" "/thank-you:thank-you"
+          )
+          for pair in "${routes[@]}"; do
+            route="${pair%%:*}"; slug="${pair##*:}"
+            perf=$(jq -r '.categories.performance.score * 100 | round' "/tmp/lh-reports/${slug}.json")
+            a11y=$(jq -r '.categories.accessibility.score * 100 | round' "/tmp/lh-reports/${slug}.json")
+            seo=$(jq -r '.categories.seo.score * 100 | round' "/tmp/lh-reports/${slug}.json")
+            jq -n --arg route "$route" --argjson perf "$perf" --argjson a11y "$a11y" --argjson seo "$seo" \
+              '{route: $route, performance: $perf, accessibility: $a11y, seo: $seo}' \
+              > "/tmp/lh-reports/${slug}.summary.json"
+          done
+          jq -s \
+            --arg quarter "${{ steps.quarter.outputs.tag }}" \
+            --arg generatedAt "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            --arg lighthouseVersion "13.5.0" \
+            --argjson threshold 90 \
+            '{ quarter: $quarter, generatedAt: $generatedAt, lighthouseVersion: $lighthouseVersion,
+               failThreshold: $threshold, source: "production (xtrasharp.com.au)", pages: .,
+               flagged: [ .[] | select(.performance < $threshold or .accessibility < $threshold or .seo < $threshold) ] }' \
+            /tmp/lh-reports/*.summary.json > "$out"
+          cat "$out" | jq .
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-${{ steps.quarter.outputs.tag }}
+          path: docs/quarterly-reports/${{ steps.quarter.outputs.tag }}.json
+          retention-days: 400

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CommercialHero from "@/components/CommercialHero";
 import CommercialSegment from "@/components/CommercialSegment";
 import Checklist from "@/components/Checklist";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Commercial Clients | Xtra Sharp Campbelltown NSW",
@@ -96,6 +97,13 @@ const serviceArea = [
 export default function CommercialPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Commercial Clients", url: "https://xtrasharp.com.au/commercial" },
+        ]}
+      />
+
       <CommercialHero />
 
       <section className="border-t border-metallic/40 px-6 py-20">

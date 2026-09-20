@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import AboutHero from "@/components/AboutHero";
 import Checklist from "@/components/Checklist";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "About | Xtra Sharp Campbelltown NSW",
@@ -46,6 +47,13 @@ const promise = [
 export default function AboutPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "About", url: "https://xtrasharp.com.au/about" },
+        ]}
+      />
+
       <AboutHero />
 
       <section className="border-t border-metallic/40 bg-accent/5 px-6 py-20">

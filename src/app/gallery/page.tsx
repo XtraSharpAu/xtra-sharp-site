@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import GalleryHero from "@/components/GalleryHero";
 import GalleryCategory from "@/components/GalleryCategory";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Gallery | Xtra Sharp Campbelltown NSW",
@@ -71,6 +72,13 @@ const categories = [
 export default function GalleryPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Gallery", url: "https://xtrasharp.com.au/gallery" },
+        ]}
+      />
+
       <GalleryHero />
 
       <div className="flex flex-col gap-16 px-6 pb-20">

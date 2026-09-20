@@ -3,6 +3,7 @@ import Link from "next/link";
 import PrivacyHero from "@/components/PrivacyHero";
 import PolicySections from "@/components/PolicySections";
 import Checklist from "@/components/Checklist";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Xtra Sharp Campbelltown NSW",
@@ -125,6 +126,13 @@ const sections = [
 export default function PrivacyPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Privacy Policy", url: "https://xtrasharp.com.au/privacy" },
+        ]}
+      />
+
       <PrivacyHero />
       <section className="border-t border-metallic/40 px-6 py-16">
         <PolicySections sections={sections} />

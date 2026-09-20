@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import TermsHero from "@/components/TermsHero";
 import PolicySections from "@/components/PolicySections";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Service Terms | Xtra Sharp Campbelltown NSW",
@@ -124,6 +125,13 @@ const sections = [
 export default function TermsPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Service Terms", url: "https://xtrasharp.com.au/terms" },
+        ]}
+      />
+
       <TermsHero />
       <section className="border-t border-metallic/40 px-6 py-16">
         <PolicySections sections={sections} />

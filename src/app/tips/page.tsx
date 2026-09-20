@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import TipsHero from "@/components/TipsHero";
 import Checklist from "@/components/Checklist";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Sharpening Tips & Advice | Xtra Sharp Campbelltown NSW",
@@ -71,6 +72,13 @@ const frequency = [
 export default function TipsPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Sharpening Tips & Advice", url: "https://xtrasharp.com.au/tips" },
+        ]}
+      />
+
       <TipsHero />
 
       <section className="border-t border-metallic/40 px-6 py-20">

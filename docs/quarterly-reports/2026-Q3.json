@@ -1,0 +1,142 @@
+{
+  "quarter": "2026-Q3",
+  "generatedAt": "2026-09-20T04:30:12Z",
+  "lighthouseVersion": "13.5.0",
+  "failThreshold": 90,
+  "pages": [
+    {
+      "route": "/about",
+      "performance": 98,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/batch",
+      "performance": 99,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/clipper-blades",
+      "performance": 96,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/commercial",
+      "performance": 98,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/contact",
+      "performance": 98,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/faq",
+      "performance": 98,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/gallery",
+      "performance": 99,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/garden-tools",
+      "performance": 99,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/",
+      "performance": 97,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/how-it-works",
+      "performance": 98,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/knife-sharpening",
+      "performance": 99,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/mail-in",
+      "performance": 98,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/pricing",
+      "performance": 98,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/privacy",
+      "performance": 98,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/processor-blades",
+      "performance": 99,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/scissors-sharpening",
+      "performance": 98,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/service-area",
+      "performance": 99,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/services",
+      "performance": 98,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/terms",
+      "performance": 98,
+      "accessibility": 100,
+      "seo": 100
+    },
+    {
+      "route": "/thank-you",
+      "performance": 97,
+      "accessibility": 100,
+      "seo": 66
+    },
+    {
+      "route": "/tips",
+      "performance": 99,
+      "accessibility": 100,
+      "seo": 100
+    }
+  ],
+  "flagged": [
+    {
+      "route": "/thank-you",
+      "performance": 97,
+      "accessibility": 100,
+      "seo": 66
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import BatchHero from "@/components/BatchHero";
 import Checklist from "@/components/Checklist";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Batch Sharpening | Xtra Sharp Campbelltown NSW",
@@ -62,6 +63,13 @@ const mailIn = ["Secure packaging", "Tracking", "Clear item list inside the parc
 export default function BatchPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Batch Sharpening", url: "https://xtrasharp.com.au/batch" },
+        ]}
+      />
+
       <BatchHero />
 
       <section className="border-t border-metallic/40 px-6 py-20">

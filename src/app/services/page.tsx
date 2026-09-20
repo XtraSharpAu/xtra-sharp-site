@@ -5,6 +5,7 @@ import ServiceOptions from "@/components/ServiceOptions";
 import Turnaround from "@/components/Turnaround";
 import ServicesContact from "@/components/ServicesContact";
 import DropOffChecklist from "@/components/DropOffChecklist";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Services & Pricing | Xtra Sharp Campbelltown NSW",
@@ -127,6 +128,13 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Services", url: "https://xtrasharp.com.au/services" },
+        ]}
+      />
+
       <ServicesHero />
 
       <section className="border-t border-metallic/40 px-6 py-20">

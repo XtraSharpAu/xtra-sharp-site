@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ThankYouHero from "@/components/ThankYouHero";
 import Checklist from "@/components/Checklist";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Thank You | Xtra Sharp Campbelltown NSW",
@@ -34,6 +35,13 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: "Home", url: "https://xtrasharp.com.au" },
+          { name: "Thank You", url: "https://xtrasharp.com.au/thank-you" },
+        ]}
+      />
+
       <ThankYouHero />
 
       <section className="border-t border-metallic/40 bg-accent/5 px-6 py-16">
