@@ -1,0 +1,28 @@
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
+export function SocialIcons() {
+  return (
+    <div className="flex items-center gap-4">
+      <a
+        href="https://www.facebook.com/xtrasharp"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Xtra Sharp on Facebook"
+        className="text-text/80 hover:text-accent hover:underline"
+      >
+        <FaFacebookSquare size={22} />
+      </a>
+
+      <a
+        href="https://x.com/XtraSharpAU"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Xtra Sharp on X"
+        className="text-text/80 hover:text-accent hover:underline"
+      >
+        <FaXTwitter size={22} />
+      </a>
+    </div>
+  );
+}

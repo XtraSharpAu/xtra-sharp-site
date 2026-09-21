@@ -1,5 +1,5 @@
 import Link from "next/link";
-import SocialBar from "@/components/SocialBar";
+import { FooterContactStrip } from "@/components/FooterContactStrip";
 
 const serviceLinks = [
   { label: "Knife Sharpening", href: "/knife-sharpening" },
@@ -124,9 +124,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mb-stack">
-          <SocialBar />
-        </div>
+        <FooterContactStrip />
 
         <div className="border-t border-metallic/40 pt-4 text-xs text-text/60">
           &copy; {new Date().getFullYear()} Xtra Sharp &mdash; Professional

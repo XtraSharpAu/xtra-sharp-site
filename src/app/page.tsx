@@ -6,6 +6,7 @@ import ServiceCard from "@/components/ServiceCard";
 import SectionHeading from "@/components/SectionHeading";
 import PageLayout from "@/components/PageLayout";
 import Section from "@/components/Section";
+import { FollowUsSection } from "@/components/FollowUsSection";
 
 export const metadata: Metadata = {
   title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
@@ -208,6 +209,8 @@ export default function Home() {
           ))}
         </div>
       </Section>
+
+      <FollowUsSection />
 
       <section className="border-t border-metallic/40 px-6 py-20 text-center">
         <CallNowButton />
