@@ -134,7 +134,7 @@ export default function MailInPage() {
         </p>
         <a
           href="tel:0412974277"
-          className="mt-4 inline-block rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
+          className="mt-4 inline-block whitespace-nowrap rounded-full bg-ctaRed px-6 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
         >
           Call Now — 0412 974 277
         </a>
@@ -265,7 +265,7 @@ export default function MailInPage() {
       <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
         <a
           href="tel:0412974277"
-          className="inline-block rounded-full bg-ctaRed px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-ctaRed/90"
+          className="inline-block whitespace-nowrap rounded-full bg-ctaRed px-8 py-4 text-center text-lg font-semibold text-white transition-colors hover:bg-ctaRed/90"
         >
           Call Now — 0412 974 277
         </a>
