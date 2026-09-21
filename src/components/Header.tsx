@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
@@ -19,8 +20,15 @@ export default function Header() {
   return (
     <header className="border-b border-metallic/40 bg-background">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 py-4">
-        <Link href="/" className="text-lg font-semibold text-text">
-          Xtra Sharp
+        <Link href="/" className="flex w-full max-w-[600px] items-center">
+          <Image
+            src="/xtrasharp_website_logo.png"
+            alt="Xtra Sharp — Knife & Tool Sharpening, Campbelltown NSW"
+            width={600}
+            height={116}
+            priority
+            className="h-auto w-full max-w-[600px]"
+          />
         </Link>
         <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-text/80">
           {navLinks.map((link) => (
