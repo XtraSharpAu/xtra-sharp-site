@@ -103,11 +103,11 @@ function ProcessorEquipmentPhoto() {
 export const metadata: Metadata = {
   title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Water-cooled sharpening for home and industrial processor blades in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
+    "Xtra Sharp Campbelltown NSW — expert water-cooled sharpening for processor blades used in commercial and industrial equipment. Safe, accurate edges and fast turnaround.",
   openGraph: {
     title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Water-cooled sharpening for home and industrial processor blades in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
+      "Xtra Sharp Campbelltown NSW — expert water-cooled sharpening for processor blades used in commercial and industrial equipment. Safe, accurate edges and fast turnaround.",
     url: "https://xtrasharp.com.au/processor-blades",
     type: "article",
     images: ["https://xtrasharp.com.au/og-processor-blades.jpg"],
@@ -116,7 +116,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Water-cooled sharpening for home and industrial processor blades in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
+      "Xtra Sharp Campbelltown NSW — expert water-cooled sharpening for processor blades used in commercial and industrial equipment. Safe, accurate edges and fast turnaround.",
     images: ["https://xtrasharp.com.au/og-processor-blades.jpg"],
   },
   other: {
@@ -220,7 +220,10 @@ export default function ProcessorBladesPage() {
           Processor Blade Sharpening
         </h1>
         <p className="max-w-2xl text-lg text-text/70">
-          Water-cooled sharpening for home and industrial processor blades.
+          Professional processor blade sharpening in Campbelltown NSW —
+          precision water-cooled sharpening for food-processing and
+          industrial blades. Each blade is restored to a safe, accurate edge
+          that maintains performance and extends equipment life.
         </p>
         <a
           href="tel:0412974277"
