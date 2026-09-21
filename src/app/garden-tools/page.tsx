@@ -11,11 +11,11 @@ import { relatedServiceLinks } from "@/lib/serviceLinks";
 export const metadata: Metadata = {
   title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Water-cooled sharpening for secateurs, hedge shears and axes in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
+    "Xtra Sharp Campbelltown NSW — expert water-cooled sharpening for garden tools including secateurs, loppers, and axes. Fast turnaround and local drop-off service.",
   openGraph: {
     title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Water-cooled sharpening for secateurs, hedge shears and axes in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
+      "Xtra Sharp Campbelltown NSW — expert water-cooled sharpening for garden tools including secateurs, loppers, and axes. Fast turnaround and local drop-off service.",
     url: "https://xtrasharp.com.au/garden-tools",
     type: "article",
     images: ["https://xtrasharp.com.au/og-garden-tools.jpg"],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Water-cooled sharpening for secateurs, hedge shears and axes in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
+      "Xtra Sharp Campbelltown NSW — expert water-cooled sharpening for garden tools including secateurs, loppers, and axes. Fast turnaround and local drop-off service.",
     images: ["https://xtrasharp.com.au/og-garden-tools.jpg"],
   },
   other: {
@@ -177,7 +177,10 @@ export default function GardenToolsPage() {
           Garden Tools Sharpening
         </h1>
         <p className="max-w-2xl text-lg text-text/70">
-          Water-cooled sharpening for secateurs, hedge shears and axes.
+          Professional garden tool sharpening in Campbelltown NSW —
+          restoring clean, accurate edges for secateurs, loppers, axes, and
+          other garden tools. Each tool is sharpened using water-cooled
+          equipment to maintain steel integrity and cutting precision.
         </p>
         <a
           href="tel:0412974277"
