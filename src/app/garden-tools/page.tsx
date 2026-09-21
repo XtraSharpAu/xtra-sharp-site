@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Checklist from "@/components/Checklist";
 import DropOffChecklist from "@/components/DropOffChecklist";
 import JsonLd from "@/components/JsonLd";
@@ -108,6 +109,57 @@ const faqSchema = {
   })),
 };
 
+const beforePhotos = [
+  {
+    src: "/cyclone_loppers_before.jpg",
+    alt: "Cyclone SK5 loppers before sharpening — heavy-duty garden cutting tool.",
+    caption:
+      "Loppers are sharpened using water-cooled equipment to restore clean, precise edges.",
+  },
+  {
+    src: "/secateurs_before.jpg",
+    alt: "Hand secateurs before sharpening — typical garden pruning shears.",
+    caption:
+      "Smaller garden tools receive the same precision sharpening process.",
+  },
+  {
+    src: "/ratchet_pruner_before.jpg",
+    alt: "Ratchet-style pruner before sharpening — silver handle design.",
+    caption:
+      "Ratchet pruners are serviced to ensure smooth cutting and blade alignment.",
+  },
+  {
+    src: "/brades_axe_before.jpg",
+    alt: "Brades axe head before sharpening — vintage tool made in England.",
+    caption:
+      "Axes and heavier garden tools are sharpened to maintain safe, efficient performance.",
+  },
+];
+
+function GardenToolsBeforePhotos() {
+  return (
+    <div className="mx-auto mt-8 grid max-w-2xl gap-6 sm:grid-cols-2">
+      {beforePhotos.map((photo) => (
+        <div key={photo.src}>
+          <div className="overflow-hidden rounded-lg shadow-md">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              width={1200}
+              height={1600}
+              sizes="(min-width: 640px) 50vw, 100vw"
+              className="h-auto w-full"
+            />
+          </div>
+          <p className="mt-2 text-center text-sm text-text/60">
+            {photo.caption}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function GardenToolsPage() {
   return (
     <>
@@ -145,6 +197,7 @@ export default function GardenToolsPage() {
             protect the steel from heat damage, giving a clean, accurate
             edge that holds up to regular garden use.
           </p>
+          <GardenToolsBeforePhotos />
         </div>
       </section>
 
