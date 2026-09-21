@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PillList from "@/components/PillList";
 import Checklist from "@/components/Checklist";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import CallNowButton from "@/components/CallNowButton";
 
 export const metadata: Metadata = {
   title: "Service Area | Xtra Sharp Campbelltown NSW",
@@ -128,12 +129,7 @@ export default function ServiceAreaPage() {
       </section>
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
-        <a
-          href="tel:0412974277"
-          className="inline-block rounded-full bg-ctaRed px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-ctaRed/90"
-        >
-          Call Now — 0412 974 277
-        </a>
+        <CallNowButton />
         <p className="mt-4 text-text/70">
           Drop-off sharpening in Campbelltown NSW. Mail-in sharpening
           Australia-wide.

@@ -8,6 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ServiceFaq from "@/components/ServiceFaq";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedServiceLinks } from "@/lib/serviceLinks";
+import CallNowButton from "@/components/CallNowButton";
 
 export const metadata: Metadata = {
   title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
@@ -541,12 +542,9 @@ function ClipperCTA() {
         Professional sharpening for groomers and animal-care specialists.
         Drop-off in Campbelltown NSW.
       </p>
-      <a
-        href="tel:0412974277"
-        className="mt-6 inline-block rounded-full bg-ctaRed px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-ctaRed/90"
-      >
-        Call Now — 0412 974 277
-      </a>
+      <div className="mt-6">
+        <CallNowButton />
+      </div>
     </>
   );
 }
