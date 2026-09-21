@@ -2,7 +2,7 @@ export default function CallNowButton() {
   return (
     <a
       href="tel:0412974277"
-      className="inline-block whitespace-nowrap rounded-lg bg-red-600 px-8 py-4 text-center text-lg font-semibold text-white shadow transition duration-200 hover:bg-red-700"
+      className="whitespace-nowrap inline-block text-center text-lg font-semibold bg-ctaRed hover:bg-ctaRed/90 text-white px-8 py-4 rounded-full transition-colors"
     >
       Call Now — 0412 974 277
     </a>
