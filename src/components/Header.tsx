@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SocialBar from "@/components/SocialBar";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -42,6 +43,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
+          <SocialBar />
           <a
             href="tel:0412974277"
             className="hidden text-sm font-medium text-text sm:inline"

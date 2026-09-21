@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SocialBar from "@/components/SocialBar";
 
 const serviceLinks = [
   { label: "Knife Sharpening", href: "/knife-sharpening" },
@@ -121,6 +122,10 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+        </div>
+
+        <div className="mb-stack">
+          <SocialBar />
         </div>
 
         <div className="border-t border-metallic/40 pt-4 text-xs text-text/60">
