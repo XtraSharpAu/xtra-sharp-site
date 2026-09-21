@@ -32,6 +32,70 @@ const localBusinessSchema = {
       closes: "17:00",
     },
   ],
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Jason" },
+      reviewBody:
+        "I recently had these 3 Japanese knives sharpened, and I'm extremely pleased with the outcome. The blades were returned in outstanding condition, with excellent edge retention and precision. The level of craftsmanship and attention to detail exceeded my expectations. I would highly recommend Phil and his service to anyone looking for professional knife sharpening.",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Michelle Siskovic" },
+      reviewBody:
+        "I would highly recommend Phil from Xtra Sharp Blade Sharpener. Phil was friendly, professional and extremely helpful throughout the whole process. His knowledge and attention to detail were fantastic, and I'm very happy with the sharpening results.",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+    },
+    {
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: "Lincoln",
+        worksFor: {
+          "@type": "Organization",
+          name: "Sydney Residential Building Pty Ltd",
+        },
+      },
+      reviewBody:
+        "Phil always makes it a pleasure to trade with. My building equipment is returned ready & of a high quality sharpen with a short turnaround. Phil is someone you can rely on. You can contact him at any hour & he's always willing to be of assistance. I'd be lost without his prompt, professional, and affordable sharpening services.",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Rickey" },
+      reviewBody:
+        "Very reliable and great to deal with, at a reasonable price. I've been using Phil for years now to sharpen my fishing knives, kitchen knives, and secateurs — highly recommend him.",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Dr Raynae Hall BVetMed MRCVS" },
+      reviewBody:
+        "I can't recommend Phil enough. During the pandemic, he kept our surgeries going in the vet clinic by keeping all our clipper blades in pristine condition. He sharpened and repaired them as needed. Not to mention, the phenomenal job with my personal knives at home. It really isn't sharp until Phil's had a go! The service and the craftsmanship are unparalleled. Thank you soo very much Phil! You put the xtra in xtra sharp!",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+    },
+  ],
 };
 
 const geistSans = Geist({
