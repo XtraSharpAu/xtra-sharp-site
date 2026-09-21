@@ -4,6 +4,8 @@ import Checklist from "@/components/Checklist";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
 import SectionHeading from "@/components/SectionHeading";
+import PageLayout from "@/components/PageLayout";
+import Section from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Service Area | Xtra Sharp Campbelltown NSW",
@@ -56,7 +58,7 @@ const noMobileNotes = [
 
 export default function ServiceAreaPage() {
   return (
-    <>
+    <PageLayout>
       <Breadcrumbs
         items={[
           { name: "Home", url: "https://xtrasharp.com.au" },
@@ -80,42 +82,36 @@ export default function ServiceAreaPage() {
         </a>
       </section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Local Area Coverage"
-            subtitle="Xtra Sharp provides drop-off sharpening from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW. I also service the wider Macarthur region."
-          />
-        </div>
+      <Section className="border-t border-metallic/40 text-center">
+        <SectionHeading
+          title="Local Area Coverage"
+          subtitle="Xtra Sharp provides drop-off sharpening from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW. I also service the wider Macarthur region."
+        />
         <div className="mx-auto mt-8 max-w-3xl">
           <PillList items={macarthurSuburbs} />
         </div>
-        <div className="mx-auto mt-8 max-w-2xl text-center">
+        <div className="mx-auto mt-8 max-w-2xl">
           <p className="text-text/80">
             Outside the local area? Mail-in sharpening is available
             Australia-wide, with return postage sent using Australia Post
             with tracking.
           </p>
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Why Drop-Off Only"
-            subtitle="Sharpening is carried out using water-cooled and machine-guided equipment based at my dedicated sharpening area in Woodbine. Keeping all sharpening at one fixed location means every item gets the same accurate, consistent result — drop-off and mail-in are the only ways to access it."
-          />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading
+          title="Why Drop-Off Only"
+          subtitle="Sharpening is carried out using water-cooled and machine-guided equipment based at my dedicated sharpening area in Woodbine. Keeping all sharpening at one fixed location means every item gets the same accurate, consistent result — drop-off and mail-in are the only ways to access it."
+        />
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading title="No Mobile Sharpening" />
-          <div className="mt-6 inline-block text-left">
-            <Checklist items={noMobileNotes} />
-          </div>
+      <Section className="border-t border-metallic/40">
+        <SectionHeading title="No Mobile Sharpening" />
+        <div className="mt-6 inline-block text-left">
+          <Checklist items={noMobileNotes} />
         </div>
-      </section>
+      </Section>
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
         <CallNowButton />
@@ -124,6 +120,6 @@ export default function ServiceAreaPage() {
           Australia-wide.
         </p>
       </section>
-    </>
+    </PageLayout>
   );
 }

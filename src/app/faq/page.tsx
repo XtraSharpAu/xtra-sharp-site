@@ -5,6 +5,7 @@ import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
 import FAQ from "@/components/FAQ";
+import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
   title: "FAQ | Xtra Sharp Campbelltown NSW",
@@ -87,7 +88,7 @@ const itemsSharpened = [
 
 export default function FaqPage() {
   return (
-    <>
+    <PageLayout>
       <JsonLd data={faqSchema} />
       <Breadcrumbs
         items={[
@@ -256,6 +257,6 @@ export default function FaqPage() {
           .
         </p>
       </section>
-    </>
+    </PageLayout>
   );
 }

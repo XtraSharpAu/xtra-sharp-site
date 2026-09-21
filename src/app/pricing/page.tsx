@@ -3,6 +3,8 @@ import Checklist from "@/components/Checklist";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
 import SectionHeading from "@/components/SectionHeading";
+import PageLayout from "@/components/PageLayout";
+import Section from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Pricing | Xtra Sharp Campbelltown NSW",
@@ -137,7 +139,7 @@ function PricingBox({ title, items, text }: PricingSectionData) {
 
 export default function PricingPage() {
   return (
-    <>
+    <PageLayout>
       <Breadcrumbs
         items={[
           { name: "Home", url: "https://xtrasharp.com.au" },
@@ -159,58 +161,50 @@ export default function PricingPage() {
       </section>
 
       {pricingSections.map((section, index) => (
-        <section
+        <Section
           key={section.title}
-          className={`border-t border-metallic/40 px-6 py-16 ${
+          className={`border-t border-metallic/40 ${
             index % 2 === 1 ? "bg-surface" : ""
           }`}
         >
           <PricingBox {...section} />
-        </section>
+        </Section>
       ))}
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Photo Quotes"
-            subtitle="If you're unsure about pricing, you can send a photo for confirmation."
-          />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading
+          title="Photo Quotes"
+          subtitle="If you're unsure about pricing, you can send a photo for confirmation."
+        />
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Drop-Off Sharpening (Campbelltown NSW)"
-            subtitle="Drop-off sharpening is available by appointment. I sharpen from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW."
-          />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 text-center">
+        <SectionHeading
+          title="Drop-Off Sharpening (Campbelltown NSW)"
+          subtitle="Drop-off sharpening is available by appointment. I sharpen from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW."
+        />
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Mail-In Sharpening (Australia-Wide)
-          </h2>
-          <p className="mt-4 text-text/80">
-            You can post items using a prepaid Australia Post satchel.
-            Return postage is sent with tracking.
-          </p>
-          <p className="mt-4 text-text/80">
-            Please contact me first before sending anything. I&apos;ll
-            confirm pricing, turnaround time and the correct satchel size.
-          </p>
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <h2 className="text-2xl font-semibold text-text">
+          Mail-In Sharpening (Australia-Wide)
+        </h2>
+        <p className="mt-4 text-text/80">
+          You can post items using a prepaid Australia Post satchel.
+          Return postage is sent with tracking.
+        </p>
+        <p className="mt-4 text-text/80">
+          Please contact me first before sending anything. I&apos;ll
+          confirm pricing, turnaround time and the correct satchel size.
+        </p>
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading title="Important Notes" />
-          <div className="mt-6 inline-block text-left">
-            <Checklist items={importantNotes} />
-          </div>
+      <Section className="border-t border-metallic/40">
+        <SectionHeading title="Important Notes" />
+        <div className="mt-6 inline-block text-left">
+          <Checklist items={importantNotes} />
         </div>
-      </section>
+      </Section>
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
         <CallNowButton />
@@ -219,6 +213,6 @@ export default function PricingPage() {
           Australia-wide.
         </p>
       </section>
-    </>
+    </PageLayout>
   );
 }

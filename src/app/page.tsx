@@ -4,6 +4,8 @@ import CallNowButton from "@/components/CallNowButton";
 import Testimonial from "@/components/Testimonial";
 import ServiceCard from "@/components/ServiceCard";
 import SectionHeading from "@/components/SectionHeading";
+import PageLayout from "@/components/PageLayout";
+import Section from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
@@ -106,7 +108,7 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <>
+    <PageLayout>
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">
           Sharpening Services — Knives, Scissors, Clipper Blades &amp; More
@@ -125,42 +127,36 @@ export default function Home() {
         </a>
       </section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-20">
-        <div className="mx-auto max-w-5xl">
-          <SectionHeading title="Our Services" />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <ServiceCard
-                key={service.title}
-                title={service.title}
-                description={service.description}
-                href={service.href}
-                icon={service.icon}
-              />
-            ))}
-          </div>
+      <Section className="border-t border-metallic/40 bg-surface">
+        <SectionHeading title="Our Services" />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => (
+            <ServiceCard
+              key={service.title}
+              title={service.title}
+              description={service.description}
+              href={service.href}
+              icon={service.icon}
+            />
+          ))}
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Drop-Off Sharpening (Campbelltown NSW)"
-            subtitle="Drop-off sharpening is available by appointment. I sharpen from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW."
-          />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 text-center">
+        <SectionHeading
+          title="Drop-Off Sharpening (Campbelltown NSW)"
+          subtitle="Drop-off sharpening is available by appointment. I sharpen from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW."
+        />
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Mail-In Sharpening (Australia-Wide)"
-            subtitle="You can post items using a prepaid Australia Post satchel. Return postage is sent with tracking. Please contact me first before sending anything."
-          />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading
+          title="Mail-In Sharpening (Australia-Wide)"
+          subtitle="You can post items using a prepaid Australia Post satchel. Return postage is sent with tracking. Please contact me first before sending anything."
+        />
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
+      <Section className="border-t border-metallic/40">
         <div className="mx-auto max-w-md">
           <SectionHeading title="Pricing" />
           <div className="mt-6 rounded-lg border border-metallic/40 bg-background p-6">
@@ -184,38 +180,34 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Service Area"
-            subtitle="Drop-off sharpening in Campbelltown NSW, servicing the Macarthur region. Mail-in sharpening available Australia-wide."
-          />
-          <div className="mt-4">
-            <Link href="/service-area" className="text-accent hover:underline">
-              View Service Area →
-            </Link>
-          </div>
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading
+          title="Service Area"
+          subtitle="Drop-off sharpening in Campbelltown NSW, servicing the Macarthur region. Mail-in sharpening available Australia-wide."
+        />
+        <div className="mt-4">
+          <Link href="/service-area" className="text-accent hover:underline">
+            View Service Area →
+          </Link>
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-20">
-        <div className="mx-auto max-w-5xl">
-          <SectionHeading title="Customer Testimonials" />
-          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((t) => (
-              <Testimonial
-                key={t.name}
-                name={t.name}
-                location={t.location}
-                text={t.text}
-                image={t.image}
-              />
-            ))}
-          </div>
+      <Section className="border-t border-metallic/40 bg-surface">
+        <SectionHeading title="Customer Testimonials" />
+        <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((t) => (
+            <Testimonial
+              key={t.name}
+              name={t.name}
+              location={t.location}
+              text={t.text}
+              image={t.image}
+            />
+          ))}
         </div>
-      </section>
+      </Section>
 
       <section className="border-t border-metallic/40 px-6 py-20 text-center">
         <CallNowButton />
@@ -224,6 +216,6 @@ export default function Home() {
           Australia-wide.
         </p>
       </section>
-    </>
+    </PageLayout>
   );
 }

@@ -10,6 +10,8 @@ import { relatedServiceLinks } from "@/lib/serviceLinks";
 import CallNowButton from "@/components/CallNowButton";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
+import PageLayout from "@/components/PageLayout";
+import Section from "@/components/Section";
 
 const scissorsIntroGalleryPhotos = [
   {
@@ -167,7 +169,7 @@ const faqSchema = {
 
 export default function ScissorsSharpeningPage() {
   return (
-    <>
+    <PageLayout>
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <Breadcrumbs
@@ -189,26 +191,22 @@ export default function ScissorsSharpeningPage() {
         </a>
       </PageHero>
 
-      <section className="border-t border-metallic/40 px-6 py-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <SectionHeading
-            title="Precision Machine-Guided Sharpening"
-            subtitle="I sharpen scissors using a machine-guided process that maintains correct angle, ride line, tension and alignment. This ensures your scissors cut cleanly, smoothly and safely."
-          />
-          <ScissorsIntroGallery />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 text-center">
+        <SectionHeading
+          title="Precision Machine-Guided Sharpening"
+          subtitle="I sharpen scissors using a machine-guided process that maintains correct angle, ride line, tension and alignment. This ensures your scissors cut cleanly, smoothly and safely."
+        />
+        <ScissorsIntroGallery />
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading title="Types of Scissors I Sharpen" />
-          <div className="mt-6 inline-block text-left">
-            <Checklist items={scissorTypes} />
-          </div>
+      <Section className="border-t border-metallic/40 bg-surface">
+        <SectionHeading title="Types of Scissors I Sharpen" />
+        <div className="mt-6 inline-block text-left">
+          <Checklist items={scissorTypes} />
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
+      <Section className="border-t border-metallic/40">
         <div className="mx-auto max-w-md">
           <SectionHeading title="Pricing" />
           <div className="mt-6 rounded-lg border border-metallic/40 bg-background p-6">
@@ -231,61 +229,51 @@ export default function ScissorsSharpeningPage() {
             photo for an exact quote.
           </p>
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Drop-Off Sharpening (Campbelltown NSW)"
-            subtitle="Drop-off sharpening is available by appointment. I sharpen from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW."
-          />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading
+          title="Drop-Off Sharpening (Campbelltown NSW)"
+          subtitle="Drop-off sharpening is available by appointment. I sharpen from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW."
+        />
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Mail-In Sharpening (Australia-Wide)
-          </h2>
-          <p className="mt-4 text-text/80">
-            You can post your scissors using a prepaid Australia Post
-            satchel. Return postage is sent with tracking.
-          </p>
-          <p className="mt-4 text-text/80">
-            Please contact me first before sending anything. I&apos;ll
-            confirm pricing, turnaround time and the correct satchel size.
-          </p>
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 text-center">
+        <h2 className="text-2xl font-semibold text-text">
+          Mail-In Sharpening (Australia-Wide)
+        </h2>
+        <p className="mt-4 text-text/80">
+          You can post your scissors using a prepaid Australia Post
+          satchel. Return postage is sent with tracking.
+        </p>
+        <p className="mt-4 text-text/80">
+          Please contact me first before sending anything. I&apos;ll
+          confirm pricing, turnaround time and the correct satchel size.
+        </p>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Turnaround Time"
-            subtitle="Most scissors are completed within 1–2 days. Busy periods may take up to 3 days, depending on workload. Urgent jobs are available by arrangement."
-          />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading
+          title="Turnaround Time"
+          subtitle="Most scissors are completed within 1–2 days. Busy periods may take up to 3 days, depending on workload. Urgent jobs are available by arrangement."
+        />
+      </Section>
 
       <DropOffChecklist />
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading title="Frequently Asked Questions" />
-          <div className="mt-6">
-            <ServiceFaq items={faqs} />
-          </div>
+      <Section className="border-t border-metallic/40 bg-surface">
+        <SectionHeading title="Frequently Asked Questions" />
+        <div className="mt-6">
+          <ServiceFaq items={faqs} />
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading title="Important Notes" />
-          <div className="mt-6 inline-block text-left">
-            <Checklist items={importantNotes} />
-          </div>
+      <Section className="border-t border-metallic/40">
+        <SectionHeading title="Important Notes" />
+        <div className="mt-6 inline-block text-left">
+          <Checklist items={importantNotes} />
         </div>
-      </section>
+      </Section>
 
       <RelatedLinks links={relatedServiceLinks("/scissors-sharpening")} />
 
@@ -298,6 +286,6 @@ export default function ScissorsSharpeningPage() {
           <CallNowButton />
         </div>
       </section>
-    </>
+    </PageLayout>
   );
 }

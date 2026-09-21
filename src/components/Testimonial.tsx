@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContentBlock from "@/components/ContentBlock";
 
 type TestimonialProps = {
   name: string;
@@ -9,7 +10,7 @@ type TestimonialProps = {
 
 export default function Testimonial({ name, location, text, image }: TestimonialProps) {
   return (
-    <div className="mb-stack">
+    <ContentBlock>
       {image && (
         <Image
           src={image}
@@ -22,6 +23,6 @@ export default function Testimonial({ name, location, text, image }: Testimonial
       <h3 className="font-semibold text-xl">{name}</h3>
       {location && <p className="text-text/70">{location}</p>}
       <p className="mt-2 text-text/90 italic">&quot;{text}&quot;</p>
-    </div>
+    </ContentBlock>
   );
 }

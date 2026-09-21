@@ -5,6 +5,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
+import PageLayout from "@/components/PageLayout";
+import Section from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Mail-In Sharpening | Xtra Sharp Campbelltown NSW",
@@ -120,7 +122,7 @@ const mailInChecklist = [
 
 export default function MailInPage() {
   return (
-    <>
+    <PageLayout>
       <Breadcrumbs
         items={[
           { name: "Home", url: "https://xtrasharp.com.au" },
@@ -140,58 +142,54 @@ export default function MailInPage() {
         </a>
       </PageHero>
 
-      <section className="border-t border-metallic/40 px-6 py-20">
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading title="How Mail-In Sharpening Works" />
-          <ol className="mt-10 space-y-6">
-            {howItWorks.map((step, index) => (
-              <li key={step.title} className="flex items-start gap-4">
-                <span className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-accent text-sm font-semibold text-background">
-                  {index + 1}
-                </span>
-                <div>
-                  <p className="font-medium text-text">{step.title}</p>
-                  {step.description && (
-                    <p className="text-sm text-text/70">{step.description}</p>
-                  )}
-                  {step.subItems && (
-                    <ul className="mt-2 space-y-1">
-                      {step.subItems.map((sub) => (
-                        <li
-                          key={sub}
-                          className="flex items-start gap-2 text-sm text-text/70"
-                        >
-                          <span className="mt-0.5 text-accent">✔</span>
-                          <span>{sub}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40">
+        <SectionHeading title="How Mail-In Sharpening Works" />
+        <ol className="mt-10 space-y-6">
+          {howItWorks.map((step, index) => (
+            <li key={step.title} className="flex items-start gap-4">
+              <span className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-accent text-sm font-semibold text-background">
+                {index + 1}
+              </span>
+              <div>
+                <p className="font-medium text-text">{step.title}</p>
+                {step.description && (
+                  <p className="text-sm text-text/70">{step.description}</p>
+                )}
+                {step.subItems && (
+                  <ul className="mt-2 space-y-1">
+                    {step.subItems.map((sub) => (
+                      <li
+                        key={sub}
+                        className="flex items-start gap-2 text-sm text-text/70"
+                      >
+                        <span className="mt-0.5 text-accent">✔</span>
+                        <span>{sub}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Satchel Sizes"
-            subtitle="The correct Australia Post satchel size depends on what you're sending and how many items are included. Please contact me first — I'll confirm the correct satchel size before you post anything."
-          />
-          <a
-            href="https://auspost.com.au/parcels-mail/calculate-postage-and-delivery-times/prepaid-satchels"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-block text-accent hover:underline"
-          >
-            auspost.com.au/parcels-mail/calculate-postage-and-delivery-times/prepaid-satchels
-          </a>
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading
+          title="Satchel Sizes"
+          subtitle="The correct Australia Post satchel size depends on what you're sending and how many items are included. Please contact me first — I'll confirm the correct satchel size before you post anything."
+        />
+        <a
+          href="https://auspost.com.au/parcels-mail/calculate-postage-and-delivery-times/prepaid-satchels"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-block text-accent hover:underline"
+        >
+          auspost.com.au/parcels-mail/calculate-postage-and-delivery-times/prepaid-satchels
+        </a>
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
+      <Section className="border-t border-metallic/40">
         <div className="mx-auto max-w-md">
           <SectionHeading title="Pricing Reference" />
           <div className="mt-6 rounded-lg border border-metallic/40 bg-background p-6">
@@ -215,34 +213,28 @@ export default function MailInPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Turnaround Time"
-            subtitle="Most items are completed within 1–2 days of arrival. During busy periods this can take up to 3 days, depending on workload. Urgent jobs are available by arrangement. Return postage is sent using Australia Post with tracking."
-          />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading
+          title="Turnaround Time"
+          subtitle="Most items are completed within 1–2 days of arrival. During busy periods this can take up to 3 days, depending on workload. Urgent jobs are available by arrangement. Return postage is sent using Australia Post with tracking."
+        />
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading title="Mail-In Checklist" />
-          <div className="mt-6 inline-block text-left">
-            <Checklist items={mailInChecklist} />
-          </div>
+      <Section className="border-t border-metallic/40">
+        <SectionHeading title="Mail-In Checklist" />
+        <div className="mt-6 inline-block text-left">
+          <Checklist items={mailInChecklist} />
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading title="Important Notes" />
-          <div className="mt-6 inline-block text-left">
-            <Checklist items={importantNotes} />
-          </div>
+      <Section className="border-t border-metallic/40 bg-surface">
+        <SectionHeading title="Important Notes" />
+        <div className="mt-6 inline-block text-left">
+          <Checklist items={importantNotes} />
         </div>
-      </section>
+      </Section>
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
         <CallNowButton />
@@ -251,6 +243,6 @@ export default function MailInPage() {
           Australia-wide.
         </p>
       </section>
-    </>
+    </PageLayout>
   );
 }

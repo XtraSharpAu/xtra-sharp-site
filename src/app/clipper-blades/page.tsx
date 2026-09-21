@@ -11,6 +11,8 @@ import { relatedServiceLinks } from "@/lib/serviceLinks";
 import CallNowButton from "@/components/CallNowButton";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
+import PageLayout from "@/components/PageLayout";
+import Section from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
@@ -548,7 +550,7 @@ function ClipperCTA() {
 
 export default function ClipperBladesPage() {
   return (
-    <>
+    <PageLayout>
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <Breadcrumbs
@@ -570,24 +572,22 @@ export default function ClipperBladesPage() {
         </a>
       </PageHero>
 
-      <section className="border-t border-metallic/40 px-6 py-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <SectionHeading
-            title="Machine-Guided Sharpening for Correct Alignment"
-            subtitle="Clipper blades are sharpened using a machine-guided process that ensures correct angle, alignment, tension, tracking and finishing. Every blade is sharpened individually, cleaned, aligned and tested before return."
-          />
-          <ClipperIntroGallery />
-          <ClipperBeforePhoto />
-          <ClipperAfterPhoto />
-          <ClipperEdgeDetailPhoto />
-          <ClipperEquipmentSection />
-          <ClipperVideoSection />
-          <ClipperProcessSteps />
-          <ClipperPackingPhotos />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 text-center">
+        <SectionHeading
+          title="Machine-Guided Sharpening for Correct Alignment"
+          subtitle="Clipper blades are sharpened using a machine-guided process that ensures correct angle, alignment, tension, tracking and finishing. Every blade is sharpened individually, cleaned, aligned and tested before return."
+        />
+        <ClipperIntroGallery />
+        <ClipperBeforePhoto />
+        <ClipperAfterPhoto />
+        <ClipperEdgeDetailPhoto />
+        <ClipperEquipmentSection />
+        <ClipperVideoSection />
+        <ClipperProcessSteps />
+        <ClipperPackingPhotos />
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16 text-center">
+      <Section className="border-t border-metallic/40 text-center">
         <SectionHeading
           title="Packing & Return Process"
           subtitle="Need your clipper blades sharpened? Book your service today."
@@ -598,90 +598,76 @@ export default function ClipperBladesPage() {
         >
           Book Sharpening
         </Link>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading title="Clipper Blade Care Instructions" />
-          <div className="mt-6 inline-block text-left">
-            <Checklist items={clipperCareInstructions} />
-          </div>
+      <Section className="border-t border-metallic/40 bg-surface">
+        <SectionHeading title="Clipper Blade Care Instructions" />
+        <div className="mt-6 inline-block text-left">
+          <Checklist items={clipperCareInstructions} />
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading title="What I Sharpen for Groomers & Animal-Care Professionals" />
-          <div className="mt-6 inline-block text-left">
-            <Checklist items={clipperBladeTypes} />
-          </div>
+      <Section className="border-t border-metallic/40 bg-surface">
+        <SectionHeading title="What I Sharpen for Groomers & Animal-Care Professionals" />
+        <div className="mt-6 inline-block text-left">
+          <Checklist items={clipperBladeTypes} />
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
+      <Section className="border-t border-metallic/40">
         <ClipperPricing />
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Drop-Off Sharpening (Campbelltown NSW)"
-            subtitle="Drop-off sharpening is available by appointment. I sharpen from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW."
-          />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading
+          title="Drop-Off Sharpening (Campbelltown NSW)"
+          subtitle="Drop-off sharpening is available by appointment. I sharpen from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW."
+        />
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Mail-In Sharpening (Australia-Wide)
-          </h2>
-          <p className="mt-4 text-text/80">
-            You can post your clipper blades and grooming shears using a
-            prepaid Australia Post satchel. Return postage is sent with
-            tracking.
-          </p>
-          <p className="mt-4 text-text/80">
-            Please contact me first before sending anything. I&apos;ll
-            confirm pricing, turnaround time and the correct satchel size.
-          </p>
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 text-center">
+        <h2 className="text-2xl font-semibold text-text">
+          Mail-In Sharpening (Australia-Wide)
+        </h2>
+        <p className="mt-4 text-text/80">
+          You can post your clipper blades and grooming shears using a
+          prepaid Australia Post satchel. Return postage is sent with
+          tracking.
+        </p>
+        <p className="mt-4 text-text/80">
+          Please contact me first before sending anything. I&apos;ll
+          confirm pricing, turnaround time and the correct satchel size.
+        </p>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Turnaround Time"
-            subtitle="Standard turnaround for clipper blades and grooming shears is 3 days."
-          />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading
+          title="Turnaround Time"
+          subtitle="Standard turnaround for clipper blades and grooming shears is 3 days."
+        />
+      </Section>
 
       <DropOffChecklist isClipperPage />
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading title="Frequently Asked Questions" />
-          <div className="mt-6">
-            <ServiceFaq items={faqs} />
-          </div>
+      <Section className="border-t border-metallic/40 bg-surface">
+        <SectionHeading title="Frequently Asked Questions" />
+        <div className="mt-6">
+          <ServiceFaq items={faqs} />
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading title="Important Notes" />
-          <div className="mt-6 inline-block text-left">
-            <Checklist items={importantNotes} />
-          </div>
+      <Section className="border-t border-metallic/40">
+        <SectionHeading title="Important Notes" />
+        <div className="mt-6 inline-block text-left">
+          <Checklist items={importantNotes} />
         </div>
-      </section>
+      </Section>
 
       <RelatedLinks links={relatedServiceLinks("/clipper-blades")} />
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
         <ClipperCTA />
       </section>
-    </>
+    </PageLayout>
   );
 }

@@ -5,6 +5,8 @@ import ContactForm from "@/components/ContactForm";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
 import SectionHeading from "@/components/SectionHeading";
+import PageLayout from "@/components/PageLayout";
+import Section from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Contact | Xtra Sharp Campbelltown NSW",
@@ -44,7 +46,7 @@ const contactPageSchema = {
 
 export default function ContactPage() {
   return (
-    <>
+    <PageLayout>
       <JsonLd data={contactPageSchema} />
       <Breadcrumbs
         items={[
@@ -66,51 +68,46 @@ export default function ContactPage() {
         </a>
       </section>
 
-      <section
-        id="contact"
-        className="border-t border-metallic/40 px-6 py-16 text-center"
-      >
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-2xl font-semibold text-text">
-            Contact Xtra Sharp
-          </h2>
-          <p className="mt-4 text-text/80">
-            <strong className="text-text">Phone:</strong>{" "}
-            <a href="tel:0412974277" className="text-accent hover:underline">
-              0412 974 277
-            </a>
-          </p>
-          <p className="mt-2 text-text/80">
-            <strong className="text-text">Email:</strong>{" "}
-            <a
-              href="mailto:phil@xtrasharp.com.au"
-              className="text-accent hover:underline"
-            >
-              phil@xtrasharp.com.au
-            </a>
-          </p>
-          <p className="mt-2 text-text/80">
-            <strong className="text-text">Location:</strong> Campbelltown
-            NSW — Address provided after booking
-          </p>
-          <p className="mt-2 text-text/80">
-            <strong className="text-text">Service Area:</strong> Campbelltown
-            NSW • Macarthur NSW • Australia-wide (mail-in sharpening)
-          </p>
+      <Section className="border-t border-metallic/40 text-center">
+        <h2 className="text-2xl font-semibold text-text">
+          Contact Xtra Sharp
+        </h2>
+        <p className="mt-4 text-text/80">
+          <strong className="text-text">Phone:</strong>{" "}
+          <a href="tel:0412974277" className="text-accent hover:underline">
+            0412 974 277
+          </a>
+        </p>
+        <p className="mt-2 text-text/80">
+          <strong className="text-text">Email:</strong>{" "}
+          <a
+            href="mailto:phil@xtrasharp.com.au"
+            className="text-accent hover:underline"
+          >
+            phil@xtrasharp.com.au
+          </a>
+        </p>
+        <p className="mt-2 text-text/80">
+          <strong className="text-text">Location:</strong> Campbelltown
+          NSW — Address provided after booking
+        </p>
+        <p className="mt-2 text-text/80">
+          <strong className="text-text">Service Area:</strong> Campbelltown
+          NSW • Macarthur NSW • Australia-wide (mail-in sharpening)
+        </p>
 
-          <h3 className="mt-6 text-lg font-semibold text-text">
-            Operating Hours
-          </h3>
-          <p className="mt-2 text-text/80">
-            Most contact and drop-offs occur between{" "}
-            <strong className="text-text">Monday – Friday 9 AM – 5 PM</strong>.
-            Service is <strong className="text-text">by appointment only</strong>{" "}
-            — please call or message to arrange a time.
-          </p>
-        </div>
-      </section>
+        <h3 className="mt-6 text-lg font-semibold text-text">
+          Operating Hours
+        </h3>
+        <p className="mt-2 text-text/80">
+          Most contact and drop-offs occur between{" "}
+          <strong className="text-text">Monday – Friday 9 AM – 5 PM</strong>.
+          Service is <strong className="text-text">by appointment only</strong>{" "}
+          — please call or message to arrange a time.
+        </p>
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16 text-center">
+      <Section className="border-t border-metallic/40 text-center">
         <figure className="mx-auto mb-4 flex flex-col items-center gap-2">
           <div className="h-[100px] w-[100px] overflow-hidden rounded-full shadow-md">
             <Image
@@ -133,45 +130,39 @@ export default function ContactPage() {
         >
           0412 974 277
         </a>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
+      <Section className="border-t border-metallic/40 bg-surface">
         <SectionHeading title="Send a Message" />
         <div className="mt-6">
           <ContactForm />
         </div>
-      </section>
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Location"
-            subtitle="Woodbine, listed publicly as Campbelltown NSW. Full address provided after booking. Drop-off sharpening is available by appointment."
-          />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 text-center">
+        <SectionHeading
+          title="Location"
+          subtitle="Woodbine, listed publicly as Campbelltown NSW. Full address provided after booking. Drop-off sharpening is available by appointment."
+        />
+      </Section>
 
-      <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">Hours</h2>
-          <p className="mt-4 text-text/80">
-            By appointment. Call or text{" "}
-            <a href="tel:0412974277" className="text-accent underline">
-              0412 974 277
-            </a>{" "}
-            to arrange a drop-off time.
-          </p>
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <h2 className="text-2xl font-semibold text-text">Hours</h2>
+        <p className="mt-4 text-text/80">
+          By appointment. Call or text{" "}
+          <a href="tel:0412974277" className="text-accent underline">
+            0412 974 277
+          </a>{" "}
+          to arrange a drop-off time.
+        </p>
+      </Section>
 
-      <section className="border-t border-metallic/40 px-6 py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionHeading
-            title="Mail-In Sharpening"
-            subtitle="Please contact me first before posting any items. I'll confirm pricing, turnaround time, and the correct Australia Post satchel size."
-          />
-        </div>
-      </section>
+      <Section className="border-t border-metallic/40 text-center">
+        <SectionHeading
+          title="Mail-In Sharpening"
+          subtitle="Please contact me first before posting any items. I'll confirm pricing, turnaround time, and the correct Australia Post satchel size."
+        />
+      </Section>
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
         <CallNowButton />
@@ -180,6 +171,6 @@ export default function ContactPage() {
           Australia-wide.
         </p>
       </section>
-    </>
+    </PageLayout>
   );
 }
