@@ -6,6 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "@/styles/globals.css";
 
+// LocalBusiness schema with verified reviews and aggregate rating for SEO
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
