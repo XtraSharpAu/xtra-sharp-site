@@ -181,11 +181,11 @@ function KnifeDemoVideo() {
 export const metadata: Metadata = {
   title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Water-cooled sharpening for kitchen, butcher, large and hunting knives in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
+    "Professional knife sharpening in Campbelltown NSW — water-cooled precision for kitchen, butcher and hunting knives. Fast turnaround. Call 0412 974 277.",
   openGraph: {
     title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Water-cooled sharpening for kitchen, butcher, large and hunting knives in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
+      "Professional knife sharpening in Campbelltown NSW — water-cooled precision for kitchen, butcher and hunting knives. Fast turnaround. Call 0412 974 277.",
     url: "https://xtrasharp.com.au/knife-sharpening",
     type: "article",
     images: ["https://xtrasharp.com.au/og-knife.jpg"],
@@ -194,7 +194,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Water-cooled sharpening for kitchen, butcher, large and hunting knives in Campbelltown NSW, with mail-in sharpening available Australia-wide.",
+      "Professional knife sharpening in Campbelltown NSW — water-cooled precision for kitchen, butcher and hunting knives. Fast turnaround. Call 0412 974 277.",
     images: ["https://xtrasharp.com.au/og-knife.jpg"],
   },
   other: {
@@ -321,6 +321,22 @@ export default function KnifeSharpeningPage() {
       </PageHero>
 
       <Section className="border-t border-metallic/40 text-center">
+        <SectionHeading title="About Knife Sharpening" />
+        <p className="text-text/80">
+          Knife sharpening restores a clean, precise edge to kitchen, butcher
+          and hunting knives that have gone dull from everyday use. It&apos;s
+          ideal for home cooks, chefs, butchers and hunters who rely on a
+          sharp blade for safe, efficient cutting. Common problems include
+          edges that tear rather than slice, blades that slip on hard skins,
+          and knives sharpened unevenly at the wrong angle by DIY tools. At
+          Xtra Sharp, every knife is sharpened using water-cooled equipment
+          to protect the steel&apos;s temper, restoring a clean, strong
+          edge. Most knives are ready within 1–2 days, with busy periods
+          taking up to 3 days.
+        </p>
+      </Section>
+
+      <Section className="border-t border-metallic/40 bg-surface text-center">
         <SectionHeading
           title="Water-Cooled Sharpening"
           subtitle="Knives require accurate angles and a controlled sharpening process. All knives are sharpened using water-cooled equipment to protect the steel's temper from heat damage, giving a clean, strong cutting edge."
@@ -367,9 +383,7 @@ export default function KnifeSharpeningPage() {
       </Section>
 
       <Section className="border-t border-metallic/40 bg-surface text-center">
-        <h2 className="text-2xl font-semibold text-text">
-          Mail-In Sharpening (Australia-Wide)
-        </h2>
+        <SectionHeading title="Mail-In Sharpening (Australia-Wide)" />
         <p className="mt-4 text-text/80">
           You can post your knives using a prepaid Australia Post
           satchel. Return postage is sent with tracking.

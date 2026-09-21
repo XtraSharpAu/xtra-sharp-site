@@ -58,11 +58,11 @@ function ScissorsIntroGallery() {
 export const metadata: Metadata = {
   title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Professional sharpening for hairdressing, grooming, sewing and household scissors in Campbelltown NSW, with mail-in sharpening Australia-wide.",
+    "Professional scissors sharpening in Campbelltown NSW for hairdressing, grooming, sewing and household scissors. Fast, precise results. Call 0412 974 277.",
   openGraph: {
     title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional sharpening for hairdressing, grooming, sewing and household scissors in Campbelltown NSW, with mail-in sharpening Australia-wide.",
+      "Professional scissors sharpening in Campbelltown NSW for hairdressing, grooming, sewing and household scissors. Fast, precise results. Call 0412 974 277.",
     url: "https://xtrasharp.com.au/scissors-sharpening",
     type: "article",
     images: ["https://xtrasharp.com.au/og-scissors.jpg"],
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional sharpening for hairdressing, grooming, sewing and household scissors in Campbelltown NSW, with mail-in sharpening Australia-wide.",
+      "Professional scissors sharpening in Campbelltown NSW for hairdressing, grooming, sewing and household scissors. Fast, precise results. Call 0412 974 277.",
     images: ["https://xtrasharp.com.au/og-scissors.jpg"],
   },
   other: {
@@ -191,6 +191,23 @@ export default function ScissorsSharpeningPage() {
         </a>
       </PageHero>
 
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading title="About Scissors Sharpening" />
+        <p className="text-text/80">
+          Scissors sharpening restores correct angle, ride line, tension and
+          alignment to scissors that have become dull, sticky or uneven with
+          use. It&apos;s suited to hairdressers, groomers, sewers and
+          households relying on scissors for clean, accurate cuts. Common
+          problems include scissors that crush fabric or hair instead of
+          cutting cleanly, blades that have lost their edge from repeated
+          use, and tension that has loosened over time. At Xtra Sharp,
+          scissors are sharpened using a machine-guided process for
+          consistent, reliable results. Most scissors are completed within
+          1–2 days, with busy periods taking up to 3 days, and urgent jobs
+          available by arrangement.
+        </p>
+      </Section>
+
       <Section className="border-t border-metallic/40 text-center">
         <SectionHeading
           title="Precision Machine-Guided Sharpening"
@@ -239,9 +256,7 @@ export default function ScissorsSharpeningPage() {
       </Section>
 
       <Section className="border-t border-metallic/40 text-center">
-        <h2 className="text-2xl font-semibold text-text">
-          Mail-In Sharpening (Australia-Wide)
-        </h2>
+        <SectionHeading title="Mail-In Sharpening (Australia-Wide)" />
         <p className="mt-4 text-text/80">
           You can post your scissors using a prepaid Australia Post
           satchel. Return postage is sent with tracking.

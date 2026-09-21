@@ -1,21 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Checklist from "@/components/Checklist";
+import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
 import PageLayout from "@/components/PageLayout";
 import Section from "@/components/Section";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedServiceLinks } from "@/lib/serviceLinks";
 
 export const metadata: Metadata = {
   title: "Mail-In Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Professional mail-in sharpening Australia-wide for knives, scissors, clipper blades and more, with a prepaid satchel and tracked return postage.",
+    "Australia-wide mail-in sharpening from Campbelltown NSW for knives, scissors, clipper blades and more, with tracked return postage. Call 0412 974 277.",
   openGraph: {
     title: "Mail-In Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional mail-in sharpening Australia-wide for knives, scissors, clipper blades and more, with a prepaid satchel and tracked return postage.",
+      "Australia-wide mail-in sharpening from Campbelltown NSW for knives, scissors, clipper blades and more, with tracked return postage. Call 0412 974 277.",
     url: "https://xtrasharp.com.au/mail-in",
     type: "article",
     images: ["https://xtrasharp.com.au/og-mail-in.jpg"],
@@ -24,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mail-In Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional mail-in sharpening Australia-wide for knives, scissors, clipper blades and more, with a prepaid satchel and tracked return postage.",
+      "Australia-wide mail-in sharpening from Campbelltown NSW for knives, scissors, clipper blades and more, with tracked return postage. Call 0412 974 277.",
     images: ["https://xtrasharp.com.au/og-mail-in.jpg"],
   },
   other: {
@@ -111,6 +114,25 @@ const importantNotes = [
   "Mail-in available Australia-wide",
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Mail-In Sharpening",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Xtra Sharp",
+  },
+  areaServed: "Australia-wide (mail-in)",
+  offers: {
+    "@type": "Offer",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      priceCurrency: "AUD",
+      minPrice: 6,
+    },
+  },
+};
+
 const mailInChecklist = [
   "Clean items before packing",
   "Wrap each item securely to prevent movement",
@@ -123,6 +145,7 @@ const mailInChecklist = [
 export default function MailInPage() {
   return (
     <PageLayout>
+      <JsonLd data={serviceSchema} />
       <Breadcrumbs
         items={[
           { name: "Home", url: "https://xtrasharp.com.au" },
@@ -141,6 +164,24 @@ export default function MailInPage() {
           Call Now — 0412 974 277
         </a>
       </PageHero>
+
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading title="About Mail-In Sharpening" />
+        <p className="text-text/80">
+          Mail-in sharpening lets customers across Australia send knives,
+          scissors, clipper blades, garden tools and processor blades to
+          Xtra Sharp for professional sharpening without visiting in
+          person. It&apos;s ideal for customers outside Campbelltown NSW,
+          or anyone who prefers posting items rather than dropping them
+          off. Common problems include difficulty finding a reliable local
+          sharpening service, uncertainty over correct satchel sizing, and
+          concerns about safe return postage for sharp items. At Xtra
+          Sharp, items are packed securely, sharpened with the same care as
+          drop-off customers, and returned using tracked Australia Post
+          postage. Most items are completed within 1–2 days of arrival,
+          with busy periods taking up to 3 days.
+        </p>
+      </Section>
 
       <Section className="border-t border-metallic/40">
         <SectionHeading title="How Mail-In Sharpening Works" />
@@ -235,6 +276,8 @@ export default function MailInPage() {
           <Checklist items={importantNotes} />
         </div>
       </Section>
+
+      <RelatedLinks links={relatedServiceLinks("/mail-in")} />
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-20 text-center">
         <CallNowButton />

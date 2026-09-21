@@ -10,11 +10,11 @@ import Section from "@/components/Section";
 export const metadata: Metadata = {
   title: "Service Area | Xtra Sharp Campbelltown NSW",
   description:
-    "Drop-off sharpening in Campbelltown NSW, servicing Camden, Narellan and the wider Macarthur region. Mail-in sharpening also available Australia-wide.",
+    "Drop-off sharpening in Campbelltown NSW servicing Campbelltown and the Macarthur region, plus Australia-wide mail-in sharpening. Call 0412 974 277 today.",
   openGraph: {
     title: "Service Area | Xtra Sharp Campbelltown NSW",
     description:
-      "Drop-off sharpening in Campbelltown NSW, servicing Camden, Narellan and the wider Macarthur region. Mail-in sharpening also available Australia-wide.",
+      "Drop-off sharpening in Campbelltown NSW servicing Campbelltown and the Macarthur region, plus Australia-wide mail-in sharpening. Call 0412 974 277 today.",
     url: "https://xtrasharp.com.au/service-area",
     type: "website",
     images: ["https://xtrasharp.com.au/og-service-area.jpg"],
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Service Area | Xtra Sharp Campbelltown NSW",
     description:
-      "Drop-off sharpening in Campbelltown NSW, servicing Camden, Narellan and the wider Macarthur region. Mail-in sharpening also available Australia-wide.",
+      "Drop-off sharpening in Campbelltown NSW servicing Campbelltown and the Macarthur region, plus Australia-wide mail-in sharpening. Call 0412 974 277 today.",
     images: ["https://xtrasharp.com.au/og-service-area.jpg"],
   },
   other: {

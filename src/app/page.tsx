@@ -10,11 +10,11 @@ import Section from "@/components/Section";
 export const metadata: Metadata = {
   title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
   description:
-    "Xtra Sharp Campbelltown NSW — expert sharpening for knives, axes, processor blades, and garden tools using water-cooled systems, and clipper blades using specialised professional equipment.",
+    "Professional knife, scissor, clipper blade, garden tool and processor blade sharpening in Campbelltown NSW. Fast, precise results — call 0412 974 277.",
   openGraph: {
     title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
     description:
-      "Xtra Sharp Campbelltown NSW — expert sharpening for knives, axes, processor blades, and garden tools using water-cooled systems, and clipper blades using specialised professional equipment.",
+      "Professional knife, scissor, clipper blade, garden tool and processor blade sharpening in Campbelltown NSW. Fast, precise results — call 0412 974 277.",
     url: "https://xtrasharp.com.au",
     type: "website",
     images: ["https://xtrasharp.com.au/og-image.jpg"],
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
     description:
-      "Xtra Sharp Campbelltown NSW — expert sharpening for knives, axes, processor blades, and garden tools using water-cooled systems, and clipper blades using specialised professional equipment.",
+      "Professional knife, scissor, clipper blade, garden tool and processor blade sharpening in Campbelltown NSW. Fast, precise results — call 0412 974 277.",
     images: ["https://xtrasharp.com.au/og-image.jpg"],
   },
   other: {
@@ -215,6 +215,11 @@ export default function Home() {
           Drop-off sharpening in Campbelltown NSW. Mail-in sharpening
           Australia-wide.
         </p>
+        <div className="mt-4">
+          <Link href="/contact" className="text-accent hover:underline">
+            Contact Us →
+          </Link>
+        </div>
       </section>
     </PageLayout>
   );

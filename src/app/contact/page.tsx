@@ -11,11 +11,11 @@ import Section from "@/components/Section";
 export const metadata: Metadata = {
   title: "Contact | Xtra Sharp Campbelltown NSW",
   description:
-    "Call, message or book a drop-off appointment with Xtra Sharp in Campbelltown NSW, or arrange Australia-wide mail-in sharpening.",
+    "Contact Xtra Sharp in Campbelltown NSW to book knife, scissor or clipper blade sharpening — fast, friendly, professional service. Call 0412 974 277 today.",
   openGraph: {
     title: "Contact | Xtra Sharp Campbelltown NSW",
     description:
-      "Call, message or book a drop-off appointment with Xtra Sharp in Campbelltown NSW, or arrange Australia-wide mail-in sharpening.",
+      "Contact Xtra Sharp in Campbelltown NSW to book knife, scissor or clipper blade sharpening — fast, friendly, professional service. Call 0412 974 277 today.",
     url: "https://xtrasharp.com.au/contact",
     type: "website",
     images: ["https://xtrasharp.com.au/og-contact.jpg"],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact | Xtra Sharp Campbelltown NSW",
     description:
-      "Call, message or book a drop-off appointment with Xtra Sharp in Campbelltown NSW, or arrange Australia-wide mail-in sharpening.",
+      "Contact Xtra Sharp in Campbelltown NSW to book knife, scissor or clipper blade sharpening — fast, friendly, professional service. Call 0412 974 277 today.",
     images: ["https://xtrasharp.com.au/og-contact.jpg"],
   },
   other: {
@@ -69,9 +69,7 @@ export default function ContactPage() {
       </section>
 
       <Section className="border-t border-metallic/40 text-center">
-        <h2 className="text-2xl font-semibold text-text">
-          Contact Xtra Sharp
-        </h2>
+        <SectionHeading title="Contact Xtra Sharp" />
         <p className="mt-4 text-text/80">
           <strong className="text-text">Phone:</strong>{" "}
           <a href="tel:0412974277" className="text-accent hover:underline">
@@ -147,7 +145,7 @@ export default function ContactPage() {
       </Section>
 
       <Section className="border-t border-metallic/40 bg-surface text-center">
-        <h2 className="text-2xl font-semibold text-text">Hours</h2>
+        <SectionHeading title="Hours" />
         <p className="mt-4 text-text/80">
           By appointment. Call or text{" "}
           <a href="tel:0412974277" className="text-accent underline">

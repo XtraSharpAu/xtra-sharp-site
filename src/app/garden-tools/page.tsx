@@ -16,11 +16,11 @@ import Section from "@/components/Section";
 export const metadata: Metadata = {
   title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Xtra Sharp Campbelltown NSW — expert water-cooled sharpening for garden tools including secateurs, loppers, and axes. Fast turnaround and local drop-off service.",
+    "Professional garden tool sharpening in Campbelltown NSW for secateurs, loppers, axes and other tools — water-cooled precision. Call 0412 974 277 today.",
   openGraph: {
     title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Xtra Sharp Campbelltown NSW — expert water-cooled sharpening for garden tools including secateurs, loppers, and axes. Fast turnaround and local drop-off service.",
+      "Professional garden tool sharpening in Campbelltown NSW for secateurs, loppers, axes and other tools — water-cooled precision. Call 0412 974 277 today.",
     url: "https://xtrasharp.com.au/garden-tools",
     type: "article",
     images: ["https://xtrasharp.com.au/og-garden-tools.jpg"],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Xtra Sharp Campbelltown NSW — expert water-cooled sharpening for garden tools including secateurs, loppers, and axes. Fast turnaround and local drop-off service.",
+      "Professional garden tool sharpening in Campbelltown NSW for secateurs, loppers, axes and other tools — water-cooled precision. Call 0412 974 277 today.",
     images: ["https://xtrasharp.com.au/og-garden-tools.jpg"],
   },
   other: {
@@ -189,6 +189,23 @@ export default function GardenToolsPage() {
         </a>
       </PageHero>
 
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading title="About Garden Tools Sharpening" />
+        <p className="text-text/80">
+          Garden tool sharpening restores clean, accurate cutting edges to
+          secateurs, loppers, axes and other tools that have become dull or
+          damaged from regular garden use. It&apos;s ideal for home
+          gardeners, landscapers and tradespeople who rely on sharp tools
+          for efficient, safe work. Common problems include tools that
+          crush or tear stems instead of cutting cleanly, blades that have
+          chipped or rusted, and reduced cutting power from repeated use.
+          At Xtra Sharp, garden tools are sharpened using water-cooled
+          equipment to protect the steel from heat damage, giving a clean,
+          accurate edge. Most garden tools are completed within 1–2 days,
+          with busy periods taking up to 3 days.
+        </p>
+      </Section>
+
       <Section className="border-t border-metallic/40 text-center">
         <SectionHeading
           title="Water-Cooled Sharpening"
@@ -226,9 +243,7 @@ export default function GardenToolsPage() {
       </Section>
 
       <Section className="border-t border-metallic/40 bg-surface text-center">
-        <h2 className="text-2xl font-semibold text-text">
-          Mail-In Sharpening (Australia-Wide)
-        </h2>
+        <SectionHeading title="Mail-In Sharpening (Australia-Wide)" />
         <p className="mt-4 text-text/80">
           You can post your garden tools using a prepaid Australia Post
           satchel. Return postage is sent with tracking.

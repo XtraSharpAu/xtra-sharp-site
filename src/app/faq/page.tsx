@@ -6,15 +6,16 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
 import FAQ from "@/components/FAQ";
 import PageLayout from "@/components/PageLayout";
+import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "FAQ | Xtra Sharp Campbelltown NSW",
   description:
-    "Answers to common questions about professional sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp in Campbelltown NSW.",
+    "Answers about sharpening services, pricing, mail-in and turnaround at Xtra Sharp in Campbelltown NSW — fast, professional results. Call 0412 974 277 now.",
   openGraph: {
     title: "FAQ | Xtra Sharp Campbelltown NSW",
     description:
-      "Answers to common questions about professional sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp in Campbelltown NSW.",
+      "Answers about sharpening services, pricing, mail-in and turnaround at Xtra Sharp in Campbelltown NSW — fast, professional results. Call 0412 974 277 now.",
     url: "https://xtrasharp.com.au/faq",
     type: "website",
     images: ["https://xtrasharp.com.au/og-faq.jpg"],
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FAQ | Xtra Sharp Campbelltown NSW",
     description:
-      "Answers to common questions about professional sharpening, pricing, mail-in service, packing, and turnaround at Xtra Sharp in Campbelltown NSW.",
+      "Answers about sharpening services, pricing, mail-in and turnaround at Xtra Sharp in Campbelltown NSW — fast, professional results. Call 0412 974 277 now.",
     images: ["https://xtrasharp.com.au/og-faq.jpg"],
   },
   other: {
@@ -115,9 +116,7 @@ export default function FaqPage() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            What items do you sharpen?
-          </h2>
+          <SectionHeading title="What items do you sharpen?" />
           <div className="mt-6 inline-block text-left">
             <Checklist items={itemsSharpened} />
           </div>
@@ -171,9 +170,7 @@ export default function FaqPage() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            How does return postage work?
-          </h2>
+          <SectionHeading title="How does return postage work?" />
           <p className="mt-4 text-text/80">
             You can include a prepaid Australia Post satchel with your
             items. This is the easiest option and ensures your return
@@ -196,9 +193,7 @@ export default function FaqPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Do you offer pick-up services?
-          </h2>
+          <SectionHeading title="Do you offer pick-up services?" />
           <p className="mt-4 text-text/80">
             Free pick-up and drop-off available for local schools in the
             Campbelltown area.
@@ -223,9 +218,7 @@ export default function FaqPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            How do I get a quote?
-          </h2>
+          <SectionHeading title="How do I get a quote?" />
           <p className="mt-4 text-text/80">
             You can call or text{" "}
             <a href="tel:0412974277" className="text-accent underline">
@@ -255,6 +248,17 @@ export default function FaqPage() {
             Contact Xtra Sharp
           </Link>
           .
+        </p>
+        <p className="mt-6 flex flex-wrap justify-center gap-x-2 gap-y-3">
+          <Link href="/pricing" className="text-accent hover:underline">
+            View Pricing
+          </Link>
+          <span aria-hidden="true" className="text-text/30">
+            |
+          </span>
+          <Link href="/service-area" className="text-accent hover:underline">
+            Service Area
+          </Link>
         </p>
       </section>
     </PageLayout>

@@ -9,11 +9,11 @@ import Section from "@/components/Section";
 export const metadata: Metadata = {
   title: "Pricing | Xtra Sharp Campbelltown NSW",
   description:
-    "Clear, upfront pricing for knife, scissors, clipper blade, garden tool and processor blade sharpening at Xtra Sharp in Campbelltown NSW.",
+    "Clear, upfront sharpening prices in Campbelltown NSW for knives, scissors, clipper blades, garden tools and processor blades. Call 0412 974 277 for a quote.",
   openGraph: {
     title: "Pricing | Xtra Sharp Campbelltown NSW",
     description:
-      "Clear, upfront pricing for knife, scissors, clipper blade, garden tool and processor blade sharpening at Xtra Sharp in Campbelltown NSW.",
+      "Clear, upfront sharpening prices in Campbelltown NSW for knives, scissors, clipper blades, garden tools and processor blades. Call 0412 974 277 for a quote.",
     url: "https://xtrasharp.com.au/pricing",
     type: "website",
     images: ["https://xtrasharp.com.au/og-pricing.jpg"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pricing | Xtra Sharp Campbelltown NSW",
     description:
-      "Clear, upfront pricing for knife, scissors, clipper blade, garden tool and processor blade sharpening at Xtra Sharp in Campbelltown NSW.",
+      "Clear, upfront sharpening prices in Campbelltown NSW for knives, scissors, clipper blades, garden tools and processor blades. Call 0412 974 277 for a quote.",
     images: ["https://xtrasharp.com.au/og-pricing.jpg"],
   },
   other: {
@@ -186,9 +186,7 @@ export default function PricingPage() {
       </Section>
 
       <Section className="border-t border-metallic/40 bg-surface text-center">
-        <h2 className="text-2xl font-semibold text-text">
-          Mail-In Sharpening (Australia-Wide)
-        </h2>
+        <SectionHeading title="Mail-In Sharpening (Australia-Wide)" />
         <p className="mt-4 text-text/80">
           You can post items using a prepaid Australia Post satchel.
           Return postage is sent with tracking.

@@ -17,11 +17,11 @@ import Section from "@/components/Section";
 export const metadata: Metadata = {
   title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Animal clipper blade and grooming shears sharpening in Campbelltown NSW for groomers, vets and animal-care professionals. A5, wide and large-animal blades.",
+    "Professional clipper blade sharpening in Campbelltown NSW for groomers, vets and animal-care pros — A5, wide and large-animal blades. Call 0412 974 277.",
   openGraph: {
     title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Animal clipper blade and grooming shears sharpening in Campbelltown NSW for groomers, vets and animal-care professionals. A5, wide and large-animal blades.",
+      "Professional clipper blade sharpening in Campbelltown NSW for groomers, vets and animal-care pros — A5, wide and large-animal blades. Call 0412 974 277.",
     url: "https://xtrasharp.com.au/clipper-blades",
     type: "article",
     images: ["https://xtrasharp.com.au/og-clipper.jpg"],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Animal clipper blade and grooming shears sharpening in Campbelltown NSW for groomers, vets and animal-care professionals. A5, wide and large-animal blades.",
+      "Professional clipper blade sharpening in Campbelltown NSW for groomers, vets and animal-care pros — A5, wide and large-animal blades. Call 0412 974 277.",
     images: ["https://xtrasharp.com.au/og-clipper.jpg"],
   },
   other: {
@@ -572,6 +572,23 @@ export default function ClipperBladesPage() {
         </a>
       </PageHero>
 
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading title="About Clipper Blade Sharpening" />
+        <p className="text-text/80">
+          Clipper blade sharpening restores clean, precise cutting
+          performance to animal clipper blades and grooming shears used by
+          groomers, vets and animal-care professionals. It&apos;s suited to
+          anyone relying on clipper blades for daily grooming work. Common
+          problems include blades that pull or snag fur, overheating during
+          use, and reduced cutting efficiency from repeated use without
+          proper maintenance. At Xtra Sharp, clipper blades are sharpened on
+          a dedicated, purpose-built machine for A5, wide and large-animal
+          blades, ensuring correct angle, alignment and tracking every time.
+          Standard turnaround for clipper blades and grooming shears is 3
+          days, keeping your grooming schedule on track.
+        </p>
+      </Section>
+
       <Section className="border-t border-metallic/40 text-center">
         <SectionHeading
           title="Machine-Guided Sharpening for Correct Alignment"
@@ -626,9 +643,7 @@ export default function ClipperBladesPage() {
       </Section>
 
       <Section className="border-t border-metallic/40 text-center">
-        <h2 className="text-2xl font-semibold text-text">
-          Mail-In Sharpening (Australia-Wide)
-        </h2>
+        <SectionHeading title="Mail-In Sharpening (Australia-Wide)" />
         <p className="mt-4 text-text/80">
           You can post your clipper blades and grooming shears using a
           prepaid Australia Post satchel. Return postage is sent with

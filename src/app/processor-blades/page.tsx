@@ -108,11 +108,11 @@ function ProcessorEquipmentPhoto() {
 export const metadata: Metadata = {
   title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Xtra Sharp Campbelltown NSW — expert water-cooled sharpening for processor blades used in commercial and industrial equipment. Safe, accurate edges and fast turnaround.",
+    "Professional processor blade sharpening in Campbelltown NSW for commercial and industrial equipment — safe, accurate edges guaranteed. Call 0412 974 277.",
   openGraph: {
     title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Xtra Sharp Campbelltown NSW — expert water-cooled sharpening for processor blades used in commercial and industrial equipment. Safe, accurate edges and fast turnaround.",
+      "Professional processor blade sharpening in Campbelltown NSW for commercial and industrial equipment — safe, accurate edges guaranteed. Call 0412 974 277.",
     url: "https://xtrasharp.com.au/processor-blades",
     type: "article",
     images: ["https://xtrasharp.com.au/og-processor-blades.jpg"],
@@ -121,7 +121,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Xtra Sharp Campbelltown NSW — expert water-cooled sharpening for processor blades used in commercial and industrial equipment. Safe, accurate edges and fast turnaround.",
+      "Professional processor blade sharpening in Campbelltown NSW for commercial and industrial equipment — safe, accurate edges guaranteed. Call 0412 974 277.",
     images: ["https://xtrasharp.com.au/og-processor-blades.jpg"],
   },
   other: {
@@ -232,6 +232,24 @@ export default function ProcessorBladesPage() {
         </a>
       </PageHero>
 
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <SectionHeading title="About Processor Blade Sharpening" />
+        <p className="text-text/80">
+          Processor blade sharpening restores safe, accurate cutting edges
+          to blades used in home and commercial food-processing and
+          industrial equipment. It&apos;s suited to home cooks, commercial
+          kitchens and industrial operators who depend on sharp blades for
+          efficient, consistent processing. Common problems include blades
+          that tear or crush instead of cutting cleanly, reduced processing
+          efficiency, and increased strain on equipment motors from dull
+          edges. At Xtra Sharp, processor blades are sharpened using
+          water-cooled equipment to protect the steel from heat damage,
+          restoring safe, accurate performance. Most processor blades are
+          completed within 1–2 days, with busy periods taking up to 3
+          days.
+        </p>
+      </Section>
+
       <Section className="border-t border-metallic/40 text-center">
         <SectionHeading
           title="Water-Cooled Sharpening"
@@ -271,9 +289,7 @@ export default function ProcessorBladesPage() {
       </Section>
 
       <Section className="border-t border-metallic/40 bg-surface text-center">
-        <h2 className="text-2xl font-semibold text-text">
-          Mail-In Sharpening (Australia-Wide)
-        </h2>
+        <SectionHeading title="Mail-In Sharpening (Australia-Wide)" />
         <p className="mt-4 text-text/80">
           You can post your processor blades using a prepaid Australia
           Post satchel. Return postage is sent with tracking.
