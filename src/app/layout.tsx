@@ -96,6 +96,11 @@ const localBusinessSchema = {
       },
     },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "5",
+  },
 };
 
 const geistSans = Geist({
