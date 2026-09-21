@@ -4,6 +4,7 @@ import Checklist from "@/components/Checklist";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
+import FAQ from "@/components/FAQ";
 
 export const metadata: Metadata = {
   title: "FAQ | Xtra Sharp Campbelltown NSW",
@@ -124,72 +125,46 @@ export default function FaqPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            How long does sharpening take?
-          </h2>
-          <p className="mt-4 text-text/80">
-            Most sharpening is completed within 1–2 days. During busy
-            periods this can take up to 3 days, depending on workload.
-            Urgent jobs are available by arrangement.
-          </p>
+          <FAQ
+            question="How long does sharpening take?"
+            answer="Most sharpening is completed within 1–2 days. During busy periods this can take up to 3 days, depending on workload. Urgent jobs are available by arrangement."
+          />
         </div>
       </section>
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Do you sharpen damaged items?
-          </h2>
-          <p className="mt-4 text-text/80">
-            Yes &mdash; I can sharpen most damaged items including chipped
-            knives, worn axes, dull clipper blades, and scissors needing
-            tension adjustment. If something is badly damaged, I will
-            contact you before proceeding.
-          </p>
+          <FAQ
+            question="Do you sharpen damaged items?"
+            answer="Yes — I can sharpen most damaged items including chipped knives, worn axes, dull clipper blades, and scissors needing tension adjustment. If something is badly damaged, I will contact you before proceeding."
+          />
         </div>
       </section>
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Do prices change depending on condition?
-          </h2>
-          <p className="mt-4 text-text/80">
-            Some items may vary in price depending on condition, especially
-            hunting knives, axes, tomahawks, and processor blades. You can
-            send a photo for an exact quote before drop-off or mail-in.
-          </p>
+          <FAQ
+            question="Do prices change depending on condition?"
+            answer="Some items may vary in price depending on condition, especially hunting knives, axes, tomahawks, and processor blades. You can send a photo for an exact quote before drop-off or mail-in."
+          />
         </div>
       </section>
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            How do I pack items for mail-in sharpening?
-          </h2>
-          <p className="mt-4 text-text/80">
-            Pack items securely using tea towels, rags, newspaper, or
-            bubble wrap. Wrap each item separately. Make sure blade tips
-            are well wrapped so they cannot punch through the packaging.
-            Fold cardboard over tips or add extra layers of cloth or
-            bubble wrap. Place items inside a strong packing box and pack
-            tightly so they cannot move around. Include your return
-            address, phone number, email address, and any notes about
-            your items.
-          </p>
+          <FAQ
+            question="How do I pack items for mail-in sharpening?"
+            answer="Pack items securely using tea towels, rags, newspaper, or bubble wrap. Wrap each item separately. Make sure blade tips are well wrapped so they cannot punch through the packaging. Fold cardboard over tips or add extra layers of cloth or bubble wrap. Place items inside a strong packing box and pack tightly so they cannot move around. Include your return address, phone number, email address, and any notes about your items."
+          />
         </div>
       </section>
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Do I need to contact you before posting anything?
-          </h2>
-          <p className="mt-4 text-text/80">
-            Yes &mdash; please contact me first before sending any items.
-            I&apos;ll confirm pricing, turnaround time, and the correct
-            Australia Post satchel size.
-          </p>
+          <FAQ
+            question="Do I need to contact you before posting anything?"
+            answer="Yes — please contact me first before sending any items. I'll confirm pricing, turnaround time, and the correct Australia Post satchel size."
+          />
         </div>
       </section>
 
@@ -238,13 +213,10 @@ export default function FaqPage() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Where are you located?
-          </h2>
-          <p className="mt-4 text-text/80">
-            Woodbine, Campbelltown NSW. Full address provided after
-            booking.
-          </p>
+          <FAQ
+            question="Where are you located?"
+            answer="Woodbine, Campbelltown NSW. Full address provided after booking."
+          />
         </div>
       </section>
 

@@ -8,6 +8,7 @@ import ServiceFaq from "@/components/ServiceFaq";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedServiceLinks } from "@/lib/serviceLinks";
 import CallNowButton from "@/components/CallNowButton";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
@@ -173,23 +174,17 @@ export default function GardenToolsPage() {
         ]}
       />
 
-      <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
-        <h1 className="text-4xl font-bold text-text sm:text-5xl">
-          Garden Tools Sharpening
-        </h1>
-        <p className="max-w-2xl text-lg text-text/70">
-          Professional garden tool sharpening in Campbelltown NSW —
-          restoring clean, accurate edges for secateurs, loppers, axes, and
-          other garden tools. Each tool is sharpened using water-cooled
-          equipment to maintain steel integrity and cutting precision.
-        </p>
+      <PageHero
+        title="Garden Tools Sharpening"
+        subtitle="Professional garden tool sharpening in Campbelltown NSW — restoring clean, accurate edges for secateurs, loppers, axes, and other garden tools. Each tool is sharpened using water-cooled equipment to maintain steel integrity and cutting precision."
+      >
         <a
           href="tel:0412974277"
           className="mt-4 inline-block rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
         >
           Call Now — 0412 974 277
         </a>
-      </section>
+      </PageHero>
 
       <section className="border-t border-metallic/40 px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">

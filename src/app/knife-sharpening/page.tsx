@@ -8,6 +8,7 @@ import ServiceFaq from "@/components/ServiceFaq";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedServiceLinks } from "@/lib/serviceLinks";
 import CallNowButton from "@/components/CallNowButton";
+import PageHero from "@/components/PageHero";
 
 const introGalleryPhotos = [
   {
@@ -304,21 +305,17 @@ export default function KnifeSharpeningPage() {
         ]}
       />
 
-      <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
-        <h1 className="text-4xl font-bold text-text sm:text-5xl">
-          Knife Sharpening
-        </h1>
-        <p className="max-w-2xl text-lg text-text/70">
-          Water-cooled sharpening for kitchen, butcher, large and hunting
-          knives.
-        </p>
+      <PageHero
+        title="Knife Sharpening"
+        subtitle="Water-cooled sharpening for kitchen, butcher, large and hunting knives."
+      >
         <a
           href="tel:0412974277"
           className="mt-4 inline-block rounded-full bg-ctaRed px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
         >
           Call Now — 0412 974 277
         </a>
-      </section>
+      </PageHero>
 
       <section className="border-t border-metallic/40 px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">

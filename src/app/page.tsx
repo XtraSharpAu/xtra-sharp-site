@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import CommercialSegment from "@/components/CommercialSegment";
 import CallNowButton from "@/components/CallNowButton";
+import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
   title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
@@ -85,43 +85,31 @@ const pricingPreview = [
   { name: "Processor Blades", price: "From $20" },
 ];
 
-const featuredTestimonials = [
+const testimonials = [
   {
     name: "Jason",
-    quote:
-      "I recently had these 3 Japanese knives sharpened, and I'm extremely pleased with the outcome. The blades were returned in outstanding condition, with excellent edge retention and precision. The level of craftsmanship and attention to detail exceeded my expectations. I would highly recommend Phil and his service to anyone looking for professional knife sharpening.",
-    photo: "/testimonial-jason.jpg",
-    width: 480,
-    height: 640,
+    text: "I recently had these 3 Japanese knives sharpened, and I'm extremely pleased with the outcome. The blades were returned in outstanding condition, with excellent edge retention and precision. The level of craftsmanship and attention to detail exceeded my expectations. I would highly recommend Phil and his service to anyone looking for professional knife sharpening.",
+    image: "/testimonial-jason.jpg",
   },
   {
     name: "Michelle Siskovic",
-    quote:
-      "I would highly recommend Phil from Xtra Sharp Blade Sharpener. Phil was friendly, professional and extremely helpful throughout the whole process. His knowledge and attention to detail were fantastic, and I'm very happy with the sharpening results.",
-    photo: "/testimonial-michelle.jpg",
-    width: 800,
-    height: 1067,
+    text: "I would highly recommend Phil from Xtra Sharp Blade Sharpener. Phil was friendly, professional and extremely helpful throughout the whole process. His knowledge and attention to detail were fantastic, and I'm very happy with the sharpening results.",
+    image: "/testimonial-michelle.jpg",
   },
-];
-
-const textTestimonials = [
   {
     name: "Lincoln",
-    role: "Sydney Residential Building Pty Ltd, Brighton-Le-Sands 2216",
-    quote:
-      "Phil always makes it a pleasure to trade with. My building equipment is returned ready & of a high quality sharpen with a short turnaround. Phil is someone you can rely on. You can contact him at any hour & he's always willing to be of assistance. I'd be lost without his prompt, professional, and affordable sharpening services.",
+    location: "Sydney Residential Building Pty Ltd, Brighton-Le-Sands 2216",
+    text: "Phil always makes it a pleasure to trade with. My building equipment is returned ready & of a high quality sharpen with a short turnaround. Phil is someone you can rely on. You can contact him at any hour & he's always willing to be of assistance. I'd be lost without his prompt, professional, and affordable sharpening services.",
   },
   {
     name: "Rickey",
-    role: "St Andrews",
-    quote:
-      "Very reliable and great to deal with, at a reasonable price. I've been using Phil for years now to sharpen my fishing knives, kitchen knives, and secateurs — highly recommend him.",
+    location: "St Andrews",
+    text: "Very reliable and great to deal with, at a reasonable price. I've been using Phil for years now to sharpen my fishing knives, kitchen knives, and secateurs — highly recommend him.",
   },
   {
     name: "Ray",
-    role: "Dr Raynae Hall BVetMed MRCVS",
-    quote:
-      "I can't recommend Phil enough. During the pandemic, he kept our surgeries going in the vet clinic by keeping all our clipper blades in pristine condition. He sharpened and repaired them as needed. Not to mention, the phenomenal job with my personal knives at home. It really isn't sharp until Phil's had a go! The service and the craftsmanship are unparalleled. Thank you soo very much Phil! You put the xtra in xtra sharp!",
+    location: "Dr Raynae Hall BVetMed MRCVS",
+    text: "I can't recommend Phil enough. During the pandemic, he kept our surgeries going in the vet clinic by keeping all our clipper blades in pristine condition. He sharpened and repaired them as needed. Not to mention, the phenomenal job with my personal knives at home. It really isn't sharp until Phil's had a go! The service and the craftsmanship are unparalleled. Thank you soo very much Phil! You put the xtra in xtra sharp!",
   },
 ];
 
@@ -233,37 +221,15 @@ export default function Home() {
           <h2 className="text-center text-3xl font-semibold text-text">
             Customer Testimonials
           </h2>
-          <div className="mt-10 grid gap-8 sm:grid-cols-2">
-            {featuredTestimonials.map((t) => (
-              <div
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {testimonials.map((t) => (
+              <Testimonial
                 key={t.name}
-                className="overflow-hidden rounded-lg border border-metallic/40 bg-background shadow-md"
-              >
-                <Image
-                  src={t.photo}
-                  alt="Customer testimonial for Xtra Sharp Campbelltown NSW sharpening service."
-                  width={t.width}
-                  height={t.height}
-                  sizes="(min-width: 640px) 50vw, 100vw"
-                  className="h-auto w-full"
-                />
-                <div className="p-6 text-center">
-                  <p className="text-text/80">&ldquo;{t.quote}&rdquo;</p>
-                  <p className="mt-3 font-semibold text-text">{t.name}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
-            {textTestimonials.map((t) => (
-              <div
-                key={t.name}
-                className="rounded-lg border border-metallic/40 bg-background p-6 text-center shadow-md"
-              >
-                <p className="text-text/80">&ldquo;{t.quote}&rdquo;</p>
-                <p className="mt-3 font-semibold text-text">{t.name}</p>
-                <p className="text-sm text-text/60">{t.role}</p>
-              </div>
+                name={t.name}
+                location={t.location}
+                text={t.text}
+                image={t.image}
+              />
             ))}
           </div>
         </div>

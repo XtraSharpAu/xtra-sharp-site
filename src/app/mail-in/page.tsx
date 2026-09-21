@@ -3,6 +3,7 @@ import Link from "next/link";
 import Checklist from "@/components/Checklist";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Mail-In Sharpening | Xtra Sharp Campbelltown NSW",
@@ -126,20 +127,17 @@ export default function MailInPage() {
         ]}
       />
 
-      <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
-        <h1 className="text-4xl font-bold text-text sm:text-5xl">
-          Mail-In Sharpening
-        </h1>
-        <p className="max-w-2xl text-lg text-text/70">
-          Australia-wide sharpening with tracked return postage.
-        </p>
+      <PageHero
+        title="Mail-In Sharpening"
+        subtitle="Australia-wide sharpening with tracked return postage."
+      >
         <a
           href="tel:0412974277"
           className="mt-4 inline-block whitespace-nowrap rounded-full bg-ctaRed px-6 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
         >
           Call Now — 0412 974 277
         </a>
-      </section>
+      </PageHero>
 
       <section className="border-t border-metallic/40 px-6 py-20">
         <div className="mx-auto max-w-2xl">
