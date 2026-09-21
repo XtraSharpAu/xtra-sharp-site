@@ -5,11 +5,11 @@ import CommercialSegment from "@/components/CommercialSegment";
 export const metadata: Metadata = {
   title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
   description:
-    "Professional sharpening with water-cooled and machine-guided accuracy. Drop-off sharpening in Campbelltown NSW, mail-in sharpening Australia-wide.",
+    "Xtra Sharp Campbelltown NSW — expert sharpening for knives, axes, processor blades, and garden tools using water-cooled systems, and clipper blades using specialised professional equipment.",
   openGraph: {
     title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional sharpening with water-cooled and machine-guided accuracy. Drop-off sharpening in Campbelltown NSW, mail-in sharpening Australia-wide.",
+      "Xtra Sharp Campbelltown NSW — expert sharpening for knives, axes, processor blades, and garden tools using water-cooled systems, and clipper blades using specialised professional equipment.",
     url: "https://xtrasharp.com.au",
     type: "website",
     images: ["https://xtrasharp.com.au/og-image.jpg"],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional sharpening with water-cooled and machine-guided accuracy. Drop-off sharpening in Campbelltown NSW, mail-in sharpening Australia-wide.",
+      "Xtra Sharp Campbelltown NSW — expert sharpening for knives, axes, processor blades, and garden tools using water-cooled systems, and clipper blades using specialised professional equipment.",
     images: ["https://xtrasharp.com.au/og-image.jpg"],
   },
   other: {
@@ -91,8 +91,10 @@ export default function Home() {
           Sharpening Services — Knives, Scissors, Clipper Blades &amp; More
         </h1>
         <p className="max-w-2xl text-lg text-text/70">
-          Professional sharpening with water-cooled and machine-guided
-          accuracy.
+          Professional knife and tool sharpening in Campbelltown NSW —
+          precision water-cooled sharpening for knives, axes, processor
+          blades, and garden tools, plus specialised sharpening for clipper
+          blades.
         </p>
         <a
           href="tel:0412974277"
