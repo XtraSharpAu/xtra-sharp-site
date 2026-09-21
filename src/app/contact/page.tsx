@@ -4,6 +4,7 @@ import JsonLd from "@/components/JsonLd";
 import ContactForm from "@/components/ContactForm";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
+import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Contact | Xtra Sharp Campbelltown NSW",
@@ -125,7 +126,7 @@ export default function ContactPage() {
             Phillip Angland — Owner &amp; Sharpener
           </figcaption>
         </figure>
-        <h2 className="text-2xl font-semibold text-text">Call or Text</h2>
+        <SectionHeading title="Call or Text" />
         <a
           href="tel:0412974277"
           className="mt-4 block text-4xl font-bold text-ctaRed hover:underline"
@@ -135,9 +136,7 @@ export default function ContactPage() {
       </section>
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
-        <h2 className="text-center text-2xl font-semibold text-text">
-          Send a Message
-        </h2>
+        <SectionHeading title="Send a Message" />
         <div className="mt-6">
           <ContactForm />
         </div>
@@ -145,12 +144,10 @@ export default function ContactPage() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">Location</h2>
-          <p className="mt-4 text-text/80">
-            Woodbine, listed publicly as Campbelltown NSW. Full address
-            provided after booking. Drop-off sharpening is available by
-            appointment.
-          </p>
+          <SectionHeading
+            title="Location"
+            subtitle="Woodbine, listed publicly as Campbelltown NSW. Full address provided after booking. Drop-off sharpening is available by appointment."
+          />
         </div>
       </section>
 
@@ -169,14 +166,10 @@ export default function ContactPage() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Mail-In Sharpening
-          </h2>
-          <p className="mt-4 text-text/80">
-            Please contact me first before posting any items. I&apos;ll
-            confirm pricing, turnaround time, and the correct Australia Post
-            satchel size.
-          </p>
+          <SectionHeading
+            title="Mail-In Sharpening"
+            subtitle="Please contact me first before posting any items. I'll confirm pricing, turnaround time, and the correct Australia Post satchel size."
+          />
         </div>
       </section>
 

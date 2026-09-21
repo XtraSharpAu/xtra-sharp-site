@@ -10,6 +10,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import { relatedServiceLinks } from "@/lib/serviceLinks";
 import CallNowButton from "@/components/CallNowButton";
 import PageHero from "@/components/PageHero";
+import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
@@ -234,7 +235,7 @@ function ClipperEdgeDetailPhoto() {
 
 function ClipperEquipmentPhoto() {
   return (
-    <div className="mx-auto mt-12 w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
+    <div className="mx-auto mt-section w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
       <Image
         src="/clipper-blade-sharpening-machine.jpg"
         alt="Automated clipper blade sharpening machine used for A5, wide and large-animal blades."
@@ -256,7 +257,7 @@ const clipperEquipmentBenefits = [
 
 function ClipperEquipmentSection() {
   return (
-    <div className="mx-auto mt-12 max-w-3xl text-left">
+    <div className="mx-auto mt-section max-w-3xl text-left">
       <h3 className="text-xl font-semibold text-text">
         Purpose-Built Equipment for Animal Clipper Blades
       </h3>
@@ -408,7 +409,7 @@ const clipperProcessSteps = [
 
 function ClipperProcessSteps() {
   return (
-    <div className="mx-auto mt-12 max-w-3xl text-left">
+    <div className="mx-auto mt-section max-w-3xl text-left">
       <h3 className="text-xl font-semibold text-text">
         The Sharpening Process, Step by Step
       </h3>
@@ -461,7 +462,7 @@ const clipperPackingPhotos = [
 
 function ClipperPackingPhotos() {
   return (
-    <div className="mx-auto mt-12 max-w-3xl text-left">
+    <div className="mx-auto mt-section max-w-3xl text-left">
       <h3 className="text-xl font-semibold text-text">
         Packed Carefully for Return
       </h3>
@@ -490,9 +491,7 @@ function ClipperPackingPhotos() {
 function ClipperPricing() {
   return (
     <div className="mx-auto max-w-md">
-      <h2 className="text-center text-2xl font-semibold text-text">
-        Pricing
-      </h2>
+      <SectionHeading title="Pricing" />
       <div className="mt-6 rounded-lg border border-metallic/40 bg-background p-6">
         <h3 className="text-sm font-semibold text-text/80">
           Clipper Blades
@@ -536,13 +535,10 @@ function ClipperPricing() {
 function ClipperCTA() {
   return (
     <>
-      <h2 className="text-2xl font-semibold text-text">
-        Ready to sharpen your animal clipper blades and grooming shears?
-      </h2>
-      <p className="mt-4 text-text/70">
-        Professional sharpening for groomers and animal-care specialists.
-        Drop-off in Campbelltown NSW.
-      </p>
+      <SectionHeading
+        title="Ready to sharpen your animal clipper blades and grooming shears?"
+        subtitle="Professional sharpening for groomers and animal-care specialists. Drop-off in Campbelltown NSW."
+      />
       <div className="mt-6">
         <CallNowButton />
       </div>
@@ -576,15 +572,10 @@ export default function ClipperBladesPage() {
 
       <section className="border-t border-metallic/40 px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Machine-Guided Sharpening for Correct Alignment
-          </h2>
-          <p className="mt-4 text-text/80">
-            Clipper blades are sharpened using a machine-guided process that
-            ensures correct angle, alignment, tension, tracking and
-            finishing. Every blade is sharpened individually, cleaned,
-            aligned and tested before return.
-          </p>
+          <SectionHeading
+            title="Machine-Guided Sharpening for Correct Alignment"
+            subtitle="Clipper blades are sharpened using a machine-guided process that ensures correct angle, alignment, tension, tracking and finishing. Every blade is sharpened individually, cleaned, aligned and tested before return."
+          />
           <ClipperIntroGallery />
           <ClipperBeforePhoto />
           <ClipperAfterPhoto />
@@ -597,12 +588,10 @@ export default function ClipperBladesPage() {
       </section>
 
       <section className="border-t border-metallic/40 px-6 py-16 text-center">
-        <h2 className="text-2xl font-semibold text-text">
-          Packing &amp; Return Process
-        </h2>
-        <p className="mt-4 text-text/80">
-          Need your clipper blades sharpened? Book your service today.
-        </p>
+        <SectionHeading
+          title="Packing & Return Process"
+          subtitle="Need your clipper blades sharpened? Book your service today."
+        />
         <Link
           href="/contact"
           className="mt-6 inline-block rounded-full bg-ctaRed px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-ctaRed/90"
@@ -613,9 +602,7 @@ export default function ClipperBladesPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Clipper Blade Care Instructions
-          </h2>
+          <SectionHeading title="Clipper Blade Care Instructions" />
           <div className="mt-6 inline-block text-left">
             <Checklist items={clipperCareInstructions} />
           </div>
@@ -624,9 +611,7 @@ export default function ClipperBladesPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            What I Sharpen for Groomers &amp; Animal-Care Professionals
-          </h2>
+          <SectionHeading title="What I Sharpen for Groomers & Animal-Care Professionals" />
           <div className="mt-6 inline-block text-left">
             <Checklist items={clipperBladeTypes} />
           </div>
@@ -639,14 +624,10 @@ export default function ClipperBladesPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Drop-Off Sharpening (Campbelltown NSW)
-          </h2>
-          <p className="mt-4 text-text/80">
-            Drop-off sharpening is available by appointment. I sharpen from
-            my dedicated sharpening area in Woodbine, listed publicly as
-            Campbelltown NSW.
-          </p>
+          <SectionHeading
+            title="Drop-Off Sharpening (Campbelltown NSW)"
+            subtitle="Drop-off sharpening is available by appointment. I sharpen from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW."
+          />
         </div>
       </section>
 
@@ -669,13 +650,10 @@ export default function ClipperBladesPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Turnaround Time
-          </h2>
-          <p className="mt-4 text-text/80">
-            Standard turnaround for clipper blades and grooming shears is
-            3 days.
-          </p>
+          <SectionHeading
+            title="Turnaround Time"
+            subtitle="Standard turnaround for clipper blades and grooming shears is 3 days."
+          />
         </div>
       </section>
 
@@ -683,9 +661,7 @@ export default function ClipperBladesPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Frequently Asked Questions
-          </h2>
+          <SectionHeading title="Frequently Asked Questions" />
           <div className="mt-6">
             <ServiceFaq items={faqs} />
           </div>
@@ -694,9 +670,7 @@ export default function ClipperBladesPage() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Important Notes
-          </h2>
+          <SectionHeading title="Important Notes" />
           <div className="mt-6 inline-block text-left">
             <Checklist items={importantNotes} />
           </div>

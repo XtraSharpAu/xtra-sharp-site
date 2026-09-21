@@ -24,7 +24,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-metallic/40 bg-background">
       <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-text/80">
-        <div className="mb-8">
+        <div className="mb-stack">
           <h3 className="text-xl font-semibold text-text">Xtra Sharp</h3>
           <p className="mt-2">
             Professional knife sharpening in Campbelltown NSW, servicing
@@ -82,7 +82,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <div className="mb-stack grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           <div>
             <h4 className="font-semibold text-text">Services</h4>
             <ul className="mt-2 space-y-1">

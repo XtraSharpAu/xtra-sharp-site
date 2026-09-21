@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import CommercialSegment from "@/components/CommercialSegment";
 import CallNowButton from "@/components/CallNowButton";
 import Testimonial from "@/components/Testimonial";
+import ServiceCard from "@/components/ServiceCard";
+import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
@@ -35,45 +36,35 @@ const services = [
   {
     icon: "🔪",
     title: "Knife Sharpening",
-    items: [
-      "Small Victorinox paring knives",
-      "Standard knives",
-      "Large knives",
-      "Butcher knives",
-      "Hunting knives",
-    ],
+    href: "/knife-sharpening",
+    description:
+      "We sharpen small Victorinox paring knives, standard knives, large knives, butcher knives, and hunting knives.",
   },
   {
     icon: "✂️",
     title: "Scissors Sharpening",
-    items: [
-      "Hairdressing scissors",
-      "Grooming scissors",
-      "Grooming thinning scissors",
-      "Sewing scissors",
-      "Household scissors",
-    ],
+    href: "/scissors-sharpening",
+    description:
+      "We sharpen hairdressing scissors, grooming scissors, grooming thinning scissors, sewing scissors, and household scissors.",
   },
   {
     icon: "🐾",
     title: "Clipper Blade Sharpening",
-    items: [
-      "A5 clipper blades",
-      "Wide clipper blades",
-      "Large-animal blades",
-      "Grooming clipper blades",
-      "Veterinary clipper blades",
-    ],
+    href: "/clipper-blades",
+    description:
+      "We sharpen A5 clipper blades, wide clipper blades, large-animal blades, grooming clipper blades, and veterinary clipper blades.",
   },
   {
     icon: "🌿",
     title: "Garden Tools Sharpening",
-    items: ["Hedge shears", "Secateurs", "Axes / tomahawks"],
+    href: "/garden-tools",
+    description: "We sharpen hedge shears, secateurs, and axes / tomahawks.",
   },
   {
     icon: "⚙️",
     title: "Processor Blade Sharpening",
-    items: ["Home processor blades", "Large industrial blades"],
+    href: "/processor-blades",
+    description: "We sharpen home processor blades and large industrial blades.",
   },
 ];
 
@@ -136,12 +127,16 @@ export default function Home() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-20">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-center text-3xl font-semibold text-text">
-            Our Services
-          </h2>
+          <SectionHeading title="Our Services" />
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
-              <CommercialSegment key={service.title} {...service} />
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                description={service.description}
+                href={service.href}
+                icon={service.icon}
+              />
             ))}
           </div>
         </div>
@@ -149,35 +144,25 @@ export default function Home() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Drop-Off Sharpening (Campbelltown NSW)
-          </h2>
-          <p className="mt-4 text-text/80">
-            Drop-off sharpening is available by appointment. I sharpen from
-            my dedicated sharpening area in Woodbine, listed publicly as
-            Campbelltown NSW.
-          </p>
+          <SectionHeading
+            title="Drop-Off Sharpening (Campbelltown NSW)"
+            subtitle="Drop-off sharpening is available by appointment. I sharpen from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW."
+          />
         </div>
       </section>
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Mail-In Sharpening (Australia-Wide)
-          </h2>
-          <p className="mt-4 text-text/80">
-            You can post items using a prepaid Australia Post satchel.
-            Return postage is sent with tracking. Please contact me first
-            before sending anything.
-          </p>
+          <SectionHeading
+            title="Mail-In Sharpening (Australia-Wide)"
+            subtitle="You can post items using a prepaid Australia Post satchel. Return postage is sent with tracking. Please contact me first before sending anything."
+          />
         </div>
       </section>
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-md">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Pricing
-          </h2>
+          <SectionHeading title="Pricing" />
           <div className="mt-6 rounded-lg border border-metallic/40 bg-background p-6">
             {pricingPreview.map((line, index) => (
               <div
@@ -203,11 +188,10 @@ export default function Home() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">Service Area</h2>
-          <p className="mt-4 text-text/80">
-            Drop-off sharpening in Campbelltown NSW, servicing the Macarthur
-            region. Mail-in sharpening available Australia-wide.
-          </p>
+          <SectionHeading
+            title="Service Area"
+            subtitle="Drop-off sharpening in Campbelltown NSW, servicing the Macarthur region. Mail-in sharpening available Australia-wide."
+          />
           <div className="mt-4">
             <Link href="/service-area" className="text-accent hover:underline">
               View Service Area →
@@ -218,9 +202,7 @@ export default function Home() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-20">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-center text-3xl font-semibold text-text">
-            Customer Testimonials
-          </h2>
+          <SectionHeading title="Customer Testimonials" />
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((t) => (
               <Testimonial

@@ -9,6 +9,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import { relatedServiceLinks } from "@/lib/serviceLinks";
 import CallNowButton from "@/components/CallNowButton";
 import PageHero from "@/components/PageHero";
+import SectionHeading from "@/components/SectionHeading";
 
 const processorBeforePhotos = [
   {
@@ -84,7 +85,7 @@ function ProcessorAfterPhoto() {
 
 function ProcessorEquipmentPhoto() {
   return (
-    <div className="mx-auto mt-12 w-full max-w-2xl">
+    <div className="mx-auto mt-section w-full max-w-2xl">
       <div className="overflow-hidden rounded-lg shadow-md">
         <Image
           src="/knife_sharpening_machine.jpg"
@@ -231,14 +232,10 @@ export default function ProcessorBladesPage() {
 
       <section className="border-t border-metallic/40 px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Water-Cooled Sharpening
-          </h2>
-          <p className="mt-4 text-text/80">
-            Processor blades are sharpened using water-cooled equipment to
-            protect the steel from heat damage, giving safe, accurate edges
-            for home and industrial equipment.
-          </p>
+          <SectionHeading
+            title="Water-Cooled Sharpening"
+            subtitle="Processor blades are sharpened using water-cooled equipment to protect the steel from heat damage, giving safe, accurate edges for home and industrial equipment."
+          />
           <ProcessorBeforePhoto />
           <ProcessorAfterPhoto />
           <ProcessorEquipmentPhoto />
@@ -247,9 +244,7 @@ export default function ProcessorBladesPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-md">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Pricing
-          </h2>
+          <SectionHeading title="Pricing" />
           <div className="mt-6 rounded-lg border border-metallic/40 bg-background p-6">
             {pricing.map((line, index) => (
               <div
@@ -270,14 +265,10 @@ export default function ProcessorBladesPage() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Drop-Off Sharpening (Campbelltown NSW)
-          </h2>
-          <p className="mt-4 text-text/80">
-            Drop-off sharpening is available by appointment. I sharpen from
-            my dedicated sharpening area in Woodbine, listed publicly as
-            Campbelltown NSW.
-          </p>
+          <SectionHeading
+            title="Drop-Off Sharpening (Campbelltown NSW)"
+            subtitle="Drop-off sharpening is available by appointment. I sharpen from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW."
+          />
         </div>
       </section>
 
@@ -299,14 +290,10 @@ export default function ProcessorBladesPage() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Turnaround Time
-          </h2>
-          <p className="mt-4 text-text/80">
-            Most processor blades are completed within 1–2 days. Busy
-            periods may take up to 3 days, depending on workload. Urgent
-            jobs are available by arrangement.
-          </p>
+          <SectionHeading
+            title="Turnaround Time"
+            subtitle="Most processor blades are completed within 1–2 days. Busy periods may take up to 3 days, depending on workload. Urgent jobs are available by arrangement."
+          />
         </div>
       </section>
 
@@ -314,9 +301,7 @@ export default function ProcessorBladesPage() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Frequently Asked Questions
-          </h2>
+          <SectionHeading title="Frequently Asked Questions" />
           <div className="mt-6">
             <ServiceFaq items={faqs} />
           </div>
@@ -325,9 +310,7 @@ export default function ProcessorBladesPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Important Notes
-          </h2>
+          <SectionHeading title="Important Notes" />
           <div className="mt-6 inline-block text-left">
             <Checklist items={importantNotes} />
           </div>

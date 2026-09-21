@@ -3,6 +3,7 @@ import PillList from "@/components/PillList";
 import Checklist from "@/components/Checklist";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
+import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Service Area | Xtra Sharp Campbelltown NSW",
@@ -81,14 +82,10 @@ export default function ServiceAreaPage() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Local Area Coverage
-          </h2>
-          <p className="mt-4 text-text/80">
-            Xtra Sharp provides drop-off sharpening from my dedicated
-            sharpening area in Woodbine, listed publicly as Campbelltown
-            NSW. I also service the wider Macarthur region.
-          </p>
+          <SectionHeading
+            title="Local Area Coverage"
+            subtitle="Xtra Sharp provides drop-off sharpening from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW. I also service the wider Macarthur region."
+          />
         </div>
         <div className="mx-auto mt-8 max-w-3xl">
           <PillList items={macarthurSuburbs} />
@@ -104,24 +101,16 @@ export default function ServiceAreaPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Why Drop-Off Only
-          </h2>
-          <p className="mt-4 text-text/80">
-            Sharpening is carried out using water-cooled and machine-guided
-            equipment based at my dedicated sharpening area in Woodbine.
-            Keeping all sharpening at one fixed location means every item
-            gets the same accurate, consistent result &mdash; drop-off and
-            mail-in are the only ways to access it.
-          </p>
+          <SectionHeading
+            title="Why Drop-Off Only"
+            subtitle="Sharpening is carried out using water-cooled and machine-guided equipment based at my dedicated sharpening area in Woodbine. Keeping all sharpening at one fixed location means every item gets the same accurate, consistent result — drop-off and mail-in are the only ways to access it."
+          />
         </div>
       </section>
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            No Mobile Sharpening
-          </h2>
+          <SectionHeading title="No Mobile Sharpening" />
           <div className="mt-6 inline-block text-left">
             <Checklist items={noMobileNotes} />
           </div>

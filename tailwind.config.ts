@@ -12,6 +12,10 @@ const config: Config = {
         accent: "#C00000",
         ctaRed: "#C00000",
       },
+      spacing: {
+        section: "3rem",
+        stack: "2rem",
+      },
     },
   },
 };

@@ -4,6 +4,7 @@ import Checklist from "@/components/Checklist";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
 import PageHero from "@/components/PageHero";
+import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Mail-In Sharpening | Xtra Sharp Campbelltown NSW",
@@ -141,9 +142,7 @@ export default function MailInPage() {
 
       <section className="border-t border-metallic/40 px-6 py-20">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-3xl font-semibold text-text">
-            How Mail-In Sharpening Works
-          </h2>
+          <SectionHeading title="How Mail-In Sharpening Works" />
           <ol className="mt-10 space-y-6">
             {howItWorks.map((step, index) => (
               <li key={step.title} className="flex items-start gap-4">
@@ -177,15 +176,10 @@ export default function MailInPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Satchel Sizes
-          </h2>
-          <p className="mt-4 text-text/80">
-            The correct Australia Post satchel size depends on what
-            you&apos;re sending and how many items are included. Please contact me
-            first &mdash; I&apos;ll confirm the correct satchel size before
-            you post anything.
-          </p>
+          <SectionHeading
+            title="Satchel Sizes"
+            subtitle="The correct Australia Post satchel size depends on what you're sending and how many items are included. Please contact me first — I'll confirm the correct satchel size before you post anything."
+          />
           <a
             href="https://auspost.com.au/parcels-mail/calculate-postage-and-delivery-times/prepaid-satchels"
             target="_blank"
@@ -199,9 +193,7 @@ export default function MailInPage() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-md">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Pricing Reference
-          </h2>
+          <SectionHeading title="Pricing Reference" />
           <div className="mt-6 rounded-lg border border-metallic/40 bg-background p-6">
             {pricingReference.map((line, index) => (
               <div
@@ -227,23 +219,16 @@ export default function MailInPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Turnaround Time
-          </h2>
-          <p className="mt-4 text-text/80">
-            Most items are completed within 1–2 days of arrival. During busy
-            periods this can take up to 3 days, depending on workload.
-            Urgent jobs are available by arrangement. Return postage is sent
-            using Australia Post with tracking.
-          </p>
+          <SectionHeading
+            title="Turnaround Time"
+            subtitle="Most items are completed within 1–2 days of arrival. During busy periods this can take up to 3 days, depending on workload. Urgent jobs are available by arrangement. Return postage is sent using Australia Post with tracking."
+          />
         </div>
       </section>
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Mail-In Checklist
-          </h2>
+          <SectionHeading title="Mail-In Checklist" />
           <div className="mt-6 inline-block text-left">
             <Checklist items={mailInChecklist} />
           </div>
@@ -252,9 +237,7 @@ export default function MailInPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Important Notes
-          </h2>
+          <SectionHeading title="Important Notes" />
           <div className="mt-6 inline-block text-left">
             <Checklist items={importantNotes} />
           </div>

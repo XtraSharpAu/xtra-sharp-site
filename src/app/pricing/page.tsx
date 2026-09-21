@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Checklist from "@/components/Checklist";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
+import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Pricing | Xtra Sharp Campbelltown NSW",
@@ -113,9 +114,7 @@ const importantNotes = [
 function PricingBox({ title, items, text }: PricingSectionData) {
   return (
     <div className="mx-auto max-w-md">
-      <h2 className="text-center text-2xl font-semibold text-text">
-        {title}
-      </h2>
+      <SectionHeading title={title} />
       <div className="mt-6 rounded-lg border border-metallic/40 bg-background p-6">
         {items.map((line, index) => (
           <div
@@ -172,24 +171,19 @@ export default function PricingPage() {
 
       <section className="border-t border-metallic/40 bg-surface px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">Photo Quotes</h2>
-          <p className="mt-4 text-text/80">
-            If you&apos;re unsure about pricing, you can send a photo for
-            confirmation.
-          </p>
+          <SectionHeading
+            title="Photo Quotes"
+            subtitle="If you're unsure about pricing, you can send a photo for confirmation."
+          />
         </div>
       </section>
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-text">
-            Drop-Off Sharpening (Campbelltown NSW)
-          </h2>
-          <p className="mt-4 text-text/80">
-            Drop-off sharpening is available by appointment. I sharpen from
-            my dedicated sharpening area in Woodbine, listed publicly as
-            Campbelltown NSW.
-          </p>
+          <SectionHeading
+            title="Drop-Off Sharpening (Campbelltown NSW)"
+            subtitle="Drop-off sharpening is available by appointment. I sharpen from my dedicated sharpening area in Woodbine, listed publicly as Campbelltown NSW."
+          />
         </div>
       </section>
 
@@ -211,9 +205,7 @@ export default function PricingPage() {
 
       <section className="border-t border-metallic/40 px-6 py-16">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-semibold text-text">
-            Important Notes
-          </h2>
+          <SectionHeading title="Important Notes" />
           <div className="mt-6 inline-block text-left">
             <Checklist items={importantNotes} />
           </div>
