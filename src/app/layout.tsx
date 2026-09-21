@@ -17,12 +17,21 @@ const localBusinessSchema = {
     addressRegion: "NSW",
     addressCountry: "Australia",
   },
-  telephone: "0412 974 277",
+  telephone: "+61 412 974 277",
+  email: "phil@xtrasharp.com.au",
   url: "https://xtrasharp.com.au",
   description:
-    "Professional sharpening services for knives, scissors, clipper blades, garden tools, processor blades and industrial blades.",
+    "Professional sharpening services for knives, scissors, clipper blades, garden tools, processor blades and industrial blades in Campbelltown NSW. Appointment-only — most contact occurs Monday–Friday 9 AM–5 PM. Mail-in sharpening available Australia-wide.",
   areaServed:
     "Campbelltown NSW, Macarthur region, Australia-wide (mail-in sharpening)",
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "17:00",
+    },
+  ],
 };
 
 const geistSans = Geist({

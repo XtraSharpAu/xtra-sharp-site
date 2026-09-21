@@ -65,6 +65,21 @@ export default function Footer() {
               phil@xtrasharp.com.au
             </a>
           </p>
+          <p className="mt-1">
+            <strong className="text-text">Operating Hours:</strong> Most
+            contact and drop-offs occur Monday – Friday, 9 AM – 5 PM. By
+            appointment only.
+          </p>
+          <p className="mt-3">
+            <a
+              href="https://www.google.com/search?q=Xtra+Sharp+Campbelltown+NSW+reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent hover:underline"
+            >
+              Read Google reviews ›
+            </a>
+          </p>
         </div>
 
         <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">

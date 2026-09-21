@@ -64,6 +64,50 @@ export default function ContactPage() {
         </a>
       </section>
 
+      <section
+        id="contact"
+        className="border-t border-metallic/40 px-6 py-16 text-center"
+      >
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-2xl font-semibold text-text">
+            Contact Xtra Sharp
+          </h2>
+          <p className="mt-4 text-text/80">
+            <strong className="text-text">Phone:</strong>{" "}
+            <a href="tel:0412974277" className="text-accent hover:underline">
+              0412 974 277
+            </a>
+          </p>
+          <p className="mt-2 text-text/80">
+            <strong className="text-text">Email:</strong>{" "}
+            <a
+              href="mailto:phil@xtrasharp.com.au"
+              className="text-accent hover:underline"
+            >
+              phil@xtrasharp.com.au
+            </a>
+          </p>
+          <p className="mt-2 text-text/80">
+            <strong className="text-text">Location:</strong> Campbelltown
+            NSW — Address provided after booking
+          </p>
+          <p className="mt-2 text-text/80">
+            <strong className="text-text">Service Area:</strong> Campbelltown
+            NSW • Macarthur NSW • Australia-wide (mail-in sharpening)
+          </p>
+
+          <h3 className="mt-6 text-lg font-semibold text-text">
+            Operating Hours
+          </h3>
+          <p className="mt-2 text-text/80">
+            Most contact and drop-offs occur between{" "}
+            <strong className="text-text">Monday – Friday 9 AM – 5 PM</strong>.
+            Service is <strong className="text-text">by appointment only</strong>{" "}
+            — please call or message to arrange a time.
+          </p>
+        </div>
+      </section>
+
       <section className="border-t border-metallic/40 px-6 py-16 text-center">
         <figure className="mx-auto mb-4 flex flex-col items-center gap-2">
           <div className="h-[100px] w-[100px] overflow-hidden rounded-full shadow-md">

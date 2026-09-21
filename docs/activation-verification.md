@@ -46,10 +46,12 @@ Once set up, the "first heartbeat" and a test alert are both things the monitori
 |---|---|
 | Website link (what GBP should point to) | `https://xtrasharp.com.au` |
 | Phone | 0412 974 277 |
+| Email | phil@xtrasharp.com.au |
 | Suburb | Campbelltown NSW |
 | Service description phrase | "Mail-in sharpening available Australia-wide" |
+| Hours (published on Contact page, Footer, and `LocalBusiness` schema) | Monday–Friday 9 AM–5 PM, appointment only. Saturday/Sunday not listed as open hours |
 
-**What you need to actually do**: open the Business Profile listing directly and compare each field above against what's currently shown. Update anything that doesn't match.
+**What you need to actually do**: open the Business Profile listing directly and compare each field above against what's currently shown, paying particular attention to the **Hours** row — GBP has its own separate hours grid plus a "By appointment only" toggle; both need to match what's now published on the site (added after this table was first written), or customers will see two different sets of hours depending on whether they land on Google or the website. Update anything that doesn't match.
 
 ## Summary
 
@@ -63,7 +65,8 @@ Once set up, the "first heartbeat" and a test alert are both things the monitori
 | Uptime monitor created | ❌ Not done — needs an account with your contact details |
 | First heartbeat / alert test | ❌ Not applicable yet — no monitor exists |
 | GBP website link verified | ❓ Not verified — needs your GBP dashboard; site's real link given above |
-| GBP phone/suburb verified | ❓ Not verified — same reason; site's real values given above |
+| GBP phone/email/suburb verified | ❓ Not verified — same reason; site's real values given above |
 | GBP service description phrase verified | ❓ Not verified — same reason |
+| GBP hours verified against site's published hours (new) | ❓ Not verified — same reason; especially check GBP's "By appointment only" toggle matches |
 
 **"Launch officially complete" is not accurate yet.** The site itself (code, content, SEO, accessibility, performance) has been extensively built and audited across this project and is genuinely ready. The four items above are the actual remaining blockers, and every one of them requires you personally, in your own browser, logged into your own accounts — this session has confirmed, repeatedly and from multiple angles across four commands now, that it has no path to complete any of them itself.
