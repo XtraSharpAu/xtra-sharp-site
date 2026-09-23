@@ -27,7 +27,7 @@ export default function AboutHero() {
         </figure>
         <p className="text-text/70 sm:pt-2">
           Xtra Sharp is a professional knife and tool sharpening service based
-          in Woodbine, Campbelltown NSW. We provide reliable sharpening for
+          in Campbelltown, NSW 2560. We provide reliable sharpening for
           kitchens, salons, schools, workshops, and tradespeople across
           Western Sydney.
         </p>

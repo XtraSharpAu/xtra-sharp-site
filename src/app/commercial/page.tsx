@@ -88,8 +88,7 @@ const batchServices = [
 ];
 
 const serviceArea = [
-  "Campbelltown",
-  "Woodbine",
+  "Campbelltown, NSW 2560",
   "Western Sydney",
   "Australia-wide (mail-in)",
 ];
@@ -139,11 +138,9 @@ export default function CommercialPage() {
             <Checklist items={serviceArea} />
           </div>
           <p className="mt-6 text-text/80">Location:</p>
-          <p className="mt-1 font-medium text-text">
-            22 Queenscliff Drive, Woodbine NSW 2560
-          </p>
+          <p className="mt-1 font-medium text-text">Campbelltown, NSW 2560</p>
           <a
-            href="https://www.google.com/maps/place/22+Queenscliff+Dr,+Woodbine+NSW+2560"
+            href="https://www.google.com/maps/search/Xtra+Sharp+Campbelltown"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 inline-block text-accent hover:underline"

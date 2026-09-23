@@ -10,7 +10,7 @@ export default function CommercialHero() {
       </p>
       <p className="max-w-2xl text-text/70">
         Xtra Sharp provides reliable, high-quality sharpening services for
-        commercial clients across Campbelltown, Woodbine, and Western Sydney.
+        commercial clients across Campbelltown, NSW 2560 and Western Sydney.
         We offer fast turnaround, consistent results, and appointment-only
         service to ensure your tools stay sharp and ready for work.
       </p>

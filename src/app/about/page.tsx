@@ -6,11 +6,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "About | Xtra Sharp Campbelltown NSW",
   description:
-    "Xtra Sharp is a professional knife and tool sharpening service based in Woodbine, Campbelltown NSW, serving Western Sydney.",
+    "Xtra Sharp is a professional knife and tool sharpening service based in Campbelltown, NSW 2560, serving Western Sydney.",
   openGraph: {
     title: "About | Xtra Sharp Campbelltown NSW",
     description:
-      "Xtra Sharp is a professional knife and tool sharpening service based in Woodbine, Campbelltown NSW, serving Western Sydney.",
+      "Xtra Sharp is a professional knife and tool sharpening service based in Campbelltown, NSW 2560, serving Western Sydney.",
     url: "https://xtrasharp.com.au/about",
     type: "article",
     images: ["https://xtrasharp.com.au/og-about.jpg"],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About | Xtra Sharp Campbelltown NSW",
     description:
-      "Xtra Sharp is a professional knife and tool sharpening service based in Woodbine, Campbelltown NSW, serving Western Sydney.",
+      "Xtra Sharp is a professional knife and tool sharpening service based in Campbelltown, NSW 2560, serving Western Sydney.",
     images: ["https://xtrasharp.com.au/og-about.jpg"],
   },
   other: {
@@ -101,11 +101,9 @@ export default function AboutPage() {
       <section className="border-t border-metallic/40 px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-semibold text-text">📍 Location</h2>
-          <p className="mt-2 font-medium text-text">
-            22 Queenscliff Drive, Woodbine NSW 2560
-          </p>
+          <p className="mt-2 font-medium text-text">Campbelltown, NSW 2560</p>
           <a
-            href="https://www.google.com/maps/place/22+Queenscliff+Dr,+Woodbine+NSW+2560"
+            href="https://www.google.com/maps/search/Xtra+Sharp+Campbelltown"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 inline-block text-accent hover:underline"
