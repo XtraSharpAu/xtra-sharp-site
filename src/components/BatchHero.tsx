@@ -9,9 +9,9 @@ export default function BatchHero() {
       </p>
       <p className="max-w-2xl text-text/70">
         Xtra Sharp provides batch sharpening for schools, salons,
-        restaurants, workshops, and tradespeople across Campbelltown,
-        Woodbine, and Western Sydney. Batch jobs receive priority handling
-        and consistent edge quality across all items.
+        restaurants, workshops, and tradespeople across Campbelltown, NSW
+        2560 and Western Sydney. Batch jobs receive priority handling and
+        consistent edge quality across all items.
       </p>
     </section>
   );

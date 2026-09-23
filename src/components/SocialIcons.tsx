@@ -5,7 +5,7 @@ export function SocialIcons() {
   return (
     <div className="flex items-center gap-4">
       <a
-        href="https://www.facebook.com/xtrasharp"
+        href="https://www.facebook.com/XtrasharpAu/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Xtra Sharp on Facebook"

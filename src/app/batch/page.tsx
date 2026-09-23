@@ -157,17 +157,7 @@ export default function BatchPage() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-semibold text-text">📍 Location</h2>
           <p className="mt-4 text-text/80">Workshop address:</p>
-          <p className="mt-1 font-medium text-text">
-            22 Queenscliff Drive, Woodbine NSW 2560
-          </p>
-          <a
-            href="https://www.google.com/maps/place/22+Queenscliff+Dr,+Woodbine+NSW+2560"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-block text-accent hover:underline"
-          >
-            Open in Google Maps
-          </a>
+          <p className="mt-1 font-medium text-text">Campbelltown, NSW 2560</p>
           <p className="mt-6 text-text/70">Campbelltown SEO link:</p>
           <a
             href="https://www.google.com/maps/search/Xtra+Sharp+Campbelltown"

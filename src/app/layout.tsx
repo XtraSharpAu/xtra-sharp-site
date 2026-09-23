@@ -21,6 +21,10 @@ const localBusinessSchema = {
   telephone: "+61 412 974 277",
   email: "phil@xtrasharp.com.au",
   url: "https://xtrasharp.com.au",
+  sameAs: [
+    "https://www.facebook.com/XtrasharpAu/",
+    "https://x.com/XtraSharpAU",
+  ],
   description:
     "Professional sharpening services for knives, scissors, clipper blades, garden tools, processor blades and industrial blades in Campbelltown NSW. Appointment-only — most contact occurs Monday–Friday 9 AM–5 PM. Mail-in sharpening available Australia-wide.",
   areaServed:
