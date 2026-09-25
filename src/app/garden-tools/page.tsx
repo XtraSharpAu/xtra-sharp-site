@@ -16,11 +16,11 @@ import Section from "@/components/Section";
 export const metadata: Metadata = {
   title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Professional garden tool sharpening in Campbelltown NSW for secateurs, loppers, axes and other tools — water-cooled precision. Call 0412 974 277 today.",
+    "Professional sharpening for secateurs, shears, and household blades using water-cooled equipment for clean, accurate edges.",
   openGraph: {
     title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional garden tool sharpening in Campbelltown NSW for secateurs, loppers, axes and other tools — water-cooled precision. Call 0412 974 277 today.",
+      "Professional sharpening for secateurs, shears, and household blades using water-cooled equipment for clean, accurate edges.",
     url: "https://xtrasharp.com.au/garden-tools",
     type: "article",
     images: ["https://xtrasharp.com.au/og-garden-tools.jpg"],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional garden tool sharpening in Campbelltown NSW for secateurs, loppers, axes and other tools — water-cooled precision. Call 0412 974 277 today.",
+      "Professional sharpening for secateurs, shears, and household blades using water-cooled equipment for clean, accurate edges.",
     images: ["https://xtrasharp.com.au/og-garden-tools.jpg"],
   },
   other: {
@@ -67,7 +67,6 @@ const pricing = [
 ];
 
 const importantNotes = [
-  "No mobile sharpening",
   "No on-site sharpening",
   "Drop-off only",
   "Mail-in available Australia-wide",
