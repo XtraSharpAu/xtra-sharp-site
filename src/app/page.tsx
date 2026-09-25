@@ -143,6 +143,10 @@ export default function Home() {
             />
           ))}
         </div>
+        <p className="mt-8 text-center text-text/70">
+          We also provide sharpening services for commercial clients
+          including schools, salons, restaurants, and trades.
+        </p>
       </Section>
 
       <Section className="border-t border-metallic/40 text-center">

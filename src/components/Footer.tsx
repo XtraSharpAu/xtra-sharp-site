@@ -14,6 +14,7 @@ const customerLinks = [
   { label: "Drop-Off Checklist", href: "/services" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
+  { label: "Commercial Sharpening", href: "/commercial" },
 ];
 
 const legalLinks = [
