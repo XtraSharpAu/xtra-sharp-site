@@ -11,7 +11,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Xtra Sharp",
-  image: "https://xtrasharp.com.au/logo.png",
+  image: "https://xtrasharp.com.au/xtrasharp-website-logo.png",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Campbelltown",
@@ -19,6 +19,7 @@ const localBusinessSchema = {
     addressCountry: "Australia",
   },
   telephone: "+61 412 974 277",
+  priceRange: "$6–$70+",
   email: "phil@xtrasharp.com.au",
   url: "https://xtrasharp.com.au",
   sameAs: [
