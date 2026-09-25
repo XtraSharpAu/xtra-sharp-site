@@ -53,7 +53,7 @@ const faqSchema = {
       name: "What items do you sharpen?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Knives, scissors, clipper blades, garden tools, processor blades, industrial blades, chisels.",
+        text: "Kitchen knives, butcher knives, large knives, hunting knives, tomahawks, axes, hairdressing scissors, grooming scissors, sewing scissors, A5 clipper blades, wide clipper blades, large animal blades, secateurs, hedge shears, small garden tools, home processor blades, large industrial processor blades, and chisels.",
       },
     },
     {
@@ -61,7 +61,15 @@ const faqSchema = {
       name: "How long does sharpening take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most sharpening is completed within 1–2 days. Busy periods may take up to 3 days, depending on workload. Urgent jobs are available by arrangement.",
+        text: "Most sharpening is completed within 1–2 days. During busy periods this can take up to 3 days, depending on workload. Urgent jobs are available by arrangement.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you sharpen damaged items?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — I can sharpen most damaged items including chipped knives, worn axes, dull clipper blades, and scissors needing tension adjustment. If something is badly damaged, I will contact you before proceeding.",
       },
     },
     {
@@ -69,7 +77,55 @@ const faqSchema = {
       name: "Do prices change depending on condition?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Some items may vary in price depending on condition. You can send a photo for an exact quote.",
+        text: "Some items may vary in price depending on condition, especially hunting knives, axes, tomahawks, and processor blades. You can send a photo for an exact quote before drop-off or mail-in.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I pack items for mail-in sharpening?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Pack items securely using tea towels, rags, newspaper, or bubble wrap. Wrap each item separately. Make sure blade tips are well wrapped so they cannot punch through the packaging. Fold cardboard over tips or add extra layers of cloth or bubble wrap. Place items inside a strong packing box and pack tightly so they cannot move around. Include your return address, phone number, email address, and any notes about your items.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need to contact you before posting anything?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — please contact me first before sending any items. I'll confirm pricing, turnaround time, and the correct Australia Post satchel size.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does return postage work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You can include a prepaid Australia Post satchel with your items. This is the easiest option and ensures your return postage is tracked. If you prefer, I can add the postage cost to your final total — just let me know when booking.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer pick-up services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Free pick-up and drop-off available for local schools in the Campbelltown area. Commercial collections are available for jobs over $300 within the local Campbelltown area. If your business is very close to me, I can often assist with smaller loads — just contact me.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Where are you located?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Woodbine, Campbelltown NSW. Full address provided after booking.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get a quote?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You can call or text 0412 974 277, send a photo of your items, or email phil@xtrasharp.com.au for an exact price.",
       },
     },
   ],
