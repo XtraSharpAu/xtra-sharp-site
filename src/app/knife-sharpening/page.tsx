@@ -309,7 +309,7 @@ export default function KnifeSharpeningPage() {
       />
 
       <PageHero
-        title="Knife Sharpening"
+        title="Knife Sharpening — Campbelltown NSW"
         subtitle="Water-cooled sharpening for kitchen, butcher, large and hunting knives."
       >
         <a
@@ -324,27 +324,29 @@ export default function KnifeSharpeningPage() {
         <SectionHeading title="About Knife Sharpening" />
         <p className="text-text/80">
           Knife sharpening restores a clean, precise edge to kitchen, butcher
-          and hunting knives that have gone dull from everyday use. It&apos;s
+          and hunting knives that have dulled from everyday use. It&apos;s
           ideal for home cooks, chefs, butchers and hunters who rely on a
           sharp blade for safe, efficient cutting. Common problems include
           edges that tear rather than slice, blades that slip on hard skins,
           and knives sharpened unevenly at the wrong angle by DIY tools. At
           Xtra Sharp, every knife is sharpened using water-cooled equipment
           to protect the steel&apos;s temper, restoring a clean, strong
-          edge. Most knives are ready within 1–2 days, with busy periods
-          taking up to 3 days.
+          edge. Most knives are ready within 1–3 days (4–5 days when busy).
         </p>
       </Section>
 
       <Section className="border-t border-metallic/40 bg-surface text-center">
         <SectionHeading
           title="Water-Cooled Sharpening"
-          subtitle="Knives require accurate angles and a controlled sharpening process. All knives are sharpened using water-cooled equipment to protect the steel's temper from heat damage, giving a clean, strong cutting edge."
+          subtitle="Knives require accurate angles and a controlled process. All knives are sharpened using water-cooled equipment to protect the steel's temper from heat damage, giving a clean, strong cutting edge."
         />
       </Section>
 
       <Section className="border-t border-metallic/40 text-center">
-        <SectionHeading title="Precision Knife Sharpening for Every Edge" />
+        <SectionHeading
+          title="Precision Knife Sharpening for Every Edge"
+          subtitle="Serving Campbelltown, Camden, Narellan and the Macarthur region — trusted by professionals Australia-wide."
+        />
         <KnifeIntroGallery />
         <KnifeBeforeDetailPhoto />
         <KnifeDemoVideo />
@@ -397,7 +399,7 @@ export default function KnifeSharpeningPage() {
       <Section className="border-t border-metallic/40 text-center">
         <SectionHeading
           title="Turnaround Time"
-          subtitle="Most knives are completed within 1–2 days. Busy periods may take up to 3 days, depending on workload. Urgent jobs are available by arrangement."
+          subtitle="Most knives are completed within 1–3 days. Busy periods may take up to 4–5 days, depending on workload. Urgent jobs are available by arrangement."
         />
       </Section>
 
