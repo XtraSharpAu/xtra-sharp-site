@@ -9,22 +9,22 @@ import Section from "@/components/Section";
 import { FollowUsSection } from "@/components/FollowUsSection";
 
 export const metadata: Metadata = {
-  title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
+  title: "Xtra Sharp – Knife & Tool Sharpening in Campbelltown NSW",
   description:
-    "Professional knife, scissor, clipper blade, garden tool and processor blade sharpening in Campbelltown NSW. Fast, precise results — call 0412 974 277.",
+    "Professional knife & tool sharpening in Campbelltown NSW. Water-cooled & machine-guided precision for knives, scissors & clipper blades. Drop-off & mail-in Australia-wide.",
   openGraph: {
-    title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
+    title: "Xtra Sharp – Knife & Tool Sharpening in Campbelltown NSW",
     description:
-      "Professional knife, scissor, clipper blade, garden tool and processor blade sharpening in Campbelltown NSW. Fast, precise results — call 0412 974 277.",
+      "Professional knife & tool sharpening in Campbelltown NSW. Water-cooled & machine-guided precision for knives, scissors & clipper blades. Drop-off & mail-in Australia-wide.",
     url: "https://xtrasharp.com.au",
     type: "website",
     images: ["https://xtrasharp.com.au/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sharpening Services | Xtra Sharp Campbelltown NSW",
+    title: "Xtra Sharp – Knife & Tool Sharpening in Campbelltown NSW",
     description:
-      "Professional knife, scissor, clipper blade, garden tool and processor blade sharpening in Campbelltown NSW. Fast, precise results — call 0412 974 277.",
+      "Professional knife & tool sharpening in Campbelltown NSW. Water-cooled & machine-guided precision for knives, scissors & clipper blades. Drop-off & mail-in Australia-wide.",
     images: ["https://xtrasharp.com.au/og-image.jpg"],
   },
   other: {
@@ -41,21 +41,21 @@ const services = [
     title: "Knife Sharpening",
     href: "/knife-sharpening",
     description:
-      "We sharpen small Victorinox paring knives, standard knives, large knives, butcher knives, and hunting knives.",
+      "We sharpen small Victorinox paring knives, standard kitchen knives, large chef knives, butcher knives, and hunting knives.",
   },
   {
     icon: "✂️",
     title: "Scissors Sharpening",
     href: "/scissors-sharpening",
     description:
-      "We sharpen hairdressing scissors, grooming scissors, grooming thinning scissors, sewing scissors, and household scissors.",
+      "We sharpen hairdressing, grooming, sewing, and household scissors, including thinning types.",
   },
   {
     icon: "🐾",
-    title: "Clipper Blade Sharpening",
+    title: "Clipper Blade & Grooming Scissor Sharpening",
     href: "/clipper-blades",
     description:
-      "We sharpen A5 clipper blades, wide clipper blades, large-animal blades, grooming clipper blades, and veterinary clipper blades.",
+      "We sharpen A5 clipper blades, wide clipper blades, large-animal blades, grooming and veterinary clipper blades, plus grooming scissors and thinning shears used by professional animal groomers.",
   },
   {
     icon: "🌿",
@@ -112,13 +112,13 @@ export default function Home() {
     <PageLayout>
       <section className="flex flex-col items-center gap-4 px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-bold text-text sm:text-5xl">
-          Sharpening Services — Knives, Scissors, Clipper Blades &amp; More
+          Knife &amp; Tool Sharpening — Campbelltown NSW
         </h1>
         <p className="max-w-2xl text-lg text-text/70">
-          Professional knife and tool sharpening in Campbelltown NSW —
-          precision water-cooled sharpening for knives, axes, processor
-          blades, and garden tools, plus specialised sharpening for clipper
-          blades.
+          Professional knife and tool sharpening in Campbelltown NSW.
+          Water-cooled and machine-guided precision for knives, axes,
+          processor and garden tools, plus dedicated clipper blade and
+          grooming scissor sharpening.
         </p>
         <a
           href="tel:0412974277"
@@ -129,7 +129,7 @@ export default function Home() {
       </section>
 
       <Section className="border-t border-metallic/40 bg-surface">
-        <SectionHeading title="Our Services" />
+        <SectionHeading title="Sharpening Services — Knives, Scissors, Clipper Blades & More" />
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <ServiceCard
@@ -217,6 +217,9 @@ export default function Home() {
         <p className="mt-4 text-text/70">
           Drop-off sharpening in Campbelltown NSW. Mail-in sharpening
           Australia-wide.
+        </p>
+        <p className="mt-2 text-text/70">
+          Serving Campbelltown, Camden, Narellan and the Macarthur region.
         </p>
         <div className="mt-4">
           <Link href="/contact" className="text-accent hover:underline">
