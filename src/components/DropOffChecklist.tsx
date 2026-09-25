@@ -1,7 +1,7 @@
 import Checklist from "@/components/Checklist";
 
 const baseDropOffItems = [
-  "Ensure items are clean and dry.",
+  "Ensure items are clean and free of moisture.",
   "Label commercial sets clearly.",
   "Use protective sleeves for knives and scissors.",
 ];

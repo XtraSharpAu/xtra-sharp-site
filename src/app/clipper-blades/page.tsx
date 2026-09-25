@@ -91,7 +91,7 @@ const importantNotes = [
 
 const clipperCareInstructions = [
   "Always oil your clipper blades before and after use.",
-  "Store blades in a dry place to prevent rust.",
+  "Store blades in a moisture-free place to prevent rust.",
   "Avoid dropping blades — this is the most common cause of broken teeth, which makes the blade unusable.",
   "Clean hair and debris from blades regularly.",
   "If blades start pulling or snagging, they may need sharpening again.",
@@ -574,8 +574,8 @@ export default function ClipperBladesPage() {
       <Section className="border-t border-metallic/40 bg-surface text-center">
         <SectionHeading title="About Clipper Blade Sharpening" />
         <p className="text-text/80">
-          Professional clipper blade sharpening using The Shop Inc. dry
-          sharpening system for precise, long-lasting edges. Clipper blade
+          Professional clipper blade sharpening using precision-guided
+          equipment for accurate, long-lasting edges. Clipper blade
           sharpening restores clean, precise cutting performance to animal
           clipper blades and grooming shears used by groomers, vets and
           animal-care professionals. It&apos;s suited to anyone relying on

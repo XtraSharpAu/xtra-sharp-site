@@ -92,7 +92,7 @@ const faqs = [
   {
     question: "How should I maintain garden tools after sharpening?",
     answer:
-      "Wipe blades clean after each use, dry them before storing to prevent rust, and apply a light coat of oil to exposed metal between uses.",
+      "Wipe blades clean after each use, ensure they're free of moisture before storing to prevent rust, and apply a light coat of oil to exposed metal between uses.",
   },
   {
     question: "How often should garden tools be sharpened?",

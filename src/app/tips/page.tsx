@@ -39,7 +39,7 @@ const knifeCare = [
 ];
 
 const scissorCare = [
-  "Keep scissors dry and clean",
+  "Keep scissors clean and free of moisture",
   "Avoid dropping or knocking them together",
   "Use them only for their intended purpose",
   "Oil the pivot lightly",
@@ -56,7 +56,7 @@ const clipperCare = [
 
 const workshopTips = [
   "Keep chisels and plane blades rust-free",
-  "Store tools in a dry place",
+  "Store tools in a moisture-free place",
   "Avoid hitting edges on metal surfaces",
   "Sharpen professionally for clean, accurate cuts",
 ];
