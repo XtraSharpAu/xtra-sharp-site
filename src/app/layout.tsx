@@ -16,7 +16,7 @@ const localBusinessSchema = {
     "@type": "PostalAddress",
     addressLocality: "Campbelltown",
     addressRegion: "NSW",
-    addressCountry: "Australia",
+    addressCountry: "AU",
   },
   telephone: "+61 412 974 277",
   priceRange: "$6–$70+",
