@@ -84,7 +84,6 @@ const shearsPricing = [
 ];
 
 const importantNotes = [
-  "No mobile sharpening",
   "No on-site sharpening",
   "Drop-off only",
   "Mail-in available Australia-wide",
