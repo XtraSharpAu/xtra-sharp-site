@@ -5,22 +5,22 @@ import Checklist from "@/components/Checklist";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Commercial Clients | Xtra Sharp Campbelltown NSW",
+  title: "Commercial Clients Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown NSW, with batch pricing and scheduled cycles.",
+    "Professional sharpening for schools, salons, restaurants, and trades using precision-guided equipment for consistent, high-quality results.",
   openGraph: {
-    title: "Commercial Clients | Xtra Sharp Campbelltown NSW",
+    title: "Commercial Clients Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown NSW, with batch pricing and scheduled cycles.",
+      "Professional sharpening for schools, salons, restaurants, and trades using precision-guided equipment for consistent, high-quality results.",
     url: "https://xtrasharp.com.au/commercial",
     type: "article",
     images: ["https://xtrasharp.com.au/og-commercial.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Commercial Clients | Xtra Sharp Campbelltown NSW",
+    title: "Commercial Clients Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Commercial sharpening for schools, grooming salons, restaurants and workshops in Campbelltown NSW, with batch pricing and scheduled cycles.",
+      "Professional sharpening for schools, salons, restaurants, and trades using precision-guided equipment for consistent, high-quality results.",
     images: ["https://xtrasharp.com.au/og-commercial.jpg"],
   },
   other: {
@@ -39,20 +39,19 @@ const segments = [
       "Classroom scissors",
       "Art department scissors",
       "Food tech knives",
-      "Workshop tools (chisels, plane blades, woodworking tools)",
+      "Trade skills tools (chisels, plane blades, woodworking tools)",
     ],
     footer: "Bulk pricing available for large batches.",
   },
   {
     icon: "✂️",
-    title: "Grooming Salons & Barbers",
+    title: "Grooming Salons",
     items: [
       "Grooming scissors",
-      "Barber scissors",
       "Specialty salon scissors",
       "Animal clipper blades only (A5 style)",
     ],
-    note: "We do not sharpen barber clipper blades. Barber clippers and grooming clippers use different blade systems.",
+    note: "We only sharpen animal clipper blades (A5 style). Clipper blades used for cutting human hair use a different blade system and are not serviced.",
   },
   {
     icon: "🍽️",
@@ -67,12 +66,12 @@ const segments = [
   },
   {
     icon: "🧰",
-    title: "Workshops & Trades",
+    title: "Trades & Craftspeople",
     items: [
       "Chisels",
       "Plane blades",
       "Woodworking tools",
-      "General workshop tools",
+      "General trade tools",
     ],
     footer:
       "Perfect for carpenters, cabinet makers, and tradespeople needing reliable edges.",
