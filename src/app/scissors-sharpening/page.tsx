@@ -58,11 +58,11 @@ function ScissorsIntroGallery() {
 export const metadata: Metadata = {
   title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
   description:
-    "Professional scissors sharpening in Campbelltown NSW for hairdressing, grooming, sewing and household scissors. Fast, precise results. Call 0412 974 277.",
+    "Professional scissor sharpening for kitchen, hairdressing, and industrial scissors. Water-cooled precision finish.",
   openGraph: {
     title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional scissors sharpening in Campbelltown NSW for hairdressing, grooming, sewing and household scissors. Fast, precise results. Call 0412 974 277.",
+      "Professional scissor sharpening for kitchen, hairdressing, and industrial scissors. Water-cooled precision finish.",
     url: "https://xtrasharp.com.au/scissors-sharpening",
     type: "article",
     images: ["https://xtrasharp.com.au/og-scissors.jpg"],
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
     description:
-      "Professional scissors sharpening in Campbelltown NSW for hairdressing, grooming, sewing and household scissors. Fast, precise results. Call 0412 974 277.",
+      "Professional scissor sharpening for kitchen, hairdressing, and industrial scissors. Water-cooled precision finish.",
     images: ["https://xtrasharp.com.au/og-scissors.jpg"],
   },
   other: {
@@ -120,7 +120,6 @@ const pricing = [
 ];
 
 const importantNotes = [
-  "No mobile sharpening",
   "No on-site sharpening",
   "Drop-off only",
   "Mail-in available Australia-wide",
@@ -201,8 +200,9 @@ export default function ScissorsSharpeningPage() {
           problems include scissors that crush fabric or hair instead of
           cutting cleanly, blades that have lost their edge from repeated
           use, and tension that has loosened over time. At Xtra Sharp,
-          scissors are sharpened using a machine-guided process for
-          consistent, reliable results. Most scissors are completed within
+          scissors are sharpened using a water-cooled, machine-guided
+          process for consistent, reliable results. Most scissors are
+          completed within
           1–2 days, with busy periods taking up to 3 days, and urgent jobs
           available by arrangement.
         </p>
@@ -210,8 +210,8 @@ export default function ScissorsSharpeningPage() {
 
       <Section className="border-t border-metallic/40 text-center">
         <SectionHeading
-          title="Precision Machine-Guided Sharpening"
-          subtitle="I sharpen scissors using a machine-guided process that maintains correct angle, ride line, tension and alignment. This ensures your scissors cut cleanly, smoothly and safely."
+          title="Precision Water-Cooled, Machine-Guided Sharpening"
+          subtitle="I sharpen scissors using a water-cooled, machine-guided process that maintains correct angle, ride line, tension and alignment. This ensures your scissors cut cleanly, smoothly and safely."
         />
         <ScissorsIntroGallery />
       </Section>
