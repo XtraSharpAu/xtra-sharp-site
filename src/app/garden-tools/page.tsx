@@ -115,25 +115,25 @@ const faqSchema = {
 
 const beforePhotos = [
   {
-    src: "/cyclone_loppers_before.jpg",
+    src: "/cyclone-loppers-before.jpg",
     alt: "Cyclone SK5 loppers before sharpening — heavy-duty garden cutting tool.",
     caption:
       "Loppers are sharpened using water-cooled equipment to restore clean, precise edges.",
   },
   {
-    src: "/secateurs_before.jpg",
+    src: "/secateurs-before.jpg",
     alt: "Hand secateurs before sharpening — typical garden pruning shears.",
     caption:
       "Smaller garden tools receive the same precision sharpening process.",
   },
   {
-    src: "/ratchet_pruner_before.jpg",
+    src: "/ratchet-pruner-before.jpg",
     alt: "Ratchet-style pruner before sharpening — silver handle design.",
     caption:
       "Ratchet pruners are serviced to ensure smooth cutting and blade alignment.",
   },
   {
-    src: "/brades_axe_before.jpg",
+    src: "/brades-axe-before.jpg",
     alt: "Brades axe head before sharpening — vintage tool made in England.",
     caption:
       "Axes and heavier garden tools are sharpened to maintain safe, efficient performance.",

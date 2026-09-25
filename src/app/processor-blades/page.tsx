@@ -90,7 +90,7 @@ function ProcessorEquipmentPhoto() {
     <div className="mx-auto mt-section w-full max-w-2xl">
       <div className="overflow-hidden rounded-lg shadow-md">
         <Image
-          src="/knife_sharpening_machine.jpg"
+          src="/knife-sharpening-machine.jpg"
           alt="Water-cooled sharpening machine used for knives and industrial processor blades."
           width={1600}
           height={2155}

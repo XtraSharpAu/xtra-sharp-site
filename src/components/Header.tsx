@@ -23,7 +23,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 py-4">
         <Link href="/" className="flex w-full max-w-[600px] items-center">
           <Image
-            src="/xtrasharp_website_logo.png"
+            src="/xtrasharp-website-logo.png"
             alt="Xtra Sharp — Knife & Tool Sharpening, Campbelltown NSW"
             width={600}
             height={116}

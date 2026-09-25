@@ -68,7 +68,7 @@ function KnifeEquipmentPhoto() {
     <div className="mx-auto mt-section w-full max-w-2xl">
       <div className="overflow-hidden rounded-lg shadow-md">
         <Image
-          src="/knife_sharpening_machine.jpg"
+          src="/knife-sharpening-machine.jpg"
           alt="Knife sharpening machine with belt grinder and polishing wheel in workshop."
           width={1600}
           height={2155}
@@ -145,7 +145,7 @@ function KnifeEdgeDetailPhoto() {
     <div className="mx-auto mt-section w-full max-w-2xl">
       <div className="overflow-hidden rounded-lg shadow-md">
         <Image
-          src="/knife_damage_zoom.jpg"
+          src="/knife-damage-zoom.jpg"
           alt="Knife edge detail prior to sharpening."
           width={1600}
           height={501}
