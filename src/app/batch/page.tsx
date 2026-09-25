@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "twitter:url": "https://xtrasharp.com.au/batch",
   },
   alternates: {
-    canonical: "https://xtrasharp.com.au/batch",
+    canonical: "https://www.xtrasharp.com.au/batch",
   },
 };
 

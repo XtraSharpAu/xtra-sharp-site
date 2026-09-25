@@ -210,7 +210,7 @@ export const metadata: Metadata = {
     "twitter:url": "https://xtrasharp.com.au/knife-sharpening",
   },
   alternates: {
-    canonical: "https://xtrasharp.com.au/knife-sharpening",
+    canonical: "https://www.xtrasharp.com.au/knife-sharpening",
   },
 };
 

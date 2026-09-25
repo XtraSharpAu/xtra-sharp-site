@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "twitter:url": "https://xtrasharp.com.au/how-it-works",
   },
   alternates: {
-    canonical: "https://xtrasharp.com.au/how-it-works",
+    canonical: "https://www.xtrasharp.com.au/how-it-works",
   },
 };
 

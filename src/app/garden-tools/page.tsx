@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "twitter:url": "https://xtrasharp.com.au/garden-tools",
   },
   alternates: {
-    canonical: "https://xtrasharp.com.au/garden-tools",
+    canonical: "https://www.xtrasharp.com.au/garden-tools",
   },
 };
 

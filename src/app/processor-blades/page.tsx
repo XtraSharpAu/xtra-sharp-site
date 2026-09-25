@@ -128,7 +128,7 @@ export const metadata: Metadata = {
     "twitter:url": "https://xtrasharp.com.au/processor-blades",
   },
   alternates: {
-    canonical: "https://xtrasharp.com.au/processor-blades",
+    canonical: "https://www.xtrasharp.com.au/processor-blades",
   },
 };
 
