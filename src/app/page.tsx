@@ -59,15 +59,17 @@ const services = [
   },
   {
     icon: "🌿",
-    title: "Garden Tools Sharpening",
+    title: "Garden Tool Sharpening",
     href: "/garden-tools",
-    description: "We sharpen hedge shears, secateurs, and axes / tomahawks.",
+    description:
+      "We sharpen secateurs, hedge shears, axes, and other garden tools using water-cooled equipment for clean, precise edges.",
   },
   {
     icon: "⚙️",
     title: "Processor Blade Sharpening",
     href: "/processor-blades",
-    description: "We sharpen home processor blades and large industrial blades.",
+    description:
+      "We sharpen food processor blades and commercial machine blades to restore cutting accuracy and performance.",
   },
 ];
 
