@@ -40,9 +40,9 @@ jobs:
           )
           for route in "${routes[@]}"; do
             slug="${route:1}"; [ -z "$slug" ] && slug="home"; slug="${slug//\//-}"
-            echo "Auditing https://xtrasharp.com.au${route}"
-            npx -y lighthouse@13.5.0 "https://xtrasharp.com.au${route}" \
-              --only-categories=performance,accessibility,seo \
+            echo "Auditing https://www.xtrasharp.com.au${route}"
+            npx -y lighthouse@13.5.0 "https://www.xtrasharp.com.au${route}" \
+              --only-categories=performance,accessibility,best-practices,seo \
               --output=json \
               --output-path="/tmp/lh-reports/${slug}.json" \
               --chrome-flags="--headless=new --no-sandbox --disable-gpu" \
@@ -65,9 +65,10 @@ jobs:
             route="${pair%%:*}"; slug="${pair##*:}"
             perf=$(jq -r '.categories.performance.score * 100 | round' "/tmp/lh-reports/${slug}.json")
             a11y=$(jq -r '.categories.accessibility.score * 100 | round' "/tmp/lh-reports/${slug}.json")
+            bp=$(jq -r '.categories["best-practices"].score * 100 | round' "/tmp/lh-reports/${slug}.json")
             seo=$(jq -r '.categories.seo.score * 100 | round' "/tmp/lh-reports/${slug}.json")
-            jq -n --arg route "$route" --argjson perf "$perf" --argjson a11y "$a11y" --argjson seo "$seo" \
-              '{route: $route, performance: $perf, accessibility: $a11y, seo: $seo}' \
+            jq -n --arg route "$route" --argjson perf "$perf" --argjson a11y "$a11y" --argjson bp "$bp" --argjson seo "$seo" \
+              '{route: $route, performance: $perf, accessibility: $a11y, bestPractices: $bp, seo: $seo}' \
               > "/tmp/lh-reports/${slug}.summary.json"
           done
           jq -s \
@@ -76,8 +77,8 @@ jobs:
             --arg lighthouseVersion "13.5.0" \
             --argjson threshold 90 \
             '{ quarter: $quarter, generatedAt: $generatedAt, lighthouseVersion: $lighthouseVersion,
-               failThreshold: $threshold, source: "production (xtrasharp.com.au)", pages: .,
-               flagged: [ .[] | select(.performance < $threshold or .accessibility < $threshold or .seo < $threshold) ] }' \
+               failThreshold: $threshold, source: "production (www.xtrasharp.com.au)", pages: .,
+               flagged: [ .[] | select(.performance < $threshold or .accessibility < $threshold or .bestPractices < $threshold or .seo < $threshold) ] }' \
             /tmp/lh-reports/*.summary.json > "$out"
           cat "$out" | jq .
 
