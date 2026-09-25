@@ -56,14 +56,14 @@ function ScissorsIntroGallery() {
 }
 
 export const metadata: Metadata = {
-  title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
+  title: "Scissors Sharpening Campbelltown NSW | Xtra Sharp",
   description:
-    "Professional scissor sharpening for kitchen, hairdressing, and industrial scissors. Water-cooled precision finish.",
+    "Blunt scissors? Expert sharpening for hairdressing, kitchen & industrial scissors in Campbelltown NSW. Water-cooled precision, 2–4 day turnaround. Book now.",
   openGraph: {
-    title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
+    title: "Scissors Sharpening Campbelltown NSW | Xtra Sharp",
     description:
-      "Professional scissor sharpening for kitchen, hairdressing, and industrial scissors. Water-cooled precision finish.",
-    url: "https://xtrasharp.com.au/scissors-sharpening",
+      "Blunt scissors? Expert sharpening for hairdressing, kitchen & industrial scissors in Campbelltown NSW. Water-cooled precision, 2–4 day turnaround. Book now.",
+    url: "https://www.xtrasharp.com.au/scissors-sharpening",
     type: "article",
     images: [
       "https://xtrasharp.com.au/og-scissors.jpg",
@@ -75,19 +75,19 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
+    title: "Scissors Sharpening Campbelltown NSW | Xtra Sharp",
     description:
-      "Professional scissor sharpening for kitchen, hairdressing, and industrial scissors. Water-cooled precision finish.",
+      "Blunt scissors? Expert sharpening for hairdressing, kitchen & industrial scissors in Campbelltown NSW. Water-cooled precision, 2–4 day turnaround. Book now.",
     images: [
       "https://xtrasharp.com.au/og-scissors.jpg",
       "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
     ],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/scissors-sharpening",
+    "twitter:url": "https://www.xtrasharp.com.au/scissors-sharpening",
   },
   alternates: {
-    canonical: "https://xtrasharp.com.au/scissors-sharpening",
+    canonical: "https://www.xtrasharp.com.au/scissors-sharpening",
   },
 };
 
