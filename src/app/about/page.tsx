@@ -13,14 +13,23 @@ export const metadata: Metadata = {
       "Xtra Sharp is a professional knife and tool sharpening service based in Campbelltown, NSW 2560, serving Western Sydney.",
     url: "https://xtrasharp.com.au/about",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-about.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-about.jpg",
+      {
+        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "About | Xtra Sharp Campbelltown NSW",
     description:
       "Xtra Sharp is a professional knife and tool sharpening service based in Campbelltown, NSW 2560, serving Western Sydney.",
-    images: ["https://xtrasharp.com.au/og-about.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-about.jpg",
+      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+    ],
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/about",

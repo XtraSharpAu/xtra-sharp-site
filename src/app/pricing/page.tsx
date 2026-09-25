@@ -16,14 +16,23 @@ export const metadata: Metadata = {
       "Clear, upfront sharpening prices in Campbelltown NSW for knives, scissors, clipper blades, garden tools and processor blades. Call 0412 974 277 for a quote.",
     url: "https://xtrasharp.com.au/pricing",
     type: "website",
-    images: ["https://xtrasharp.com.au/og-pricing.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-pricing.jpg",
+      {
+        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pricing | Xtra Sharp Campbelltown NSW",
     description:
       "Clear, upfront sharpening prices in Campbelltown NSW for knives, scissors, clipper blades, garden tools and processor blades. Call 0412 974 277 for a quote.",
-    images: ["https://xtrasharp.com.au/og-pricing.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-pricing.jpg",
+      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+    ],
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/pricing",

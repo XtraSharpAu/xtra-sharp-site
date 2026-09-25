@@ -24,14 +24,23 @@ export const metadata: Metadata = {
       "Professional clipper blade sharpening using The Shop Inc. system for precise, long-lasting edges.",
     url: "https://xtrasharp.com.au/clipper-blades",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-clipper.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-clipper.jpg",
+      {
+        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Professional clipper blade sharpening using The Shop Inc. system for precise, long-lasting edges.",
-    images: ["https://xtrasharp.com.au/og-clipper.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-clipper.jpg",
+      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+    ],
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/clipper-blades",

@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { FooterContactStrip } from "@/components/FooterContactStrip";
+import { trackEvent } from "@/lib/gtag";
 
 const serviceLinks = [
   { label: "Knife Sharpening", href: "/knife-sharpening" },
@@ -103,7 +106,15 @@ export default function Footer() {
             <ul className="mt-2 space-y-1">
               {customerLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-accent hover:underline">
+                  <Link
+                    href={link.href}
+                    onClick={
+                      link.href === "/commercial"
+                        ? () => trackEvent("click_commercial_footer")
+                        : undefined
+                    }
+                    className="hover:text-accent hover:underline"
+                  >
                     {link.label}
                   </Link>
                 </li>

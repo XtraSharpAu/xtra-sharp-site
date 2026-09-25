@@ -18,14 +18,23 @@ export const metadata: Metadata = {
       "Contact Xtra Sharp in Campbelltown NSW to book knife, scissor or clipper blade sharpening — fast, friendly, professional service. Call 0412 974 277 today.",
     url: "https://xtrasharp.com.au/contact",
     type: "website",
-    images: ["https://xtrasharp.com.au/og-contact.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-contact.jpg",
+      {
+        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact | Xtra Sharp Campbelltown NSW",
     description:
       "Contact Xtra Sharp in Campbelltown NSW to book knife, scissor or clipper blade sharpening — fast, friendly, professional service. Call 0412 974 277 today.",
-    images: ["https://xtrasharp.com.au/og-contact.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-contact.jpg",
+      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+    ],
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/contact",

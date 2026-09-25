@@ -188,14 +188,23 @@ export const metadata: Metadata = {
       "Professional knife sharpening in Campbelltown NSW — water-cooled precision for kitchen, butcher and hunting knives. Fast turnaround. Call 0412 974 277.",
     url: "https://xtrasharp.com.au/knife-sharpening",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-knife.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-knife.jpg",
+      {
+        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Professional knife sharpening in Campbelltown NSW — water-cooled precision for kitchen, butcher and hunting knives. Fast turnaround. Call 0412 974 277.",
-    images: ["https://xtrasharp.com.au/og-knife.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-knife.jpg",
+      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+    ],
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/knife-sharpening",

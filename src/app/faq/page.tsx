@@ -18,14 +18,23 @@ export const metadata: Metadata = {
       "Answers about sharpening services, pricing, mail-in and turnaround at Xtra Sharp in Campbelltown NSW — fast, professional results. Call 0412 974 277 now.",
     url: "https://xtrasharp.com.au/faq",
     type: "website",
-    images: ["https://xtrasharp.com.au/og-faq.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-faq.jpg",
+      {
+        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "FAQ | Xtra Sharp Campbelltown NSW",
     description:
       "Answers about sharpening services, pricing, mail-in and turnaround at Xtra Sharp in Campbelltown NSW — fast, professional results. Call 0412 974 277 now.",
-    images: ["https://xtrasharp.com.au/og-faq.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-faq.jpg",
+      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+    ],
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/faq",

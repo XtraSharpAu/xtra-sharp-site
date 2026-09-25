@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { SocialIcons } from "@/components/SocialIcons";
+import { trackEvent } from "@/lib/gtag";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -46,12 +49,14 @@ export default function Header() {
           <SocialIcons />
           <a
             href="tel:0412974277"
+            onClick={() => trackEvent("click_phone", { location: "header" })}
             className="hidden text-sm font-medium text-text sm:inline"
           >
             0412 974 277
           </a>
           <a
             href="tel:0412974277"
+            onClick={() => trackEvent("click_phone", { location: "header" })}
             className="rounded-full bg-ctaRed px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-ctaRed/90"
           >
             Call Now

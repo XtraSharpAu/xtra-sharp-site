@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent } from "@/lib/gtag";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -9,6 +10,7 @@ export default function ContactForm() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    trackEvent("submit_contact_form");
     const subject = encodeURIComponent(`Enquiry from ${name || "website contact form"}`);
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\n\n${message}`

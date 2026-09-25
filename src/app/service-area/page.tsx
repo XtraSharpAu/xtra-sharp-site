@@ -17,14 +17,23 @@ export const metadata: Metadata = {
       "Drop-off sharpening in Campbelltown NSW servicing Campbelltown and the Macarthur region, plus Australia-wide mail-in sharpening. Call 0412 974 277 today.",
     url: "https://xtrasharp.com.au/service-area",
     type: "website",
-    images: ["https://xtrasharp.com.au/og-service-area.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-service-area.jpg",
+      {
+        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Service Area | Xtra Sharp Campbelltown NSW",
     description:
       "Drop-off sharpening in Campbelltown NSW servicing Campbelltown and the Macarthur region, plus Australia-wide mail-in sharpening. Call 0412 974 277 today.",
-    images: ["https://xtrasharp.com.au/og-service-area.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-service-area.jpg",
+      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+    ],
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/service-area",

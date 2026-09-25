@@ -65,14 +65,23 @@ export const metadata: Metadata = {
       "Professional scissor sharpening for kitchen, hairdressing, and industrial scissors. Water-cooled precision finish.",
     url: "https://xtrasharp.com.au/scissors-sharpening",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-scissors.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-scissors.jpg",
+      {
+        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Scissors Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Professional scissor sharpening for kitchen, hairdressing, and industrial scissors. Water-cooled precision finish.",
-    images: ["https://xtrasharp.com.au/og-scissors.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-scissors.jpg",
+      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+    ],
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/scissors-sharpening",

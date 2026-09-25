@@ -23,14 +23,23 @@ export const metadata: Metadata = {
       "Professional sharpening for secateurs, shears, and household blades using water-cooled equipment for clean, accurate edges.",
     url: "https://xtrasharp.com.au/garden-tools",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-garden-tools.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-garden-tools.jpg",
+      {
+        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Professional sharpening for secateurs, shears, and household blades using water-cooled equipment for clean, accurate edges.",
-    images: ["https://xtrasharp.com.au/og-garden-tools.jpg"],
+    images: [
+      "https://xtrasharp.com.au/og-garden-tools.jpg",
+      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+    ],
   },
   other: {
     "twitter:url": "https://xtrasharp.com.au/garden-tools",
