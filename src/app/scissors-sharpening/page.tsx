@@ -98,10 +98,15 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Xtra Sharp",
+    url: "https://xtrasharp.com.au",
   },
   areaServed: "Campbelltown NSW, Macarthur region, Australia-wide (mail-in)",
+  description:
+    "Professional scissor sharpening for kitchen, hairdressing, and industrial scissors. Water-cooled precision finish.",
   offers: {
     "@type": "Offer",
+    priceCurrency: "AUD",
+    url: "https://xtrasharp.com.au/pricing",
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "AUD",

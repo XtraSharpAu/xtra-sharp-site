@@ -221,10 +221,15 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Xtra Sharp",
+    url: "https://xtrasharp.com.au",
   },
   areaServed: "Campbelltown NSW, Macarthur region, Australia-wide (mail-in)",
+  description:
+    "Professional knife sharpening in Campbelltown NSW — water-cooled precision for kitchen, butcher and hunting knives. Fast turnaround. Call 0412 974 277.",
   offers: {
     "@type": "Offer",
+    priceCurrency: "AUD",
+    url: "https://xtrasharp.com.au/pricing",
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "AUD",

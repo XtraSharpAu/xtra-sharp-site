@@ -3,6 +3,7 @@ import CommercialHero from "@/components/CommercialHero";
 import CommercialSegment from "@/components/CommercialSegment";
 import Checklist from "@/components/Checklist";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Commercial Clients Sharpening | Xtra Sharp Campbelltown NSW",
@@ -101,9 +102,35 @@ const serviceArea = [
   "Australia-wide (mail-in)",
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Commercial & Trade Sharpening",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Xtra Sharp",
+    url: "https://xtrasharp.com.au",
+  },
+  areaServed: "Campbelltown NSW, Macarthur region, Australia-wide (mail-in)",
+  description:
+    "Professional sharpening for schools, salons, restaurants, and trades using precision-guided equipment for consistent, high-quality results.",
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "AUD",
+    url: "https://xtrasharp.com.au/pricing",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      priceCurrency: "AUD",
+      minPrice: 6,
+      maxPrice: 70,
+    },
+  },
+};
+
 export default function CommercialPage() {
   return (
     <>
+      <JsonLd data={serviceSchema} />
       <Breadcrumbs
         items={[
           { name: "Home", url: "https://xtrasharp.com.au" },

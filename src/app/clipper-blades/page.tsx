@@ -57,10 +57,15 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Xtra Sharp",
+    url: "https://xtrasharp.com.au",
   },
   areaServed: "Campbelltown NSW, Macarthur region, Australia-wide (mail-in)",
+  description:
+    "Professional clipper blade sharpening using The Shop Inc. system for precise, long-lasting edges.",
   offers: {
     "@type": "Offer",
+    priceCurrency: "AUD",
+    url: "https://xtrasharp.com.au/pricing",
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "AUD",
