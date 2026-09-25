@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /thank-you
 
-Sitemap: https://xtrasharp.com.au/sitemap.xml
+Sitemap: https://www.xtrasharp.com.au/sitemap.xml

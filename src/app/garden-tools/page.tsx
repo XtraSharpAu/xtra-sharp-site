@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     title: "Garden Tools Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Professional sharpening for secateurs, shears, and household blades using water-cooled equipment for clean, accurate edges.",
-    url: "https://xtrasharp.com.au/garden-tools",
+    url: "https://www.xtrasharp.com.au/garden-tools",
     type: "article",
     images: [
-      "https://xtrasharp.com.au/og-garden-tools.jpg",
+      "https://www.xtrasharp.com.au/og-garden-tools.jpg",
       {
-        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        url: "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
         alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
       },
     ],
@@ -37,12 +37,12 @@ export const metadata: Metadata = {
     description:
       "Professional sharpening for secateurs, shears, and household blades using water-cooled equipment for clean, accurate edges.",
     images: [
-      "https://xtrasharp.com.au/og-garden-tools.jpg",
-      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+      "https://www.xtrasharp.com.au/og-garden-tools.jpg",
+      "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
     ],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/garden-tools",
+    "twitter:url": "https://www.xtrasharp.com.au/garden-tools",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/garden-tools",
@@ -56,7 +56,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Xtra Sharp",
-    url: "https://xtrasharp.com.au",
+    url: "https://www.xtrasharp.com.au",
   },
   areaServed: "Campbelltown NSW, Macarthur region, Australia-wide (mail-in)",
   description:
@@ -64,7 +64,7 @@ const serviceSchema = {
   offers: {
     "@type": "Offer",
     priceCurrency: "AUD",
-    url: "https://xtrasharp.com.au/pricing",
+    url: "https://www.xtrasharp.com.au/pricing",
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "AUD",
@@ -185,8 +185,8 @@ export default function GardenToolsPage() {
       <JsonLd data={faqSchema} />
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Garden Tools Sharpening", url: "https://xtrasharp.com.au/garden-tools" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Garden Tools Sharpening", url: "https://www.xtrasharp.com.au/garden-tools" },
         ]}
       />
 

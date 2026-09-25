@@ -66,9 +66,9 @@ export const metadata: Metadata = {
     url: "https://www.xtrasharp.com.au/scissors-sharpening",
     type: "article",
     images: [
-      "https://xtrasharp.com.au/og-scissors.jpg",
+      "https://www.xtrasharp.com.au/og-scissors.jpg",
       {
-        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        url: "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
         alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
       },
     ],
@@ -79,8 +79,8 @@ export const metadata: Metadata = {
     description:
       "Blunt scissors? Expert sharpening for hairdressing, kitchen & industrial scissors in Campbelltown NSW. Water-cooled precision, 2–4 day turnaround. Book now.",
     images: [
-      "https://xtrasharp.com.au/og-scissors.jpg",
-      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+      "https://www.xtrasharp.com.au/og-scissors.jpg",
+      "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
     ],
   },
   other: {
@@ -98,7 +98,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Xtra Sharp",
-    url: "https://xtrasharp.com.au",
+    url: "https://www.xtrasharp.com.au",
   },
   areaServed: "Campbelltown NSW, Macarthur region, Australia-wide (mail-in)",
   description:
@@ -106,7 +106,7 @@ const serviceSchema = {
   offers: {
     "@type": "Offer",
     priceCurrency: "AUD",
-    url: "https://xtrasharp.com.au/pricing",
+    url: "https://www.xtrasharp.com.au/pricing",
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "AUD",
@@ -187,8 +187,8 @@ export default function ScissorsSharpeningPage() {
       <JsonLd data={faqSchema} />
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Scissors Sharpening", url: "https://xtrasharp.com.au/scissors-sharpening" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Scissors Sharpening", url: "https://www.xtrasharp.com.au/scissors-sharpening" },
         ]}
       />
 

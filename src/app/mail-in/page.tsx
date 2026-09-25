@@ -19,19 +19,19 @@ export const metadata: Metadata = {
     title: "Mail-In Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Australia-wide mail-in sharpening from Campbelltown NSW for knives, scissors, clipper blades and more, with tracked return postage. Call 0412 974 277.",
-    url: "https://xtrasharp.com.au/mail-in",
+    url: "https://www.xtrasharp.com.au/mail-in",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-mail-in.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-mail-in.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mail-In Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Australia-wide mail-in sharpening from Campbelltown NSW for knives, scissors, clipper blades and more, with tracked return postage. Call 0412 974 277.",
-    images: ["https://xtrasharp.com.au/og-mail-in.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-mail-in.jpg"],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/mail-in",
+    "twitter:url": "https://www.xtrasharp.com.au/mail-in",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/mail-in",
@@ -148,8 +148,8 @@ export default function MailInPage() {
       <JsonLd data={serviceSchema} />
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Mail-In Sharpening", url: "https://xtrasharp.com.au/mail-in" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Mail-In Sharpening", url: "https://www.xtrasharp.com.au/mail-in" },
         ]}
       />
 

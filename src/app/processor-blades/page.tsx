@@ -113,19 +113,19 @@ export const metadata: Metadata = {
     title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Professional processor blade sharpening in Campbelltown NSW for commercial and industrial equipment — safe, accurate edges guaranteed. Call 0412 974 277.",
-    url: "https://xtrasharp.com.au/processor-blades",
+    url: "https://www.xtrasharp.com.au/processor-blades",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-processor-blades.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-processor-blades.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Processor Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Professional processor blade sharpening in Campbelltown NSW for commercial and industrial equipment — safe, accurate edges guaranteed. Call 0412 974 277.",
-    images: ["https://xtrasharp.com.au/og-processor-blades.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-processor-blades.jpg"],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/processor-blades",
+    "twitter:url": "https://www.xtrasharp.com.au/processor-blades",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/processor-blades",
@@ -215,8 +215,8 @@ export default function ProcessorBladesPage() {
       <JsonLd data={faqSchema} />
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Processor Blade Sharpening", url: "https://xtrasharp.com.au/processor-blades" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Processor Blade Sharpening", url: "https://www.xtrasharp.com.au/processor-blades" },
         ]}
       />
 

@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     title: "About | Xtra Sharp Campbelltown NSW",
     description:
       "Xtra Sharp is a professional knife and tool sharpening service based in Campbelltown, NSW 2560, serving Western Sydney.",
-    url: "https://xtrasharp.com.au/about",
+    url: "https://www.xtrasharp.com.au/about",
     type: "article",
     images: [
-      "https://xtrasharp.com.au/og-about.jpg",
+      "https://www.xtrasharp.com.au/og-about.jpg",
       {
-        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        url: "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
         alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
       },
     ],
@@ -27,12 +27,12 @@ export const metadata: Metadata = {
     description:
       "Xtra Sharp is a professional knife and tool sharpening service based in Campbelltown, NSW 2560, serving Western Sydney.",
     images: [
-      "https://xtrasharp.com.au/og-about.jpg",
-      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+      "https://www.xtrasharp.com.au/og-about.jpg",
+      "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
     ],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/about",
+    "twitter:url": "https://www.xtrasharp.com.au/about",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/about",
@@ -58,8 +58,8 @@ export default function AboutPage() {
     <>
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "About", url: "https://xtrasharp.com.au/about" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "About", url: "https://www.xtrasharp.com.au/about" },
         ]}
       />
 

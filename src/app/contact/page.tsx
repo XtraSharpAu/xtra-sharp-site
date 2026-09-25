@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     title: "Contact | Xtra Sharp Campbelltown NSW",
     description:
       "Contact Xtra Sharp in Campbelltown NSW to book knife, scissor or clipper blade sharpening — fast, friendly, professional service. Call 0412 974 277 today.",
-    url: "https://xtrasharp.com.au/contact",
+    url: "https://www.xtrasharp.com.au/contact",
     type: "website",
     images: [
-      "https://xtrasharp.com.au/og-contact.jpg",
+      "https://www.xtrasharp.com.au/og-contact.jpg",
       {
-        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        url: "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
         alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
       },
     ],
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     description:
       "Contact Xtra Sharp in Campbelltown NSW to book knife, scissor or clipper blade sharpening — fast, friendly, professional service. Call 0412 974 277 today.",
     images: [
-      "https://xtrasharp.com.au/og-contact.jpg",
-      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+      "https://www.xtrasharp.com.au/og-contact.jpg",
+      "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
     ],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/contact",
+    "twitter:url": "https://www.xtrasharp.com.au/contact",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/contact",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  url: "https://xtrasharp.com.au/contact",
+  url: "https://www.xtrasharp.com.au/contact",
   contactType: "Customer Service",
   telephone: "0412 974 277",
   email: "phil@xtrasharp.com.au",
@@ -59,8 +59,8 @@ export default function ContactPage() {
       <JsonLd data={contactPageSchema} />
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Contact", url: "https://xtrasharp.com.au/contact" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Contact", url: "https://www.xtrasharp.com.au/contact" },
         ]}
       />
 

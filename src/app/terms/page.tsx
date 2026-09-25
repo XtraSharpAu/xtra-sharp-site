@@ -12,19 +12,19 @@ export const metadata: Metadata = {
     title: "Service Terms | Xtra Sharp Campbelltown NSW",
     description:
       "Xtra Sharp's service terms covering appointments, item condition, repairs, turnaround, pricing, pick-up/mail-in, liability, and cancellations.",
-    url: "https://xtrasharp.com.au/terms",
+    url: "https://www.xtrasharp.com.au/terms",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-terms.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-terms.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Service Terms | Xtra Sharp Campbelltown NSW",
     description:
       "Xtra Sharp's service terms covering appointments, item condition, repairs, turnaround, pricing, pick-up/mail-in, liability, and cancellations.",
-    images: ["https://xtrasharp.com.au/og-terms.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-terms.jpg"],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/terms",
+    "twitter:url": "https://www.xtrasharp.com.au/terms",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/terms",
@@ -127,8 +127,8 @@ export default function TermsPage() {
     <>
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Service Terms", url: "https://xtrasharp.com.au/terms" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Service Terms", url: "https://www.xtrasharp.com.au/terms" },
         ]}
       />
 

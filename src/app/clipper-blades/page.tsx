@@ -22,12 +22,12 @@ export const metadata: Metadata = {
     title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Professional clipper blade sharpening using The Shop Inc. system for precise, long-lasting edges.",
-    url: "https://xtrasharp.com.au/clipper-blades",
+    url: "https://www.xtrasharp.com.au/clipper-blades",
     type: "article",
     images: [
-      "https://xtrasharp.com.au/og-clipper.jpg",
+      "https://www.xtrasharp.com.au/og-clipper.jpg",
       {
-        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        url: "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
         alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
       },
     ],
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     description:
       "Professional clipper blade sharpening using The Shop Inc. system for precise, long-lasting edges.",
     images: [
-      "https://xtrasharp.com.au/og-clipper.jpg",
-      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+      "https://www.xtrasharp.com.au/og-clipper.jpg",
+      "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
     ],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/clipper-blades",
+    "twitter:url": "https://www.xtrasharp.com.au/clipper-blades",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/clipper-blades",
@@ -57,7 +57,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Xtra Sharp",
-    url: "https://xtrasharp.com.au",
+    url: "https://www.xtrasharp.com.au",
   },
   areaServed: "Campbelltown NSW, Macarthur region, Australia-wide (mail-in)",
   description:
@@ -65,7 +65,7 @@ const serviceSchema = {
   offers: {
     "@type": "Offer",
     priceCurrency: "AUD",
-    url: "https://xtrasharp.com.au/pricing",
+    url: "https://www.xtrasharp.com.au/pricing",
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "AUD",
@@ -568,8 +568,8 @@ export default function ClipperBladesPage() {
       <JsonLd data={faqSchema} />
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Clipper Blade Sharpening", url: "https://xtrasharp.com.au/clipper-blades" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Clipper Blade Sharpening", url: "https://www.xtrasharp.com.au/clipper-blades" },
         ]}
       />
 

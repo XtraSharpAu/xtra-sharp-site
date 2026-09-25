@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     title: "Service Area | Xtra Sharp Campbelltown NSW",
     description:
       "Drop-off sharpening in Campbelltown NSW servicing Campbelltown and the Macarthur region, plus Australia-wide mail-in sharpening. Call 0412 974 277 today.",
-    url: "https://xtrasharp.com.au/service-area",
+    url: "https://www.xtrasharp.com.au/service-area",
     type: "website",
     images: [
-      "https://xtrasharp.com.au/og-service-area.jpg",
+      "https://www.xtrasharp.com.au/og-service-area.jpg",
       {
-        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        url: "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
         alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
       },
     ],
@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     description:
       "Drop-off sharpening in Campbelltown NSW servicing Campbelltown and the Macarthur region, plus Australia-wide mail-in sharpening. Call 0412 974 277 today.",
     images: [
-      "https://xtrasharp.com.au/og-service-area.jpg",
-      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+      "https://www.xtrasharp.com.au/og-service-area.jpg",
+      "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
     ],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/service-area",
+    "twitter:url": "https://www.xtrasharp.com.au/service-area",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/service-area",
@@ -70,8 +70,8 @@ export default function ServiceAreaPage() {
     <PageLayout>
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Service Area", url: "https://xtrasharp.com.au/service-area" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Service Area", url: "https://www.xtrasharp.com.au/service-area" },
         ]}
       />
 

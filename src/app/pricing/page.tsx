@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     title: "Pricing | Xtra Sharp Campbelltown NSW",
     description:
       "Clear, upfront sharpening prices in Campbelltown NSW for knives, scissors, clipper blades, garden tools and processor blades. Call 0412 974 277 for a quote.",
-    url: "https://xtrasharp.com.au/pricing",
+    url: "https://www.xtrasharp.com.au/pricing",
     type: "website",
     images: [
-      "https://xtrasharp.com.au/og-pricing.jpg",
+      "https://www.xtrasharp.com.au/og-pricing.jpg",
       {
-        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        url: "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
         alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
       },
     ],
@@ -30,12 +30,12 @@ export const metadata: Metadata = {
     description:
       "Clear, upfront sharpening prices in Campbelltown NSW for knives, scissors, clipper blades, garden tools and processor blades. Call 0412 974 277 for a quote.",
     images: [
-      "https://xtrasharp.com.au/og-pricing.jpg",
-      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+      "https://www.xtrasharp.com.au/og-pricing.jpg",
+      "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
     ],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/pricing",
+    "twitter:url": "https://www.xtrasharp.com.au/pricing",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/pricing",
@@ -151,8 +151,8 @@ export default function PricingPage() {
     <PageLayout>
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Pricing", url: "https://xtrasharp.com.au/pricing" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Pricing", url: "https://www.xtrasharp.com.au/pricing" },
         ]}
       />
 

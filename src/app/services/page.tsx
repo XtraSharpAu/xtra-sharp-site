@@ -15,19 +15,19 @@ export const metadata: Metadata = {
     title: "Services & Pricing | Xtra Sharp Campbelltown NSW",
     description:
       "Professional knife, scissors, clipper blade, garden tool and processor blade sharpening in Campbelltown NSW. See what's included and pricing for every service.",
-    url: "https://xtrasharp.com.au/services",
+    url: "https://www.xtrasharp.com.au/services",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-services.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-services.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Services & Pricing | Xtra Sharp Campbelltown NSW",
     description:
       "Professional knife, scissors, clipper blade, garden tool and processor blade sharpening in Campbelltown NSW. See what's included and pricing for every service.",
-    images: ["https://xtrasharp.com.au/og-services.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-services.jpg"],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/services",
+    "twitter:url": "https://www.xtrasharp.com.au/services",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/services",
@@ -130,8 +130,8 @@ export default function ServicesPage() {
     <>
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Services", url: "https://xtrasharp.com.au/services" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Services", url: "https://www.xtrasharp.com.au/services" },
         ]}
       />
 

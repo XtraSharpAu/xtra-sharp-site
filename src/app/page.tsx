@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     title: "Xtra Sharp – Knife & Tool Sharpening in Campbelltown NSW",
     description:
       "Professional knife & tool sharpening in Campbelltown NSW. Water-cooled & machine-guided precision for knives, scissors & clipper blades. Drop-off & mail-in Australia-wide.",
-    url: "https://xtrasharp.com.au",
+    url: "https://www.xtrasharp.com.au",
     type: "website",
     images: [
-      "https://xtrasharp.com.au/og-image.jpg",
+      "https://www.xtrasharp.com.au/og-image.jpg",
       {
-        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        url: "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
         alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
       },
     ],
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     description:
       "Professional knife & tool sharpening in Campbelltown NSW. Water-cooled & machine-guided precision for knives, scissors & clipper blades. Drop-off & mail-in Australia-wide.",
     images: [
-      "https://xtrasharp.com.au/og-image.jpg",
-      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+      "https://www.xtrasharp.com.au/og-image.jpg",
+      "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
     ],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au",
+    "twitter:url": "https://www.xtrasharp.com.au",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au",

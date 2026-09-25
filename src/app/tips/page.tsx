@@ -11,19 +11,19 @@ export const metadata: Metadata = {
     title: "Sharpening Tips & Advice | Xtra Sharp Campbelltown NSW",
     description:
       "Practical care tips for knives, scissors, clipper blades and workshop tools between professional sharpening visits, from Xtra Sharp in Campbelltown NSW.",
-    url: "https://xtrasharp.com.au/tips",
+    url: "https://www.xtrasharp.com.au/tips",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-tips.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-tips.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Sharpening Tips & Advice | Xtra Sharp Campbelltown NSW",
     description:
       "Practical care tips for knives, scissors, clipper blades and workshop tools between professional sharpening visits, from Xtra Sharp in Campbelltown NSW.",
-    images: ["https://xtrasharp.com.au/og-tips.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-tips.jpg"],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/tips",
+    "twitter:url": "https://www.xtrasharp.com.au/tips",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/tips",
@@ -74,8 +74,8 @@ export default function TipsPage() {
     <>
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Sharpening Tips & Advice", url: "https://xtrasharp.com.au/tips" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Sharpening Tips & Advice", url: "https://www.xtrasharp.com.au/tips" },
         ]}
       />
 

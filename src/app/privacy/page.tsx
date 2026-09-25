@@ -13,19 +13,19 @@ export const metadata: Metadata = {
     title: "Privacy Policy | Xtra Sharp Campbelltown NSW",
     description:
       "How Xtra Sharp, a professional sharpening business in Campbelltown NSW, collects, uses, and protects customer information, booking details, and communication.",
-    url: "https://xtrasharp.com.au/privacy",
+    url: "https://www.xtrasharp.com.au/privacy",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-privacy.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-privacy.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy | Xtra Sharp Campbelltown NSW",
     description:
       "How Xtra Sharp, a professional sharpening business in Campbelltown NSW, collects, uses, and protects customer information, booking details, and communication.",
-    images: ["https://xtrasharp.com.au/og-privacy.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-privacy.jpg"],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/privacy",
+    "twitter:url": "https://www.xtrasharp.com.au/privacy",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/privacy",
@@ -128,8 +128,8 @@ export default function PrivacyPage() {
     <>
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Privacy Policy", url: "https://xtrasharp.com.au/privacy" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Privacy Policy", url: "https://www.xtrasharp.com.au/privacy" },
         ]}
       />
 

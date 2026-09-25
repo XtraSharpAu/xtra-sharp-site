@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     title: "FAQ | Xtra Sharp Campbelltown NSW",
     description:
       "Answers about sharpening services, pricing, mail-in and turnaround at Xtra Sharp in Campbelltown NSW — fast, professional results. Call 0412 974 277 now.",
-    url: "https://xtrasharp.com.au/faq",
+    url: "https://www.xtrasharp.com.au/faq",
     type: "website",
     images: [
-      "https://xtrasharp.com.au/og-faq.jpg",
+      "https://www.xtrasharp.com.au/og-faq.jpg",
       {
-        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        url: "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
         alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
       },
     ],
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     description:
       "Answers about sharpening services, pricing, mail-in and turnaround at Xtra Sharp in Campbelltown NSW — fast, professional results. Call 0412 974 277 now.",
     images: [
-      "https://xtrasharp.com.au/og-faq.jpg",
-      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+      "https://www.xtrasharp.com.au/og-faq.jpg",
+      "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
     ],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/faq",
+    "twitter:url": "https://www.xtrasharp.com.au/faq",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/faq",
@@ -158,8 +158,8 @@ export default function FaqPage() {
       <JsonLd data={faqSchema} />
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "FAQ", url: "https://xtrasharp.com.au/faq" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "FAQ", url: "https://www.xtrasharp.com.au/faq" },
         ]}
       />
 

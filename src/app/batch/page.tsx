@@ -11,19 +11,19 @@ export const metadata: Metadata = {
     title: "Batch Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Batch sharpening for schools, salons, restaurants and workshops across Campbelltown NSW and Western Sydney, with priority handling and consistent edge quality.",
-    url: "https://xtrasharp.com.au/batch",
+    url: "https://www.xtrasharp.com.au/batch",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-batch.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-batch.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Batch Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Batch sharpening for schools, salons, restaurants and workshops across Campbelltown NSW and Western Sydney, with priority handling and consistent edge quality.",
-    images: ["https://xtrasharp.com.au/og-batch.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-batch.jpg"],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/batch",
+    "twitter:url": "https://www.xtrasharp.com.au/batch",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/batch",
@@ -65,8 +65,8 @@ export default function BatchPage() {
     <>
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Batch Sharpening", url: "https://xtrasharp.com.au/batch" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Batch Sharpening", url: "https://www.xtrasharp.com.au/batch" },
         ]}
       />
 

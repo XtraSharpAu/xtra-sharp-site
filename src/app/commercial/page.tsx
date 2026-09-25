@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     title: "Commercial Clients Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Professional sharpening for schools, salons, restaurants, and trades using precision-guided equipment for consistent, high-quality results.",
-    url: "https://xtrasharp.com.au/commercial",
+    url: "https://www.xtrasharp.com.au/commercial",
     type: "article",
     images: [
-      "https://xtrasharp.com.au/og-commercial.jpg",
+      "https://www.xtrasharp.com.au/og-commercial.jpg",
       {
-        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        url: "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
         alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
       },
     ],
@@ -29,12 +29,12 @@ export const metadata: Metadata = {
     description:
       "Professional sharpening for schools, salons, restaurants, and trades using precision-guided equipment for consistent, high-quality results.",
     images: [
-      "https://xtrasharp.com.au/og-commercial.jpg",
-      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+      "https://www.xtrasharp.com.au/og-commercial.jpg",
+      "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
     ],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/commercial",
+    "twitter:url": "https://www.xtrasharp.com.au/commercial",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/commercial",
@@ -109,7 +109,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Xtra Sharp",
-    url: "https://xtrasharp.com.au",
+    url: "https://www.xtrasharp.com.au",
   },
   areaServed: "Campbelltown NSW, Macarthur region, Australia-wide (mail-in)",
   description:
@@ -117,7 +117,7 @@ const serviceSchema = {
   offers: {
     "@type": "Offer",
     priceCurrency: "AUD",
-    url: "https://xtrasharp.com.au/pricing",
+    url: "https://www.xtrasharp.com.au/pricing",
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "AUD",
@@ -133,8 +133,8 @@ export default function CommercialPage() {
       <JsonLd data={serviceSchema} />
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Commercial Clients", url: "https://xtrasharp.com.au/commercial" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Commercial Clients", url: "https://www.xtrasharp.com.au/commercial" },
         ]}
       />
 

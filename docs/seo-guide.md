@@ -13,18 +13,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "<same as title>",
     description: "<same as description>",
-    url: "https://xtrasharp.com.au/<route>",
+    url: "https://www.xtrasharp.com.au/<route>",
     type: "website" | "article",
-    images: ["https://xtrasharp.com.au/og-<slug>.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-<slug>.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "<same as title>",
     description: "<same as description>",
-    images: ["https://xtrasharp.com.au/og-<slug>.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-<slug>.jpg"],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/<route>",
+    "twitter:url": "https://www.xtrasharp.com.au/<route>",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/<route>",
@@ -41,7 +41,7 @@ Notes on this pattern:
 
 ## Image Asset Naming Convention
 
-OG images follow `og-<slug>.jpg`, referenced by absolute URL (`https://xtrasharp.com.au/og-<slug>.jpg`). **None of these image files currently exist in `public/`** — see `docs/image-handling.md`. The URLs are correct and ready to resolve the moment the files are added; nothing else needs to change.
+OG images follow `og-<slug>.jpg`, referenced by absolute URL (`https://www.xtrasharp.com.au/og-<slug>.jpg`). **None of these image files currently exist in `public/`** — see `docs/image-handling.md`. The URLs are correct and ready to resolve the moment the files are added; nothing else needs to change.
 
 ## Schema Placement
 

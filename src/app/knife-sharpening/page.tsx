@@ -186,12 +186,12 @@ export const metadata: Metadata = {
     title: "Knife Sharpening | Xtra Sharp Campbelltown NSW",
     description:
       "Professional knife sharpening in Campbelltown NSW — water-cooled precision for kitchen, butcher and hunting knives. Fast turnaround. Call 0412 974 277.",
-    url: "https://xtrasharp.com.au/knife-sharpening",
+    url: "https://www.xtrasharp.com.au/knife-sharpening",
     type: "article",
     images: [
-      "https://xtrasharp.com.au/og-knife.jpg",
+      "https://www.xtrasharp.com.au/og-knife.jpg",
       {
-        url: "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+        url: "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
         alt: "Xtra Sharp – Professional Knife & Tool Sharpening Campbelltown NSW",
       },
     ],
@@ -202,12 +202,12 @@ export const metadata: Metadata = {
     description:
       "Professional knife sharpening in Campbelltown NSW — water-cooled precision for kitchen, butcher and hunting knives. Fast turnaround. Call 0412 974 277.",
     images: [
-      "https://xtrasharp.com.au/og-knife.jpg",
-      "https://xtrasharp.com.au/brand-composite-campbelltown.jpg",
+      "https://www.xtrasharp.com.au/og-knife.jpg",
+      "https://www.xtrasharp.com.au/brand-composite-campbelltown.jpg",
     ],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/knife-sharpening",
+    "twitter:url": "https://www.xtrasharp.com.au/knife-sharpening",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/knife-sharpening",
@@ -221,7 +221,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Xtra Sharp",
-    url: "https://xtrasharp.com.au",
+    url: "https://www.xtrasharp.com.au",
   },
   areaServed: "Campbelltown NSW, Macarthur region, Australia-wide (mail-in)",
   description:
@@ -229,7 +229,7 @@ const serviceSchema = {
   offers: {
     "@type": "Offer",
     priceCurrency: "AUD",
-    url: "https://xtrasharp.com.au/pricing",
+    url: "https://www.xtrasharp.com.au/pricing",
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "AUD",
@@ -317,8 +317,8 @@ export default function KnifeSharpeningPage() {
       <JsonLd data={faqSchema} />
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Knife Sharpening", url: "https://xtrasharp.com.au/knife-sharpening" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Knife Sharpening", url: "https://www.xtrasharp.com.au/knife-sharpening" },
         ]}
       />
 

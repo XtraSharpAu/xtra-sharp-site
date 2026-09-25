@@ -11,19 +11,19 @@ export const metadata: Metadata = {
     title: "Gallery | Xtra Sharp Campbelltown NSW",
     description:
       "See examples of Xtra Sharp's knife, scissor, clipper blade and tool sharpening work, plus our Campbelltown NSW workshop setup.",
-    url: "https://xtrasharp.com.au/gallery",
+    url: "https://www.xtrasharp.com.au/gallery",
     type: "article",
-    images: ["https://xtrasharp.com.au/og-gallery.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-gallery.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Gallery | Xtra Sharp Campbelltown NSW",
     description:
       "See examples of Xtra Sharp's knife, scissor, clipper blade and tool sharpening work, plus our Campbelltown NSW workshop setup.",
-    images: ["https://xtrasharp.com.au/og-gallery.jpg"],
+    images: ["https://www.xtrasharp.com.au/og-gallery.jpg"],
   },
   other: {
-    "twitter:url": "https://xtrasharp.com.au/gallery",
+    "twitter:url": "https://www.xtrasharp.com.au/gallery",
   },
   alternates: {
     canonical: "https://www.xtrasharp.com.au/gallery",
@@ -74,8 +74,8 @@ export default function GalleryPage() {
     <>
       <Breadcrumbs
         items={[
-          { name: "Home", url: "https://xtrasharp.com.au" },
-          { name: "Gallery", url: "https://xtrasharp.com.au/gallery" },
+          { name: "Home", url: "https://www.xtrasharp.com.au" },
+          { name: "Gallery", url: "https://www.xtrasharp.com.au/gallery" },
         ]}
       />
 
