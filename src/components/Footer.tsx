@@ -14,10 +14,16 @@ const serviceLinks = [
 ];
 
 const customerLinks = [
+  { label: "Pricing", href: "/pricing" },
+  { label: "How It Works", href: "/how-it-works" },
+  { label: "Service Area", href: "/service-area" },
   { label: "Drop-Off Checklist", href: "/services" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Sharpening Tips", href: "/tips" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
   { label: "Commercial Sharpening", href: "/commercial" },
+  { label: "Batch Sharpening", href: "/batch" },
 ];
 
 const legalLinks = [

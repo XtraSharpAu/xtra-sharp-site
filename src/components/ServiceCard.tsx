@@ -21,7 +21,7 @@ export default function ServiceCard({ title, description, href, icon }: ServiceC
         href={href}
         className="inline-block bg-ctaRed text-white px-6 py-3 rounded-full transition-colors hover:bg-ctaRed/90"
       >
-        Learn More
+        Learn more about {title}
       </a>
     </div>
   );
