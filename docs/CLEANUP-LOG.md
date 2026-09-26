@@ -39,3 +39,19 @@ Notes and next steps:
 - Home SEO fell from 100 to 92; open the full Lighthouse report to see which check failed.
 - Likely areas to check: embedded YouTube videos (clipper-blades, knife-sharpening) and large hero images (home).
 - Get Best Practices and detailed suggestions from PageSpeed Insights once its quota resets.
+
+## Performance Baseline – Run #2 (www) – 26 Sep 2026
+
+Source: workflow "Quarterly Lighthouse Audit" [run #2](https://github.com/XtraSharpAu/xtra-sharp-site/actions/runs/36177145137) (Lighthouse 13.5.0, mobile, GitHub Actions runner, commit 2a79436, audited `https://www.xtrasharp.com.au`, 26 Sep 2026 05:01 AEST). First run to include Best Practices.
+
+| Page | Perf | A11y | Best Practices | SEO | Perf in run #1 |
+|---|---|---|---|---|---|
+| / (home) | 83 | 100 | 100 | 92 | 60 |
+| /clipper-blades | 47 | 100 | 96 | 100 | 50 |
+| /commercial | 75 | 100 | 100 | 100 | 91–95 |
+| /knife-sharpening | 88 | 100 | 96 | 100 | 83 |
+| /processor-blades | 95 | 100 | 100 | 100 | 71 |
+| /thank-you | 96 | 100 | 100 | 69 (expected: page is noindex) | 94 |
+| Other 15 pages | 94–97 | 100 | 100 | 100 | 91–95 |
+
+Note: Large swings observed; YouTube embeds and image weight likely causes.

@@ -3,6 +3,16 @@
 Baseline: release `v2.0-clean` (26 Sep 2026). Scores and history are in [CLEANUP-LOG.md](CLEANUP-LOG.md).
 Status key: **To do** · **Done** (already in place — keep it working) · **Check**
 
+## v2.1 Work Items – Confirmed
+
+Confirmed 26 Sep 2026 after Lighthouse run #2 (see [CLEANUP-LOG.md](CLEANUP-LOG.md)).
+
+| Priority | Work item | Pages |
+|---|---|---|
+| 1 | Replace YouTube embeds with click-to-play thumbnails | `/clipper-blades`, `/knife-sharpening` |
+| 2 | Compress hero and gallery images (target under 150 KB) | Home and image-heavy pages |
+| 3 | Small-screen testing at 360–414 px | Home hero, pricing tables, clipper-blades video grid |
+
 ## 1. Image optimization
 
 Main reason for this section: on 26 Sep, mobile Performance was 50 on `/clipper-blades`, 60 on the home page, 71 on `/processor-blades` and 83 on `/knife-sharpening`.
