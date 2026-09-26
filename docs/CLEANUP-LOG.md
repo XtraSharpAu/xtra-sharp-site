@@ -221,3 +221,15 @@ Merged via PR #5 (squash) after checking the Vercel preview.
 - "Leave a Google review" button (https://g.page/r/CcAgWKGNmPfeEAE/review) added to the Thank You page ("Happy with your sharpening?") and the Contact page, plus a "Leave a review ›" link in the footer.
 - All links open in a new tab (noopener noreferrer) and fire the GA4 event `click_google_review`.
 - URL kept in `src/lib/reviews.ts`; button in `src/components/GoogleReviewButton.tsx`.
+
+## v2.5 Contact Form – 26 Sep 2026
+
+Merged via PR #6 (squash) after checking the Vercel preview.
+
+- The contact form now sends enquiries directly instead of opening a `mailto:` link: `src/components/ContactForm.tsx` POSTs JSON to Web3Forms (`https://api.web3forms.com/submit`), with the public access key kept in `src/lib/contact.ts`.
+- Added an optional Phone field between Email and Message. The submit button reads "Sending…" and is disabled while the request is in flight.
+- A hidden honeypot checkbox (`botcheck`) blocks bot submissions with no network request made.
+- On success, fires the GA4 event `submit_contact_form` and redirects to `/thank-you`. On failure or a network error, the typed fields are kept, a message points to phone/email, and the GA4 event `contact_form_error` fires.
+- Intro text above the form changed to first person ("Send me a message below and I'll get back to you as soon as I can.").
+- Home page `description` (metadata, OpenGraph, Twitter) shortened to focus on the core service.
+- **Preview test:** a test enquiry submitted on the Vercel preview redirected to `/thank-you` and arrived correctly in Outlook.
