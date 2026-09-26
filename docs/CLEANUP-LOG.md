@@ -55,3 +55,47 @@ Source: workflow "Quarterly Lighthouse Audit" [run #2](https://github.com/XtraSh
 | Other 15 pages | 94–97 | 100 | 100 | 100 | 91–95 |
 
 Note: Large swings observed; YouTube embeds and image weight likely causes.
+
+## v2.1 Development Phase – Local Testing Results
+
+Status: code changes made and checked offline, **not yet built with Next.js or audited with Lighthouse** (see "Still to verify"). Nothing has been deployed; the live site is unchanged.
+
+### 1. Click-to-play video component
+
+- New `src/components/VideoThumbnail.tsx` (props: `thumbnailSrc`, `videoId`, `altText`, optional `title`) and helper `src/lib/youtube.ts` (`youTubeThumb(videoId)`; kept outside the client component so server pages can call it).
+- Shows a lazy-loaded YouTube thumbnail (~20 KB) with a red play button. The YouTube iframe (`youtube-nocookie.com`, autoplay) is only created after a click, so nothing from YouTube's player loads with the page.
+- Used for all 10 videos on `/clipper-blades` (process overview + 9 steps) and the 1 video on `/knife-sharpening`. The live `/clipper-blades` page currently creates 10 YouTube iframes on page load.
+- Checked: TypeScript syntax on all changed files; no remaining `youtube.com/embed` iframes in `src/`.
+
+### 2. Image compression
+
+- 36 JPEGs in `public/` over 150 KB re-exported: long edge capped at 1,600 px, aspect ratio kept (existing `width`/`height` props stay valid), quality stepped down from 82 only as far as needed (lowest used: 70). All 36 are now 138–146 KB; total 7.6 MB → 5.1 MB. Filenames unchanged. Spot-checked visually at display size.
+- A few very detailed photos needed downscaling to get under 150 KB (for example `scissors-gallery-lineup.jpg` is now 564 px wide, `knife-sharpening-machine.jpg` 779 px wide); these are still sharp at the size they're displayed.
+- `next.config.ts`: `images.formats` set to AVIF then WebP, so next/image serves AVIF where the browser supports it.
+- Responsive sizes: images on `/clipper-blades` and `/knife-sharpening` had fixed `width` values (up to 1,600) and no `sizes`, so phones were sent full-width files. Added `sizes` to all 12 images on those two pages (single images: `(min-width: 672px) 672px, 100vw`; galleries sized to their grid columns).
+
+### 3. Small-screen testing (live site, 360 / 375 / 390 / 414 px)
+
+Pages: `/`, `/pricing`, `/clipper-blades`, `/knife-sharpening`, measured in Chrome at each width.
+
+| Check | Result |
+|---|---|
+| Horizontal scroll | None on any page or width |
+| Elements overflowing the viewport | None |
+| Text under 12 px | None |
+| H1 size | 36 px on all pages |
+| Pricing tables | Fit within the viewport at 360 px |
+| Video blocks | Full width, 16:9, no overflow |
+| Tap targets under 24 px | Header nav links (20 px tall, 8 px row gap), footer links (19 px tall), Facebook/X icons (22×22 px) |
+
+Tap targets pass WCAG 2.2 AA through spacing, and Lighthouse Accessibility is 100, but the header nav (12 wrapped text links) and the social icons are small for thumbs. Possible later improvement: a compact mobile menu and 44 px icon buttons.
+
+### 4. Lighthouse (local)
+
+Not run yet. This session's network policy blocks the npm registry (so the site can't be installed or built here) and blocks access to xtrasharp.com.au, so a local `next build` + Lighthouse run wasn't possible.
+
+### Still to verify
+
+1. `next build` succeeds (includes full type-check and lint).
+2. Lighthouse for `/`, `/clipper-blades` and `/knife-sharpening`, compared with Run #2 (83 / 47 / 88).
+3. Click-to-play works on a phone (thumbnail → video plays).
