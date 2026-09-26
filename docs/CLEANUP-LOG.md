@@ -146,3 +146,14 @@ GA4 property: "Xtra Sharp Website" (property 555128797), web stream 15811521503,
 - **Result:** Realtime stayed at **0 active users** after desktop test visits and after the reported phone visit to `/clipper-blades` on mobile data (checked several times, the last shortly after the phone test).
 - **Interpretation (unresolved):** Kaspersky on the desktop could explain the desktop visits not showing, but not a phone visit on mobile data. So the cause isn't confirmed. Possible explanations: the phone visit didn't send a hit (for example, a content blocker or private relay on the phone), Realtime delay, or hits not being processed for this stream.
 - **Next check (27 Sep):** open Reports → Engagement → Pages and screens for **26 Sep**. If 26 Sep shows views, tracking works and only Realtime/test visits were affected. If 26 Sep shows none across the whole site, tracking stopped at or after the v2.1 deploy and needs investigating (GA4 DebugView, tag configuration). Before v2.1, the property recorded 183 views between 29 Aug and 25 Sep.
+
+## Search Console Indexing Check – v2.1 Live – 26 Sep 2026
+
+Property: `sc-domain:xtrasharp.com.au`. Page indexing: 22 indexed, 114 not indexed (65 × 404, 21 × crawled – not indexed, 14 × noindex, 9 × discovered – not indexed, 4 × redirect, 1 × 5xx; report last updated 21 Sep).
+
+- **Discovered – currently not indexed (9 URLs):** all are non-www addresses (`https://xtrasharp.com.au/…`: commercial, contact, gallery, garden-tools, knife-sharpening, scissors-sharpening, service-area, services, terms). `/clipper-blades` isn't in the list. The bare domain now redirects to `www` (checked on `/knife-sharpening`), so these are old addresses, not pages to fix. **Validate fix started 26 Sep**; Google should move them to "Page with redirect".
+- **Sitemap:** `https://www.xtrasharp.com.au/sitemap.xml` was submitted and read on 26 Sep (before the v2.1 release), status Success, 20 pages. **Resubmitted after the release; "Sitemap submitted successfully."**
+- **URL Inspection (www):**
+  - `https://www.xtrasharp.com.au/clipper-blades`: **URL is on Google**, page indexed, breadcrumbs (1) and review snippets (6) valid.
+  - `https://www.xtrasharp.com.au/knife-sharpening`: **URL is not on Google, "URL is unknown to Google"** (no referring sitemap or page recorded yet). **Indexing requested 26 Sep.**
+- Follow-up: re-inspect `/knife-sharpening` in about a week, and check the validation result for the non-www group. Other www service pages may also be unknown to Google; inspect them if the Page indexing count doesn't rise after the sitemap is re-read.
