@@ -13,12 +13,29 @@ Confirmed 26 Sep 2026 after Lighthouse run #2 (see [CLEANUP-LOG.md](CLEANUP-LOG.
 | 2 | Compress hero and gallery images (target under 150 KB) | Home and image-heavy pages |
 | 3 | Small-screen testing at 360–414 px | Home hero, pricing tables, clipper-blades video grid |
 
+**Progress (26 Sep 2026, local only, not deployed):**
+
+- **Priority 1 — Built, awaiting build/Lighthouse check.** `VideoThumbnail` component added; all 11 YouTube embeds on the two pages now load only on click.
+- **Priority 2 — Done locally, awaiting build/Lighthouse check.** 36 images re-exported under 150 KB; AVIF + WebP enabled; `sizes` added on `/clipper-blades` and `/knife-sharpening`.
+- **Priority 3 — Tested.** No overflow or small text at 360–414 px; small header/footer/social tap targets noted as a possible later improvement.
+
+Details: [CLEANUP-LOG.md → v2.1 Development Phase](CLEANUP-LOG.md).
+
+## v2.1 Verification – Completed
+
+Verified 26 Sep 2026 on the Vercel preview of branch `v2.1-dev` (build 330c51c).
+
+- **Click-to-play video component verified.** No YouTube iframes or requests on page load (`/clipper-blades` previously loaded 10); thumbnails lazy-load; clicking play loads the player in place.
+- **Image compression verified.** 36 images under 150 KB; AVIF served (30 KB at phone width vs ~250 KB before); responsive `sizes` working.
+- **Mobile layout verified.** No horizontal scroll or small text at 360–414 px (see CLEANUP-LOG.md).
+- **Lighthouse results recorded.** Run #3 mobile Performance: home 95 (was 83), clipper-blades 80 (was 47), knife-sharpening 84 (was 88). Accessibility and Best Practices 100 on all three. Preview SEO scores are lowered by Vercel's preview-only `noindex` header; see CLEANUP-LOG.md.
+
 ## 1. Image optimization
 
 Main reason for this section: on 26 Sep, mobile Performance was 50 on `/clipper-blades`, 60 on the home page, 71 on `/processor-blades` and 83 on `/knife-sharpening`.
 
-- **To do — Compress hero and gallery images.** The largest files in `public/` are about 250 KB each (for example `clipper-blade-clean-top.jpg`, `knife-sharpening-machine.jpg`, `scissors-gallery-*.jpg`). Re-export them at display size and target under 150 KB. `next/image` already resizes them and serves WebP, so smaller source files mainly speed up the first, uncached load.
-- **To do — Replace embedded YouTube frames with preview thumbnails + lightbox.** `/clipper-blades` loads YouTube iframes on page load for the process overview plus each step video, and `/knife-sharpening` has one. Show a thumbnail image with a play button, and load the video only when it's clicked. Priority 1: this is the most likely cause of the low clipper-blades score.
+- **Done locally (26 Sep, not deployed) — Compress hero and gallery images.** The largest files in `public/` are about 250 KB each (for example `clipper-blade-clean-top.jpg`, `knife-sharpening-machine.jpg`, `scissors-gallery-*.jpg`). Re-export them at display size and target under 150 KB. `next/image` already resizes them and serves WebP, so smaller source files mainly speed up the first, uncached load.
+- **Built locally (26 Sep, not deployed) — Replace embedded YouTube frames with click-to-play thumbnails** (inline player, no lightbox). `/clipper-blades` loads YouTube iframes on page load for the process overview plus each step video, and `/knife-sharpening` has one. Show a thumbnail image with a play button, and load the video only when it's clicked. Priority 1: this is the most likely cause of the low clipper-blades score.
 
 ## 2. Analytics integration
 
@@ -40,7 +57,7 @@ Main reason for this section: on 26 Sep, mobile Performance was 50 on `/clipper-
 
 - **Done — Lazy-load non-critical images.** `next/image` lazy-loads by default (only the header logo uses `priority`), and the Contact page map already has `loading="lazy"`. The YouTube change in section 1 covers the remaining heavy embeds.
 - **Done — Preload the main font.** Fonts load via `next/font/google` (Geist), which self-hosts and preloads them automatically. No change needed.
-- **To do — Review mobile viewport scaling.** Check the site at 360–414 px widths (home hero, pricing tables, clipper-blades video grid) and confirm there's no horizontal scroll or undersized text.
+- **Done (26 Sep) — Review mobile viewport scaling.** No horizontal scroll or undersized text found; see CLEANUP-LOG.md. Check the site at 360–414 px widths (home hero, pricing tables, clipper-blades video grid) and confirm there's no horizontal scroll or undersized text.
 
 ## Suggested order
 
