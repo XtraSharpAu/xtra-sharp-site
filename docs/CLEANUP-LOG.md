@@ -122,3 +122,19 @@ Notes:
 - Live `/knife-sharpening`: 0 iframes on load, 1 click-to-play thumbnail, 9 images with responsive `sizes`, AVIF served (30 KB at phone width), HTTP 200, no `noindex`.
 - PageSpeed Insights (mobile), live `/knife-sharpening`, 26 Sep 4:44 PM: **Performance 76 · Accessibility 100 · Best Practices 100 · SEO 100.** SEO is back to 100, which confirms the preview's 61 was caused by preview-only behaviour. This run happened within minutes of the deploy, so optimized images were still being generated for the first time; re-check Performance on the next run.
 - PageSpeed Insights for `/` and `/clipper-blades` didn't complete (the tool stalled). The scheduled Quarterly Lighthouse workflow on **1 Oct 2026** audits all 21 production pages and gives the like-for-like comparison with Run #1/#2.
+
+## Analytics Verification – v2.1 Live – 26 Sep 2026
+
+GA4 property: "Xtra Sharp Website" (property 555128797), web stream 15811521503, Measurement ID **G-LKK494K8YP**. The stream shows "Receiving traffic in past 48 hours."
+
+- **Tag check (live site):** after the v2.1 deploy, `/clipper-blades` and `/knife-sharpening` both load the GA4 script and send a `page_view` to G-LKK494K8YP, which matches the property's stream ID.
+- **Pages and screens, last 28 days (29 Aug – 25 Sep 2026, before v2.1):**
+
+| Page | Views | Active users | Avg engagement time | Event count |
+|---|---|---|---|---|
+| /knife-sharpening | 12 | 8 | 46 s | 22 |
+| /clipper-blades | 8 | 7 | 23 s | 19 |
+| All pages | 183 | 65 | 1 m 00 s | 422 |
+
+- **Today (26 Sep):** standard reports only cover up to 25 Sep, so today's page views aren't available yet. Realtime showed **0 active users** even after two test visits that sent `page_view` hits in this browser. The tag and ID are correct, so these test hits were probably blocked or filtered before reaching the reports: either security software in this browser blocking tracking requests, or a GA4 internal-traffic filter. To confirm, open the live site on a phone (mobile data, not Wi-Fi) and watch Realtime.
+- Organic search traffic to the updated pages is expected to show within 2–3 days. Compare /clipper-blades and /knife-sharpening against the 28-day figures above in early October.

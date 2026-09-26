@@ -1,6 +1,6 @@
 # Xtra Sharp Website — v2.1 Update Plan
 
-> **v2.1 milestone: CLOSED (26 Sep 2026).** Merged to `main` as 36986fc (PR #2) and verified live. Follow-ups: compare the 1 Oct 2026 Lighthouse workflow run with Run #2, and consider v2.2 items below.
+> **v2.1 milestone: CLOSED (26 Sep 2026).** Merged to `main` as 36986fc (PR #2) and verified live. Follow-ups: **Next performance comparison scheduled for 1 Oct** (Quarterly Lighthouse workflow, 09:00 UTC = 7 pm AEST, all 21 production pages); compare with Run #2. Check GA4 traffic for /clipper-blades and /knife-sharpening in early October; see CLEANUP-LOG.md. Consider v2.2 items below.
 
 Baseline: release `v2.0-clean` (26 Sep 2026). Scores and history are in [CLEANUP-LOG.md](CLEANUP-LOG.md).
 Status key: **To do** · **Done** (already in place — keep it working) · **Check**
