@@ -13,6 +13,8 @@ import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
 import PageLayout from "@/components/PageLayout";
 import Section from "@/components/Section";
+import VideoThumbnail from "@/components/VideoThumbnail";
+import { youTubeThumb } from "@/lib/youtube";
 
 export const metadata: Metadata = {
   title: "Clipper Blade Sharpening | Xtra Sharp Campbelltown NSW",
@@ -179,6 +181,7 @@ function ClipperIntroGallery() {
       {clipperIntroGalleryPhotos.map((photo) => (
         <div key={photo.src} className="overflow-hidden rounded-lg shadow-md">
           <Image
+            sizes="(min-width: 896px) 290px, (min-width: 640px) 33vw, 100vw"
             src={photo.src}
             alt={photo.alt}
             width={photo.width}
@@ -196,6 +199,7 @@ function ClipperBeforePhoto() {
     <div className="mx-auto mt-6 w-full max-w-2xl">
       <div className="overflow-hidden rounded-lg shadow-md">
         <Image
+          sizes="(min-width: 672px) 672px, 100vw"
           src="/clipper-blade-worn-closeup.jpg"
           alt="Clipper blades before sharpening — visible wear along the teeth."
           width={1200}
@@ -215,6 +219,7 @@ function ClipperAfterPhoto() {
     <div className="mx-auto mt-6 w-full max-w-2xl">
       <div className="overflow-hidden rounded-lg shadow-md">
         <Image
+          sizes="(min-width: 672px) 672px, 100vw"
           src="/clipper-blade-clean-top.jpg"
           alt="Clipper blades after sharpening — aligned and polished."
           width={1200}
@@ -234,6 +239,7 @@ function ClipperEdgeDetailPhoto() {
     <div className="mx-auto mt-6 w-full max-w-2xl">
       <div className="overflow-hidden rounded-lg shadow-md">
         <Image
+          sizes="(min-width: 672px) 672px, 100vw"
           src="/clipper-blade-edge-teeth-macro.jpg"
           alt="Close-up of sharpened edge detail."
           width={1200}
@@ -252,6 +258,7 @@ function ClipperEquipmentPhoto() {
   return (
     <div className="mx-auto mt-section w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
       <Image
+        sizes="(min-width: 672px) 672px, 100vw"
         src="/clipper-blade-sharpening-machine.jpg"
         alt="Automated clipper blade sharpening machine used for A5, wide and large-animal blades."
         width={1920}
@@ -332,15 +339,11 @@ function ClipperEquipmentSection() {
 function ClipperVideoSection() {
   return (
     <div className="mx-auto mt-6 w-full max-w-2xl">
-      <div className="aspect-video overflow-hidden rounded-lg shadow-md">
-        <iframe
-          src="https://www.youtube.com/embed/vSB9MhXxX6Y"
-          title="Clipper Blade Sharpening — Process Overview"
-          className="h-full w-full"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        />
-      </div>
+      <VideoThumbnail
+        thumbnailSrc={youTubeThumb("vSB9MhXxX6Y")}
+        videoId="vSB9MhXxX6Y"
+        altText="Clipper Blade Sharpening — Process Overview"
+      />
       <p className="mt-2 text-sm text-text/60">
         Clipper Blade Sharpening — Process Overview. This video shows part
         of the clipper blade sharpening workflow, including setup,
@@ -434,13 +437,11 @@ function ClipperProcessSteps() {
             <h4 className="font-semibold text-text">
               Step {index + 1} — {step.title}
             </h4>
-            <div className="mt-3 aspect-video overflow-hidden rounded-lg shadow-md">
-              <iframe
-                src={`https://www.youtube.com/embed/${step.videoId}`}
-                title={`Clipper Blade Sharpening — Step ${index + 1}: ${step.title}`}
-                className="h-full w-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
+            <div className="mt-3">
+              <VideoThumbnail
+                thumbnailSrc={youTubeThumb(step.videoId)}
+                videoId={step.videoId}
+                altText={`Clipper Blade Sharpening — Step ${index + 1}: ${step.title}`}
               />
             </div>
             {step.description && (
@@ -486,6 +487,7 @@ function ClipperPackingPhotos() {
           <div key={photo.src}>
             <div className="overflow-hidden rounded-lg shadow-md">
               <Image
+                sizes="(min-width: 640px) 210px, 100vw"
                 src={photo.src}
                 alt={photo.alt}
                 width={photo.width}
