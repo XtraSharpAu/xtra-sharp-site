@@ -114,3 +114,11 @@ Source: Lighthouse in Chrome DevTools (mobile, emulated Moto G Power), run by ha
 Notes:
 - `/clipper-blades` details: FCP 3.4 s, LCP 3.4 s, TBT 230 ms, CLS 0, Speed Index 4.0 s. Remaining Performance suggestions are about Next.js JavaScript (unused JS, main-thread work), a possible v2.2 item.
 - Run #3 was measured in a local Chrome on a different machine and network from Run #1/#2 (GitHub Actions runner), so small differences (such as knife-sharpening 88 → 84) are within normal run-to-run variation. The next scheduled workflow run on production (1 Oct 2026) gives a like-for-like comparison.
+
+## v2.1 Release – Merged and Verified Live – 26 Sep 2026
+
+- PR #2 (`v2.1-dev` → `main`) squash-merged as **36986fc**: "Add v2.1 verified build: video component, image compression, mobile testing." `main` is identical to the verified preview build 330c51c plus the Run #3 docs. Vercel deployed it to production.
+- Live `https://www.xtrasharp.com.au/clipper-blades`: 0 YouTube iframes and 0 YouTube player requests on load (was 10 iframes), 10 click-to-play thumbnails. No `X-Robots-Tag` header.
+- Live `/knife-sharpening`: 0 iframes on load, 1 click-to-play thumbnail, 9 images with responsive `sizes`, AVIF served (30 KB at phone width), HTTP 200, no `noindex`.
+- PageSpeed Insights (mobile), live `/knife-sharpening`, 26 Sep 4:44 PM: **Performance 76 · Accessibility 100 · Best Practices 100 · SEO 100.** SEO is back to 100, which confirms the preview's 61 was caused by preview-only behaviour. This run happened within minutes of the deploy, so optimized images were still being generated for the first time; re-check Performance on the next run.
+- PageSpeed Insights for `/` and `/clipper-blades` didn't complete (the tool stalled). The scheduled Quarterly Lighthouse workflow on **1 Oct 2026** audits all 21 production pages and gives the like-for-like comparison with Run #1/#2.

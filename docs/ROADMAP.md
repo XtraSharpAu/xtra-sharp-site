@@ -1,5 +1,7 @@
 # Xtra Sharp Website — v2.1 Update Plan
 
+> **v2.1 milestone: CLOSED (26 Sep 2026).** Merged to `main` as 36986fc (PR #2) and verified live. Follow-ups: compare the 1 Oct 2026 Lighthouse workflow run with Run #2, and consider v2.2 items below.
+
 Baseline: release `v2.0-clean` (26 Sep 2026). Scores and history are in [CLEANUP-LOG.md](CLEANUP-LOG.md).
 Status key: **To do** · **Done** (already in place — keep it working) · **Check**
 
@@ -13,7 +15,7 @@ Confirmed 26 Sep 2026 after Lighthouse run #2 (see [CLEANUP-LOG.md](CLEANUP-LOG.
 | 2 | Compress hero and gallery images (target under 150 KB) | Home and image-heavy pages |
 | 3 | Small-screen testing at 360–414 px | Home hero, pricing tables, clipper-blades video grid |
 
-**Progress (26 Sep 2026, local only, not deployed):**
+**Status (26 Sep 2026): all three items done and live.** Earlier progress notes:
 
 - **Priority 1 — Built, awaiting build/Lighthouse check.** `VideoThumbnail` component added; all 11 YouTube embeds on the two pages now load only on click.
 - **Priority 2 — Done locally, awaiting build/Lighthouse check.** 36 images re-exported under 150 KB; AVIF + WebP enabled; `sizes` added on `/clipper-blades` and `/knife-sharpening`.
@@ -23,7 +25,7 @@ Details: [CLEANUP-LOG.md → v2.1 Development Phase](CLEANUP-LOG.md).
 
 ## v2.1 Verification – Completed
 
-Verified 26 Sep 2026 on the Vercel preview of branch `v2.1-dev` (build 330c51c).
+Verified 26 Sep 2026 on the Vercel preview of branch `v2.1-dev` (build 330c51c), then on the live site after merge (36986fc).
 
 - **Click-to-play video component verified.** No YouTube iframes or requests on page load (`/clipper-blades` previously loaded 10); thumbnails lazy-load; clicking play loads the player in place.
 - **Image compression verified.** 36 images under 150 KB; AVIF served (30 KB at phone width vs ~250 KB before); responsive `sizes` working.
@@ -59,7 +61,13 @@ Main reason for this section: on 26 Sep, mobile Performance was 50 on `/clipper-
 - **Done — Preload the main font.** Fonts load via `next/font/google` (Geist), which self-hosts and preloads them automatically. No change needed.
 - **Done (26 Sep) — Review mobile viewport scaling.** No horizontal scroll or undersized text found; see CLEANUP-LOG.md. Check the site at 360–414 px widths (home hero, pricing tables, clipper-blades video grid) and confirm there's no horizontal scroll or undersized text.
 
-## Suggested order
+## Possible v2.2 items
+
+- Reduce Next.js JavaScript cost (unused JS, main-thread work), the main remaining Lighthouse suggestion on `/clipper-blades`.
+- Larger mobile tap targets: compact mobile menu for the 12 header links, 44 px social icons.
+- Add `sizes` to images on the other service pages (processor blades, scissors, garden tools).
+
+## Suggested order (v2.1, completed)
 
 1. YouTube thumbnail + lightbox (clipper blades, knife sharpening)
 2. Compress hero and gallery images
