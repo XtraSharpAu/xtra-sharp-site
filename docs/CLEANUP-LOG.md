@@ -138,3 +138,11 @@ GA4 property: "Xtra Sharp Website" (property 555128797), web stream 15811521503,
 
 - **Today (26 Sep):** standard reports only cover up to 25 Sep, so today's page views aren't available yet. Realtime showed **0 active users** even after two test visits that sent `page_view` hits in this browser. The tag and ID are correct, so these test hits were probably blocked or filtered before reaching the reports: either security software in this browser blocking tracking requests, or a GA4 internal-traffic filter. To confirm, open the live site on a phone (mobile data, not Wi-Fi) and watch Realtime.
 - Organic search traffic to the updated pages is expected to show within 2–3 days. Compare /clipper-blades and /knife-sharpening against the 28-day figures above in early October.
+
+## Outside-Visitor Realtime Test – v2.1 Live – 26 Sep 2026
+
+- **Property:** Xtra Sharp Website (555128797), Measurement ID **G-LKK494K8YP**. The site tag sends `page_view` hits to this ID on `/clipper-blades` and `/knife-sharpening` (checked in the browser).
+- **Data filters:** one filter, "Internal Traffic" (Exclude), state **Testing**. A filter in Testing only labels matching events and doesn't remove them from reports or Realtime. There's no "Developer Traffic" filter. **Filters are not the cause.**
+- **Result:** Realtime stayed at **0 active users** after desktop test visits and after the reported phone visit to `/clipper-blades` on mobile data (checked several times, the last shortly after the phone test).
+- **Interpretation (unresolved):** Kaspersky on the desktop could explain the desktop visits not showing, but not a phone visit on mobile data. So the cause isn't confirmed. Possible explanations: the phone visit didn't send a hit (for example, a content blocker or private relay on the phone), Realtime delay, or hits not being processed for this stream.
+- **Next check (27 Sep):** open Reports → Engagement → Pages and screens for **26 Sep**. If 26 Sep shows views, tracking works and only Realtime/test visits were affected. If 26 Sep shows none across the whole site, tracking stopped at or after the v2.1 deploy and needs investigating (GA4 DebugView, tag configuration). Before v2.1, the property recorded 183 views between 29 Aug and 25 Sep.
