@@ -3,6 +3,14 @@
 > **v2.1 milestone: CLOSED (26 Sep 2026).** Merged to `main` as 36986fc (PR #2) and verified live. Follow-ups: **Next performance comparison scheduled for 1 Oct** (Quarterly Lighthouse workflow, 09:00 UTC = 7 pm AEST, all 21 production pages); compare with Run #2. Check GA4 traffic for /clipper-blades and /knife-sharpening in early October; see CLEANUP-LOG.md. Consider v2.2 items below.
 >
 > **Search Console (26 Sep 2026):** Search Console validation triggered for any unindexed pages; sitemap confirmed current. The 9 "Discovered – currently not indexed" URLs are all old non-www addresses (they now redirect to www); "Validate fix" started. Sitemap `https://www.xtrasharp.com.au/sitemap.xml` resubmitted after the v2.1 release (Success, 20 pages). `www…/clipper-blades` is indexed; `www…/knife-sharpening` was "URL is unknown to Google", so indexing was requested. Re-check both in URL Inspection in about a week.
+>
+> **Next checks:**
+>
+> | Date | Check | Where |
+> |---|---|---|
+> | 27 Sep 2026 | Analytics for 26 Sep: views of `/clipper-blades`, `/knife-sharpening` and whole site (confirms tracking after v2.1) | GA4 → Reports → Engagement → Pages and screens, date = 26 Sep |
+> | 1 Oct 2026, 7 pm AEST | Quarterly Lighthouse run (all 21 pages), compare with Run #2 | GitHub Actions → Quarterly Lighthouse Audit |
+> | ≈ 3 Oct 2026 | Re-inspect `www…/knife-sharpening` (indexing requested 26 Sep) and check "Validate fix" result for the non-www group | Search Console → URL Inspection / Pages |
 
 Baseline: release `v2.0-clean` (26 Sep 2026). Scores and history are in [CLEANUP-LOG.md](CLEANUP-LOG.md).
 Status key: **To do** · **Done** (already in place — keep it working) · **Check**
