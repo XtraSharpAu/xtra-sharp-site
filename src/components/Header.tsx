@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { SocialIcons } from "@/components/SocialIcons";
 import { trackEvent } from "@/lib/gtag";
 
@@ -23,6 +24,37 @@ const navLinks = [
 
 export default function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileNavRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (!mobileNavOpen) return;
+
+    function handlePointerDown(event: MouseEvent) {
+      const target = event.target as Node;
+      if (
+        mobileNavRef.current?.contains(target) ||
+        menuButtonRef.current?.contains(target)
+      ) {
+        return;
+      }
+      setMobileNavOpen(false);
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setMobileNavOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    }
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [mobileNavOpen]);
 
   return (
     <header className="border-b border-metallic/40 bg-background">
@@ -49,12 +81,18 @@ export default function Header() {
           ))}
         </nav>
         <button
+          ref={menuButtonRef}
           type="button"
           onClick={() => setMobileNavOpen((open) => !open)}
           aria-expanded={mobileNavOpen}
           aria-controls="mobile-nav"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center text-sm font-medium text-text/80 hover:text-accent md:hidden"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center gap-2 text-sm font-medium text-text/80 hover:text-accent md:hidden"
         >
+          {mobileNavOpen ? (
+            <FaTimes size={18} aria-hidden="true" />
+          ) : (
+            <FaBars size={18} aria-hidden="true" />
+          )}
           Menu
         </button>
         <div className="flex items-center gap-4">
@@ -76,6 +114,7 @@ export default function Header() {
         </div>
         {mobileNavOpen && (
           <nav
+            ref={mobileNavRef}
             id="mobile-nav"
             className="flex w-full flex-col gap-3 border-t border-metallic/40 pt-3 text-sm text-text/80 md:hidden"
           >
