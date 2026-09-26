@@ -12,6 +12,8 @@ import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
 import PageLayout from "@/components/PageLayout";
 import Section from "@/components/Section";
+import VideoThumbnail from "@/components/VideoThumbnail";
+import { youTubeThumb } from "@/lib/youtube";
 
 const introGalleryPhotos = [
   {
@@ -37,6 +39,7 @@ function KnifeIntroGallery() {
           className="overflow-hidden rounded-lg shadow-md"
         >
           <Image
+            sizes="(min-width: 896px) 290px, (min-width: 640px) 33vw, 100vw"
             src={photo.src}
             alt={photo.alt}
             width={1200}
@@ -53,6 +56,7 @@ function KnifePremiumPhoto() {
   return (
     <div className="mx-auto mt-6 w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
       <Image
+        sizes="(min-width: 672px) 672px, 100vw"
         src="/knife-premium-japanese.jpg"
         alt="Japanese chef knife sharpened for precision cutting."
         width={1200}
@@ -68,6 +72,7 @@ function KnifeEquipmentPhoto() {
     <div className="mx-auto mt-section w-full max-w-2xl">
       <div className="overflow-hidden rounded-lg shadow-md">
         <Image
+          sizes="(min-width: 672px) 672px, 100vw"
           src="/knife-sharpening-machine.jpg"
           alt="Knife sharpening machine with belt grinder and polishing wheel in workshop."
           width={1600}
@@ -109,6 +114,7 @@ function KnifeGroupPhotos() {
           <div key={photo.src}>
             <div className="overflow-hidden rounded-lg shadow-md">
               <Image
+                sizes="(min-width: 768px) 370px, (min-width: 640px) 50vw, 100vw"
                 src={photo.src}
                 alt={photo.alt}
                 width={photo.width}
@@ -130,6 +136,7 @@ function KnifeBeforeDetailPhoto() {
   return (
     <div className="mx-auto mt-6 w-full max-w-2xl overflow-hidden rounded-lg shadow-md">
       <Image
+        sizes="(min-width: 672px) 672px, 100vw"
         src="/knives-before-sharpening-detail.jpg"
         alt="Close-up of knife edges before sharpening showing visible damage and dull spots."
         width={1400}
@@ -145,6 +152,7 @@ function KnifeEdgeDetailPhoto() {
     <div className="mx-auto mt-section w-full max-w-2xl">
       <div className="overflow-hidden rounded-lg shadow-md">
         <Image
+          sizes="(min-width: 672px) 672px, 100vw"
           src="/knife-damage-zoom.jpg"
           alt="Knife edge detail prior to sharpening."
           width={1600}
@@ -162,15 +170,11 @@ function KnifeEdgeDetailPhoto() {
 function KnifeDemoVideo() {
   return (
     <div className="mx-auto mt-8 w-full max-w-2xl">
-      <div className="aspect-video overflow-hidden rounded-lg shadow-md">
-        <iframe
-          src="https://www.youtube.com/embed/pRQ2ZioYiFw"
-          title="Knife Sharpening Demonstration — Same knife set shown above."
-          className="h-full w-full"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        />
-      </div>
+      <VideoThumbnail
+        thumbnailSrc={youTubeThumb("pRQ2ZioYiFw")}
+        videoId="pRQ2ZioYiFw"
+        altText="Knife Sharpening Demonstration — Same knife set shown above."
+      />
       <p className="mt-2 text-sm text-text/60">
         Knife Sharpening Demonstration — Same knife set shown above.
       </p>
