@@ -21,6 +21,15 @@ Confirmed 26 Sep 2026 after Lighthouse run #2 (see [CLEANUP-LOG.md](CLEANUP-LOG.
 
 Details: [CLEANUP-LOG.md → v2.1 Development Phase](CLEANUP-LOG.md).
 
+## v2.1 Verification – Completed
+
+Verified 26 Sep 2026 on the Vercel preview of branch `v2.1-dev` (build 330c51c).
+
+- **Click-to-play video component verified.** No YouTube iframes or requests on page load (`/clipper-blades` previously loaded 10); thumbnails lazy-load; clicking play loads the player in place.
+- **Image compression verified.** 36 images under 150 KB; AVIF served (30 KB at phone width vs ~250 KB before); responsive `sizes` working.
+- **Mobile layout verified.** No horizontal scroll or small text at 360–414 px (see CLEANUP-LOG.md).
+- **Lighthouse results recorded.** Run #3 mobile Performance: home 95 (was 83), clipper-blades 80 (was 47), knife-sharpening 84 (was 88). Accessibility and Best Practices 100 on all three. Preview SEO scores are lowered by Vercel's preview-only `noindex` header; see CLEANUP-LOG.md.
+
 ## 1. Image optimization
 
 Main reason for this section: on 26 Sep, mobile Performance was 50 on `/clipper-blades`, 60 on the home page, 71 on `/processor-blades` and 83 on `/knife-sharpening`.

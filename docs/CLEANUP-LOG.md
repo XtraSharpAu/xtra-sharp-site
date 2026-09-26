@@ -58,7 +58,7 @@ Note: Large swings observed; YouTube embeds and image weight likely causes.
 
 ## v2.1 Development Phase – Local Testing Results
 
-Status: code changes made and checked offline, **not yet built with Next.js or audited with Lighthouse** (see "Still to verify"). Nothing has been deployed; the live site is unchanged.
+Status: verified on the Vercel preview of branch `v2.1-dev` (build 330c51c). See Run #3 below.
 
 ### 1. Click-to-play video component
 
@@ -90,12 +90,27 @@ Pages: `/`, `/pricing`, `/clipper-blades`, `/knife-sharpening`, measured in Chro
 
 Tap targets pass WCAG 2.2 AA through spacing, and Lighthouse Accessibility is 100, but the header nav (12 wrapped text links) and the social icons are small for thumbs. Possible later improvement: a compact mobile menu and 44 px icon buttons.
 
-### 4. Lighthouse (local)
+### 4. Build and preview checks (26 Sep 2026)
 
-Not run yet. This session's network policy blocks the npm registry (so the site can't be installed or built here) and blocks access to xtrasharp.com.au, so a local `next build` + Lighthouse run wasn't possible.
+- All 14 Vercel preview builds of `v2.1-dev` succeeded, including the final build 330c51c (`next build` with type-check). The only build warnings (npm install-scripts notice, custom Cache-Control header in `next.config.ts`) were already present before v2.1.
+- Preview `/clipper-blades`: 0 YouTube iframes and 0 YouTube requests on page load (live site: 10 iframes). Thumbnails (12–15 KB each) load only when scrolled into view. Clicking play replaces the thumbnail with the YouTube player in place.
+- Preview `/knife-sharpening`: 0 iframes on load, 1 play button; all 9 content images have `sizes`, with srcset from 256w.
+- AVIF confirmed: first gallery image at phone width is 30 KB AVIF (58 KB WebP fallback) vs 142 KB compressed JPEG (~250 KB before v2.1).
 
-### Still to verify
+## Performance Baseline – Run #3 (v2.1-dev preview) – 26 Sep 2026
 
-1. `next build` succeeds (includes full type-check and lint).
-2. Lighthouse for `/`, `/clipper-blades` and `/knife-sharpening`, compared with Run #2 (83 / 47 / 88).
-3. Click-to-play works on a phone (thumbnail → video plays).
+Source: Lighthouse in Chrome DevTools (mobile, emulated Moto G Power), run by hand on the Vercel preview `xtra-sharp-site-v2-git-v21-dev-xtrasharpau.vercel.app`, build **330c51c** (branch `v2.1-dev`). PageSpeed Insights couldn't be used because Vercel's preview protection redirects it to the login page.
+
+| Page | Perf | A11y | Best Practices | SEO | Perf in Run #2 (live) | Change |
+|---|---|---|---|---|---|---|
+| / (home) | 95 | 100 | 100 | 69 * | 83 | +12 |
+| /clipper-blades | 80 | 100 | 100 | 69 * | 47 | +33 |
+| /knife-sharpening | 84 | 100 | 100 | 61 ** | 88 | −4 |
+
+\* SEO 69 on the preview is caused by Vercel's `X-Robots-Tag: noindex` header, which Vercel adds to every preview deployment (confirmed on the preview; the only failed SEO check on `/clipper-blades` is "Page is blocked from indexing"). This header isn't sent by the production site, so these pages are expected to score as before on main (Run #2: home 92, clipper-blades 100).
+
+\*\* `/knife-sharpening` SEO 61 is 8 points below the noindex-only score, so one more SEO check failed on that run. Title, meta description, canonical, HTTP status, link text, crawlable links and image alt text were checked on the preview and all pass; confirm the failing item from the full report, and re-check after merge.
+
+Notes:
+- `/clipper-blades` details: FCP 3.4 s, LCP 3.4 s, TBT 230 ms, CLS 0, Speed Index 4.0 s. Remaining Performance suggestions are about Next.js JavaScript (unused JS, main-thread work), a possible v2.2 item.
+- Run #3 was measured in a local Chrome on a different machine and network from Run #1/#2 (GitHub Actions runner), so small differences (such as knife-sharpening 88 → 84) are within normal run-to-run variation. The next scheduled workflow run on production (1 Oct 2026) gives a like-for-like comparison.
