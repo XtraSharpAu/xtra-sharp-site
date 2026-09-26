@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SocialIcons } from "@/components/SocialIcons";
@@ -21,6 +22,8 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
   return (
     <header className="border-b border-metallic/40 bg-background">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 py-4">
@@ -34,7 +37,7 @@ export default function Header() {
             className="h-auto w-full max-w-[600px]"
           />
         </Link>
-        <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-text/80">
+        <nav className="hidden gap-x-5 gap-y-2 text-sm text-text/80 md:flex md:flex-wrap">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -45,6 +48,15 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+        <button
+          type="button"
+          onClick={() => setMobileNavOpen((open) => !open)}
+          aria-expanded={mobileNavOpen}
+          aria-controls="mobile-nav"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center text-sm font-medium text-text/80 hover:text-accent md:hidden"
+        >
+          Menu
+        </button>
         <div className="flex items-center gap-4">
           <SocialIcons />
           <a
@@ -62,6 +74,23 @@ export default function Header() {
             Call Now
           </a>
         </div>
+        {mobileNavOpen && (
+          <nav
+            id="mobile-nav"
+            className="flex w-full flex-col gap-3 border-t border-metallic/40 pt-3 text-sm text-text/80 md:hidden"
+          >
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileNavOpen(false)}
+                className="transition-colors hover:text-accent"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        )}
       </div>
     </header>
   );

@@ -43,6 +43,7 @@ function ScissorsIntroGallery() {
           className="overflow-hidden rounded-lg shadow-md"
         >
           <Image
+            sizes="(min-width: 896px) 290px, (min-width: 640px) 33vw, 100vw"
             src={photo.src}
             alt={photo.alt}
             width={photo.width}

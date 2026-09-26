@@ -9,7 +9,7 @@ export function SocialIcons() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Xtra Sharp on Facebook"
-        className="text-text/80 hover:text-accent hover:underline"
+        className="inline-flex min-h-11 min-w-11 items-center justify-center text-text/80 hover:text-accent hover:underline"
       >
         <FaFacebookSquare size={22} />
       </a>
@@ -19,7 +19,7 @@ export function SocialIcons() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Xtra Sharp on X"
-        className="text-text/80 hover:text-accent hover:underline"
+        className="inline-flex min-h-11 min-w-11 items-center justify-center text-text/80 hover:text-accent hover:underline"
       >
         <FaXTwitter size={22} />
       </a>

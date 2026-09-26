@@ -35,6 +35,7 @@ function ProcessorBeforePhoto() {
         <div key={photo.src}>
           <div className="overflow-hidden rounded-lg shadow-md">
             <Image
+              sizes="(min-width: 768px) 370px, (min-width: 640px) 50vw, 100vw"
               src={photo.src}
               alt={photo.alt}
               width={photo.width}
@@ -71,6 +72,7 @@ function ProcessorAfterPhoto() {
         <div key={photo.src}>
           <div className="overflow-hidden rounded-lg shadow-md">
             <Image
+              sizes="(min-width: 768px) 370px, (min-width: 640px) 50vw, 100vw"
               src={photo.src}
               alt={photo.alt}
               width={photo.width}
@@ -90,6 +92,7 @@ function ProcessorEquipmentPhoto() {
     <div className="mx-auto mt-section w-full max-w-2xl">
       <div className="overflow-hidden rounded-lg shadow-md">
         <Image
+          sizes="(min-width: 672px) 672px, 100vw"
           src="/knife-sharpening-machine.jpg"
           alt="Water-cooled sharpening machine used for knives and industrial processor blades."
           width={1600}
