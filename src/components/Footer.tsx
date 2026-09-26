@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { FooterContactStrip } from "@/components/FooterContactStrip";
 import { trackEvent } from "@/lib/gtag";
+import { GOOGLE_REVIEW_URL } from "@/lib/reviews";
 
 const serviceLinks = [
   { label: "Knife Sharpening", href: "/knife-sharpening" },
@@ -81,7 +82,7 @@ export default function Footer() {
             contact and drop-offs occur Monday – Friday, 9 AM – 5 PM. By
             appointment only.
           </p>
-          <p className="mt-3">
+          <p className="mt-3 flex flex-wrap items-center gap-2">
             <a
               href="https://www.google.com/search?q=Xtra+Sharp+Campbelltown+NSW+reviews"
               target="_blank"
@@ -89,6 +90,18 @@ export default function Footer() {
               className="hover:text-accent hover:underline"
             >
               Read Google reviews ›
+            </a>
+            <span aria-hidden="true" className="text-text/30">
+              |
+            </span>
+            <a
+              href={GOOGLE_REVIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("click_google_review")}
+              className="hover:text-accent hover:underline"
+            >
+              Leave a review ›
             </a>
           </p>
         </div>

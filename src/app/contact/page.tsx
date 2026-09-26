@@ -4,6 +4,7 @@ import JsonLd from "@/components/JsonLd";
 import ContactForm from "@/components/ContactForm";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CallNowButton from "@/components/CallNowButton";
+import GoogleReviewButton from "@/components/GoogleReviewButton";
 import SectionHeading from "@/components/SectionHeading";
 import PageLayout from "@/components/PageLayout";
 import Section from "@/components/Section";
@@ -112,6 +113,14 @@ export default function ContactPage() {
           Service is <strong className="text-text">by appointment only</strong>{" "}
           — please call or message to arrange a time.
         </p>
+      </Section>
+
+      <Section className="border-t border-metallic/40 bg-surface text-center">
+        <p className="text-text/80">
+          If you&apos;ve had sharpening done recently, I&apos;d really
+          appreciate a quick Google review.
+        </p>
+        <GoogleReviewButton />
       </Section>
 
       <Section className="border-t border-metallic/40 text-center">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ThankYouHero from "@/components/ThankYouHero";
 import Checklist from "@/components/Checklist";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import GoogleReviewButton from "@/components/GoogleReviewButton";
 
 export const metadata: Metadata = {
   title: "Thank You | Xtra Sharp Campbelltown NSW",
@@ -95,6 +96,19 @@ export default function ThankYouPage() {
           >
             Return to Home
           </Link>
+        </div>
+      </section>
+
+      <section className="border-t border-metallic/40 px-6 py-16">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-semibold text-text">
+            Happy with your sharpening?
+          </h2>
+          <p className="mt-4 text-text/80">
+            A quick Google review really helps a small local business like
+            mine.
+          </p>
+          <GoogleReviewButton />
         </div>
       </section>
     </>
