@@ -157,3 +157,41 @@ Property: `sc-domain:xtrasharp.com.au`. Page indexing: 22 indexed, 114 not index
   - `https://www.xtrasharp.com.au/clipper-blades`: **URL is on Google**, page indexed, breadcrumbs (1) and review snippets (6) valid.
   - `https://www.xtrasharp.com.au/knife-sharpening`: **URL is not on Google, "URL is unknown to Google"** (no referring sitemap or page recorded yet). **Indexing requested 26 Sep.**
 - Follow-up: re-inspect `/knife-sharpening` in about a week, and check the validation result for the non-www group. Other www service pages may also be unknown to Google; inspect them if the Page indexing count doesn't rise after the sitemap is re-read.
+
+## Indexing and Performance Prep – 26 Sep 2026
+
+### Indexing requests (Search Console → URL Inspection, www service pages)
+
+| Page | Status before | Action |
+|---|---|---|
+| /knife-sharpening | URL is unknown to Google | Indexing requested (earlier today) |
+| /scissors-sharpening | URL is unknown to Google | Indexing requested |
+| /garden-tools | Discovered – currently not indexed | Indexing requested |
+| /mail-in | Discovered – currently not indexed | Indexing requested |
+| /commercial | Discovered – currently not indexed | Indexing requested |
+| /clipper-blades | Indexed | None needed |
+| /processor-blades | Indexed | None needed |
+| /batch | Indexed | None needed |
+| /services | Indexed | None needed |
+
+5 indexing requests made today (Search Console allows roughly 10 per day). The remaining non-service pages (home, pricing, service-area, faq, contact, about, how-it-works, tips, gallery, terms, privacy) weren't inspected this time.
+
+### Sitemap verification
+
+`https://www.xtrasharp.com.au/sitemap.xml` lists **20 URLs**: `/`, knife-sharpening, scissors-sharpening, clipper-blades, garden-tools, processor-blades, pricing, mail-in, service-area, contact, faq, about, services, how-it-works, commercial, batch, tips, gallery, terms, privacy. That's correct and complete. The Lighthouse workflow audits 21 routes because it also checks `/thank-you`, which is deliberately `noindex` and correctly left out of the sitemap.
+
+### Lighthouse baseline (mobile, lab)
+
+PageSpeed Insights stalled for both pages this evening (probably the tool's rate limit), so no new runs were recorded. Latest lab figures from earlier today:
+
+| Page | Source | Perf | LCP | CLS | TBT |
+|---|---|---|---|---|---|
+| /clipper-blades | Lighthouse (DevTools), v2.1 preview, build 330c51c | 80 | 3.4 s | 0 | 230 ms |
+| /knife-sharpening | PageSpeed Insights, live, 4:44 PM | 76 | – | – | – |
+
+- **FID is no longer reported:** Google retired First Input Delay in 2024 and replaced it with Interaction to Next Paint (INP). INP needs real-user data, which appears in PageSpeed Insights / Search Console Core Web Vitals once there's enough traffic. In lab tests, Total Blocking Time (TBT) is the closest equivalent, so TBT is recorded instead.
+- The scheduled Lighthouse workflow on 1 Oct 2026 gives the full like-for-like baseline for all 21 pages.
+
+### GA4 tag check
+
+Tag Assistant couldn't be used here: it needs its browser extension or a connected debug session. The tag was instead confirmed in the browser's network activity on the live site: `/clipper-blades` and `/knife-sharpening` load `gtag.js` and send a `page_view` to **G-LKK494K8YP**, matching the GA4 stream (property 555128797). Realtime still showed 0 (see "Outside-Visitor Realtime Test" above); the 27 Sep check of 26 Sep data will confirm whether hits are being recorded.
