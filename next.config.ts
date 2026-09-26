@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    // Serve AVIF to browsers that support it, WebP to the rest; the original
+    // JPEG is only used as a last resort. Source files stay .jpg in /public.
+    formats: ["image/avif", "image/webp"],
+  },
   async headers() {
     return [
       {
