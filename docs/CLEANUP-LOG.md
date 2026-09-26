@@ -233,3 +233,12 @@ Merged via PR #6 (squash) after checking the Vercel preview.
 - Intro text above the form changed to first person ("Send me a message below and I'll get back to you as soon as I can.").
 - Home page `description` (metadata, OpenGraph, Twitter) shortened to focus on the core service.
 - **Preview test:** a test enquiry submitted on the Vercel preview redirected to `/thank-you` and arrived correctly in Outlook.
+
+## v2.6 Pick-Up Wording – 26 Sep 2026
+
+Merged via PR #7 (squash) after checking the Vercel preview.
+
+- Local pick-up and return wording made consistent across 8 files: it's for schools and larger jobs over $300 in the local area (Campbelltown, Macarthur and Western Sydney); everything else is customer drop-off by appointment or mail-in.
+- Files updated: `src/app/service-area/page.tsx`, `src/components/HowItWorks.tsx`, `src/components/ServiceOptions.tsx`, `src/app/how-it-works/page.tsx`, `src/components/FaqAccordion.tsx`, `src/app/terms/page.tsx`, `src/components/WhyChooseUs.tsx`, `src/app/commercial/page.tsx`.
+- Service Area page no longer says "Drop-off only" in its no-mobile checklist, and its "Why Drop-Off Only" heading was renamed to "Why No Mobile Sharpening" (no longer claims drop-off/mail-in are the only ways in).
+- Mail-in line changed from "anywhere in NSW" to "anywhere in Australia".
