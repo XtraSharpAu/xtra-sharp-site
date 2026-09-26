@@ -48,7 +48,7 @@ const faqs: FaqItem[] = [
       [
         "Drop-Off: Appointment required",
         "Mail-In: Australia Post accepted",
-        "Local Pick-Up: Available in selected Western Sydney areas",
+        "Local Pick-Up & Return: Available for schools and larger jobs over $300 in the local area",
       ],
       "Return postage or pick-up fees are quoted during booking.",
     ],
