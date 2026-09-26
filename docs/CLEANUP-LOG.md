@@ -205,3 +205,11 @@ Merged via PR #3 (squash) on 26 Sep 2026 after checking the Vercel preview.
 - **Footer links added:** Pricing, How It Works, Service Area, Gallery, Sharpening Tips, Batch Sharpening. Several of these pages previously had few or no internal links.
 - **Search Console "Excluded by noindex" (14):** checked; all are old Mobifirst addresses (/tos, /disclaimer, /cookielaw, old-domain /privacy) or home-page URLs with tracking parameters. No action needed.
 - **Follow-up:** the 404 count in Search Console should fall over the next few weeks as Google recrawls. Home SEO should read 100 in the 1 Oct Lighthouse run.
+
+## v2.3 Mobile Tidy-up – 26 Sep 2026
+
+Merged via PR #4 (squash) after checking the Vercel preview at 375 px and desktop width.
+
+- Mobile header: below md, the 12 wrapped nav links are replaced by a "☰ Menu" button (44 px tall, aria-expanded / aria-controls) opening the same links. Icon switches to ✕ when open. Menu closes on link tap, outside tap, or Escape (focus returns to the button). Desktop nav unchanged.
+- Social icons (Facebook, X): 44×44 px tap targets, icon size unchanged.
+- Responsive `sizes` added to all content images on /processor-blades and /scissors-sharpening.
