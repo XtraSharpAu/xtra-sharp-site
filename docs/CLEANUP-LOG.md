@@ -195,3 +195,13 @@ PageSpeed Insights stalled for both pages this evening (probably the tool's rate
 ### GA4 tag check
 
 Tag Assistant couldn't be used here: it needs its browser extension or a connected debug session. The tag was instead confirmed in the browser's network activity on the live site: `/clipper-blades` and `/knife-sharpening` load `gtag.js` and send a `page_view` to **G-LKK494K8YP**, matching the GA4 stream (property 555128797). Realtime still showed 0 (see "Outside-Visitor Realtime Test" above); the 27 Sep check of 26 Sep data will confirm whether hits are being recorded.
+
+## v2.2 SEO Tidy-up – 26 Sep 2026
+
+Merged via PR #3 (squash) on 26 Sep 2026 after checking the Vercel preview.
+
+- **Redirects (permanent):** old WordPress-era addresses from Search Console's "Not found (404)" report now go to the matching page: /about-us → /about, /our-prices → /pricing, /privacy-policy and /cookielaw → /privacy, /terms-of-use, /tos and /disclaimer → /terms, /blog and /do-your-knives-have-knife-temper-damage → /tips, /category/knives → /knife-sharpening, /tool-sharpening → /garden-tools, /portfolio → /gallery, /portfolio-item/* and /services-item/* → matching service pages, and all 38 /mobile-knife-sharpening-service-in-[suburb] pages → /service-area. Junk addresses (/wp-admin, /m/…, /*) are left as 404.
+- **Home page link text:** service card buttons changed from "Learn More" to "Learn more about [service]". This fixes the home page's Lighthouse SEO "descriptive link text" check (home SEO was 92).
+- **Footer links added:** Pricing, How It Works, Service Area, Gallery, Sharpening Tips, Batch Sharpening. Several of these pages previously had few or no internal links.
+- **Search Console "Excluded by noindex" (14):** checked; all are old Mobifirst addresses (/tos, /disclaimer, /cookielaw, old-domain /privacy) or home-page URLs with tracking parameters. No action needed.
+- **Follow-up:** the 404 count in Search Console should fall over the next few weeks as Google recrawls. Home SEO should read 100 in the 1 Oct Lighthouse run.
