@@ -81,7 +81,7 @@ const sections = [
   {
     title: "Pick-Up & Mail-In",
     paragraphs: [
-      "Local pick-up is available in selected Western Sydney areas and quoted based on distance.",
+      "Local pick-up and return is available for schools and larger jobs over $300 in the local area, quoted based on distance.",
       "Mail-in customers are responsible for postage to Xtra Sharp.",
       "Return postage can be included in the quote or billed separately.",
     ],

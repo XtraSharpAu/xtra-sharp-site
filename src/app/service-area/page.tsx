@@ -61,7 +61,7 @@ const macarthurSuburbs = [
 const noMobileNotes = [
   "No mobile sharpening",
   "No on-site sharpening",
-  "Drop-off only",
+  "Local pick-up and return for schools and jobs over $300",
   "Mail-in available Australia-wide",
 ];
 
@@ -110,8 +110,8 @@ export default function ServiceAreaPage() {
 
       <Section className="border-t border-metallic/40 bg-surface text-center">
         <SectionHeading
-          title="Why Drop-Off Only"
-          subtitle="Sharpening is carried out using water-cooled and machine-guided equipment based at my dedicated sharpening area in Woodbine. Keeping all sharpening at one fixed location means every item gets the same accurate, consistent result — drop-off and mail-in are the only ways to access it."
+          title="Why No Mobile Sharpening"
+          subtitle="Sharpening is carried out using water-cooled and machine-guided equipment based at my dedicated sharpening area in Woodbine. Keeping all sharpening at one fixed location means every item gets the same accurate, consistent result, whether it's dropped off, mailed in, or collected and returned for a qualifying pick-up job."
         />
       </Section>
 

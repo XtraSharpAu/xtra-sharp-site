@@ -15,7 +15,7 @@ const options = [
   {
     title: "Local Pick-Up",
     description:
-      "Available in selected areas of Western Sydney. Quoted based on distance.",
+      "Pick-up and return available for schools and larger jobs over $300 in the local area. Quoted based on distance.",
   },
 ];
 

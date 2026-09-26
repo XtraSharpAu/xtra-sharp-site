@@ -2,7 +2,7 @@ const reasons = [
   "Professional, consistent results",
   "Appointment-only service (no waiting around)",
   "Fast turnaround",
-  "Local pick-up available for bigger jobs",
+  "Local pick-up and return for schools and jobs over $300",
   "Mail-in option for convenience",
   "Trusted by schools and commercial clients",
   "Serving Campbelltown, Western Sydney & Macarthur",

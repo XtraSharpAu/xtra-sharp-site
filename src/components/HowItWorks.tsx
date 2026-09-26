@@ -13,12 +13,12 @@ const steps = [
   {
     title: "Mail-In Service Available",
     description:
-      "Send your items from anywhere in NSW. We sharpen and return them promptly.",
+      "Send your items from anywhere in Australia. We sharpen and return them promptly.",
   },
   {
-    title: "Local Pick-Up for Larger Jobs & Schools",
+    title: "Local Pick-Up & Return for Schools & Jobs Over $300",
     description:
-      "Available across Campbelltown, Macarthur and Western Sydney for bulk or commercial sharpening.",
+      "Available for schools and larger jobs over $300 in the local area (Campbelltown, Macarthur and Western Sydney). All other jobs are customer drop-off by appointment or mail-in.",
   },
 ];
 

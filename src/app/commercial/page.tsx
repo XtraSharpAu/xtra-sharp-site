@@ -92,7 +92,7 @@ const batchServices = [
   "Batch pricing",
   "Scheduled sharpening cycles",
   "Priority turnaround",
-  "Pick-up options (selected suburbs)",
+  "Pick-up & return for schools and jobs over $300 in the local area",
   "Mail-in service Australia-wide",
 ];
 
