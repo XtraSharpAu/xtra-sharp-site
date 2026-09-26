@@ -213,3 +213,11 @@ Merged via PR #4 (squash) after checking the Vercel preview at 375 px and deskto
 - Mobile header: below md, the 12 wrapped nav links are replaced by a "☰ Menu" button (44 px tall, aria-expanded / aria-controls) opening the same links. Icon switches to ✕ when open. Menu closes on link tap, outside tap, or Escape (focus returns to the button). Desktop nav unchanged.
 - Social icons (Facebook, X): 44×44 px tap targets, icon size unchanged.
 - Responsive `sizes` added to all content images on /processor-blades and /scissors-sharpening.
+
+## v2.4 Google Review Links – 26 Sep 2026
+
+Merged via PR #5 (squash) after checking the Vercel preview.
+
+- "Leave a Google review" button (https://g.page/r/CcAgWKGNmPfeEAE/review) added to the Thank You page ("Happy with your sharpening?") and the Contact page, plus a "Leave a review ›" link in the footer.
+- All links open in a new tab (noopener noreferrer) and fire the GA4 event `click_google_review`.
+- URL kept in `src/lib/reviews.ts`; button in `src/components/GoogleReviewButton.tsx`.
